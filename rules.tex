@@ -1,0 +1,66 @@
+\documentclass[10pt,a4paper,titlepage,twocolumn]{scrartcl} % Professionelle KOMA-Klasse
+% \usepackage{tgpagella}
+
+% \usepackage{tgbonum}
+% \usepackage{XCharter} % Setzt XCharter als Hauptschrift
+% \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ebgaramond}
+\usepackage[english]{babel}
+\usepackage{longtable} 
+\usepackage{booktabs}   
+\usepackage[table]{xcolor}
+\usepackage{geometry}
+\usepackage{fontawesome5}
+\usepackage{tcolorbox} % Für minimalistische, schicke RPG-Rahmen und Boxen
+\usepackage{fontspec}
+\usepackage{imakeidx}
+
+
+\makeindex[columns=2, title=Index, intoc] 
+
+% \setmainfont{TeX Gyre Pagella}
+\newfontfamily\dsix{DpolySixSider-jqRO.ttf}
+
+% Seitenränder perfekt für ein ausgedrucktes RPG-Heft einstellen
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+
+% Eine eigene, schlichte Box für RPG-Hinweise definieren (Schwarz/Weiß-Stil)
+\newtcolorbox{rpgbox}[1]{
+  colback=white, 
+  colframe=black, 
+  fonttitle=\bfseries, 
+  title=#1, 
+  arc=0mm, % Eckige Kanten für Retro-Look
+  boxrule=1pt
+}
+
+
+\newcommand{\kw}[1]{\textsf{\textbf{#1}}\index{#1}}
+\newcommand{\game}{\textsf{\textbf{Beneath The Shard}}}
+\newcommand{\todo}{\textit{todo}}
+\newcommand{\world}{\textit{WORLDNAME}}
+
+
+% ==========================================
+% TITELBLATT CONFIGURATION (Manuell & Unabhängig)
+% ==========================================5
+\begin{document}
+
+\include{chapters/title}
+
+\tableofcontents
+
+\clearpage 
+
+\include{chapters/playing-the-game}
+
+\include{chapters/character-creation}
+
+
+\clearpage
+
+
+\printindex
+
+\end{document}
