@@ -9,4 +9,72 @@ The three archetypes are:
     \item \textbf{Mage:} \todo{}
 \end{itemize}
 
+\subsection{Attributes}
+
+Each character has six attributes:
+\begin{itemize}
+    \item \textbf{Strength     $\left[\textbf{STR}\right]$:} \todo{}
+    \item \textbf{Dexterity    $\left[\textbf{DEX}\right]$:} \todo{}
+    \item \textbf{Constitution $\left[\textbf{CON}\right]$:} \todo{}
+    \item \textbf{Intelligence $\left[\textbf{INT}\right]$:} \todo{}
+    \item \textbf{Wisdom       $\left[\textbf{WIS}\right]$:} \todo{}
+    \item \textbf{Charisma     $\left[\textbf{CHA}\right]$:} \todo{}
+\end{itemize}
+
+\subsection{Attribute Value}
+Each attribute has an \kw{Attribute Value} ranging from \textsf{0} to \textsf{100}. 
+
+Roll \textsf{6} times for each 
+of your character's attributes on the following table with \D{3}{6}
+
+\begin{table}[htbp]
+  \centering % Centers the entire table on the page
+  \caption{Determine Attribute Values}
+  \label{tab:attribute_values} % MUST come after or inside \caption
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|c|c|}
+    \hline
+    \textbf{3d6} & \textbf{Attribute Value} \\
+    \hline
+    \textsf{2 -- 4}   &  \textsf{20} \\
+    \hline                    
+    \textsf{5 -- 6}   &  \textsf{30} \\
+    \hline                
+    \textsf{7 -- 8}   &  \textsf{40} \\
+    \hline             
+    \textsf{9 -- 10}  &  \textsf{50} \\
+    \hline         
+    \textsf{11 -- 12} &  \textsf{60} \\
+    \hline        
+    \textsf{13 -- 14} &  \textsf{70} \\
+    \hline    
+    \textsf{15 -- 16} &  \textsf{80} \\
+    \hline
+    \textsf{17 -- 18} &  \textsf{90} \\
+    \hline
+\end{tabular}
+\end{table}
+
+\subsection{Attribute Rank}
+
+The \kw{Attribute Rank} of an attribute is its value divided by \textsf{10}.
+If a character's \attr{STR} is \textsf{75}, its rank is \textsf{7}
+
+\subsection{Attribute Check}
+
+Sometimes the game asks you to perform an attribute check. Then you need to roll 
+d100 equal or below your attribute value.
+
+\begin{rpgboxb}{Attribute Check Example}
+    \textit{Check \acheck{DEX}{+10}:} you need add \textsf{10} to your \attr{DEX} attribute
+    and roll d100 equal or below it.
+
+    If a character has \attr{DEX} \textsf{60} he needs to roll \textsf{70} or less on a \dper
+\end{rpgboxb}
+
+
+
+
+
+
 \subsection{Party}

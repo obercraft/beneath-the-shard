@@ -15,7 +15,8 @@
 \usepackage{tcolorbox} % Für minimalistische, schicke RPG-Rahmen und Boxen
 \usepackage{fontspec}
 \usepackage{imakeidx}
-
+\usepackage{tabularx}
+\usepackage{ragged2e}
 
 \makeindex[columns=2, title=Index, intoc] 
 
@@ -35,12 +36,40 @@
   boxrule=1pt
 }
 
+% Eine eigene, schlichte Box für RPG-Hinweise definieren (Schwarz/Weiß-Stil)
+\newtcolorbox{rpgboxb}[1]{
+  colback=white, 
+  colframe=black, 
+  fonttitle=\bfseries, 
+  title=#1, 
+  arc=0mm,          % Eckige Kanten
+  boxrule=1pt,
+  % --- HIER IST DER FIX FÜR DEN BLOCKSATZ ---
+  before upper={\justifying\noindent} % Erzwingt echten Blocksatz ab dem ersten Wort
+}
+
 
 \newcommand{\kw}[1]{\textsf{\textbf{#1}}\index{#1}}
 \newcommand{\game}{\textsf{\textbf{Beneath The Shard}}}
 \newcommand{\todo}{\textit{todo}}
 \newcommand{\world}{\textit{WORLDNAME}}
 
+\newcommand{\energy}[1]{\textsf{#1}\faBolt}
+\newcommand{\easy}{\faDiceOne}
+\newcommand{\medium}{\faDiceFour}
+\newcommand{\hard}{\faDiceSix}
+\newcommand{\attr}[1]{\textbf{#1}}
+\newcommand{\acheck}[2]{\textbf{#1}\textsf{#2}}
+
+% O{} -> 1. Argument ist optional, Standardwert ist komplett leer
+% m   -> 2. Argument ist obligatorisch (Pflichtfeld)
+\NewDocumentCommand{\D}{ m m }{%
+  \IfBlankTF{#1}%
+    {\textsf{d#2}}% Wenn Parameter 1 leer ist, zeige nur z.B. "d6"
+    {\textsf{#1d#2}}% Wenn Parameter 1 da ist, zeige z.B. "3d6"
+}
+
+\newcommand{\dper}{\D{}{100}}
 
 % ==========================================
 % TITELBLATT CONFIGURATION (Manuell & Unabhängig)
