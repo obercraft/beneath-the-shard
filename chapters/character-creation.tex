@@ -22,9 +22,9 @@ Each character has six attributes:
 \end{itemize}
 
 \subsection{Attribute Value}
-Each attribute has an \kw{Attribute Value} ranging from \textsf{0} to \textsf{100}. 
+Each attribute has an \kw{Attribute Value} ranging from 0 to 100. 
 
-Roll \textsf{6} times for each 
+Roll 6 times for each 
 of your character's attributes on the following table with \D{3}{6}
 
 \begin{table}[htbp]
@@ -36,29 +36,29 @@ of your character's attributes on the following table with \D{3}{6}
     \hline
     \textbf{3d6} & \textbf{Attribute Value} \\
     \hline
-    \textsf{2 -- 4}   &  \textsf{20} \\
+    2 -- 4   &  20 \\
     \hline                    
-    \textsf{5 -- 6}   &  \textsf{30} \\
+    5 -- 6   & 30 \\
     \hline                
-    \textsf{7 -- 8}   &  \textsf{40} \\
+    7 -- 8   &  40 \\
     \hline             
-    \textsf{9 -- 10}  &  \textsf{50} \\
+    9 -- 10  &  50 \\
     \hline         
-    \textsf{11 -- 12} &  \textsf{60} \\
+    11 -- 12 &  55 \\
     \hline        
-    \textsf{13 -- 14} &  \textsf{70} \\
+    13 -- 14 &  60 \\
     \hline    
-    \textsf{15 -- 16} &  \textsf{80} \\
+    15 -- 16 &  65 \\
     \hline
-    \textsf{17 -- 18} &  \textsf{90} \\
+    17 -- 18 &  70 \\
     \hline
 \end{tabular}
 \end{table}
 
 \subsection{Attribute Rank}
 
-The \kw{Attribute Rank} of an attribute is its value divided by \textsf{10}.
-If a character's \attr{STR} is \textsf{75}, its rank is \textsf{7}
+The \kw{Attribute Rank} of an attribute is its value divided by 10, rounded down.
+If a character's \attr{STR} is 75, its rank is 7
 
 \subsection{Attribute Check}
 
@@ -66,14 +66,19 @@ Sometimes the game asks you to perform an attribute check. Then you need to roll
 d100 equal or below your attribute value.
 
 \begin{rpgboxb}{Attribute Check Example}
-    \textit{Check \acheck{DEX}{+10}:} you need add \textsf{10} to your \attr{DEX} attribute
+    \textit{Check \acheck{DEX}{+10}:} you need add 10 to your \attr{DEX} attribute
     and roll d100 equal or below it.
 
-    If a character has \attr{DEX} \textsf{60} he needs to roll \textsf{70} or less on a \dper
+    If a character has \attr{DEX}{60} he needs to roll 70 or less on a \dper
 \end{rpgboxb}
 
+\subsubsection{Critical Hit}
+If you roll doubles, eg. both dice show the same number on a \dper{} and the roll is equal or below attribute value,
+then you score a \kw{Critical Hit}
 
 
+\subsubsection{Critical Miss}
+A \kw{Critical Miss} works like a Critical Hit, but the \dper{} is above your attribute value.
 
 
 

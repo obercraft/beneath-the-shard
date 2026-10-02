@@ -1,11 +1,14 @@
 \documentclass[10pt,a4paper,titlepage,twocolumn]{scrartcl} % Professionelle KOMA-Klasse
 % \usepackage{tgpagella}
 
+\usepackage[lining, tabular]{ebgaramond}
+% \usepackage{baskervald}
 % \usepackage{tgbonum}
 % \usepackage{XCharter} % Setzt XCharter als Hauptschrift
 % \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{ebgaramond}
+% \usepackage[T1]{fontenc}
+% \usepackage{ebgaramond}
+% \usepackage{fbb}
 \usepackage[english]{babel}
 \usepackage{longtable} 
 \usepackage{booktabs}   
@@ -17,6 +20,13 @@
 \usepackage{imakeidx}
 \usepackage{tabularx}
 \usepackage{ragged2e}
+\usepackage{tabularray}
+\usepackage{lipsum} 
+
+% \setmainfont{Cormorant Garamond}
+
+% \renewcommand{\rmdefault}{CormorantGaramond-LF} % LF steht für Lining Figures (Standard-Ziffern)
+% \normalfont % Aktiviert die Änderung für das gesamte Dokument
 
 \makeindex[columns=2, title=Index, intoc] 
 
@@ -85,6 +95,8 @@
 \include{chapters/playing-the-game}
 
 \include{chapters/character-creation}
+
+\include{chapters/combat}
 
 
 \clearpage
