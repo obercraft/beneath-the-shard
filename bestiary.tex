@@ -1,0 +1,27 @@
+\documentclass[10pt,a4paper,titlepage,onecolumn]{scrartcl}
+\input{preamble}
+\renewcommand{\bookhead}{{\GameSans\bfseries\color{shardink}Bestiary}}
+
+\begin{document}
+
+\include{chapters/title-bestiary}
+
+\tableofcontents
+
+\clearpage
+
+\section{How to Use This Book}
+
+These entries are for the Monster phase in \game{} (see the core rules: Combat).
+Each creature has a dice pool, Hits, Deploy tag, Threat die for Initiative, and an ordered action list resolved \textbf{top to bottom}.
+
+Monsters do \textbf{not} spend party Energy: Medium needs a die showing at least 4; Hard Hard needs two dice showing 6.
+
+When an adventure lists a monster by number (\#01--\#100), find that entry here.
+
+\input{tables/monsters-bestiary}
+
+\clearpage
+\printindex
+
+\end{document}

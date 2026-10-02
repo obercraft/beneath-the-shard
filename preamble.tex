@@ -1,0 +1,178 @@
+% Shared grim-dark hybrid preamble for Beneath The Shard books.
+% Root files set \documentclass, then \input{preamble}.
+
+\usepackage[lining, tabular]{ebgaramond}
+\usepackage[english]{babel}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage[table]{xcolor}
+\usepackage{geometry}
+\usepackage{fontawesome5}
+\usepackage{fontspec}
+\usepackage{imakeidx}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{tabularray}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[automark, headsepline, footsepline]{scrlayer-scrpage}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+
+\definecolor{shardink}{HTML}{1A1614}
+\definecolor{ash}{HTML}{8A8078}
+\definecolor{blood}{HTML}{6B2C2C}
+\definecolor{bone}{HTML}{F5F0E8}
+\definecolor{shardamber}{HTML}{A67C2D}
+
+\color{shardink}
+
+\newfontfamily\TitleFont{Forum-Regular.otf}[
+  BoldFont = Forum-Regular.otf,
+  ItalicFont = Forum-Regular.otf,
+  BoldItalicFont = Forum-Regular.otf
+]
+\newfontfamily\GameSans{DejaVu Sans Condensed}[
+  BoldFont=* Bold,
+  ItalicFont=* Oblique,
+  BoldItalicFont=* Bold Oblique
+]
+
+\setkomafont{section}{\TitleFont\Large\color{shardink}}
+\setkomafont{subsection}{\TitleFont\large\color{shardink}}
+\setkomafont{subsubsection}{\TitleFont\normalsize\color{shardink}}
+\setkomafont{pageheadfoot}{\GameSans\footnotesize\color{ash}}
+\setkomafont{pagenumber}{\GameSans\footnotesize\color{shardink}}
+
+\makeatletter
+\renewcommand{\sectionlinesformat}[4]{%
+  \@hangfrom{\hskip #2#3}{#4}%
+  \Ifstr{#1}{section}{%
+    \par\nobreak
+    \vspace{0.15\baselineskip}%
+    {\color{blood}\noindent\rule{\columnwidth}{0.6pt}}\par
+    \nobreak
+    \vspace{0.35\baselineskip}%
+  }{%
+    \par
+  }%
+}
+\makeatother
+
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+
+\newcommand{\kw}[1]{{\GameSans\bfseries\color{shardink}#1}\index{#1}}
+\newcommand{\game}{{\GameSans\bfseries\color{shardink}Beneath The Shard}}
+\newcommand{\todo}{\textit{todo}}
+\newcommand{\world}{\textit{WORLDNAME}}
+
+\newcommand{\energy}[1]{{\GameSans #1}{\color{shardamber}\faBolt}}
+\newcommand{\easy}{\faDiceOne}
+\newcommand{\medium}{\faDiceFour}
+\newcommand{\hard}{\faDiceSix}
+
+\NewDocumentCommand{\attr}{m G{}}{%
+  \textbf{#1}\IfBlankF{#2}{\,\textsf{#2}}%
+}
+\newcommand{\acheck}[2]{\textbf{#1}{\GameSans #2}}
+
+\NewDocumentCommand{\D}{ m m }{%
+  \IfBlankTF{#1}%
+    {{\GameSans d#2}}%
+    {{\GameSans #1d#2}}%
+}
+
+\newcommand{\dper}{\D{}{100}}
+
+\newcommand{\bookhead}{\game}
+\clearpairofpagestyles
+\ihead{\bookhead}
+\ohead{\headmark}
+\cfoot{\pagemark}
+\setkomafont{headsepline}{\color{blood}}
+\setkomafont{footsepline}{\color{ash}}
+\KOMAoptions{headsepline=0.4pt, footsepline=0.3pt}
+\pagestyle{scrheadings}
+
+\makeindex[columns=2, title=Index, intoc]
+
+\IfFileExists{DpolySixSider-jqRO.ttf}{%
+  \newfontfamily\dsix{DpolySixSider-jqRO.ttf}%
+}{%
+  \newcommand{\dsix}{\sffamily}%
+}
+
+\tcbset{
+  shardbox/.style={
+    enhanced,
+    arc=0mm,
+    boxrule=0.8pt,
+    colback=bone,
+    colframe=shardink,
+    colbacktitle=shardink,
+    coltitle=bone,
+    fonttitle=\GameSans\bfseries\small,
+    left=4pt,
+    right=4pt,
+    top=3pt,
+    bottom=3pt,
+    before upper={\justifying\noindent\color{shardink}},
+    breakable
+  },
+  monsterbox/.style={
+    shardbox,
+    colbacktitle=shardink,
+    before skip=0.6em,
+    after skip=0.8em
+  },
+  encounterbox/.style={
+    shardbox,
+    colbacktitle=blood,
+    before skip=0.6em,
+    after skip=0.8em
+  }
+}
+
+\newtcolorbox{rpgbox}[1]{
+  shardbox,
+  title=#1
+}
+
+\newtcolorbox{hazardbox}[1]{
+  shardbox,
+  colframe=blood,
+  colbacktitle=blood,
+  title=#1
+}
+
+\newtcolorbox{monsterentry}[1]{
+  monsterbox,
+  title=#1
+}
+
+\newtcolorbox{encounterentry}[1]{
+  encounterbox,
+  title=#1
+}
+
+\newenvironment{rpgboxb}[1]{\begin{rpgbox}{#1}}{\end{rpgbox}}
+
+\newcommand{\shardheadercell}[1]{%
+  \cellcolor{shardink}{\color{bone}\GameSans\bfseries\small #1}%
+}
+
+\newcommand{\shardmark}[1][2.2cm]{%
+  \begin{tikzpicture}[baseline=(current bounding box.center)]
+    \fill[shardink]
+      (0,0.55*#1) -- (0.22*#1,0.18*#1) -- (0.12*#1,-0.55*#1)
+      -- (-0.18*#1,-0.35*#1) -- (-0.28*#1,0.05*#1) -- cycle;
+    \fill[blood]
+      (0,0.55*#1) -- (0.22*#1,0.18*#1) -- (0.05*#1,0.05*#1) -- cycle;
+    \fill[shardamber!80!shardink]
+      (-0.08*#1,0.15*#1) -- (0.05*#1,0.05*#1) -- (-0.02*#1,-0.2*#1)
+      -- (-0.18*#1,-0.1*#1) -- cycle;
+    \draw[bone, line width=0.4pt]
+      (0,0.55*#1) -- (0.22*#1,0.18*#1) -- (0.12*#1,-0.55*#1)
+      -- (-0.18*#1,-0.35*#1) -- (-0.28*#1,0.05*#1) -- cycle;
+  \end{tikzpicture}%
+}

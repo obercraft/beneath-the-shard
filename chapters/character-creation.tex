@@ -1,13 +1,27 @@
 \section{Character Creation}
 
 In \game{} you play a party of three characters. Each character is created based on an \kw{archetype}.
-The three archetypes are:
+All characters also share the Basic Actions listed in Combat. The three archetypes are:
 
 \begin{itemize}
-    \item \textbf{Warrior:} \todo{}
-    \item \textbf{Rogue:} \todo{}
-    \item \textbf{Mage:} \todo{}
+    \item \textbf{Warrior:} Front-line steel and grit. Holds ground when the Shard-dark presses in.
+    \begin{itemize}
+        \item \kw{Cleave} --- \hard{} \hard{}: Deal 1 hit to up to two foes in your zone.
+        \item \kw{Hold the Line} --- \medium{} \energy{1}: You and one ally in your zone each \kw{Guard} (ignore the first hit).
+    \end{itemize}
+    \item \textbf{Rogue:} Fast blades and cruel timing. Strikes, then vanishes into another zone.
+    \begin{itemize}
+        \item \kw{Skirmish} --- \medium{} \energy{1}: Deal 1 hit to a foe in your zone, then \kw{Move} to an adjacent zone.
+        \item \kw{Exploit} --- \hard{} \hard{}: Deal 2 hits to one foe in your zone that was already hit this round.
+    \end{itemize}
+    \item \textbf{Mage:} Shard-touched will. Channels Aether-Glass into bolts and wards.
+    \begin{itemize}
+        \item \kw{Arc Bolt} --- \medium{} \energy{1}: Deal 1 hit to a foe in your zone or an adjacent zone.
+        \item \kw{Ward} --- \easy: One ally in your zone gains \kw{Guard} (ignore the first hit).
+    \end{itemize}
 \end{itemize}
+
+Then choose one \kw{class} under your archetype (see Classes). You begin at level 1: pick one of that level's five special actions. Each time you level up, pick one special action from the new level's list of five.
 
 \subsection{Attributes}
 
@@ -22,36 +36,26 @@ Each character has six attributes:
 \end{itemize}
 
 \subsection{Attribute Value}
-Each attribute has an \kw{Attribute Value} ranging from 0 to 100. 
+Each attribute has an \kw{Attribute Value} ranging from 0 to 100.
 
-Roll 6 times for each 
+Roll 6 times for each
 of your character's attributes on the following table with \D{3}{6}
 
 \begin{table}[htbp]
-  \centering % Centers the entire table on the page
+  \centering
   \caption{Determine Attribute Values}
-  \label{tab:attribute_values} % MUST come after or inside \caption
-\renewcommand{\arraystretch}{1.3}
-\begin{tabular}{|c|c|}
-    \hline
-    \textbf{3d6} & \textbf{Attribute Value} \\
-    \hline
-    2 -- 4   &  20 \\
-    \hline                    
-    5 -- 6   & 30 \\
-    \hline                
-    7 -- 8   &  40 \\
-    \hline             
-    9 -- 10  &  50 \\
-    \hline         
-    11 -- 12 &  55 \\
-    \hline        
-    13 -- 14 &  60 \\
-    \hline    
-    15 -- 16 &  65 \\
-    \hline
-    17 -- 18 &  70 \\
-    \hline
+  \label{tab:attribute_values}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{cc}
+  \shardheadercell{3d6} & \shardheadercell{Attribute Value} \\
+  \rowcolor{bone} 2 -- 4   & 20 \\
+  \rowcolor{ash!15} 5 -- 6   & 30 \\
+  \rowcolor{bone} 7 -- 8   & 40 \\
+  \rowcolor{ash!15} 9 -- 10  & 50 \\
+  \rowcolor{bone} 11 -- 12 & 55 \\
+  \rowcolor{ash!15} 13 -- 14 & 60 \\
+  \rowcolor{bone} 15 -- 16 & 65 \\
+  \rowcolor{ash!15} 17 -- 18 & 70 \\
 \end{tabular}
 \end{table}
 
@@ -62,15 +66,15 @@ If a character's \attr{STR} is 75, its rank is 7
 
 \subsection{Attribute Check}
 
-Sometimes the game asks you to perform an attribute check. Then you need to roll 
+Sometimes the game asks you to perform an attribute check. Then you need to roll
 d100 equal or below your attribute value.
 
-\begin{rpgboxb}{Attribute Check Example}
+\begin{rpgbox}{Attribute Check Example}
     \textit{Check \acheck{DEX}{+10}:} you need add 10 to your \attr{DEX} attribute
     and roll d100 equal or below it.
 
     If a character has \attr{DEX}{60} he needs to roll 70 or less on a \dper
-\end{rpgboxb}
+\end{rpgbox}
 
 \subsubsection{Critical Hit}
 If you roll doubles, eg. both dice show the same number on a \dper{} and the roll is equal or below attribute value,

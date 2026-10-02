@@ -1,0 +1,166 @@
+\section{Campaign}
+
+Terramyr campaigns follow the three lore phases---\textbf{Delve and Harvest}, \textbf{Survive the Resonance}, and \textbf{Seal the Breach}---as a repeating expedition loop between the surface and the Star-Grave.
+First-time players should run the companion adventure \textbf{The Ledger Gate} (\texttt{adventure.pdf}) once before improvising full campaigns.
+
+\subsection{Expedition Loop}
+
+Run each expedition in this order:
+
+\begin{enumerate}
+    \item \textbf{Setup (once):} Roll a Party Motivation (Campaign Setup table). Build three characters (archetype $\rightarrow$ class $\rightarrow$ level~1 special action). Note starting Debt or Favor implied by the Motivation.
+    \item \textbf{Choose a Gate:} Pick or roll a Surface Region (below). Set a \kw{Journey Clock} (usually 4--6 boxes).
+    \item \textbf{Travel:} On each clock tick, resolve a non-combat encounter from the companion volume \textbf{Journey Encounters} (\texttt{encounters.pdf})---roll \D{}{100} or pick by mechanic band. Update Resonance Stress and Debt/Favor as directed.
+    \item \textbf{Camp:} Before the Gate, use Campfire Counsel---assign party dice to Heal, Repair, Scout, Bargain, and Lore.
+    \item \textbf{Omen:} At the Gate, roll or choose a Shard-Gate Omen. Apply its twist for the whole delve.
+    \item \textbf{Delve:} Explore 3--7 chambers (Chamber Themes below). A chamber may be a hazard, a choice, or a combat encounter built with the Threat Budget.
+    \item \textbf{Harvest:} Taking Aether-Glass raises Resonance Stress. Selling or spending crystals feeds Debt, Favor, and gear.
+    \item \textbf{Return or deepen:} Clear shallow Gates for gear and levels; push mid and deep Gates toward the Prismatic Heart.
+    \item \textbf{Finale:} Face Heart-tier horrors. Stress and Debt come due. Seal or destroy the Heart---or fail.
+\end{enumerate}
+
+\subsection{Campaign Length}
+
+\begin{itemize}
+    \item \textbf{Short campaign:} 6 Gates (2 shallow, 2 mid, 2 deep), then the Prismatic Heart.
+    \item \textbf{Long campaign:} 10 Gates across more regions, allowing characters to approach level~10 before the Heart.
+\end{itemize}
+
+\textbf{Victory:} Stabilize or destroy the Prismatic Heart.\\
+\textbf{Failure:} Resonance Stress maxes into thralldom, Debt foreclosure ends the party, or the World Crack Clock fills and the finale begins whether you are ready or not.
+
+\subsection{Leveling}
+
+When you \textbf{clear a Gate tier} (complete the delve and return, or secure the Gate as the adventure requires), each surviving character \kw{level up}s by one level: choose one special action from that class level's list of five.
+
+Optional: also level when a Motivation beat resolves in a major way (GM/solo judgment). Characters who fall may be replaced; see Legacy under future Bond rules---for now, build a new companion at the party's lowest level.
+
+\subsection{Threat Budget}
+
+Build combat encounters with Threat Points. Spend points on monsters from the companion volume \textbf{Bestiary} (\texttt{bestiary.pdf}), entries \#01--\#100:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lc}
+  \shardheadercell{Tier} & \shardheadercell{Cost} \\
+  \rowcolor{bone} Minion (\#01--40) & 1 each \\
+  \rowcolor{ash!15} Brute (\#41--75) & 3 each \\
+  \rowcolor{bone} Elite (\#76--95) & 6 each \\
+  \rowcolor{ash!15} Horror (\#96--100) & 12 each \\
+\end{tabular}
+\end{center}
+
+\vspace{2mm}
+Suggested budgets: \textbf{shallow} 4--6 points, \textbf{mid} 8--12, \textbf{deep} 14--18, \textbf{Heart} 24+.
+Use the highest Threat die among monsters as the encounter Initiative die.
+
+\paragraph{Sample fights.}
+\begin{itemize}
+    \item \textbf{Shallow nest (5 pts):} Vein Tick (\#01), Ash Rat (\#02), Ash Rat (\#02), Glass Mite (\#03), Cave Urchin (\#04). Lead Threat d6.
+    \item \textbf{Guild roadblock (6 pts):} Debt Thug (\#17) $\times$3, Debt Collector (\#56). Threat d8 from the Collector.
+    \item \textbf{Vein ambush (9 pts):} Shard Brute (\#41), Crystal Hound Alpha (\#43), Resonance Spawn (\#50).
+    \item \textbf{Deep gate (18 pts):} Shard Captain (\#76), Gatecutter Assassin (\#82), Static Rain Elemental (\#92).
+    \item \textbf{Heart approach (12--14 pts):} Prismatic Heart Guardian (\#96) alone, or Nameless from Aethelgard (\#97) plus two Glass Mites (\#03).
+\end{itemize}
+
+\subsection{Surface Regions}
+
+When you need a destination, choose or roll \D{1}{8}:
+
+\begin{center}
+{\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\linewidth}{c l c c >{\raggedright\arraybackslash}X}
+  \shardheadercell{d8} & \shardheadercell{Region} & \shardheadercell{Gate} & \shardheadercell{Clock} & \shardheadercell{Notes} \\
+  \rowcolor{bone} 1 & Guild Marches & Shallow & 4 & Debt collectors, thugs; Favor with Crown helps. \\
+  \rowcolor{ash!15} 2 & Ash Frontier & Shallow & 5 & Ember beasts, ash storms; Stress from heat. \\
+  \rowcolor{bone} 3 & Salt Quarantine & Shallow/Mid & 5 & Plague banners, forgeries, blindfish walkers. \\
+  \rowcolor{ash!15} 4 & Vein Wastes & Mid & 6 & Resonance spawn, crystal hounds; Stress rises fast. \\
+  \rowcolor{bone} 5 & Crown Scar Road & Mid & 5 & Knights, bailiffs, political Debt/Favor. \\
+  \rowcolor{ash!15} 6 & Cult Lacunae & Mid/Deep & 6 & Hierophants, omens stronger; ignore at peril. \\
+  \rowcolor{bone} 7 & Black Gate Reach & Deep & 6 & Elites, gate enforcers; World Crack ticks on failure. \\
+  \rowcolor{ash!15} 8 & Star-Grave Lip & Deep & 4 & Short clock, brutal delves; horrors possible. \\
+\end{tabularx}
+}
+\end{center}
+
+\subsection{Chamber Themes}
+
+For each delve chamber, roll \D{1}{20} (or pick):
+
+\begin{center}
+{\small
+\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\linewidth}{c l >{\raggedright\arraybackslash}X}
+  \shardheadercell{d20} & \shardheadercell{Theme} & \shardheadercell{Prompt} \\
+  \rowcolor{bone} 1 & Crystal Vein & Harvest raw glass (+Stress) or leave it quiet. \\
+  \rowcolor{ash!15} 2 & Collapse & Journey-style hazard; Medium to pass or take 1 hit. \\
+  \rowcolor{bone} 3 & Nest & Combat: spend shallow/mid Threat Budget on Swarm/Front. \\
+  \rowcolor{ash!15} 4 & Shrine & Omen echo; obey for a free Guard or defy for loot +Stress. \\
+  \rowcolor{bone} 5 & Vault Door & Hard Hard to crack; refined glass or Favor token inside. \\
+  \rowcolor{ash!15} 6 & Flooded Shaft & Move costs Medium; Drown risk (1 hit) on failure. \\
+  \rowcolor{bone} 7 & Guild Cache & Bargain or steal; Debt if witnessed. \\
+  \rowcolor{ash!15} 8 & Echo Hall & Non-combat Resonance event; or fight an Echo Sprig. \\
+  \rowcolor{bone} 9 & Bone Gallery & Combat: Wights/undead band. \\
+  \rowcolor{ash!15} 10 & Glass Market & Silent stalls; buy memories (loot) or smash (combat). \\
+  \rowcolor{bone} 11 & Chokepoint & Ideal Tunnel Knight fight; Front Deploy only. \\
+  \rowcolor{ash!15} 12 & Cult Circle & Mid Threat + Stress; leave offering to skip fight. \\
+  \rowcolor{bone} 13 & False Gate & Roll an extra Omen; wrong exit costs Clock +1 later. \\
+  \rowcolor{ash!15} 14 & Aether Forge & Repair gear free once; +1 Stress from fumes. \\
+  \rowcolor{bone} 15 & Prison Cage & Free a captive (Favor) or leave them (Debt later). \\
+  \rowcolor{ash!15} 16 & Predator Den & Brute-focused combat. \\
+  \rowcolor{bone} 17 & Static Field & Metal armor: 1 hit unless Guard; Static Rain vibe. \\
+  \rowcolor{ash!15} 18 & Relic Tombs & Relic loot; elite guard possible. \\
+  \rowcolor{bone} 19 & Vertical Drop & Move between ``levels'' counts as two zones. \\
+  \rowcolor{ash!15} 20 & Heart Whisper & Deep only: preview finale; World Crack +1 if you flee the delve. \\
+\end{tabularx}
+}
+\end{center}
+
+\subsection{Aether-Glass Economy}
+
+Crystals come in three grades:
+
+\begin{itemize}
+    \item \textbf{Raw:} Harvested in veins. Recharge 1 party Energy once, then gone. Mark $+1$ Resonance Stress when used or carried out of a Gate.
+    \item \textbf{Refined:} Sold for Favor, used to bribe (clear 1 Debt pressure), or to power a gear mod for one expedition. $+1$ Stress when spent.
+    \item \textbf{Prismatic:} Rare deep loot. Permanent relic fuel or Heart-key material. $+2$ Stress when bound to a character.
+\end{itemize}
+
+You may dump crystals before exiting to reduce Stress at the cost of wealth and Motivation progress.
+
+\subsection{Corruption Mutations}
+
+Keep a Resonance Stress track (party or per character; default party track of 6 boxes). When the track \textbf{fills}, clear it and roll \D{1}{10} for a permanent mutation:
+
+\begin{center}
+{\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\linewidth}{c l >{\raggedright\arraybackslash}X}
+  \shardheadercell{d10} & \shardheadercell{Mutation} & \shardheadercell{Effect} \\
+  \rowcolor{bone} 1 & Glass Freckles & Cosmetic. Townsfolk shun; Bargain at $-1$ face once per town. \\
+  \rowcolor{ash!15} 2 & Vein Glow & Ignore darkness; Swarm foes prefer you as target. \\
+  \rowcolor{bone} 3 & Static Hair & Free Easy once per fight that deals 1 hit to a metal-clad foe in your zone; take 1 hit on a 1. \\
+  \rowcolor{ash!15} 4 & Echo Speech & Aid without energy once per camp; cannot surprise foes. \\
+  \rowcolor{bone} 5 & Shard Nail & Strike ignores Guard once per fight; cannot wear fine gloves/relic rings. \\
+  \rowcolor{ash!15} 6 & Hollow Appetite & Rations heal only at camp if you also take $+1$ Stress. \\
+  \rowcolor{bone} 7 & Crystal Rash & $-1$ CHA/Bargain; $+1$ hit on your first Strike each fight. \\
+  \rowcolor{ash!15} 8 & Twin Pulse & Share Guard with an ally in your zone once per fight; both Marked for hazards. \\
+  \rowcolor{bone} 9 & Glass Hunger & Must spend or destroy 1 Raw/Refined each Gate or take 2 hits entering. \\
+  \rowcolor{ash!15} 10 & Thrall Crack & Next Stress fill: character becomes an enemy elite under GM control unless Favor burns the corruption. \\
+\end{tabularx}
+}
+\end{center}
+
+\subsection{World Crack Clock}
+
+Start a campaign clock with \textbf{8 boxes}. Advance it when:
+
+\begin{itemize}
+    \item You fail or abandon a \textbf{deep} Gate ( $+1$ ).
+    \item You ignore a Heart Whisper chamber or a finale Omen ( $+1$ ).
+    \item A horror escapes the delve onto the surface ( $+1$ ).
+    \item Motivation demands delay while the Shard grows (adventure triggers).
+\end{itemize}
+
+When the clock \textbf{fills}, begin the Prismatic Heart finale immediately---travel clocks compress to 2, Omens are mandatory, and Threat Budgets use deep/Heart values. Clearing shallow Gates does not reduce the clock; only sealing/destroying the Heart ends it.

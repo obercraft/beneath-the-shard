@@ -1,106 +1,29 @@
-\documentclass[10pt,a4paper,titlepage,twocolumn]{scrartcl} % Professionelle KOMA-Klasse
-% \usepackage{tgpagella}
+\documentclass[10pt,a4paper,titlepage,twocolumn]{scrartcl}
+\input{preamble}
 
-\usepackage[lining, tabular]{ebgaramond}
-% \usepackage{baskervald}
-% \usepackage{tgbonum}
-% \usepackage{XCharter} % Setzt XCharter als Hauptschrift
-% \usepackage[utf8]{inputenc}
-% \usepackage[T1]{fontenc}
-% \usepackage{ebgaramond}
-% \usepackage{fbb}
-\usepackage[english]{babel}
-\usepackage{longtable} 
-\usepackage{booktabs}   
-\usepackage[table]{xcolor}
-\usepackage{geometry}
-\usepackage{fontawesome5}
-\usepackage{tcolorbox} % Für minimalistische, schicke RPG-Rahmen und Boxen
-\usepackage{fontspec}
-\usepackage{imakeidx}
-\usepackage{tabularx}
-\usepackage{ragged2e}
-\usepackage{tabularray}
-\usepackage{lipsum} 
-
-% \setmainfont{Cormorant Garamond}
-
-% \renewcommand{\rmdefault}{CormorantGaramond-LF} % LF steht für Lining Figures (Standard-Ziffern)
-% \normalfont % Aktiviert die Änderung für das gesamte Dokument
-
-\makeindex[columns=2, title=Index, intoc] 
-
-% \setmainfont{TeX Gyre Pagella}
-\newfontfamily\dsix{DpolySixSider-jqRO.ttf}
-
-% Seitenränder perfekt für ein ausgedrucktes RPG-Heft einstellen
-\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
-
-% Eine eigene, schlichte Box für RPG-Hinweise definieren (Schwarz/Weiß-Stil)
-\newtcolorbox{rpgbox}[1]{
-  colback=white, 
-  colframe=black, 
-  fonttitle=\bfseries, 
-  title=#1, 
-  arc=0mm, % Eckige Kanten für Retro-Look
-  boxrule=1pt
-}
-
-% Eine eigene, schlichte Box für RPG-Hinweise definieren (Schwarz/Weiß-Stil)
-\newtcolorbox{rpgboxb}[1]{
-  colback=white, 
-  colframe=black, 
-  fonttitle=\bfseries, 
-  title=#1, 
-  arc=0mm,          % Eckige Kanten
-  boxrule=1pt,
-  % --- HIER IST DER FIX FÜR DEN BLOCKSATZ ---
-  before upper={\justifying\noindent} % Erzwingt echten Blocksatz ab dem ersten Wort
-}
-
-
-\newcommand{\kw}[1]{\textsf{\textbf{#1}}\index{#1}}
-\newcommand{\game}{\textsf{\textbf{Beneath The Shard}}}
-\newcommand{\todo}{\textit{todo}}
-\newcommand{\world}{\textit{WORLDNAME}}
-
-\newcommand{\energy}[1]{\textsf{#1}\faBolt}
-\newcommand{\easy}{\faDiceOne}
-\newcommand{\medium}{\faDiceFour}
-\newcommand{\hard}{\faDiceSix}
-\newcommand{\attr}[1]{\textbf{#1}}
-\newcommand{\acheck}[2]{\textbf{#1}\textsf{#2}}
-
-% O{} -> 1. Argument ist optional, Standardwert ist komplett leer
-% m   -> 2. Argument ist obligatorisch (Pflichtfeld)
-\NewDocumentCommand{\D}{ m m }{%
-  \IfBlankTF{#1}%
-    {\textsf{d#2}}% Wenn Parameter 1 leer ist, zeige nur z.B. "d6"
-    {\textsf{#1d#2}}% Wenn Parameter 1 da ist, zeige z.B. "3d6"
-}
-
-\newcommand{\dper}{\D{}{100}}
-
-% ==========================================
-% TITELBLATT CONFIGURATION (Manuell & Unabhängig)
-% ==========================================5
 \begin{document}
 
 \include{chapters/title}
 
 \tableofcontents
 
-\clearpage 
+\clearpage
+
+\include{chapters/lore}
+
+\include{chapters/campaign}
 
 \include{chapters/playing-the-game}
 
+\include{chapters/non-combat}
+
 \include{chapters/character-creation}
+
+\include{chapters/classes}
 
 \include{chapters/combat}
 
-
 \clearpage
-
 
 \printindex
 

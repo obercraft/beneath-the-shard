@@ -13,49 +13,21 @@ First you create a party, then you get on a journey through \world{}. On your yo
 face combat- and non-combat encounters.
 
 \vspace{5mm}
-\renewcommand{\arraystretch}{1.3}
-\begin{tabularx}{\linewidth}{|p{1cm}|X|}
-    \hline
-    \textbf{Symbol} & \textbf{Zweite Spalte} \\
-    \hline
-	\easy & assign one dice showing at least a 1 \\
-    \hline
-    \medium{} \energy{1} & assign one dice showing at least a 4 and pay 1 energy \\
-    \hline
-    \hard{} \hard{} & assign two dice showing a 6 \\    
-    \hline    
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\linewidth}{c >{\raggedright\arraybackslash}X}
+  \shardheadercell{Symbol} & \shardheadercell{Meaning} \\
+  \rowcolor{bone}
+  \easy & assign one dice showing at least a 1 \\
+  \rowcolor{ash!15}
+  \medium{} \energy{1} & assign one dice showing at least a 4 and pay 1 energy \\
+  \rowcolor{bone}
+  \hard{} \hard{} & assign two dice showing a 6 \\
 \end{tabularx}
 
+In combat, roll your party's shared \kw{Dice Pool} at the start of each round and assign the results to meet these thresholds. See Combat for the full procedure.
+
+Between fights, travel and Gate crossings use non-combat beats---see Non-Combat Encounters for the five journey mechanics, then roll \D{}{100} in the companion volume \textbf{Journey Encounters} (\texttt{encounters.pdf}) when the adventure demands it.
 
 \vspace{5mm}
-
-% \begin{table}[htbp]
-%   \centering % Centers the entire table on the page
-%   \caption{This is the title of the table.}
-%   \label{tab:attribute_values} % MUST come after or inside \caption
-% \renewcommand{\arraystretch}{1.3}
-% \begin{tabular}{|c|c|}
-%     \hline
-%     \textbf{3d6} & \textbf{Attribute Value} \\
-%     \hline
-%     \{2 -- 4}   &  \{20} \\
-%     \hline                    
-%     \{5 -- 6}   &  \{30} \\
-%     \hline                
-%     \{7 -- 8}   &  \{40} \\
-%     \hline             
-%     \{9 -- 10}  &  \{50} \\
-%     \hline         
-%     \{11 -- 12} &  \{60} \\
-%     \hline        
-%     \{13 -- 14} &  \{70} \\
-%     \hline    
-%     \{15 -- 16} &  \{80} \\
-%     \hline
-%     \{17 -- 18} &  \{90} \\
-%     \hline
-% \end{tabular}
-% \end{table}
-
 
 \attr{STR}{15}
