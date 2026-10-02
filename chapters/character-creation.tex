@@ -23,67 +23,147 @@ All characters also share the Basic Actions listed in Combat. The three archetyp
 
 Then choose one \kw{class} under your archetype (see Classes). You begin at level 1: pick one of that level's five special actions. Each time you level up, pick one special action from the new level's list of five.
 
+\subsection{Dice Pool and Level}
+
+Every character starts with a combat \kw{Dice Pool} of \D{2}{6}. The pool grows by one die at \textbf{level 3}, \textbf{level 6}, and \textbf{level 9} (\D{3}{6}, \D{4}{6}, \D{5}{6}). A bigger pool means more dice to assign in a round and, from level 3 on, access to \textbf{power actions} that need three or four dice from one character: Grand \grand{} at level 3+, Dire \dire{} at level 6+, Fell \fell{} at level 9+. The class lists only offer those actions at the levels that can use them.
+
+\subsection{Starting Kit}
+
+Each character begins with one \textbf{weapon} of their choice, \textbf{Light armor}, and \textbf{one gear item} from the Equipment chapter. One character may take a Shield instead of the gear item. A Mage also begins with a \textbf{Grimoire} holding two First-Circle spells (see Spells). Everything else is bought with Refined crystals in a Town or taken from the dark.
+
 \subsection{Attributes}
 
-Each character has six attributes:
+Each character has six attributes. In combat they do nothing---the Dice Pool carries the fight. Everywhere else, they are who your character is when the dice stop.
+
 \begin{itemize}
-    \item \textbf{Strength     $\left[\textbf{STR}\right]$:} \todo{}
-    \item \textbf{Dexterity    $\left[\textbf{DEX}\right]$:} \todo{}
-    \item \textbf{Constitution $\left[\textbf{CON}\right]$:} \todo{}
-    \item \textbf{Intelligence $\left[\textbf{INT}\right]$:} \todo{}
-    \item \textbf{Wisdom       $\left[\textbf{WIS}\right]$:} \todo{}
-    \item \textbf{Charisma     $\left[\textbf{CHA}\right]$:} \todo{}
+    \item \textbf{Strength $\left[\textbf{STR}\right]$:} Hauling sleds, fording black water, forcing doors, holding a beam while the others crawl under.
+    \item \textbf{Dexterity $\left[\textbf{DEX}\right]$:} Sneaking past tolls, picking Guild locks, scouting ahead, mending straps and tools by lamplight.
+    \item \textbf{Constitution $\left[\textbf{CON}\right]$:} Marching on a filled clock, breathing ash, resisting plague banners. CON sets your \kw{Hits}.
+    \item \textbf{Intelligence $\left[\textbf{INT}\right]$:} Reading pre-Cataclysm script, forging papers, recalling what a Gate did to the last expedition.
+    \item \textbf{Wisdom $\left[\textbf{WIS}\right]$:} Noticing the rotated milestone, reading Omens in coals, tending wounds without making them worse.
+    \item \textbf{Charisma $\left[\textbf{CHA}\right]$:} Bargaining with factors, bribing ferrymen, talking a collector into one more week.
 \end{itemize}
 
 \subsection{Attribute Value}
 Each attribute has an \kw{Attribute Value} ranging from 0 to 100.
 
-Roll 6 times for each
-of your character's attributes on the following table with \D{3}{6}
+Roll \D{3}{6} once for each of the six attributes and read the value from the table.
 
 \begin{table}[htbp]
   \centering
   \caption{Determine Attribute Values}
   \label{tab:attribute_values}
 \renewcommand{\arraystretch}{1.25}
-\begin{tabular}{cc}
-  \shardheadercell{3d6} & \shardheadercell{Attribute Value} \\
-  \rowcolor{bone} 2 -- 4   & 20 \\
-  \rowcolor{ash!15} 5 -- 6   & 30 \\
-  \rowcolor{bone} 7 -- 8   & 40 \\
-  \rowcolor{ash!15} 9 -- 10  & 50 \\
-  \rowcolor{bone} 11 -- 12 & 55 \\
-  \rowcolor{ash!15} 13 -- 14 & 60 \\
-  \rowcolor{bone} 15 -- 16 & 65 \\
-  \rowcolor{ash!15} 17 -- 18 & 70 \\
+\begin{tabular}{ccc}
+  \shardheadercell{3d6} & \shardheadercell{Attribute Value} & \shardheadercell{Dice} \\
+  \rowcolor{bone} 3 -- 4   & 20 & 1 \\
+  \rowcolor{ash!15} 5 -- 6   & 30 & 2 \\
+  \rowcolor{bone} 7 -- 8   & 40 & 2 \\
+  \rowcolor{ash!15} 9 -- 10  & 50 & 3 \\
+  \rowcolor{bone} 11 -- 12 & 55 & 3 \\
+  \rowcolor{ash!15} 13 -- 14 & 60 & 3 \\
+  \rowcolor{bone} 15 -- 16 & 65 & 3 \\
+  \rowcolor{ash!15} 17 -- 18 & 70 & 4 \\
 \end{tabular}
 \end{table}
 
-\subsection{Attribute Rank}
+After rolling, you may swap the values of any two attributes once, so the Warrior is not the party's only scholar by accident.
+
+\subsection{Attribute Rank and Dice}
 
 The \kw{Attribute Rank} of an attribute is its value divided by 10, rounded down.
-If a character's \attr{STR} is 75, its rank is 7
+If a character's \attr{STR} is 75, its rank is 7.
+
+Each attribute also gives a number of \kw{Attribute Dice}: half the Rank, rounded up, to a maximum of 4.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lc}
+  \shardheadercell{Value} & \shardheadercell{Dice} \\
+  \rowcolor{bone} 20 -- 29 & 1 \\
+  \rowcolor{ash!15} 30 -- 49 & 2 \\
+  \rowcolor{bone} 50 -- 69 & 3 \\
+  \rowcolor{ash!15} 70 -- 80 & 4 \\
+\end{tabular}
+\end{center}
+
+Each time a character \kw{level up}s, add $+10$ to one of their attributes (maximum 80). Write the dice next to the value on the party sheet; they are what you roll on the road.
+
+\subsection{Hits}
+
+A character's maximum \kw{Hits} are $3 + \lfloor \textrm{CON Rank} / 2 \rfloor$. A CON of 20 gives 4 Hits; 50 gives 5; 70 gives 6. Each \kw{Scar} earned by going Down in a fight lowers the maximum by 1, never below 3. Hits are tracked on the party sheet and heal only through Campfire Counsel, class actions, or encounter rewards.
 
 \subsection{Attribute Check}
 
-Sometimes the game asks you to perform an attribute check. Then you need to roll
-d100 equal or below your attribute value.
+Outside combat the game asks for \kw{Attribute Check}s. One character attempts the check: roll their \kw{Attribute Dice} for the fitting attribute and count every die showing \textbf{4 or more} as a \kw{success}.
+
+Encounters, Omens, and Campfire Counsel name their difficulty with the same words as combat. Outside combat those words are the successes you need:
+
+\begin{center}
+{\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\linewidth}{l c >{\raggedright\arraybackslash}X}
+  \shardheadercell{Difficulty} & \shardheadercell{Successes} & \shardheadercell{Example} \\
+  \rowcolor{bone} Easy & 1 & Notice a leaning milestone \\
+  \rowcolor{ash!15} Medium & 2 & Sneak past a mercenary toll \\
+  \rowcolor{bone} Hard (``Hard Hard'') & 3 & Forge quarantine papers \\
+\end{tabularx}
+}
+\end{center}
+
+\begin{itemize}
+    \item \textbf{Easy floor:} an Easy check always rolls at least 2 dice, even for an attribute with only 1 die.
+    \item \kw{Aid}\textbf{:} before the roll, each other standing character may spend \energy{1} from the party track to add 1 die to the pool. Each may Aid once; their own attributes do not matter.
+    \item \textbf{Energy in the text:} a check written ``Medium + Energy'' costs that Energy on top of any Aid, spent before rolling.
+    \item \kw{Exhausted} removes 1 die from the pool; a \kw{Down} character can neither attempt nor Aid.
+\end{itemize}
+
+\paragraph{Which attribute?}
+If the text names an attribute, use it. If it only describes the task, pick from this table; if two fit, use the higher.
+
+\begin{center}
+{\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\linewidth}{l >{\raggedright\arraybackslash}X}
+  \shardheadercell{Attribute} & \shardheadercell{Tasks} \\
+  \rowcolor{bone} STR & climb, ford, swim, haul, hold a line, force \\
+  \rowcolor{ash!15} DEX & sneak, scout, pick locks, repair, duel, raft-build \\
+  \rowcolor{bone} CON & march, endure heat or cold, resist plague or fumes, camp cold \\
+  \rowcolor{ash!15} INT & lore, maps, forge papers, read script, appraise glass \\
+  \rowcolor{bone} WIS & notice, insight, heal, read omens or coals, keep watch \\
+  \rowcolor{ash!15} CHA & bargain, bribe, negotiate passage, sing, lead refugees \\
+\end{tabularx}
+}
+\end{center}
 
 \begin{rpgbox}{Attribute Check Example}
-    \textit{Check \acheck{DEX}{+10}:} you need add 10 to your \attr{DEX} attribute
-    and roll d100 equal or below it.
+    \textit{Medium crossing (STR):} your Warrior has \attr{STR}{60}, so 3 dice. You roll $5$, $4$, $2$---two successes. The party crosses.
 
-    If a character has \attr{DEX}{60} he needs to roll 70 or less on a \dper
+    \textit{Easy notice (WIS):} your Mage has \attr{WIS}{40}, so 2 dice. You roll $3$, $1$---no success. The milestone was rotated, and you walk the wrong way.
+
+    \textit{Hard Hard forgery (INT):} the same Mage has \attr{INT}{65}, so 3 dice; alone that is a 1-in-8 chance of three successes. The Warrior and Rogue each spend \energy{1} to Aid, making 5 dice. You roll $6$, $6$, $4$, $3$, $1$---three successes, papers accepted, Energy down by 2.
 \end{rpgbox}
 
-\subsubsection{Critical Hit}
-If you roll doubles, eg. both dice show the same number on a \dper{} and the roll is equal or below attribute value,
-then you score a \kw{Critical Hit}
-
+\subsubsection{Critical Success}
+If you rolled at least 2 dice and \textbf{every} die shows a 6, you score a \kw{Critical Success}. Apply the encounter's success and also \textbf{clear 1 Resonance Stress}, unless the text grants a better bonus.
 
 \subsubsection{Critical Miss}
-A \kw{Critical Miss} works like a Critical Hit, but the \dper{} is above your attribute value.
+If you rolled at least 2 dice and \textbf{every} die shows a 1, it is a \kw{Critical Miss}. Apply the failure and also \textbf{mark $+1$ Resonance Stress}, unless the text names a worse cost.
 
-
+\paragraph{Spending Favor.}
+After rolling, you may burn one Favor mark with any faction to reroll every die that did not show a success; keep the new results. One Favor per check.
 
 \subsection{Party}
+
+Your three characters live on one party sheet (see the last page of this book). Record:
+
+\begin{itemize}
+    \item \textbf{Each character:} name, archetype, class, level, Dice Pool, six attributes, maximum and current Hits, Scars, archetype actions, the one special action learned per level, weapon, off-hand, armor and its boxes, four gear slots, bound relic, and (Mages) known spells.
+    \item \textbf{Energy} (8 boxes), shared by all three.
+    \item \textbf{Resonance Stress} (6 boxes) --- see Non-Combat Encounters and Campaign: Corruption Mutations.
+    \item \textbf{Debt and Favor} marks, one line per faction (Guild, Crown, Cult, Companies, others as they appear).
+    \item \textbf{Journey Clock} for the current road and the \textbf{World Crack Clock} (8 boxes).
+\end{itemize}
+
+\paragraph{Bonds.}
+Name one tie between each pair of characters: a debt, a shared grave, a lie one told the other. Bonds have no rule weight; they are what you read back when a Scar is written down, and they decide who carries whom out of the Gate.

@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-"""Generate tables/monsters.tex — 100 monster stat blocks."""
+"""Generate tables/monsters-bestiary.tex — 100 monster stat blocks."""
 
 from pathlib import Path
 
-# Legacy OUT removed; see OUT_BESTIARY in main generators below.
 
 
 def esc(s: str) -> str:
@@ -160,7 +159,7 @@ MINIONS = [
     ]),
     ("Whisper Moth", "1d6", 1, "Rear", "d6", [
         ("Soft Wing", "E", "Move without triggering entry hits."),
-        ("Steal Word", "M", "Deal 1 hit; cancel one keyword action name this round (GM)."),
+        ("Steal Word", "M", "Deal 1 hit; that character cannot use archetype actions until the next round."),
     ]),
     ("Bone Spur", "2d6", 2, "Mid", "d6", [
         ("Plant", "E", "If it does not Move, gain Guard."),
@@ -376,7 +375,7 @@ BRUTES = [
     ("Grim Bailiff", "3d6", 4, "Front", "d8", [
         ("Serve Writ", "E", "Move into zone with a character who has Debt."),
         ("Mace", "M", "Deal 2 hits."),
-        ("Confiscate", "H", "Deal 1 hit; character cannot use a chosen item/action next round (GM)."),
+        ("Confiscate", "H", "Deal 1 hit; that character loses Guard and cannot Guard next round."),
     ]),
 ]
 
@@ -468,7 +467,7 @@ ELITES = [
     ("Debtknife Captain", "4d6", 6, "Front", "d8", [
         ("Corner Ledger", "E", "Move to character with Debt."),
         ("Collection", "M", "Deal 2 hits."),
-        ("Foreclosure", "H", "Deal 3 hits; seize an item (GM)."),
+        ("Foreclosure", "H", "Deal 3 hits; the party loses 1 Energy."),
         ("Final Notice", "H", "Deal 4 hits to a marked debtor."),
     ]),
     ("Ashblade Zealot", "4d6", 6, "Front", "d8", [
@@ -567,7 +566,6 @@ def all_monsters():
 
 
 OUT_BESTIARY = Path("/home/msachau/shardbound/tables/monsters-bestiary.tex")
-OUT_LEGACY = Path("/home/msachau/shardbound/tables/monsters.tex")
 
 
 def main():
@@ -632,13 +630,6 @@ def main():
     OUT_BESTIARY.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"Wrote {OUT_BESTIARY} with {len(monsters)} monsters")
 
-    legacy = [
-        r"% Legacy compact index --- prefer Bestiary companion book",
-        r"\begin{verbatim}",
-        "See bestiary.pdf / tables/monsters-bestiary.tex",
-        r"\end{verbatim}",
-    ]
-    OUT_LEGACY.write_text("\n".join(legacy) + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":

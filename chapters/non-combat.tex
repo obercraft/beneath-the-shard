@@ -1,19 +1,64 @@
 \section{Non-Combat Encounters}
 
-Between delves and battles, Terramyr still demands a price. Use these five journey mechanics to frame downtime, travel, and Gate crossings.
-When the adventure calls for a non-combat beat---or when a Journey Clock tick, camp, or Gate demands it---roll \D{}{100} and open the matching entry in the companion volume \textbf{Beneath The Shard --- Journey Encounters} (\texttt{encounters.pdf}).
+Between delves and battles, Terramyr still demands a price. Five journey mechanics frame travel, Gate crossings, and camp.
+Whenever a hex entered, a Gate, or a camp calls for a beat, roll \dper{} and open the matching entry in the companion volume \textbf{Beneath The Shard --- Journey Encounters} (\texttt{encounters.pdf}). The entries are grouped by mechanic: 01--20 Journey Clock, 21--40 Resonance Stress, 41--60 Debt \& Favors, 61--80 Shard-Gate Omens, 81--100 Campfire Counsel.
 
-\subsection{Journey Clock}
-Track travel as a shared clock (boxes equal to the route's length). When the clock advances, pressure rises: weather, detours, and exhaustion. Filling the clock means you arrive Late, Lost, or Exhausted (GM picks one: start next fight with $-1$ party die, or roll an extra encounter).
+Every check outside combat is an \kw{Attribute Check} (Character Creation): one character rolls their Attribute Dice for the fitting attribute and counts 4+ as successes---Easy needs 1, Medium 2, Hard Hard 3. Companions may Aid with \energy{1} per extra die, spent before the roll.
+
+\subsection{Journey Clock (Supply)}
+Travel is measured in \kw{Supply}: six boxes filled in a Town, one spent for every hex entered on the Map of Terramyr (Campaign: Hexploration) and one for every Camp. Each hex entered also draws one encounter. The Supply track \textbf{is} the Journey Clock the encounters speak of: ``clock $+1$'' means spend one more Supply, ``clock $-1$'' means regain one.
+
+When Supply is \textbf{empty}, every further hex costs one price of your choice:
+
+\begin{itemize}
+    \item \textbf{Late:} roll the next Gate Omen twice and apply both.
+    \item \textbf{Lost:} resolve one extra encounter in this hex.
+    \item \textbf{Exhausted:} the party rolls $-1$ die in its next fight.
+\end{itemize}
+
+Each such hex also marks $+1$ Resonance Stress. Camps and Towns refill Supply (Campaign: Hexploration).
 
 \subsection{Resonance Stress}
-Handling Aether-Glass fills a party or personal Stress track. High Stress twists body and mind. Reduce Stress mainly through Campfire Counsel, destroying crystal, or paying rare costs listed in encounters.
+Handling Aether-Glass fills the party's \kw{Resonance Stress} track of \textbf{6} boxes. Harvesting, carrying, and spending crystal marks Stress (Campaign: Aether-Glass Economy); so do Critical Misses and many encounters.
+When the track fills, clear it and roll on the Corruption Mutations table in Campaign.
+Reduce Stress through Campfire Counsel (Lore), Critical Successes, destroying crystal, and the rare costs listed in encounters.
 
 \subsection{Debt \& Favors}
-Marks track what guilds, crowns, cults, and killers owe you---or what you owe them. Spend Favor for aid; ignore Debt and collectors write the next chapter in blood.
+Marks track what factions owe you---or what you owe them. Keep one line per faction: the Mining Guild, the Crown, the Star-Cult, the Free Companies, and whoever else writes your name down.
+
+\paragraph{Debt.}
+\begin{itemize}
+    \item \textbf{3 Debt} with one faction: that faction sends collectors. Your next delve must include a \textbf{Collector chamber} (Threat 6: Debt Thug \#17 $\times$3 and Debt Collector \#56, or a faction-fitting equivalent at the same budget). Winning does not clear the Debt, but they stop coming for one Gate.
+    \item \textbf{5 Debt} with one faction: \textbf{foreclosure}. The campaign ends in failure unless a Motivation beat explicitly offers another way out.
+\end{itemize}
+
+\paragraph{Favor.}
+Burn one Favor mark with a faction to do one of the following:
+\begin{itemize}
+    \item Reroll every failed die of one Attribute Check (after seeing the roll).
+    \item Pass one toll, checkpoint, or encounter involving that faction without resolving it.
+    \item Clear 1 Debt with the \textbf{same} faction.
+\end{itemize}
 
 \subsection{Shard-Gate Omens}
-Before each Gate, roll or draw an omen. Omens twist the coming delve's rules (zones, Guards, who is Marked). Heeding an omen often costs Stress or gear; ignoring it invites worse timing in combat.
+At the Gate, roll \D{1}{20} and apply entry \textbf{60 + result} from Journey Encounters for the whole delve. Omens twist the delve's rules (zones, Guards, who is Marked). Heeding an omen often costs Stress or gear; ignoring it invites worse timing in combat.
+If the Journey Clock filled with \textbf{Late}, roll twice and apply both. A Campfire \textbf{Lore} success lets you see the Omen before you commit.
 
 \subsection{Campfire Counsel}
-Between fights, assign party dice to downtime actions instead of combat: Heal, Repair, Scout, Bargain, and Lore. Success softens clocks, Stress, Debt, and Omens; failure invites the night in.
+Camp in any hex for 1 Supply, and at least once before each Gate (encounters may also grant a free camp). Energy refills to 8. Then choose \textbf{two} Counsel actions; each is attempted by a different character with one Attribute Check.
+
+\begin{center}
+{\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\linewidth}{l l l >{\raggedright\arraybackslash}X}
+  \shardheadercell{Counsel} & \shardheadercell{Attr.} & \shardheadercell{Diff.} & \shardheadercell{Success} \\
+  \rowcolor{bone} Heal & WIS & Medium & Heal 2 Hits on one character. \textit{Crit:} heal every character 2 Hits. \\
+  \rowcolor{ash!15} Repair & DEX & Medium & Restore one lost tool or item, or clear \kw{Exhausted}. \\
+  \rowcolor{bone} Scout & DEX & Easy & Before the first fight of the delve, read its monsters' Deploy tags; once in the delve, choose a Chamber Theme instead of rolling. \textit{Or:} reveal the Feature of one adjacent hex. \\
+  \rowcolor{ash!15} Bargain & CHA & Medium \energy{1} & Clear 1 Debt with a faction present on this road, or gain 1 Favor with them. \\
+  \rowcolor{bone} Lore & INT & Easy & Clear 1 Resonance Stress; \textbf{or} roll the coming Omen now and, if you dislike it, reroll it once; \textbf{or} roll and record the Omen of any known Gate on the map. \\
+\end{tabularx}
+}
+\end{center}
+
+A failed Counsel does nothing; a Critical Miss also wakes the night---roll one Campfire encounter (81--100) and resolve it before dawn.

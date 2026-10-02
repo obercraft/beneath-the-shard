@@ -1,0 +1,71 @@
+\section{Equipment}
+
+Steel, leather, and Aether-Glass keep a party alive between Gates. Every character has four kinds of slot; what fills them is written on the party sheet.
+
+\subsection{Slots}
+
+\begin{itemize}
+    \item \textbf{Weapon (1):} one weapon. A \textbf{2h} weapon also fills the off-hand slot.
+    \item \textbf{Off-hand (1):} shield, buckler, parrying knife, or empty (required empty for 2h weapons).
+    \item \textbf{Armor (1):} none, Light, Medium, or Heavy. Armor boxes absorb hits after Guard (Combat: Defense).
+    \item \textbf{Gear (4):} tools, consumables, and tokens. Each item takes one slot unless the text says otherwise.
+\end{itemize}
+
+\paragraph{Starting kit.}
+As Character Creation: one weapon of your choice, Light armor, and one gear item. One character may take a Shield instead of that gear item. Fists are free: Strike with no weapon deals 1 hit and nothing more.
+
+\subsection{Catalog}
+
+Prices are in \textbf{Refined} crystals. Towns sell the full list; Faction Posts on the map sell \textbf{gear only}.
+
+\input{tables/equipment}
+
+\subsection{Shops and Spoils}
+
+\paragraph{Buying.}
+Pay the listed Refined price in a Town (or gear-only at a Faction Post). You may sell mundane gear back for half price (round down, minimum 0). Relics are never sold in ordinary shops.
+
+\paragraph{Spoils.}
+When you \textbf{seal a Gate} and Return to a Town, the party gains Refined by the Gate's ring, plus any Raw harvested in veins:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lc}
+  \shardheadercell{Gate ring} & \shardheadercell{Refined} \\
+  \rowcolor{bone} E or D (shallow) & 2 \\
+  \rowcolor{ash!15} C (mid) & 4 \\
+  \rowcolor{bone} B (deep) & 6 \\
+  \rowcolor{ash!15} A (Heart) & 8, or a Prismatic crystal on a 4+ on \D{1}{6} \\
+\end{tabular}
+\end{center}
+
+Split loot as you like. Unsealed loot left behind on Retreat or Broken is lost (Campaign / Combat).
+
+\subsection{Relics}
+
+\kw{Relic}s are Shard-touched treasures. They are not shop goods.
+
+\begin{itemize}
+    \item A character may have \textbf{one Relic bound} and \textbf{one Relic carried} (unbound, no benefit).
+    \item \textbf{Binding} costs Resonance Stress by rarity (below). Unbinding in a Town clears the benefit but not Stress already marked.
+    \item Relic effects that grant actions use your Dice Pool and Energy like any other action.
+\end{itemize}
+
+\paragraph{Rarity and bind cost.}
+\begin{center}
+{\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\linewidth}{l c >{\raggedright\arraybackslash}X}
+  \shardheadercell{Rarity} & \shardheadercell{Bind} & \shardheadercell{Typical find} \\
+  \rowcolor{bone} Common & $0$ Stress & Rings E--D; Shrine defy; some journey beats \\
+  \rowcolor{ash!15} Uncommon & $+1$ Stress & Ring C; Vault Door \\
+  \rowcolor{bone} Rare & $+1$ Stress and roll Corruption Mutation (\D{1}{10}) & Ring B; elite vaults \\
+  \rowcolor{ash!15} Prismatic & $+2$ Stress & Star-Grave; bind with a Prismatic crystal \\
+\end{tabularx}
+}
+\end{center}
+
+\paragraph{Finding relics.}
+When a chamber or encounter grants a Relic, roll on the table for the Gate's ring (or the rarity named). On higher tables, high d20 results can step up in rarity.
+
+\input{tables/relics}

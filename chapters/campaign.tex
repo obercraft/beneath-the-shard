@@ -8,22 +8,64 @@ First-time players should run the companion adventure \textbf{The Ledger Gate} (
 Run each expedition in this order:
 
 \begin{enumerate}
-    \item \textbf{Setup (once):} Roll a Party Motivation (Campaign Setup table). Build three characters (archetype $\rightarrow$ class $\rightarrow$ level~1 special action). Note starting Debt or Favor implied by the Motivation.
-    \item \textbf{Choose a Gate:} Pick or roll a Surface Region (below). Set a \kw{Journey Clock} (usually 4--6 boxes).
-    \item \textbf{Travel:} On each clock tick, resolve a non-combat encounter from the companion volume \textbf{Journey Encounters} (\texttt{encounters.pdf})---roll \D{}{100} or pick by mechanic band. Update Resonance Stress and Debt/Favor as directed.
-    \item \textbf{Camp:} Before the Gate, use Campfire Counsel---assign party dice to Heal, Repair, Scout, Bargain, and Lore.
-    \item \textbf{Omen:} At the Gate, roll or choose a Shard-Gate Omen. Apply its twist for the whole delve.
-    \item \textbf{Delve:} Explore 3--7 chambers (Chamber Themes below). A chamber may be a hazard, a choice, or a combat encounter built with the Threat Budget.
+    \item \textbf{Setup (once):} Roll a Party Motivation (Campaign Setup table). Build three characters (archetype $\rightarrow$ class $\rightarrow$ level~1 special action). Note starting Debt or Favor implied by the Motivation. Choose a home Town on the Map of Terramyr (Guild Marches, \textbf{E5}, unless the Motivation says otherwise).
+    \item \textbf{Outfit:} In a Town, set \kw{Supply} to 6 and Energy to 8. Pay any Debt you intend to pay.
+    \item \textbf{Travel:} Move one hex at a time (Hexploration below). Each hex entered costs 1 Supply and triggers one beat from \textbf{Journey Encounters} (\texttt{encounters.pdf}).
+    \item \textbf{Discover:} The first time you enter a hex, roll its Feature. Pencil it onto the map. Gates stay where you find them.
+    \item \textbf{Camp:} Anywhere, for 1 Supply: Energy refills and you take two Campfire Counsel actions. Camp at least once before a Gate.
+    \item \textbf{Omen:} At the Gate, roll a Shard-Gate Omen. Apply its twist for the whole delve.
+    \item \textbf{Delve:} Explore 3--7 chambers (Chamber Themes below). A chamber may be a hazard, a choice, or a combat encounter built with the Threat Budget for the Gate's ring.
     \item \textbf{Harvest:} Taking Aether-Glass raises Resonance Stress. Selling or spending crystals feeds Debt, Favor, and gear.
-    \item \textbf{Return or deepen:} Clear shallow Gates for gear and levels; push mid and deep Gates toward the Prismatic Heart.
-    \item \textbf{Finale:} Face Heart-tier horrors. Stress and Debt come due. Seal or destroy the Heart---or fail.
+    \item \textbf{Return:} Walk back hex by hex to a Town to sell, level up, and refit. A sealed Gate is struck through on the map.
+    \item \textbf{Deepen:} Shallow rings pay for gear and levels; ring \textbf{B} Gates open the way to the Star-Grave.
+    \item \textbf{Finale:} Enter \textbf{A0}. Face Heart-tier horrors. Stress and Debt come due. Seal or destroy the Heart---or fail.
 \end{enumerate}
+
+\subsection{Hexploration}
+
+The Map of Terramyr (next page) has five rings. Ring \textbf{E} is the surface rim with six Towns; \textbf{D} and \textbf{E} hold shallow Gates, \textbf{C} mid Gates, \textbf{B} deep Gates, and \textbf{A0} is the Star-Grave itself. Wedges are the Surface Regions. Movement is always to an adjacent hex.
+
+\paragraph{Entering a hex.}
+\begin{enumerate}
+    \item Mark \textbf{Supply $-1$}. Encounters that say ``clock $+1$'' also mean Supply $-1$; ``clock $-1$'' restores one.
+    \item If the hex is \textbf{unexplored}, roll \D{1}{6} on the Hex Feature table for its ring and write the letter on the map.
+    \item Roll \D{}{100} on Journey Encounters and resolve it. In an \textbf{explored} hex, roll \D{1}{6} first and only draw an encounter on a 1--2.
+    \item Resolve the Feature (visit the camp, bargain at the post, delve the Gate, or move on).
+\end{enumerate}
+
+\paragraph{Hex Features.}
+\begin{center}
+{\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\linewidth}{c c c c c >{\raggedright\arraybackslash}X}
+  \shardheadercell{E} & \shardheadercell{D} & \shardheadercell{C} & \shardheadercell{B} & \shardheadercell{Mark} & \shardheadercell{Feature} \\
+  \rowcolor{bone} 1--2 & 1 & 1 & --- & -- & \textbf{Weather only.} Nothing but the road and the sky. \\
+  \rowcolor{ash!15} 3 & 2 & 2 & 1 & C & \textbf{Camp.} Regain 2 Supply; you may make one Bargain check here. \\
+  \rowcolor{bone} 4 & 3 & 3 & 2 & F & \textbf{Faction Post.} Roll a Debt \& Favors beat (41--60) instead of the usual encounter. \\
+  \rowcolor{ash!15} 5 & 4 & 4 & 3 & R & \textbf{Ruin.} One Chamber Theme as a single chamber; loot as rolled, no Omen needed. \\
+  \rowcolor{bone} 6 & 5 & 5--6 & 4--5 & G & \textbf{Shard-Gate.} Tier by ring. Delve now or later. \\
+  \rowcolor{ash!15} --- & 6 & --- & 6 & H & \textbf{Hazard.} Static field or collapse: each character makes an Easy CON check or takes 1 hit; $+1$ Stress for the party. \\
+\end{tabularx}
+}
+\end{center}
+
+\paragraph{Supply.}
+Supply is the expedition's Journey Clock. At \textbf{0}, every further hex costs one of the clock prices (Late, Lost, or Exhausted---see Non-Combat Encounters) \textbf{and} $+1$ Resonance Stress. Supply refills to 6 in any Town and by 2 at a Camp feature.
+
+\paragraph{Gates.}
+A discovered Gate stays on the map. Delving it needs an Omen and a Campfire first. Once its delve is completed and the party returns to the surface, the Gate is \textbf{sealed}: strike it through; it yields nothing more. If you retreat or are Broken, it stays open with its Omen already rolled.
+
+\paragraph{The Star-Grave.}
+\textbf{A0} cannot be entered until the party has sealed \textbf{two ring-B Gates}---or until the World Crack Clock fills, when A0 opens from any adjacent hex whether you are ready or not. Entering A0 begins the finale (Heart Threat Budget, mandatory Omen).
+
+\paragraph{Counsel on the road.}
+Campfire \textbf{Scout} may instead reveal the Feature of one adjacent hex without entering it. Campfire \textbf{Lore} may instead roll and record the Omen of a known Gate before you travel there.
 
 \subsection{Campaign Length}
 
 \begin{itemize}
-    \item \textbf{Short campaign:} 6 Gates (2 shallow, 2 mid, 2 deep), then the Prismatic Heart.
-    \item \textbf{Long campaign:} 10 Gates across more regions, allowing characters to approach level~10 before the Heart.
+    \item \textbf{Short campaign:} 6 Gates (2 shallow, 2 mid, 2 deep), then the Prismatic Heart. Two sealed ring-B Gates open \textbf{A0}.
+    \item \textbf{Long campaign:} 10 Gates across more wedges, allowing characters to approach level~10 before the Heart.
 \end{itemize}
 
 \textbf{Victory:} Stabilize or destroy the Prismatic Heart.\\
@@ -31,9 +73,9 @@ Run each expedition in this order:
 
 \subsection{Leveling}
 
-When you \textbf{clear a Gate tier} (complete the delve and return, or secure the Gate as the adventure requires), each surviving character \kw{level up}s by one level: choose one special action from that class level's list of five.
+When you \textbf{clear a Gate tier} (complete the delve and return, or secure the Gate as the adventure requires), each surviving character \kw{level up}s by one level: choose one special action from that class level's list of five, and add $+10$ to one attribute (maximum 80; see Character Creation: Attribute Rank and Dice). On reaching \textbf{level 3, 6, and 9} the character's combat Dice Pool grows by one die (\D{3}{6}, \D{4}{6}, \D{5}{6}); a Mage's spell limit grows with level as well (Spells).
 
-Optional: also level when a Motivation beat resolves in a major way (GM/solo judgment). Characters who fall may be replaced; see Legacy under future Bond rules---for now, build a new companion at the party's lowest level.
+Optional: also level when a Motivation beat resolves in a major way (your judgment---once per Gate at most). A character lost to Thrall Crack or left behind in a Broken party may be replaced: build a new companion at the party's lowest level and mark \textbf{Debt +1} with the faction that buried, bought, or freed them.
 
 \subsection{Threat Budget}
 
@@ -65,24 +107,26 @@ Use the highest Threat die among monsters as the encounter Initiative die.
 
 \subsection{Surface Regions}
 
-When you need a destination, choose or roll \D{1}{8}:
+Regions are the wedges of the Map of Terramyr. A hex's wedge colours its encounters; its ring sets the Gate tier.
 
 \begin{center}
 {\small
 \renewcommand{\arraystretch}{1.15}
-\begin{tabularx}{\linewidth}{c l c c >{\raggedright\arraybackslash}X}
-  \shardheadercell{d8} & \shardheadercell{Region} & \shardheadercell{Gate} & \shardheadercell{Clock} & \shardheadercell{Notes} \\
-  \rowcolor{bone} 1 & Guild Marches & Shallow & 4 & Debt collectors, thugs; Favor with Crown helps. \\
-  \rowcolor{ash!15} 2 & Ash Frontier & Shallow & 5 & Ember beasts, ash storms; Stress from heat. \\
-  \rowcolor{bone} 3 & Salt Quarantine & Shallow/Mid & 5 & Plague banners, forgeries, blindfish walkers. \\
-  \rowcolor{ash!15} 4 & Vein Wastes & Mid & 6 & Resonance spawn, crystal hounds; Stress rises fast. \\
-  \rowcolor{bone} 5 & Crown Scar Road & Mid & 5 & Knights, bailiffs, political Debt/Favor. \\
-  \rowcolor{ash!15} 6 & Cult Lacunae & Mid/Deep & 6 & Hierophants, omens stronger; ignore at peril. \\
-  \rowcolor{bone} 7 & Black Gate Reach & Deep & 6 & Elites, gate enforcers; World Crack ticks on failure. \\
-  \rowcolor{ash!15} 8 & Star-Grave Lip & Deep & 4 & Short clock, brutal delves; horrors possible. \\
+\begin{tabularx}{\linewidth}{l c c >{\raggedright\arraybackslash}X}
+  \shardheadercell{Region} & \shardheadercell{Town} & \shardheadercell{Rings} & \shardheadercell{Notes} \\
+  \rowcolor{bone} Guild Marches & E5 & E--C & Debt collectors, thugs; Favor with Crown helps. Faction Posts belong to the Guild. \\
+  \rowcolor{ash!15} Crown Scar Road & E1 & E--C & Knights, bailiffs, political Debt/Favor. Camps here also clear 1 Crown Debt for 1 Refined. \\
+  \rowcolor{bone} Salt Quarantine & E21 & E--C & Plague banners, forgeries, blindfish walkers. Hazards here are plague: CON check or $+1$ Stress instead of a hit. \\
+  \rowcolor{ash!15} Ash Frontier & E17 & E--C & Ember beasts, ash storms. Weather-only hexes still cost $+1$ Supply from heat. \\
+  \rowcolor{bone} Vein Wastes & E13 & E--C & Resonance spawn, crystal hounds. Every Gate delve here adds $+1$ Stress on entry. \\
+  \rowcolor{ash!15} Cult Lacunae & E9 & E--C & Hierophants. Omens here are rolled twice; apply the worse. \\
+  \rowcolor{bone} Black Gate Reach & --- & B & Elites, gate enforcers. Failing or abandoning a Gate here ticks the World Crack. \\
+  \rowcolor{ash!15} Star-Grave & --- & A & The Prismatic Heart. Horrors certain; finale rules apply. \\
 \end{tabularx}
 }
 \end{center}
+
+\textbf{Gate tiers by ring:} E and D shallow (Threat 4--6), C mid (8--12), B deep (14--18), A Heart (24+).
 
 \subsection{Chamber Themes}
 
@@ -96,21 +140,21 @@ For each delve chamber, roll \D{1}{20} (or pick):
   \rowcolor{bone} 1 & Crystal Vein & Harvest raw glass (+Stress) or leave it quiet. \\
   \rowcolor{ash!15} 2 & Collapse & Journey-style hazard; Medium to pass or take 1 hit. \\
   \rowcolor{bone} 3 & Nest & Combat: spend shallow/mid Threat Budget on Swarm/Front. \\
-  \rowcolor{ash!15} 4 & Shrine & Omen echo; obey for a free Guard or defy for loot +Stress. \\
-  \rowcolor{bone} 5 & Vault Door & Hard Hard to crack; refined glass or Favor token inside. \\
+  \rowcolor{ash!15} 4 & Shrine & Omen echo; obey for a free Guard, or defy for $+1$ Stress and one \textbf{Common} Relic (Equipment). \\
+  \rowcolor{bone} 5 & Vault Door & Hard Hard to crack; take an \textbf{Uncommon} Relic \emph{or} 2 Refined. \\
   \rowcolor{ash!15} 6 & Flooded Shaft & Move costs Medium; Drown risk (1 hit) on failure. \\
   \rowcolor{bone} 7 & Guild Cache & Bargain or steal; Debt if witnessed. \\
   \rowcolor{ash!15} 8 & Echo Hall & Non-combat Resonance event; or fight an Echo Sprig. \\
   \rowcolor{bone} 9 & Bone Gallery & Combat: Wights/undead band. \\
-  \rowcolor{ash!15} 10 & Glass Market & Silent stalls; buy memories (loot) or smash (combat). \\
+  \rowcolor{ash!15} 10 & Glass Market & Silent stalls; buy a Grimoire Page (Circle I, 2 Refined) or smash (combat). \\
   \rowcolor{bone} 11 & Chokepoint & Ideal Tunnel Knight fight; Front Deploy only. \\
   \rowcolor{ash!15} 12 & Cult Circle & Mid Threat + Stress; leave offering to skip fight. \\
   \rowcolor{bone} 13 & False Gate & Roll an extra Omen; wrong exit costs Clock +1 later. \\
-  \rowcolor{ash!15} 14 & Aether Forge & Repair gear free once; +1 Stress from fumes. \\
+  \rowcolor{ash!15} 14 & Aether Forge & Repair gear free once; $+1$ Stress from fumes. \\
   \rowcolor{bone} 15 & Prison Cage & Free a captive (Favor) or leave them (Debt later). \\
   \rowcolor{ash!15} 16 & Predator Den & Brute-focused combat. \\
   \rowcolor{bone} 17 & Static Field & Metal armor: 1 hit unless Guard; Static Rain vibe. \\
-  \rowcolor{ash!15} 18 & Relic Tombs & Relic loot; elite guard possible. \\
+  \rowcolor{ash!15} 18 & Relic Tombs & Roll the Relic table for this Gate's ring (Equipment); elite guard possible. A Mage may find a Grimoire Page instead (same Circle as ring: I shallow, II mid, III deep). \\
   \rowcolor{bone} 19 & Vertical Drop & Move between ``levels'' counts as two zones. \\
   \rowcolor{ash!15} 20 & Heart Whisper & Deep only: preview finale; World Crack +1 if you flee the delve. \\
 \end{tabularx}
@@ -123,8 +167,8 @@ Crystals come in three grades:
 
 \begin{itemize}
     \item \textbf{Raw:} Harvested in veins. Recharge 1 party Energy once, then gone. Mark $+1$ Resonance Stress when used or carried out of a Gate.
-    \item \textbf{Refined:} Sold for Favor, used to bribe (clear 1 Debt pressure), or to power a gear mod for one expedition. $+1$ Stress when spent.
-    \item \textbf{Prismatic:} Rare deep loot. Permanent relic fuel or Heart-key material. $+2$ Stress when bound to a character.
+    \item \textbf{Refined:} Buy gear and Grimoire Pages, sell for Favor, bribe (clear 1 Debt pressure), or power a gear mod for one expedition. $+1$ Stress when spent as fuel (not when spent as shop price).
+    \item \textbf{Prismatic:} Rare deep loot. Bind a Prismatic Relic, fuel a Heart-key, or hold for the finale. $+2$ Stress when bound to a character.
 \end{itemize}
 
 You may dump crystals before exiting to reduce Stress at the cost of wealth and Motivation progress.
@@ -147,7 +191,7 @@ Keep a Resonance Stress track (party or per character; default party track of 6 
   \rowcolor{bone} 7 & Crystal Rash & $-1$ CHA/Bargain; $+1$ hit on your first Strike each fight. \\
   \rowcolor{ash!15} 8 & Twin Pulse & Share Guard with an ally in your zone once per fight; both Marked for hazards. \\
   \rowcolor{bone} 9 & Glass Hunger & Must spend or destroy 1 Raw/Refined each Gate or take 2 hits entering. \\
-  \rowcolor{ash!15} 10 & Thrall Crack & Next Stress fill: character becomes an enemy elite under GM control unless Favor burns the corruption. \\
+  \rowcolor{ash!15} 10 & Thrall Crack & Next Stress fill: this character turns. Remove them from the party; they fight you as Shard Captain (\#76) in the next delve unless you burn 2 Favor to purge the corruption first. \\
 \end{tabularx}
 }
 \end{center}
@@ -163,4 +207,4 @@ Start a campaign clock with \textbf{8 boxes}. Advance it when:
     \item Motivation demands delay while the Shard grows (adventure triggers).
 \end{itemize}
 
-When the clock \textbf{fills}, begin the Prismatic Heart finale immediately---travel clocks compress to 2, Omens are mandatory, and Threat Budgets use deep/Heart values. Clearing shallow Gates does not reduce the clock; only sealing/destroying the Heart ends it.
+When the clock \textbf{fills}, begin the Prismatic Heart finale immediately---\textbf{A0} opens from any adjacent hex, Supply cannot be refilled, Omens are mandatory, and Threat Budgets use deep/Heart values. Clearing shallow Gates does not reduce the clock; only sealing/destroying the Heart ends it.

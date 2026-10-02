@@ -1,31 +1,32 @@
 \onecolumn
 \rowcolors{3}{bone}{ash!15}
-\begin{longtable}{lp{10cm}}
+\begin{longtable}{lp{3.2cm}p{9.5cm}}
 \caption{Conditions} \label{tab:conditions} \\
 \toprule
-\shardheadercell{Condition} & \shardheadercell{Effect} \\
+\shardheadercell{Condition} & \shardheadercell{Ends} & \shardheadercell{Effect} \\
 \toprule
 \endfirsthead
 
-\multicolumn{2}{c}{{\bfseries \tablename\ \thetable{} -- Continued from previous page}} \\
+\multicolumn{3}{c}{{\bfseries \tablename\ \thetable{} -- Continued from previous page}} \\
 \midrule
-\shardheadercell{Condition} & \shardheadercell{Effect} \\
+\shardheadercell{Condition} & \shardheadercell{Ends} & \shardheadercell{Effect} \\
 \midrule
 \endhead
 
 \midrule
-\multicolumn{2}{r}{{Continued on next page...}} \\
+\multicolumn{3}{r}{{Continued on next page...}} \\
 \endfoot
 \bottomrule
 \endlastfoot
 
-% --- CATEGORY 1 ---
-\kw{Burning} & 1 Damage at the beginning \\
-Frozen  & 2 Damage at the beginning at the beginning 
-at the beginning at the beginning at the beginning at the beginning
-at the beginning at the beginning at the beginning at the beginning
-at the beginning at the beginning at the beginning at the beginning
-\\ 
+\kw{Guard} & When it absorbs a hit, or at the end of the fight & Ignore the first hit you would take. A character or monster never holds more than one Guard unless an action says ``Guard twice''. \\
+\kw{Bound} & End of the next round, or as the action states & Cannot \kw{Move} or be Moved. Other actions are unaffected. \\
+\kw{Marked} & When the mark is used, or at the end of the fight & The next hit dealt to this figure by the marking side deals $+1$ hit. Several Marks on one figure each add $+1$ to that same hit. \\
+\kw{Burning} & When the figure gains Guard, or at the end of the fight & Takes 1 hit at the start of each round. \\
+\kw{Down} & When the fight is won (stand with 1 Hit and a Scar) or the party is Broken & 0 Hits. Contributes no dice, acts not at all, and cannot be targeted while an ally is standing. \\
+\kw{Scarred} & Never & Permanent. Maximum Hits reduced by 1 per Scar, never below 3. \\
+\kw{Exhausted} & After the party's first fight of the delve, or by Campfire Repair & The party rolls $-1$ die in its next fight. \\
+\kw{Lost} & When the next encounter is resolved & Resolve one extra encounter before you reach the Gate. \\
 
 \end{longtable}
 \twocolumn

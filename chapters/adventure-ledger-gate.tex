@@ -9,14 +9,15 @@ The Bestiary (\texttt{bestiary.pdf}) helps if you want full monster lore; this t
 \subsection{What You Need}
 
 \begin{itemize}
-    \item At least twelve six-sided dice and scrap paper (or a party sheet).
-    \item Three characters at \textbf{level 1} (build your own, or use the sketches below).
-    \item Tokens or notes for zones \textbf{Z1--Z5}, Hits, Debt, Resonance Stress, and party Energy.
+    \item At least fifteen six-sided dice and the party sheet from the core rules. No \dper{} is needed---every beat here is scripted.
+    \item Three characters at \textbf{level 1} with attributes rolled (build your own, or use the sketches below) and their \textbf{starting kits}.
+    \item Tokens or notes for zones \textbf{Z1--Z5}, Hits, Armor boxes, Debt, Resonance Stress, and party Energy.
 \end{itemize}
 
-\paragraph{Intro assumptions.}
-Start with \textbf{party Energy 3}, \textbf{Resonance Stress 0} (track of 6), and \textbf{Debt +1} from the Guild ledger.
-Characters each have their default Dice Pool (\D{2}{6}) unless a rule says otherwise.
+\paragraph{Starting state.}
+Start with the party \textbf{Energy} track full (8), \textbf{Resonance Stress 0} (track of 6), and \textbf{Debt +1} with the Mining Guild.
+Each character has Hits equal to $3 + \lfloor \textrm{CON Rank} / 2 \rfloor$ and a Dice Pool of \D{2}{6}.
+Checks on the road are Attribute Checks: the named character rolls their Attribute Dice for the named attribute and counts 4+ as successes---Easy needs 1 (roll at least 2 dice), Medium 2, Hard Hard 3. Companions may add 1 die each for \energy{1}.
 
 \subsection{The Hook}
 
@@ -31,20 +32,21 @@ Record \textbf{Debt +1}. You may instead roll a Motivation from the core book an
 
 \subsection{Pregen Sketches (Optional)}
 
-Use these if you want to start immediately (fill Attributes later if needed; combat here runs on pools and actions):
+Use these if you want to start immediately. Attributes are given as values; Hits follow from CON.
 
 \begin{itemize}
-    \item \textbf{Warrior --- Iron Vanguard:} Archetype actions Cleave, Hold the Line. Level~1 special: pick one from Iron Vanguard Level~1. Front-line stubbornness.
-    \item \textbf{Rogue --- Gatecutter:} Skirmish, Exploit. Level~1 special: pick one from Gatecutter Level~1. Locks, routes, quiet violence.
-    \item \textbf{Mage --- Aetherwright:} Arc Bolt, Ward. Level~1 special: pick one from Aetherwright Level~1. Pattern-light and barriers.
+    \item \textbf{Warrior --- Iron Vanguard:} STR 65 (3 dice), DEX 40 (2), CON 60 (3), INT 30 (2), WIS 50 (3), CHA 40 (2). Hits 6. Archetype actions Cleave, Hold the Line. Level~1 special: pick one from Iron Vanguard Level~1. \textbf{Kit:} Mace, Shield (instead of gear), Light armor.
+    \item \textbf{Rogue --- Gatecutter:} STR 40 (2 dice), DEX 65 (3), CON 50 (3), INT 50 (3), WIS 40 (2), CHA 55 (3). Hits 5. Skirmish, Exploit. Level~1 special: pick one from Gatecutter Level~1. \textbf{Kit:} Shortsword, Light armor, Lockpicks.
+    \item \textbf{Mage --- Aetherwright:} STR 30 (2 dice), DEX 40 (2), CON 40 (2), INT 65 (3), WIS 60 (3), CHA 50 (3). Hits 5. Arc Bolt, Ward. Level~1 special: pick one from Aetherwright Level~1. \textbf{Kit:} Shard-Staff, Light armor, Bandages. \textbf{Grimoire:} Glass Veil and Spark Needle (or any two Circle~I spells).
 \end{itemize}
 
-All three share Basic Actions: Move, Strike, Guard, Aid.
+All three share Basic Actions: Move, Strike, Guard, Aid, Brace, Use Gear.
 
 % ==========================================
 \section{Act I --- Road to Hollow Vein}
 
 Set a \kw{Journey Clock} with \textbf{4 boxes}. Resolve the ticks below in order (mark one box after each).
+On the campaign map, this is four hexes from the Guild Marches Town (\textbf{E5}) to a shallow Gate; if you carry on into a campaign afterwards, pencil the Hollow Vein Gate onto a ring-D hex adjacent to your route and strike it through as sealed.
 Do not roll the full non-combat table; stakes are written here (mirrors Journey Encounters \#03, \#04, \#09, \#20).
 
 \subsection{Tick 1 --- Refugee Column}
@@ -56,7 +58,7 @@ Do not roll the full non-combat table; stakes are written here (mirrors Journey 
 
 \textbf{Choose:}
 \begin{itemize}
-    \item \textbf{Share:} Spend 1 party Energy on food and mercy. Clock does \textbf{not} feel worse---advance the clock as usual, but gain nothing else.
+    \item \textbf{Share:} Spend 1 party Energy on food and mercy. Advance the clock as usual; gain nothing else but a clear conscience.
     \item \textbf{Refuse:} Advance the clock. Mark a \textbf{Debt rumor}: if you later meet Guild collectors in the delve, they fight with Threat as written and you cannot bargain them down.
 \end{itemize}
 
@@ -70,8 +72,8 @@ Do not roll the full non-combat table; stakes are written here (mirrors Journey 
 \textbf{Choose one:}
 \begin{itemize}
     \item \textbf{Pay:} Clear any Favor you hold, or take \textbf{Debt +1} to the Companies (separate from Guild Debt). Advance clock.
-    \item \textbf{Fight stub:} Skip to a short skirmish---treat as Threat 3: three Ash Rats (\#02, Swarm). Then advance clock.
-    \item \textbf{Sneak:} Assign dice for a \medium{} action (one character, face 4+, spend 1 Energy). Success: pass without payment. Failure: they notice---take 1 hit on that character \textbf{and} Debt +1 to the Companies. Advance clock either way.
+    \item \textbf{Fight:} A short skirmish---Threat 3: three Ash Rats (\#02, Swarm) the Companies set loose. Win and regain 2 Energy as usual. Then advance clock.
+    \item \textbf{Sneak:} One character makes a \textbf{Medium DEX check} (2 successes on their DEX dice; the others may Aid for \energy{1} each). Success: pass without payment. Failure: they notice---that character takes 1 hit \textbf{and} you mark Debt +1 to the Companies. Advance clock either way.
 \end{itemize}
 
 \subsection{Tick 3 --- Collapsed Mining Sled}
@@ -94,21 +96,21 @@ Do not roll the full non-combat table; stakes are written here (mirrors Journey 
     The Hollow Vein exhales cold light over the fields.
 \end{rpgbox}
 
-Assign dice for an \easy{} action (any character).
+One character makes an \textbf{Easy CON check} (1 success on their CON dice, rolling at least 2).
 \begin{itemize}
     \item \textbf{Success:} You arrive steady. Advance clock (full). Begin Campfire.
-    \item \textbf{Failure:} You arrive \textbf{Exhausted}: in the next combat only, roll party pool with \textbf{$-1$ die} (normally 5d6 instead of 6d6 for a full party). Advance clock. Begin Campfire.
+    \item \textbf{Failure:} You arrive \kw{Exhausted}: in the next combat only, roll the party pool with \textbf{$-1$ die} (5d6 instead of 6d6 for a full party). Advance clock. Begin Campfire.
 \end{itemize}
 
 \subsection{Campfire before the Gate}
 
-Night under March sky. Assign party dice to \textbf{two} Campfire Counsel actions (Heal, Repair, Scout, Bargain, or Lore) using Easy/Medium as in the core rules.
+Night under March sky. Energy refills to 8. Choose \textbf{two} Campfire Counsel actions from the core table (Non-Combat Encounters), each attempted by a different character. Notes for this adventure:
 \begin{itemize}
-    \item \textbf{Heal (Easy):} Clear 1 hit from one character.
-    \item \textbf{Repair (Medium + Energy):} Restore a lost tool/item if the Omen later takes one.
-    \item \textbf{Scout (Easy):} Learn Deploy tags for Chamber 2 before you enter (read the monster list early).
-    \item \textbf{Bargain (Medium + Energy):} If refugees were refused, cancel the Debt rumor once.
-    \item \textbf{Lore (Easy):} Preview the fixed Omen name (\textit{Glass Teeth})---you may prepare Guards.
+    \item \textbf{Heal (WIS, Medium):} Heals 2 Hits on one character---useful if the ridge went badly.
+    \item \textbf{Repair (DEX, Medium):} Clears \kw{Exhausted}, or restores a tool later taken by the Omen (resolve it then; you may hold the success).
+    \item \textbf{Scout (DEX, Easy):} Read Chamber 2's monster list and Deploy tags now; you may also pick Chamber 3's choice before seeing it.
+    \item \textbf{Bargain (CHA, Medium \energy{1}):} If refugees were refused, cancel the Debt rumor; otherwise clear the Companies' Debt if you took it.
+    \item \textbf{Lore (INT, Easy):} The Omen here is fixed (\textit{Glass Teeth}), so take the other option: clear 1 Resonance Stress.
 \end{itemize}
 
 % ==========================================
@@ -123,8 +125,8 @@ Night under March sky. Assign party dice to \textbf{two} Campfire Counsel action
 
 \begin{hazardbox}{Omen: Glass Teeth}
     The Gate rim grows teeth of living crystal.
-    \textbf{Entering the delve:} each character must attempt Guard (\easy) or suffer \textbf{1 hit}.
-    On failure of that Guard attempt, also lose one tool/item (note it); Repair at camp could have saved it.
+    \textbf{Entering the delve:} each character makes an \textbf{Easy DEX check} (1 success; no Aid---everyone is busy with their own footing). Failure: \textbf{1 hit} and one tool or item is bitten away (note it); a held Campfire Repair success restores it.
+    \textbf{For the whole delve:} Guard gained from Basic Actions costs a die showing 2+ instead of 1+---the teeth are in everything.
 \end{hazardbox}
 
 Apply this Omen for the whole delve. Then proceed to Chamber 1.
@@ -142,9 +144,9 @@ Combat uses Deployment, Initiative, Dice Pools, and Monster Phase (top to bottom
     A pale cousin of Static Rain ghosts through the first corridor---enough to teach fear, not yet a full storm.
 \end{hazardbox}
 
-Any character wearing heavy metal (Warrior default yes) takes \textbf{1 hit} unless they find stone shelter: assign \easy{} (Move into alcove / Guard narrative).
+Any character in metal armour (the Warrior, by default) makes an \textbf{Easy DEX check} (1 success) to reach an alcove; companions may Aid.
 Success: no hit. Failure: 1 hit.
-Non-metal characters are safe this chamber.
+Characters without metal armour are safe this chamber.
 Then go to Chamber 2.
 
 \subsection{Chamber 2 --- Tick Nest (Combat)}
@@ -164,18 +166,19 @@ Then go to Chamber 2.
 \end{itemize}
 
 Place party (Z1/Z2) then monsters by Deploy. Roll Initiative. Fight until nest creatures are out or you retreat.
-On victory, go to Chamber 3.
+On victory, regain 2 Energy and stand any Down character with 1 Hit and a Scar (core rules: End of Fight). Go to Chamber 3.
 
 \subsection{Chamber 3 --- Guild Cache Scratch (Choice)}
 
 \begin{rpgbox}{Cache}
     A side niche holds a Guild strongbox scratched by panicked tools.
-    Inside: a refined token stamped with Crown wax---not your sealed weight, but valuable.
+    Inside: a refined token stamped with Crown wax---and a wrapped Common Relic the clerks forgot to ledger.
 \end{rpgbox}
 
 \textbf{Choose:}
 \begin{itemize}
     \item \textbf{Steal the token:} Gain a \textbf{Refined} crystal token. Mark \textbf{Debt +1} (Guild notices later). Stress +0.
+    \item \textbf{Take the relic:} Roll once on the \textbf{Common} Relic table (Equipment). Mark \textbf{Debt +1}. Binding Stress is 0 for Common.
     \item \textbf{Leave it:} Mark \textbf{Crown Favor rumor} (once this campaign, Bargain Easy when dealing with Crown agents).
 \end{itemize}
 
@@ -194,8 +197,9 @@ Continue to Chamber 4.
     \item Debt Collector \#56 --- Deploy Front --- pool 3d6, Hits 4, Threat d8
 \end{itemize}
 
-If you still carry the \textbf{Debt rumor} from Tick 1, you cannot talk them down---combat is mandatory.
-If the Collector would flee (your call when it has 1 Hit left), note \textbf{Collector fled}: Debt +1 persists after the adventure even if you deliver the glass.
+If you do \textbf{not} carry the \textbf{Debt rumor} from Tick 1, one character may first try a \textbf{Hard Hard CHA check} (3 successes; Aid allowed) to talk them down: success means the Thugs leave and only the Collector fights (Threat 3); failure means combat as written and Debt +1 with the Guild.
+If you still carry the Debt rumor, combat is mandatory.
+When the Collector has 1 Hit left you may let it flee instead of finishing it; note \textbf{Collector fled}: Debt +1 persists after the adventure even if you deliver the glass.
 
 On victory (or after retreat rules), go to Chamber 5 if you still hold the delve.
 
@@ -212,9 +216,9 @@ On victory (or after retreat rules), go to Chamber 5 if you still hold the delve
     \item \textbf{Greed:} Also pocket 1 extra Raw for yourselves: Stress \textbf{+1} more (total +2 if you also sealed). Extra Raw is yours after delivery.
 \end{itemize}
 
-If Stress reaches 6, apply a Corruption Mutation from the Campaign chapter (or note ``mutation pending'' and clear the track once).
+If Stress reaches 6, clear the track and roll a Corruption Mutation from the Campaign chapter.
 
-Then extract: return through chambers narratively to Z1 / the Gate (no extra fights unless you want them). Omen teeth do not bite on exit.
+Then extract: return through the chambers to the Gate (no extra fights unless you want them). Omen teeth do not bite on exit. On the surface, Energy refills to 8.
 
 % ==========================================
 \section{Act IV --- Surface and Aftermath}
@@ -225,7 +229,7 @@ Return to the March town factor.
 
 \begin{itemize}
     \item If you deliver the \textbf{sealed weight:} Clear the adventure's starting \textbf{Debt +1}. The relative (or papers) is released.
-    \item Keep any \textbf{extra Raw} and the stolen \textbf{Refined token} if you took them.
+    \item Keep any \textbf{extra Raw}, stolen \textbf{Refined token}, or \textbf{Common Relic} if you took them.
     \item If \textbf{Collector fled} was marked: mark \textbf{Debt +1} again as a campaign hook---the ledger is not finished with you.
     \item Company Debt from the ridge toll remains until paid in a later session.
 \end{itemize}

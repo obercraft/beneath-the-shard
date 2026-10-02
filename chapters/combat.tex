@@ -47,11 +47,85 @@ At the start of the fight, roll \kw{Initiative} once; it persists for the whole 
 \textbf{Party wins:} each round is Party phase, then Monster phase.\\
 \textbf{Monsters win:} each round is Monster phase, then Party phase.
 
+The Threat \textbf{die} decides Initiative. Threat \textbf{Points} (Campaign: Threat Budget) are the cost to put a monster in the fight. They share a name because both measure how much a creature is feared, but they are never added together.
+
+\subsection{Hits, Energy, and Falling}
+
+\paragraph{Hits.}
+Each character has a number of \kw{Hits} equal to $3 + \lfloor \textrm{CON Rank} / 2 \rfloor$ (see Character Creation), usually 4--6. Mark one box each time you take a hit. Hits do not recover on their own; heal them with Campfire Counsel, class actions, or encounter rewards.
+
+\paragraph{Energy.}
+The party shares one \kw{Energy} track of \textbf{8} boxes. Every \medium{} \energy{1} action spends one. Energy refills to full at a Campfire and whenever you return to the surface. You regain \textbf{2 Energy} after every fight you win, and \textbf{1} for each Raw crystal you burn (Campaign: Aether-Glass Economy). Energy never exceeds 8.
+
+\paragraph{Down.}
+A character at 0 Hits is \kw{Down}: they contribute no dice, take no actions, and cannot be targeted while another character is still standing. If the party \textbf{wins} the fight, every Down character stands up with 1 Hit and takes a permanent \kw{Scar}: reduce their maximum Hits by 1 (never below 3). Write the Scar on the party sheet.
+
+\paragraph{Broken.}
+If all three characters are Down, the party is \kw{Broken}. You wake at the Gate mouth. Lose all unsealed loot, mark \textbf{Debt +2} with the faction nearest your Motivation, and advance the \textbf{World Crack Clock} by 1. If that clock was already full, the campaign ends in failure.
+
+\subsection{Defense}
+
+Defense is chosen in the Party phase, like everything else: you decide who stands in front, who Guards, and what they wear before the monsters roll. When a hit lands on a character, peel it through these layers \textbf{in order}; the first layer that can absorb it does.
+
+\begin{enumerate}
+    \item \textbf{Guard.} A character with \kw{Guard} ignores the first hit they would take before their next round, then loses Guard. A \textbf{Shield} makes Guard ignore two hits instead.
+    \item \textbf{Armor.} Worn armor has \kw{Armor} boxes (Light 1, Medium 2, Heavy 3; see Equipment). Each box absorbs one hit once per fight. Boxes refresh at a Camp or in a Town, not between chambers.
+    \item \textbf{Hits.} Whatever is left marks the character's Hits.
+\end{enumerate}
+
+Effects that say ``ignore Guard'' skip the first layer only; ``ignore Armor'' skips the second. ``Unavoidable'' hits skip both. A hit that is \textbf{redirected} to another character goes through that character's layers from the top.
+
+\paragraph{Defensive actions.}
+Actions marked \defensive{} in the class lists, the grimoire, and the relic tables are defensive: they grant Guard, redirect or cancel hits, restore Armor boxes, or heal. Every class has at least ten of them spread across its levels, so a party can be built to hold a chokepoint as readily as to burn one down. Defensive actions are assigned dice in the Party phase and last, unless they say otherwise, \textbf{until your next round}.
+
+\paragraph{Heavy armor.}
+A character in Heavy armor may \kw{Move} only once per round and cannot use actions that Move more than one zone. In a Static Field chamber or Static Rain, they take 1 hit at the start of every round unless Guarded---the Shard loves iron.
+
+\subsection{Retreat}
+
+A standing character in \textbf{Z1} may spend a \kw{Move} to leave the battle field instead of changing zones. The fight ends when every standing character has left; Down characters are carried out with them (they still take a Scar). Retreating from a delve has the costs listed under Campaign (lose unsealed loot, Debt +1).
+
+\subsection{Targeting}
+
+Monster actions often say ``one character'' or ``the nearest character''. Resolve them without a referee:
+
+\begin{itemize}
+    \item \textbf{Nearest:} the standing character with the smallest zone distance.
+    \item \textbf{One character} (in reach): the standing character with the \textbf{fewest current Hits}.
+    \item \textbf{Ties:} prefer a character \textbf{without} Guard; if still tied, you choose.
+\end{itemize}
+
+Character actions that say ``one foe'' are always your choice among legal targets.
+
+\subsection{End of Fight}
+
+The fight is won when every monster is out. Then:
+\begin{enumerate}
+    \item Down characters stand with 1 Hit and a Scar.
+    \item Regain 2 Energy.
+    \item Clear Guard, Bound, Marked, and Burning from everyone. Spent Armor boxes stay spent until a Camp or Town.
+    \item Collect Spoils (Equipment: Spoils and Shops) and any relic the chamber promised.
+\end{enumerate}
+
 \subsection{Dice Pool}
 
-In combat you command a party of three characters. Each character has a \kw{Dice Pool} of \D{2}{6} by default.
+In combat you command a party of three characters. Each character has a \kw{Dice Pool} that grows with their level:
 
-During the \textbf{Party phase}, roll \textbf{all party dice at once}. With a full party that is normally \D{6}{6}---the sum of every active character's pool. A character who is out of the fight contributes no dice, so the shared roll shrinks with every fallen companion.
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lcc}
+  \shardheadercell{Level} & \shardheadercell{Pool} & \shardheadercell{Opens} \\
+  \rowcolor{bone} 1--2 & \D{2}{6} & Easy, Medium, Hard Hard \\
+  \rowcolor{ash!15} 3--5 & \D{3}{6} & Grand \grand \\
+  \rowcolor{bone} 6--8 & \D{4}{6} & Dire \dire \\
+  \rowcolor{ash!15} 9--10 & \D{5}{6} & Fell \fell \\
+\end{tabular}
+\end{center}
+
+During the \textbf{Party phase}, roll \textbf{all party dice at once}: the sum of every standing character's pool, \D{6}{6} for a fresh party and up to \D{15}{6} for veterans. A character who is out of the fight contributes no dice, so the shared roll shrinks with every fallen companion.
+
+\paragraph{Power actions.}
+Actions marked \grand, \dire, or \fell{} want three or four dice from \textbf{one} character. They are the heavy blows, wide wards, and spells that separate a level-6 Ashblade from a hired knife. A character can never take more dice than their pool, so a Grand action is physically impossible before level 3, a Dire before level 6, and a Fell before level 9. Energy is paid once per action, as printed---never per die.
 
 \subsection{Combat Round}
 
@@ -60,7 +134,7 @@ Each \kw{Combat Round}, resolve the two phases in Initiative order.
 \paragraph{Party phase.}
 \begin{enumerate}
     \item \textbf{Roll:} Gather every active character's Dice Pool and roll them together.
-    \item \textbf{Assign:} Place individual dice onto actions. A character may receive \textbf{at most as many dice as their pool} (usually \textbf{2}). You may split those dice across that character's actions, but the total assigned to them must not exceed their pool.
+    \item \textbf{Assign:} Place individual dice onto actions. A character may receive \textbf{at most as many dice as their pool} (2--5 by level). You may split those dice across that character's actions, but the total assigned to them must not exceed their pool, and all dice on a single action belong to the same character.
     \item \textbf{Resolve:} An action succeeds only if the assigned dice meet its difficulty (see Playing The Game: \easy, \medium{} \energy{1}, \hard{} \hard{}). Discard any unassigned dice for the rest of the phase.
 \end{enumerate}
 
@@ -77,6 +151,8 @@ Each active monster (or pack that shares one pool) acts using the Monster Phase 
     The leftover $2$ and $1$ are discarded.
 
     No character received more than two dice.
+
+    \textit{Three levels later} the same party rolls \D{9}{6}: $6$, $6$, $5$, $4$, $4$, $4$, $3$, $2$, $1$. The Warrior (pool 3) takes $6$, $6$, $4$---those faces would pay for a Dire action, but Dire picks start at level 6, so it is \kw{Cleave} plus a Medium \kw{Strike}. The Mage (pool 3) takes $5$, $4$, $4$ for a Grand spell. The Rogue takes the $3$ to \kw{Guard}.
 \end{rpgbox}
 
 \subsection{Monster Phase}
@@ -114,7 +190,13 @@ Archetype-specific actions are listed under each archetype in Character Creation
   \rowcolor{ash!15}
   \kw{Strike} & \medium{} \energy{1} & Deal 1 hit to one foe in your zone. \\
   \rowcolor{bone}
-  \kw{Guard} & \easy & Until your next round, ignore the first hit you would take. \\
+  \defensive{} \kw{Guard} & \easy & Until your next round, ignore the first hit you would take (two with a Shield). \\
   \rowcolor{ash!15}
   \kw{Aid} & \medium{} \energy{1} & An ally in your zone gains $+1$ on one die face they use this round (max 6), or reclaim 1 spent energy if you aid no die. \\
+  \rowcolor{bone}
+  \defensive{} \kw{Brace} & \medium{} \energy{1} & Until your next round, you cannot be Moved by foes and the first hit you take is absorbed by an Armor box even if all your boxes are spent. \\
+  \rowcolor{ash!15}
+  \kw{Use Gear} & \easy & Use one consumable or tool from your gear slots (Equipment). \\
 \end{tabularx}
+
+Weapons change what \kw{Strike} does (reach, extra hits, ignoring Guard); the exact wording is on the weapon line in Equipment. A character always has at least a fist: Strike with no weapon deals 1 hit and nothing more.

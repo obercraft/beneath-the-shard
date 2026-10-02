@@ -14,6 +14,7 @@
 \usepackage{ragged2e}
 \usepackage{tabularray}
 \usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
 \usepackage{graphicx}
 \usepackage[automark, headsepline, footsepline]{scrlayer-scrpage}
 \usepackage{tcolorbox}
@@ -64,12 +65,18 @@
 \newcommand{\kw}[1]{{\GameSans\bfseries\color{shardink}#1}\index{#1}}
 \newcommand{\game}{{\GameSans\bfseries\color{shardink}Beneath The Shard}}
 \newcommand{\todo}{\textit{todo}}
-\newcommand{\world}{\textit{WORLDNAME}}
+\newcommand{\world}{Terramyr}
 
 \newcommand{\energy}[1]{{\GameSans #1}{\color{shardamber}\faBolt}}
 \newcommand{\easy}{\faDiceOne}
 \newcommand{\medium}{\faDiceFour}
 \newcommand{\hard}{\faDiceSix}
+% Multi-die power tiers (Combat: Power Actions)
+\newcommand{\grand}{\medium\medium\medium}
+\newcommand{\dire}{\hard\hard\medium}
+\newcommand{\fell}{\hard\hard\medium\medium}
+\newcommand{\defensive}{{\color{shardamber}\faIcon{shield-alt}}}
+\newcommand{\stress}[1]{{\GameSans #1}{\color{blood}\faBurn}}
 
 \NewDocumentCommand{\attr}{m G{}}{%
   \textbf{#1}\IfBlankF{#2}{\,\textsf{#2}}%

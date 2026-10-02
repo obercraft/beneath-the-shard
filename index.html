@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beneath The Shard</title>
+  <meta name="description" content="Download the printable PDFs for Beneath The Shard, a grim-dark solo pen-and-paper RPG." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Forum&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --shardink: #1a1614;
+      --ash: #8a8078;
+      --blood: #6b2c2c;
+      --bone: #f5f0e8;
+      --amber: #a67c2d;
+      --deep: #0e0c0b;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "EB Garamond", Georgia, serif;
+      color: var(--bone);
+      background: var(--deep);
+      line-height: 1.55;
+      min-height: 100vh;
+    }
+
+    /* Cracked underworld field — full-bleed, no card inset */
+    .stage {
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse 90% 70% at 50% 18%, rgba(166, 124, 45, 0.14), transparent 55%),
+        radial-gradient(ellipse 60% 50% at 80% 90%, rgba(107, 44, 44, 0.22), transparent 50%),
+        linear-gradient(165deg, #1c1612 0%, #0e0c0b 45%, #15100e 100%);
+    }
+
+    .stage::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(
+          30deg,
+          transparent 0,
+          transparent 28px,
+          rgba(138, 128, 120, 0.035) 28px,
+          rgba(138, 128, 120, 0.035) 29px
+        ),
+        repeating-linear-gradient(
+          -30deg,
+          transparent 0,
+          transparent 28px,
+          rgba(138, 128, 120, 0.03) 28px,
+          rgba(138, 128, 120, 0.03) 29px
+        );
+      pointer-events: none;
+      animation: drift 48s linear infinite;
+    }
+
+    .stage::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 8%;
+      width: min(42vw, 280px);
+      height: min(42vw, 280px);
+      transform: translateX(-50%);
+      background:
+        radial-gradient(circle at 50% 50%, rgba(166, 124, 45, 0.35) 0%, transparent 42%),
+        radial-gradient(circle at 50% 50%, rgba(245, 240, 232, 0.06) 0%, transparent 65%);
+      filter: blur(2px);
+      pointer-events: none;
+      animation: pulse 7s ease-in-out infinite;
+    }
+
+    @keyframes drift {
+      from { transform: translateY(0); }
+      to { transform: translateY(29px); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.55; transform: translateX(-50%) scale(1); }
+      50% { opacity: 0.9; transform: translateX(-50%) scale(1.06); }
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .shell {
+      position: relative;
+      z-index: 1;
+      max-width: 42rem;
+      margin: 0 auto;
+      padding: clamp(3.5rem, 12vh, 7rem) 1.5rem 4rem;
+      text-align: center;
+    }
+
+    .eyebrow {
+      font-family: "Forum", "EB Garamond", serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--ash);
+      animation: rise 0.9s ease both;
+    }
+
+    .rule {
+      display: block;
+      width: min(14rem, 55%);
+      height: 1px;
+      margin: 1.1rem auto;
+      background: linear-gradient(90deg, transparent, var(--blood), transparent);
+      border: 0;
+      animation: rise 1s ease 0.1s both;
+    }
+
+    .brand {
+      font-family: "Forum", "EB Garamond", serif;
+      font-size: clamp(2.6rem, 9vw, 4.2rem);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: var(--bone);
+      line-height: 1.05;
+      animation: rise 1s ease 0.15s both;
+    }
+
+    .tag {
+      font-family: "Forum", "EB Garamond", serif;
+      font-size: clamp(1rem, 2.8vw, 1.25rem);
+      color: var(--blood);
+      margin-top: 0.65rem;
+      letter-spacing: 0.04em;
+      animation: rise 1s ease 0.25s both;
+    }
+
+    .lede {
+      margin: 1.6rem auto 0;
+      max-width: 28rem;
+      font-size: 1.15rem;
+      color: rgba(245, 240, 232, 0.82);
+      animation: rise 1.05s ease 0.35s both;
+    }
+
+    .cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-top: 2.2rem;
+      animation: rise 1.1s ease 0.45s both;
+    }
+
+    .cta a {
+      font-family: "Forum", "EB Garamond", serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      color: var(--deep);
+      background: var(--amber);
+      border: 1px solid var(--amber);
+      padding: 0.7rem 1.25rem;
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .cta a:hover,
+    .cta a:focus-visible {
+      background: transparent;
+      color: var(--amber);
+      outline: none;
+    }
+
+    .cta a.ghost {
+      background: transparent;
+      color: var(--bone);
+      border-color: rgba(245, 240, 232, 0.35);
+    }
+
+    .cta a.ghost:hover,
+    .cta a.ghost:focus-visible {
+      border-color: var(--bone);
+      color: var(--bone);
+      background: rgba(245, 240, 232, 0.06);
+    }
+
+    /* Catalog below the first viewport */
+    .catalog {
+      position: relative;
+      z-index: 1;
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 0 1.5rem 5rem;
+    }
+
+    .catalog h2 {
+      font-family: "Forum", "EB Garamond", serif;
+      font-size: 1.55rem;
+      font-weight: 400;
+      color: var(--bone);
+      text-align: center;
+      margin-bottom: 0.4rem;
+    }
+
+    .catalog > p {
+      text-align: center;
+      color: var(--ash);
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+    }
+
+    .books {
+      list-style: none;
+      border-top: 1px solid rgba(138, 128, 120, 0.35);
+    }
+
+    .books li {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.35rem 1.25rem;
+      align-items: baseline;
+      padding: 1.15rem 0;
+      border-bottom: 1px solid rgba(138, 128, 120, 0.35);
+    }
+
+    .books .name {
+      font-family: "Forum", "EB Garamond", serif;
+      font-size: 1.25rem;
+      color: var(--bone);
+      text-decoration: none;
+      justify-self: start;
+    }
+
+    .books .name:hover,
+    .books .name:focus-visible {
+      color: var(--amber);
+      outline: none;
+    }
+
+    .books .meta {
+      grid-column: 1;
+      color: var(--ash);
+      font-size: 0.98rem;
+      font-style: italic;
+    }
+
+    .books .get {
+      grid-row: 1 / span 2;
+      align-self: center;
+      font-family: "Forum", "EB Garamond", serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--amber);
+      border-bottom: 1px solid transparent;
+      padding-bottom: 1px;
+    }
+
+    .books .get:hover,
+    .books .get:focus-visible {
+      border-bottom-color: var(--amber);
+      outline: none;
+    }
+
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 0 1.5rem 3rem;
+      color: var(--ash);
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: var(--ash);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    footer a:hover { color: var(--bone); }
+
+    @media (prefers-reduced-motion: reduce) {
+      .stage::before,
+      .stage::after,
+      .eyebrow, .rule, .brand, .tag, .lede, .cta {
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <header class="shell">
+      <p class="eyebrow">A solo pen &amp; paper RPG</p>
+      <hr class="rule" />
+      <h1 class="brand">Beneath The Shard</h1>
+      <p class="tag">— Chronicles of the Star-Grave —</p>
+      <p class="lede">
+        Print the core rules, bestiary, journey tables, and the intro delve.
+        Steel your heart — the Shard calls.
+      </p>
+      <div class="cta">
+        <a href="rules.pdf">Download Rules</a>
+        <a class="ghost" href="#volumes">All volumes</a>
+      </div>
+    </header>
+
+    <section class="catalog" id="volumes" aria-labelledby="volumes-heading">
+      <h2 id="volumes-heading">The volumes</h2>
+      <p>A4 print-ready PDFs. Start with the rules, then walk The Ledger Gate.</p>
+      <ul class="books">
+        <li>
+          <a class="name" href="rules.pdf">Core Rules</a>
+          <span class="meta">Campaign loop, hexploration, pools, classes, combat</span>
+          <a class="get" href="rules.pdf">PDF</a>
+        </li>
+        <li>
+          <a class="name" href="adventure.pdf">The Ledger Gate</a>
+          <span class="meta">Intro adventure — no companion books required</span>
+          <a class="get" href="adventure.pdf">PDF</a>
+        </li>
+        <li>
+          <a class="name" href="bestiary.pdf">Bestiary</a>
+          <span class="meta">One hundred monsters for Threat Budget fights</span>
+          <a class="get" href="bestiary.pdf">PDF</a>
+        </li>
+        <li>
+          <a class="name" href="encounters.pdf">Journey Encounters</a>
+          <span class="meta">Road, debt, omen, and campfire tables</span>
+          <a class="get" href="encounters.pdf">PDF</a>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>Planet Terramyr · build from source — see <a href="README.md">README</a></p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+\onecolumn
+\rowcolors{1}{}{}
+\section{Party Sheet}
+
+\vspace{-0.8em}
+{\footnotesize\itshape Copy this page. One sheet carries the whole expedition.}
+
+\newcommand{\boxes}[1]{%
+  \foreach \i in {1,...,#1}{\tikz[baseline=-0.3ex]\draw[shardink, line width=0.5pt] (0,0) rectangle (0.24,0.24);\,}%
+}
+\newcommand{\sheetline}[1]{\makebox[#1]{\dotfill}}
+
+\newcommand{\charblock}[1]{%
+\begin{tcolorbox}[shardbox, title={#1}, left=2pt, right=2pt, top=0pt, bottom=0pt, before skip=2pt, after skip=2pt]
+{\scriptsize
+\textbf{Name} \sheetline{3.6cm}\quad \textbf{Arch.} \sheetline{2.0cm}\quad \textbf{Class} \sheetline{2.8cm}\quad \textbf{Lv} \sheetline{0.7cm}
+\quad \textbf{Pool} 2\,\boxes{1}\,3\,\boxes{1}\,4\,\boxes{1}\,5\,\boxes{1}
+
+\vspace{1pt}
+\begin{tabular}{@{}llllll@{}}
+\textbf{STR} & \sheetline{0.95cm} & \textbf{DEX} & \sheetline{0.95cm} & \textbf{CON} & \sheetline{0.95cm} \\
+\textbf{INT} & \sheetline{0.95cm} & \textbf{WIS} & \sheetline{0.95cm} & \textbf{CHA} & \sheetline{0.95cm} \\
+\end{tabular}
+\hfill
+\begin{tabular}{@{}ll@{}}
+\textbf{Hits} & \boxes{6} \\
+\textbf{Scars} & \boxes{3} \\
+\textbf{Armor} & \boxes{3} \\
+\end{tabular}
+
+\vspace{1pt}
+\textbf{Weapon} \sheetline{4.0cm}\quad \textbf{Off-hand} \sheetline{3.2cm}\quad \textbf{Armor type} \sheetline{2.8cm}
+
+\vspace{1pt}
+\textbf{Gear} 1\,\sheetline{2.8cm}\, 2\,\sheetline{2.8cm}\, 3\,\sheetline{2.8cm}\, 4\,\sheetline{2.8cm}
+
+\vspace{1pt}
+\textbf{Relic (bound)} \sheetline{5.5cm}\quad \textbf{Carried} \sheetline{5.0cm}
+
+\vspace{1pt}
+\textbf{Spells} (Mage) \sheetline{13.5cm}
+
+\vspace{1pt}
+\textbf{Archetype} \sheetline{13.5cm}
+
+\vspace{1pt}
+\begin{tabular}{@{}ll@{\quad}ll@{}}
+\textbf{L1} & \sheetline{4.6cm} & \textbf{L6} & \sheetline{4.6cm} \\
+\textbf{L2} & \sheetline{4.6cm} & \textbf{L7} & \sheetline{4.6cm} \\
+\textbf{L3} & \sheetline{4.6cm} & \textbf{L8} & \sheetline{4.6cm} \\
+\textbf{L4} & \sheetline{4.6cm} & \textbf{L9} & \sheetline{4.6cm} \\
+\textbf{L5} & \sheetline{4.6cm} & \textbf{L10} & \sheetline{4.6cm} \\
+\end{tabular}
+}
+\end{tcolorbox}
+}
+
+\charblock{Character One}
+\charblock{Character Two}
+\charblock{Character Three}
+
+\begin{tcolorbox}[shardbox, colbacktitle=blood, colframe=blood, title={Party}, left=2pt, right=2pt, top=0pt, bottom=0pt, before skip=2pt, after skip=0pt]
+{\scriptsize
+\begin{minipage}[t]{7.6cm}
+\begin{tabular}{@{}ll@{}}
+\textbf{Energy} (max 8) & \boxes{8} \\[1pt]
+\textbf{Resonance Stress} & \boxes{6} \\[1pt]
+\textbf{Supply} (Journey Clock) & \boxes{6} \\[1pt]
+\textbf{World Crack Clock} & \boxes{8} \\
+\end{tabular}
+
+\vspace{2pt}
+\mbox{\textbf{Home Town}~\sheetline{1.6cm}}\hfill\mbox{\textbf{Current hex}~\sheetline{1.6cm}}
+
+\vspace{2pt}
+\textbf{Motivation} \sheetline{7.2cm}
+
+\vspace{2pt}
+\textbf{Crystals} (Raw / Refined / Prismatic) \sheetline{4.0cm}
+
+\vspace{2pt}
+\textbf{Mutations} \sheetline{6.4cm}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{7.6cm}
+\begin{tabular}{@{}lll@{}}
+\shardheadercell{Faction} & \shardheadercell{Debt} & \shardheadercell{Favor} \\[1pt]
+Mining Guild & \boxes{5} & \boxes{5} \\
+Crown & \boxes{5} & \boxes{5} \\
+Star-Cult & \boxes{5} & \boxes{5} \\
+Free Companies & \boxes{5} & \boxes{5} \\
+\sheetline{2.2cm} & \boxes{5} & \boxes{5} \\
+\end{tabular}
+
+\vspace{2pt}
+\textbf{Bonds}\\[1pt]
+\sheetline{7.4cm}\\[1pt]
+\sheetline{7.4cm}
+\end{minipage}
+}
+\end{tcolorbox}
+\twocolumn

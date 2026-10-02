@@ -3,31 +3,46 @@
 To start a new game of \game{} you need:
 
 \begin{itemize}
-    \item \textbf{Dice:} at least 12 six-sided dice, and two ten-sided dice of different color.
-    \item \textbf{Party Sheet:} \todo{}
-    \item \textbf{World Map:} \todo{}
-    \item \textbf{Scrap Paper:} \todo{}
+    \item \textbf{Dice:} at least 15 six-sided dice for the party pool (it grows with level) and attribute checks, plus two ten-sided dice of different colours for \dper{} \textbf{table lookups only} (Party Motivation, Journey Encounters).
+    \item \textbf{Party Sheet:} a copy of the sheet on the last page of this book, or any paper split into three character blocks and the shared trackers.
+    \item \textbf{Hex Map:} a copy of the Map of Terramyr (Campaign chapter). You pencil Gates, camps, and ruins onto it as you discover them; one copy lasts a whole campaign.
+    \item \textbf{Companion books:} \texttt{bestiary.pdf} for monsters and \texttt{encounters.pdf} for journey beats. The intro adventure \texttt{adventure.pdf} needs neither.
+    \item \textbf{Tokens:} five markers for zones Z1--Z5 and a handful of chits for monsters; coins work.
+    \item \textbf{Pencil:} Hits, Energy, Stress, Debt, and clocks change constantly.
 \end{itemize}
 
-First you create a party, then you get on a journey through \world{}. On your your journey you will
-face combat- and non-combat encounters.
+First you create a party, then you set out across \world{} one hex at a time, spending Supply and drawing encounters as you go. Beyond the Shard-Gates you find on the map, you face combat.
 
-\vspace{5mm}
+\begin{rpgbox}{{One Die, Two Ways}}
+    \textbf{In combat} the party rolls its shared pool of six-sided dice and \textbf{assigns faces} to actions: a 1+ for Easy, a 4+ and 1 Energy for Medium, two 6s for Hard Hard. Power actions want three or four dice at once. Attributes do not matter; position, Energy, gear, and the faces you rolled do.
+
+    \textbf{On the road} one character rolls their \textbf{Attribute Dice} (1--4, from one attribute) and \textbf{counts 4+ as successes}: Easy needs 1, Medium 2, Hard Hard 3. Companions add dice by spending Energy. See Character Creation: Attribute Check.
+
+    \dper{} is only ever used to look up a table entry, never to test a character.
+\end{rpgbox}
+
+\vspace{3mm}
 \renewcommand{\arraystretch}{1.25}
 \begin{tabularx}{\linewidth}{c >{\raggedright\arraybackslash}X}
   \shardheadercell{Symbol} & \shardheadercell{Meaning} \\
   \rowcolor{bone}
-  \easy & assign one dice showing at least a 1 \\
+  \easy & assign one die showing at least a 1 \\
   \rowcolor{ash!15}
-  \medium{} \energy{1} & assign one dice showing at least a 4 and pay 1 energy \\
+  \medium{} \energy{1} & assign one die showing at least a 4 and pay 1 Energy \\
   \rowcolor{bone}
   \hard{} \hard{} & assign two dice showing a 6 \\
+  \rowcolor{ash!15}
+  \grand{} \energy{1} & \textbf{Grand:} assign three dice showing at least a 4 and pay 1 Energy \\
+  \rowcolor{bone}
+  \dire{} \energy{1} & \textbf{Dire:} assign two 6s and one die of 4 or more; pay 1 Energy \\
+  \rowcolor{ash!15}
+  \fell{} \energy{2} & \textbf{Fell:} assign two 6s and two dice of 4 or more; pay 2 Energy \\
+  \rowcolor{bone}
+  \defensive & a \textbf{defensive} action: it keeps hits off someone \\
+  \rowcolor{ash!15}
+  \stress{1} & the action also marks 1 Resonance Stress (spells, relics) \\
 \end{tabularx}
 
-In combat, roll your party's shared \kw{Dice Pool} at the start of each round and assign the results to meet these thresholds. See Combat for the full procedure.
+In combat, roll your party's shared \kw{Dice Pool} at the start of each round and assign the results to meet these thresholds. Every die on one action must come from the same character, so Grand, Dire, and Fell actions need a character whose pool has grown to three or more dice (level~3, 6, and 9). See Combat for the full procedure.
 
-Between fights, travel and Gate crossings use non-combat beats---see Non-Combat Encounters for the five journey mechanics, then roll \D{}{100} in the companion volume \textbf{Journey Encounters} (\texttt{encounters.pdf}) when the adventure demands it.
-
-\vspace{5mm}
-
-\attr{STR}{15}
+Between fights, travel and Gate crossings use non-combat beats---see Non-Combat Encounters for the five journey mechanics, then roll \dper{} in the companion volume \textbf{Journey Encounters} (\texttt{encounters.pdf}) when the adventure demands it.

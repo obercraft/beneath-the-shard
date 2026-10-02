@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate tables/non-combat-encounters.tex — 100 encounters."""
+"""Generate tables/encounters-book.tex — 100 encounters."""
 
 from pathlib import Path
 
@@ -18,7 +18,7 @@ def esc(s: str) -> str:
 # 20 encounters per mechanic: (title, description)
 JOURNEY = [
     ("Broken Causeway", "A stone bridge over a shard-chasm has collapsed to a single beam. Advance the Journey Clock by 1 if you take the long way, or assign dice for a Medium crossing: failure drops one character for 1 hit and still advances the clock."),
-    ("Ash Wind Front", "A wall of volcanic grit blinds the road. Mark +1 Journey Clock. Camp now (see Campfire Counsel) or push on: Hard Hard to keep the map accurate; failure means you become Lost (next encounter is rolled with disadvantage: use higher of two d100 results when told to roll)."),
+    ("Ash Wind Front", "A wall of volcanic grit blinds the road. Mark +1 Journey Clock. Camp now (see Campfire Counsel) or push on: Hard Hard to keep the map accurate; failure means you become Lost (resolve one extra encounter before the Gate)."),
     ("Refugee Column", "Starving surface folk block the trail, begging for crystal dust. Give supplies (lose 1 energy from the party) or refuse and gain a Debt mark from their guild patrons later. Clock does not advance if you share."),
     ("Toll of the Free Companies", "Mercenaries claim this ridge. Pay a Favor owed or fight a short skirmish; either way the clock advances unless you sneak (Medium) past without payment."),
     ("Flooded Quarry Road", "Meltwater from shard-heat floods the path. Detour (+2 Journey Clock) or ford: each character risks 1 hit on a failed Easy swim/climb."),
@@ -46,7 +46,7 @@ RESONANCE = [
     ("Echo of Aethelgard", "A dead language floods a mage's dreams. Gain a free Lore fact; mark +1 Stress. Refuse the vision: Hard Hard or wake with 1 hit."),
     ("Bleeding Focus", "Aether-Glass tools weep red light. Destroy a crystal focus (-1 Stress) or keep it (+1 Stress, +1 hit on next Arc Bolt)."),
     ("Chorus of Flies", "Insects swarm toward the most resonant character. Easy to endure; failure: that character cannot Aid until after a Campfire."),
-    ("Memory Theft", "Stress flares: forget one known map detail (GM erases). Recover with Campfire Counsel Heal/Lore."),
+    ("Memory Theft", "Stress flares: cross out one Scout or Lore result you are holding; if you hold none, mark +1 Journey Clock. Recover with Campfire Counsel Lore."),
     ("Crystal Rash", "Skin facets appear overnight. +1 Stress. Medium CON-style endurance or gain Disfigured (foes target you first once per fight)."),
     ("Sympathetic Pain", "When any ally takes a hit next combat, you take 1 too until Stress is reduced at camp."),
     ("Oracle Bleed", "Nosebleeds during planning. Seer/Mage may force a reroll on one Journey roll now; mark +2 Stress."),
@@ -59,7 +59,7 @@ RESONANCE = [
     ("Dust Communion", "Inhale glittered air. Heal 1 hit and +2 Stress, or hold breath (Easy) with no effect."),
     ("Name in the Glass", "Crystal shows a loved one's face asking you to dig deeper. Resist (Medium) or mark a personal Quest Debt and +1 Stress."),
     ("Overcharge Cache", "Found battery-crystals. Take them (+1 party energy, +1 Stress each) or smash them (-1 Stress, noise attracts Journey encounter)."),
-    ("Resonance Break", "Stress track fills. Immediate mutation table (GM) or burn 2 Favor/Debt marks to vent safely; otherwise start next delve with Horror (cannot Guard first round)."),
+    ("Resonance Break", "Stress track fills. Roll on the Corruption Mutations table now, or burn 2 Favor marks to vent safely; if you can do neither, start the next delve unable to Guard in its first round."),
 ]
 
 DEBT = [
@@ -126,8 +126,8 @@ CAMPFIRE = [
     ("Naming the Dead", "Lore for fallen NPCs. Gain a Favor with their kin faction; Stress -1."),
     ("Sparring Embers", "Two characters practice. Both spend Medium; both gain +1 face once tomorrow, or take 1 hit on failure."),
     ("False Dawn Pack-Up", "Leave early. Clock -1 but no one Heals; or sleep in (Heal allowed, Clock +0)."),
-    ("Omen in the Coals", "Read fire (Easy). Preview next Gate Omen category; misread: GM lies once."),
-    ("Last Song", "Cantor/anyone sings. Allies -1 Stress; foes within a mile (GM) may mark your camp on their map."),
+    ("Omen in the Coals", "Read fire (Easy WIS). Roll the next Gate Omen now and keep it; on a failure, roll it now but it changes: reroll it at the Gate and apply the second result."),
+    ("Last Song", "Anyone sings (Medium CHA). Success: party -1 Stress. Failure: -1 Stress anyway, but the first fight of the next delve adds one Minion of your choice to the monsters."),
     ("Scatter the Ashes", "Break camp clean. Next collectors/trackers need Hard Hard to find your trail; fail to scatter and Debt agents arrive next stop."),
 ]
 
