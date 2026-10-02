@@ -53,10 +53,11 @@ def esc(s: str) -> str:
 
 def emit_circle(title, intro, spells):
     lines = [rf"\subsubsection{{{title}}}", "", intro, ""]
-    lines.append(r"{\footnotesize")
-    lines.append(r"\renewcommand{\arraystretch}{1.12}")
+    lines.append(r"\noindent")
+    lines.append(r"{\normalsize")
+    lines.append(r"\renewcommand{\arraystretch}{1.35}")
     lines.append(
-        r"\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{2.2cm} c >{\raggedright\arraybackslash}X}"
+        r"\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.0cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}"
     )
     lines.append(
         r"  \shardheadercell{Spell} & \shardheadercell{Diff.} & \shardheadercell{Effect / Overcast} \\"
@@ -65,11 +66,12 @@ def emit_circle(title, intro, spells):
         color = r"\rowcolor{bone}" if i % 2 == 0 else r"\rowcolor{ash!15}"
         tag = r"\defensive{} " if defensive else ""
         lines.append(
-            f"  {color} {tag}{esc(name)} & {diff} & {effect}"
+            f"  {color} {tag}\\textbf{{{esc(name)}}} & {diff} & {effect}"
             rf" \textit{{Overcast:}} {over} \\"
         )
     lines.append(r"\end{tabularx}")
     lines.append(r"}")
+    lines.append(r"\vspace{0.55em}")
     lines.append("")
     return lines
 

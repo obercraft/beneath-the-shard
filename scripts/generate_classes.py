@@ -37,23 +37,25 @@ def esc(s: str) -> str:
 
 
 def level_table(actions):
-    """actions: list of (name, diff_key, effect)"""
+    """Full-page single-column ability table (Classes chapter uses \\onecolumn)."""
     rows = []
     for i, (name, dk, effect) in enumerate(actions):
         color = r"\rowcolor{bone}" if i % 2 == 0 else r"\rowcolor{ash!15}"
         tag = r"\defensive{} " if is_defensive(effect) else ""
         rows.append(
-            f"  {color} {tag}{esc(name)} & {DIFF[dk]} & {esc(effect)} \\\\"
+            f"  {color} {tag}\\textbf{{{esc(name)}}} & {DIFF[dk]} & {esc(effect)} \\\\"
         )
     body = "\n".join(rows)
     return rf"""
-{{\small
-\renewcommand{{\arraystretch}}{{1.15}}
-\begin{{tabularx}}{{\linewidth}}{{>{{\raggedright\arraybackslash}}p{{2.6cm}} c >{{\raggedright\arraybackslash}}X}}
+\noindent
+{{\normalsize
+\renewcommand{{\arraystretch}}{{1.35}}
+\begin{{tabularx}}{{\linewidth}}{{@{{\hspace{{2pt}}}} >{{\raggedright\arraybackslash}}p{{4.2cm}} >{{\centering\arraybackslash}}p{{3.2cm}} >{{\raggedright\arraybackslash}}X @{{}}}}
   \shardheadercell{{Action}} & \shardheadercell{{Diff.}} & \shardheadercell{{Effect}} \\
 {body}
 \end{{tabularx}}
 }}
+\vspace{{0.55em}}
 """
 
 
@@ -1402,8 +1404,7 @@ def emit_archetype(key: str) -> str:
         parts.append("")
         used_names: set = set()
         for level in range(1, 11):
-            parts.append(f"\\paragraph{{Level {level}.}}")
-            parts.append(r"Choose one:")
+            parts.append(f"\\subsubsection*{{Level {level} --- choose one}}")
             actions = pick_actions(cname, key, level, used_names)
             parts.append(level_table(actions))
             parts.append("")
