@@ -1,0 +1,218 @@
+{
+  "circleI": [
+    {
+      "name": "Spark Needle",
+      "diff": "\\easy",
+      "defensive": false,
+      "effect": "Deal 1 hit to a foe in your zone or an adjacent zone.",
+      "overcast": "$+1$ hit"
+    },
+    {
+      "name": "Glass Veil",
+      "diff": "\\easy",
+      "defensive": true,
+      "effect": "One ally in your zone gains Guard.",
+      "overcast": "That ally also restores 1 Armor box"
+    },
+    {
+      "name": "Dust Bind",
+      "diff": "\\medium{} \\energy{1}",
+      "defensive": false,
+      "effect": "Bind one foe in your zone.",
+      "overcast": "Also deal 1 hit"
+    },
+    {
+      "name": "Shard Mend",
+      "diff": "\\medium{} \\energy{1}",
+      "defensive": true,
+      "effect": "Heal 1 Hit on one ally in your zone.",
+      "overcast": "Heal 2 Hits instead"
+    },
+    {
+      "name": "Static Kiss",
+      "diff": "\\easy",
+      "defensive": false,
+      "effect": "A foe in your zone loses Guard.",
+      "overcast": "That foe is also Marked"
+    },
+    {
+      "name": "Echo Step",
+      "diff": "\\medium{} \\energy{1}",
+      "defensive": false,
+      "effect": "Move one ally one zone.",
+      "overcast": "Also grant them Guard"
+    },
+    {
+      "name": "Vein Sense",
+      "diff": "\\easy",
+      "defensive": false,
+      "effect": "Mark one foe in any zone.",
+      "overcast": "Deal 1 hit to that foe"
+    },
+    {
+      "name": "Ash Whisper",
+      "diff": "\\medium{} \\energy{1}",
+      "defensive": false,
+      "effect": "Deal 1 hit to a foe in any zone.",
+      "overcast": "$+1$ hit"
+    },
+    {
+      "name": "Null Soften",
+      "diff": "\\medium{} \\energy{1}",
+      "defensive": true,
+      "effect": "Until your next round, foes in your zone deal 1 less hit (minimum 1).",
+      "overcast": "Also gain Guard"
+    },
+    {
+      "name": "Cinder Seal",
+      "diff": "\\easy",
+      "defensive": false,
+      "effect": "Set one foe in your zone Burning.",
+      "overcast": "Also deal 1 hit"
+    },
+    {
+      "name": "Pattern Brace",
+      "diff": "\\medium{} \\energy{1}",
+      "defensive": true,
+      "effect": "Restore 1 Armor box on yourself or an ally in your zone.",
+      "overcast": "Restore 2 boxes, split as you like"
+    },
+    {
+      "name": "Borrowed Face",
+      "diff": "\\medium{} \\energy{1}",
+      "defensive": false,
+      "effect": "Raise one unassigned party die by $+1$ (max 6).",
+      "overcast": "Raise two dice instead"
+    }
+  ],
+  "circleII": [
+    {
+      "name": "Lance Lattice",
+      "diff": "\\grand{} \\energy{1}",
+      "defensive": false,
+      "effect": "Deal 3 hits to one foe in any zone.",
+      "overcast": "Ignore Armor"
+    },
+    {
+      "name": "Bastion Glass",
+      "diff": "\\grand{} \\energy{1}",
+      "defensive": true,
+      "effect": "Allies in your zone gain Guard and restore 1 Armor box each.",
+      "overcast": "Also heal 1 Hit each"
+    },
+    {
+      "name": "Rift Pull",
+      "diff": "\\grand{} \\energy{1}",
+      "defensive": false,
+      "effect": "Pull one foe from any zone into yours; deal 2 hits.",
+      "overcast": "Also Bind them"
+    },
+    {
+      "name": "Choir Bolt",
+      "diff": "\\grand{} \\energy{1}",
+      "defensive": false,
+      "effect": "Deal 1 hit to every foe in one zone.",
+      "overcast": "$+1$ hit to each"
+    },
+    {
+      "name": "Horizon Lock",
+      "diff": "\\grand{} \\energy{1}",
+      "defensive": false,
+      "effect": "Until your next round, foes cannot leave your zone; each takes 1 hit.",
+      "overcast": "Also Bind one of them"
+    },
+    {
+      "name": "Aether Battery",
+      "diff": "\\grand{} \\energy{1} \\stress{1}",
+      "defensive": false,
+      "effect": "Reclaim 3 Energy.",
+      "overcast": "Reclaim 4 Energy"
+    },
+    {
+      "name": "Mirror Cage",
+      "diff": "\\grand{} \\energy{1}",
+      "defensive": true,
+      "effect": "Until your next round, the first hit against an ally in your zone is dealt to its attacker instead.",
+      "overcast": "First two hits"
+    },
+    {
+      "name": "Shatter Note",
+      "diff": "\\grand{} \\energy{1}",
+      "defensive": false,
+      "effect": "Deal 2 hits to one foe; it loses Guard and is Marked.",
+      "overcast": "$+1$ hit"
+    },
+    {
+      "name": "Flesh Dust",
+      "diff": "\\grand{} \\energy{1} \\stress{1}",
+      "defensive": true,
+      "effect": "Heal 2 Hits on each ally in your zone.",
+      "overcast": "Heal 3 Hits each"
+    },
+    {
+      "name": "False Door",
+      "diff": "\\grand{} \\energy{1}",
+      "defensive": true,
+      "effect": "Until your next round, one ally in your zone cannot be targeted.",
+      "overcast": "Two allies"
+    }
+  ],
+  "circleIII": [
+    {
+      "name": "Breaking Light",
+      "diff": "\\dire{} \\energy{1}",
+      "defensive": false,
+      "effect": "Deal 4 hits to one foe in any zone, ignoring Armor.",
+      "overcast": "Also Bind them"
+    },
+    {
+      "name": "Lattice Absolute",
+      "diff": "\\dire{} \\energy{1} \\stress{1}",
+      "defensive": true,
+      "effect": "Until your next round, allies in your zone ignore all hits; you take 1 hit.",
+      "overcast": "You take no hit"
+    },
+    {
+      "name": "Oblivion Pinch",
+      "diff": "\\dire{} \\energy{1} \\stress{1}",
+      "defensive": false,
+      "effect": "Remove one Minion from the fight, or deal 5 hits to a Brute.",
+      "overcast": "Deal 5 hits to an Elite instead of removing a Minion"
+    },
+    {
+      "name": "Thunder Choir",
+      "diff": "\\dire{} \\energy{1}",
+      "defensive": false,
+      "effect": "Deal 2 hits to every foe on the battle field.",
+      "overcast": "$+1$ hit to Marked foes"
+    },
+    {
+      "name": "Starless Veil",
+      "diff": "\\dire{} \\energy{1}",
+      "defensive": true,
+      "effect": "Until your next round, no ally can be targeted by foes outside your zone.",
+      "overcast": "Also grant Guard to all allies in your zone"
+    },
+    {
+      "name": "Unmaking",
+      "diff": "\\fell{} \\energy{2} \\stress{1}",
+      "defensive": false,
+      "effect": "Deal 5 hits to one foe and 2 hits to each other foe in its zone.",
+      "overcast": "Ignore Guard on all those hits"
+    },
+    {
+      "name": "The Cage Holds",
+      "diff": "\\fell{} \\energy{2}",
+      "defensive": false,
+      "effect": "Every foe on the battle field is Bound and skips its next phase.",
+      "overcast": "Also deal 1 hit to each"
+    },
+    {
+      "name": "Last Hymn",
+      "diff": "\\fell{} \\energy{2} \\stress{2}",
+      "defensive": true,
+      "effect": "Until your next round every ally ignores all hits and heals 1 Hit.",
+      "overcast": "Heal 2 Hits each"
+    }
+  ]
+}

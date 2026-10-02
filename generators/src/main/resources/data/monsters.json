@@ -1,0 +1,2996 @@
+{
+  "tiers": [
+    {
+      "lo": 1,
+      "hi": 40,
+      "title": "Minions",
+      "intro": "Small hungers, swarms, and hired knives. Cheap Threat, ugly deaths."
+    },
+    {
+      "lo": 41,
+      "hi": 75,
+      "title": "Brutes \\& Skirmishers",
+      "intro": "Heavy meat and mid-dark predators. They set the tempo of a delve."
+    },
+    {
+      "lo": 76,
+      "hi": 95,
+      "title": "Elites",
+      "intro": "Named dangers, cult blades, and guild engines. Threat often rolls d8."
+    },
+    {
+      "lo": 96,
+      "hi": 100,
+      "title": "Horrors",
+      "intro": "Apocalypse fragments. Budget carefully---or not at all."
+    }
+  ],
+  "diffMacros": {
+    "E": "\\easy",
+    "M": "\\medium",
+    "H": "\\hard{} \\hard{}",
+    "G": "\\grand{} \\energy{1}",
+    "D": "\\dire{} \\energy{1}",
+    "F": "\\fell{} \\energy{2}"
+  },
+  "minions": [
+    {
+      "name": "Vein Tick",
+      "pool": "2d6",
+      "hits": 2,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Close In",
+          "diff": "E",
+          "effect": "If not sharing a zone with a character, Move toward the nearest one."
+        },
+        {
+          "name": "Bite",
+          "diff": "M",
+          "effect": "Deal 1 hit to one character in its zone."
+        },
+        {
+          "name": "Latch",
+          "diff": "H",
+          "effect": "Deal 1 hit; that character cannot Move next round."
+        }
+      ]
+    },
+    {
+      "name": "Ash Rat",
+      "pool": "1d6",
+      "hits": 1,
+      "deploy": "Swarm",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Skitter",
+          "diff": "E",
+          "effect": "Move to an adjacent zone."
+        },
+        {
+          "name": "Nip",
+          "diff": "E",
+          "effect": "Deal 1 hit to a character in its zone."
+        },
+        {
+          "name": "Scatter",
+          "diff": "M",
+          "effect": "Move; the next Strike against it this round needs +1 face."
+        }
+      ]
+    },
+    {
+      "name": "Glass Mite",
+      "pool": "1d6",
+      "hits": 1,
+      "deploy": "Swarm",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Crawl",
+          "diff": "E",
+          "effect": "Move toward nearest character."
+        },
+        {
+          "name": "Shard Bite",
+          "diff": "M",
+          "effect": "Deal 1 hit; ignore Guard."
+        }
+      ]
+    },
+    {
+      "name": "Cave Urchin",
+      "pool": "2d6",
+      "hits": 2,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Roll",
+          "diff": "E",
+          "effect": "Move into a character's zone."
+        },
+        {
+          "name": "Spine",
+          "diff": "M",
+          "effect": "Deal 1 hit to each character in its zone (max 2)."
+        }
+      ]
+    },
+    {
+      "name": "Drip Slime",
+      "pool": "2d6",
+      "hits": 2,
+      "deploy": "Mid",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Ooze",
+          "diff": "E",
+          "effect": "Move to adjacent zone."
+        },
+        {
+          "name": "Engulf",
+          "diff": "M",
+          "effect": "Deal 1 hit; character loses Guard."
+        },
+        {
+          "name": "Split Drip",
+          "diff": "H",
+          "effect": "Spawn: place another Drip Slime with 1 Hit in an adjacent zone (once per fight)."
+        }
+      ]
+    },
+    {
+      "name": "Gloom Bat",
+      "pool": "1d6",
+      "hits": 1,
+      "deploy": "Rear",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Swoop",
+          "diff": "E",
+          "effect": "Move to a character's zone from up to two zones away."
+        },
+        {
+          "name": "Bleed Screech",
+          "diff": "M",
+          "effect": "Deal 1 hit; that character cannot Aid this round."
+        }
+      ]
+    },
+    {
+      "name": "Bone Maggot",
+      "pool": "1d6",
+      "hits": 1,
+      "deploy": "Swarm",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Burrow Edge",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Gnaw",
+          "diff": "E",
+          "effect": "Deal 1 hit to a character who took a hit this round."
+        }
+      ]
+    },
+    {
+      "name": "Rust Beetle",
+      "pool": "2d6",
+      "hits": 2,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Clack",
+          "diff": "E",
+          "effect": "Move adjacent to nearest character."
+        },
+        {
+          "name": "Corrode",
+          "diff": "M",
+          "effect": "Deal 1 hit; next Strike by that character costs +1 energy if Medium."
+        }
+      ]
+    },
+    {
+      "name": "Shardling Scout",
+      "pool": "2d6",
+      "hits": 2,
+      "deploy": "Mid",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Advance",
+          "diff": "E",
+          "effect": "Move toward Z1."
+        },
+        {
+          "name": "Crystal Cut",
+          "diff": "M",
+          "effect": "Deal 1 hit."
+        },
+        {
+          "name": "Signal",
+          "diff": "H",
+          "effect": "All other Shardlings treat Close In as already satisfied this round."
+        }
+      ]
+    },
+    {
+      "name": "Tunnel Leech",
+      "pool": "2d6",
+      "hits": 2,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Slither",
+          "diff": "E",
+          "effect": "Move into occupied zone."
+        },
+        {
+          "name": "Drain",
+          "diff": "M",
+          "effect": "Deal 1 hit; monster heals 1 hit (max Hits)."
+        }
+      ]
+    },
+    {
+      "name": "Ember Moth",
+      "pool": "1d6",
+      "hits": 1,
+      "deploy": "Swarm",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Flutter",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Singe",
+          "diff": "M",
+          "effect": "Deal 1 hit; ongoing: 1 hit next round unless Guarded."
+        }
+      ]
+    },
+    {
+      "name": "Pit Viper",
+      "pool": "2d6",
+      "hits": 2,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Coil",
+          "diff": "E",
+          "effect": "Gain Guard."
+        },
+        {
+          "name": "Strike",
+          "diff": "M",
+          "effect": "Deal 1 hit."
+        },
+        {
+          "name": "Venom",
+          "diff": "H",
+          "effect": "Deal 1 hit; character cannot Guard next round."
+        }
+      ]
+    },
+    {
+      "name": "Carrion Crow",
+      "pool": "1d6",
+      "hits": 1,
+      "deploy": "Rear",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Circle",
+          "diff": "E",
+          "effect": "Move to Rear-most empty adjacent step toward party."
+        },
+        {
+          "name": "Eye Peck",
+          "diff": "M",
+          "effect": "Deal 1 hit; -1 face on that character's next die."
+        }
+      ]
+    },
+    {
+      "name": "Fungal Spore",
+      "pool": "1d6",
+      "hits": 1,
+      "deploy": "Swarm",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Drift",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Choke",
+          "diff": "M",
+          "effect": "Deal 1 hit; character cannot use Hard Hard this round."
+        }
+      ]
+    },
+    {
+      "name": "Mine Wight Pup",
+      "pool": "2d6",
+      "hits": 2,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Shamble",
+          "diff": "E",
+          "effect": "Move toward nearest character."
+        },
+        {
+          "name": "Claw",
+          "diff": "M",
+          "effect": "Deal 1 hit."
+        }
+      ]
+    },
+    {
+      "name": "Crystal Gnat Cloud",
+      "pool": "2d6",
+      "hits": 3,
+      "deploy": "Swarm",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Swarm Move",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Sting Cloud",
+          "diff": "M",
+          "effect": "Deal 1 hit to every character in its zone."
+        },
+        {
+          "name": "Disperse",
+          "diff": "H",
+          "effect": "Ignore the next hit; Move."
+        }
+      ]
+    },
+    {
+      "name": "Debt Thug",
+      "pool": "2d6",
+      "hits": 3,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Press",
+          "diff": "E",
+          "effect": "Move into a character's zone."
+        },
+        {
+          "name": "Club",
+          "diff": "M",
+          "effect": "Deal 1 hit."
+        },
+        {
+          "name": "Shake Down",
+          "diff": "H",
+          "effect": "Deal 1 hit; party marks +1 Debt if they flee this fight."
+        }
+      ]
+    },
+    {
+      "name": "Gate Urchin",
+      "pool": "2d6",
+      "hits": 2,
+      "deploy": "Mid",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Cling",
+          "diff": "E",
+          "effect": "If on Gate terrain (Z5), gain Guard."
+        },
+        {
+          "name": "Spike",
+          "diff": "M",
+          "effect": "Deal 1 hit to character in same or adjacent zone."
+        }
+      ]
+    },
+    {
+      "name": "Soot Imp",
+      "pool": "2d6",
+      "hits": 2,
+      "deploy": "Mid",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Cackle Step",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Cinder Flick",
+          "diff": "M",
+          "effect": "Deal 1 hit to adjacent zone."
+        },
+        {
+          "name": "Smoke",
+          "diff": "H",
+          "effect": "Characters in its zone treat Strike as needing +1 face."
+        }
+      ]
+    },
+    {
+      "name": "Pale Centipede",
+      "pool": "2d6",
+      "hits": 2,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Undulate",
+          "diff": "E",
+          "effect": "Move; may pass through a monster zone."
+        },
+        {
+          "name": "Mandible",
+          "diff": "M",
+          "effect": "Deal 1 hit."
+        },
+        {
+          "name": "Coil Bind",
+          "diff": "H",
+          "effect": "Deal 1 hit; character cannot Move."
+        }
+      ]
+    },
+    {
+      "name": "Scrap Hound",
+      "pool": "2d6",
+      "hits": 3,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Bay",
+          "diff": "E",
+          "effect": "Move toward a character who is alone in their zone."
+        },
+        {
+          "name": "Maul",
+          "diff": "M",
+          "effect": "Deal 1 hit."
+        },
+        {
+          "name": "Drag",
+          "diff": "H",
+          "effect": "Deal 1 hit; Move that character one zone toward Z5."
+        }
+      ]
+    },
+    {
+      "name": "Lantern Jelly",
+      "pool": "1d6",
+      "hits": 2,
+      "deploy": "Mid",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Pulse",
+          "diff": "E",
+          "effect": "All characters in adjacent zones are revealed (no stealth)."
+        },
+        {
+          "name": "Sting",
+          "diff": "M",
+          "effect": "Deal 1 hit."
+        }
+      ]
+    },
+    {
+      "name": "Ore Tick",
+      "pool": "2d6",
+      "hits": 2,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Magnet Crawl",
+          "diff": "E",
+          "effect": "Move into zone with most metal (Warrior preferred)."
+        },
+        {
+          "name": "Suck Spark",
+          "diff": "M",
+          "effect": "Deal 1 hit; steal 1 energy if that character would spend any this round."
+        }
+      ]
+    },
+    {
+      "name": "Grave Larva",
+      "pool": "1d6",
+      "hits": 1,
+      "deploy": "Swarm",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Writhe",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Burrow Flesh",
+          "diff": "M",
+          "effect": "Deal 1 hit to a character at 1 hit remaining, or 1 hit otherwise."
+        }
+      ]
+    },
+    {
+      "name": "Echo Sprig",
+      "pool": "2d6",
+      "hits": 2,
+      "deploy": "Rear",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Mimic Step",
+          "diff": "E",
+          "effect": "Move to copy a character's last Move destination if adjacent path exists."
+        },
+        {
+          "name": "False Call",
+          "diff": "M",
+          "effect": "Cancel one Aid this round."
+        },
+        {
+          "name": "Shatter Chirp",
+          "diff": "H",
+          "effect": "Deal 1 hit to all in its zone."
+        }
+      ]
+    },
+    {
+      "name": "Blindfish Walker",
+      "pool": "2d6",
+      "hits": 2,
+      "deploy": "Mid",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Slap",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Gulp Dark",
+          "diff": "M",
+          "effect": "Deal 1 hit; zone becomes difficult (Moves Hard Hard) until cleared."
+        }
+      ]
+    },
+    {
+      "name": "Nail Sprite",
+      "pool": "1d6",
+      "hits": 1,
+      "deploy": "Swarm",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Dart",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Puncture",
+          "diff": "E",
+          "effect": "Deal 1 hit."
+        },
+        {
+          "name": "Rust Laugh",
+          "diff": "M",
+          "effect": "Character's next Guard fails automatically."
+        }
+      ]
+    },
+    {
+      "name": "Cinder Beetle",
+      "pool": "2d6",
+      "hits": 2,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Glow",
+          "diff": "E",
+          "effect": "Gain Guard."
+        },
+        {
+          "name": "Burst",
+          "diff": "M",
+          "effect": "Deal 1 hit to its zone; take 1 hit itself."
+        }
+      ]
+    },
+    {
+      "name": "Tunnel Brat",
+      "pool": "2d6",
+      "hits": 2,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Chuck Rock",
+          "diff": "M",
+          "effect": "Deal 1 hit to adjacent zone."
+        },
+        {
+          "name": "Run",
+          "diff": "E",
+          "effect": "Move toward Z5."
+        },
+        {
+          "name": "Jeer",
+          "diff": "H",
+          "effect": "Nearest character must target this monster if they Strike this round."
+        }
+      ]
+    },
+    {
+      "name": "Shard Flea",
+      "pool": "1d6",
+      "hits": 1,
+      "deploy": "Swarm",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Hop",
+          "diff": "E",
+          "effect": "Move up to two zones."
+        },
+        {
+          "name": "Bite",
+          "diff": "E",
+          "effect": "Deal 1 hit."
+        }
+      ]
+    },
+    {
+      "name": "Muck Crab",
+      "pool": "2d6",
+      "hits": 3,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Sideways",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Claw",
+          "diff": "M",
+          "effect": "Deal 1 hit."
+        },
+        {
+          "name": "Pinch Gear",
+          "diff": "H",
+          "effect": "Deal 1 hit; character cannot use archetype actions next round."
+        }
+      ]
+    },
+    {
+      "name": "Whisper Moth",
+      "pool": "1d6",
+      "hits": 1,
+      "deploy": "Rear",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Soft Wing",
+          "diff": "E",
+          "effect": "Move without triggering entry hits."
+        },
+        {
+          "name": "Steal Word",
+          "diff": "M",
+          "effect": "Deal 1 hit; that character cannot use archetype actions until the next round."
+        }
+      ]
+    },
+    {
+      "name": "Bone Spur",
+      "pool": "2d6",
+      "hits": 2,
+      "deploy": "Mid",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Plant",
+          "diff": "E",
+          "effect": "If it does not Move, gain Guard."
+        },
+        {
+          "name": "Impale",
+          "diff": "M",
+          "effect": "Deal 1 hit to character entering its zone, or Strike in zone."
+        }
+      ]
+    },
+    {
+      "name": "Guild Rat",
+      "pool": "2d6",
+      "hits": 2,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Flank",
+          "diff": "E",
+          "effect": "Move to a zone with a character and another monster."
+        },
+        {
+          "name": "Shiv",
+          "diff": "M",
+          "effect": "Deal 1 hit."
+        },
+        {
+          "name": "Call Debt",
+          "diff": "H",
+          "effect": "If it hits, mark +1 Debt."
+        }
+      ]
+    },
+    {
+      "name": "Static Polyp",
+      "pool": "2d6",
+      "hits": 2,
+      "deploy": "Mid",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Anchor",
+          "diff": "E",
+          "effect": "Cannot be Moved this round."
+        },
+        {
+          "name": "Arc",
+          "diff": "M",
+          "effect": "Deal 1 hit to a character in same or adjacent zone."
+        },
+        {
+          "name": "Discharge",
+          "diff": "H",
+          "effect": "Deal 1 hit to all characters in adjacent zones."
+        }
+      ]
+    },
+    {
+      "name": "Dust Wisp",
+      "pool": "1d6",
+      "hits": 1,
+      "deploy": "Swarm",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Drift",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Choke Dust",
+          "diff": "M",
+          "effect": "Deal 1 hit; Stress +1 on that character if Resonance is tracked."
+        }
+      ]
+    },
+    {
+      "name": "Cave Spiderling",
+      "pool": "2d6",
+      "hits": 2,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Web Line",
+          "diff": "E",
+          "effect": "Move; leave web: next foe Move into that zone costs Medium for characters."
+        },
+        {
+          "name": "Bite",
+          "diff": "M",
+          "effect": "Deal 1 hit."
+        }
+      ]
+    },
+    {
+      "name": "Pyre Cub",
+      "pool": "2d6",
+      "hits": 3,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Pounce",
+          "diff": "E",
+          "effect": "Move into character zone."
+        },
+        {
+          "name": "Rake",
+          "diff": "M",
+          "effect": "Deal 1 hit."
+        },
+        {
+          "name": "Howl Embers",
+          "diff": "H",
+          "effect": "Deal 1 hit; character takes 1 hit at start of next round."
+        }
+      ]
+    },
+    {
+      "name": "Lead Slug",
+      "pool": "1d6",
+      "hits": 3,
+      "deploy": "Mid",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Creep",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Crush Toe",
+          "diff": "M",
+          "effect": "Deal 1 hit; character cannot Move."
+        }
+      ]
+    },
+    {
+      "name": "Hollow Child Echo",
+      "pool": "2d6",
+      "hits": 2,
+      "deploy": "Rear",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Beckon",
+          "diff": "E",
+          "effect": "Nearest character Moves one zone toward this monster if not Hard Hard resisted (assign any die 4+)."
+        },
+        {
+          "name": "Cold Touch",
+          "diff": "M",
+          "effect": "Deal 1 hit."
+        },
+        {
+          "name": "Wail",
+          "diff": "H",
+          "effect": "All characters in adjacent zones take 1 hit."
+        }
+      ]
+    }
+  ],
+  "brutes": [
+    {
+      "name": "Shard Brute",
+      "pool": "3d6",
+      "hits": 5,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Advance",
+          "diff": "E",
+          "effect": "Move toward nearest character."
+        },
+        {
+          "name": "Smash",
+          "diff": "M",
+          "effect": "Deal 2 hits to one character in its zone."
+        },
+        {
+          "name": "Backhand",
+          "diff": "H",
+          "effect": "Deal 1 hit to up to two characters in its zone."
+        },
+        {
+          "name": "Roar",
+          "diff": "M",
+          "effect": "Characters in its zone cannot Guard this round."
+        }
+      ]
+    },
+    {
+      "name": "Tunnel Ogre",
+      "pool": "3d6",
+      "hits": 5,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Stoop Walk",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Club Sweep",
+          "diff": "M",
+          "effect": "Deal 1 hit to each character in its zone."
+        },
+        {
+          "name": "Hurl Rubble",
+          "diff": "H",
+          "effect": "Deal 2 hits to a character in an adjacent zone."
+        }
+      ]
+    },
+    {
+      "name": "Crystal Hound Alpha",
+      "pool": "3d6",
+      "hits": 4,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Hunt",
+          "diff": "E",
+          "effect": "Move toward the most wounded character."
+        },
+        {
+          "name": "Bite",
+          "diff": "M",
+          "effect": "Deal 2 hits."
+        },
+        {
+          "name": "Pack Howl",
+          "diff": "H",
+          "effect": "All Swarm allies Move once for free (no die)."
+        }
+      ]
+    },
+    {
+      "name": "Ashblade Mercenary",
+      "pool": "3d6",
+      "hits": 4,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Close",
+          "diff": "E",
+          "effect": "Move into a character's zone."
+        },
+        {
+          "name": "Burning Cut",
+          "diff": "M",
+          "effect": "Deal 1 hit; ongoing 1 hit next round."
+        },
+        {
+          "name": "Execute",
+          "diff": "H",
+          "effect": "Deal 3 hits to a character who already took a hit this round."
+        }
+      ]
+    },
+    {
+      "name": "Vein Stalker Beast",
+      "pool": "3d6",
+      "hits": 4,
+      "deploy": "Mid",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Stalk",
+          "diff": "E",
+          "effect": "Move; gain Guard if ending in Mid/Rear."
+        },
+        {
+          "name": "Pounce",
+          "diff": "M",
+          "effect": "Move into zone and deal 1 hit."
+        },
+        {
+          "name": "Throat Rip",
+          "diff": "H",
+          "effect": "Deal 2 hits; character cannot Aid."
+        }
+      ]
+    },
+    {
+      "name": "Iron Vulture",
+      "pool": "2d6",
+      "hits": 4,
+      "deploy": "Rear",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Wheel",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Dive",
+          "diff": "M",
+          "effect": "Deal 2 hits to a character in Front (Z1--Z2)."
+        },
+        {
+          "name": "Carry Off",
+          "diff": "H",
+          "effect": "Deal 1 hit; Move character one zone toward Z5."
+        }
+      ]
+    },
+    {
+      "name": "Quarry Wight",
+      "pool": "3d6",
+      "hits": 5,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Shamble",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Grave Claw",
+          "diff": "M",
+          "effect": "Deal 2 hits."
+        },
+        {
+          "name": "Drain Warmth",
+          "diff": "H",
+          "effect": "Deal 1 hit; heal 1 hit."
+        },
+        {
+          "name": "Wail of Pits",
+          "diff": "M",
+          "effect": "Characters in zone lose Guard."
+        }
+      ]
+    },
+    {
+      "name": "Slag Golem Chunk",
+      "pool": "3d6",
+      "hits": 5,
+      "deploy": "Mid",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Trudge",
+          "diff": "E",
+          "effect": "Move; ignore forced Move."
+        },
+        {
+          "name": "Fist",
+          "diff": "M",
+          "effect": "Deal 2 hits."
+        },
+        {
+          "name": "Slag Burst",
+          "diff": "H",
+          "effect": "Deal 1 hit to all in its zone; it takes 1 hit."
+        }
+      ]
+    },
+    {
+      "name": "Gate Enforcer",
+      "pool": "3d6",
+      "hits": 4,
+      "deploy": "Front",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Lock Step",
+          "diff": "E",
+          "effect": "Move to block path to Z1 (prefer Z2/Z3)."
+        },
+        {
+          "name": "Baton",
+          "diff": "M",
+          "effect": "Deal 1 hit."
+        },
+        {
+          "name": "Arrest",
+          "diff": "H",
+          "effect": "Deal 2 hits; character cannot leave zone."
+        }
+      ]
+    },
+    {
+      "name": "Resonance Spawn",
+      "pool": "3d6",
+      "hits": 4,
+      "deploy": "Mid",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Pulse Step",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Static Lash",
+          "diff": "M",
+          "effect": "Deal 1 hit to same or adjacent zone."
+        },
+        {
+          "name": "Overload",
+          "diff": "H",
+          "effect": "Deal 2 hits; party Resonance Stress +1."
+        }
+      ]
+    },
+    {
+      "name": "Cave Troll Kin",
+      "pool": "3d6",
+      "hits": 5,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Lumber",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Rend",
+          "diff": "M",
+          "effect": "Deal 2 hits."
+        },
+        {
+          "name": "Regrow",
+          "diff": "H",
+          "effect": "Heal 2 hits if it dealt a hit this phase."
+        }
+      ]
+    },
+    {
+      "name": "Blackmarket Ogre",
+      "pool": "3d6",
+      "hits": 5,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Menace",
+          "diff": "E",
+          "effect": "Nearest character Moves away one zone or takes 1 hit (player choice)."
+        },
+        {
+          "name": "Chain Hook",
+          "diff": "M",
+          "effect": "Pull a character from adjacent zone; deal 1 hit."
+        },
+        {
+          "name": "Crush",
+          "diff": "H",
+          "effect": "Deal 3 hits."
+        }
+      ]
+    },
+    {
+      "name": "Glass Serpent",
+      "pool": "3d6",
+      "hits": 4,
+      "deploy": "Mid",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Slither",
+          "diff": "E",
+          "effect": "Move up to two zones in a line."
+        },
+        {
+          "name": "Fang",
+          "diff": "M",
+          "effect": "Deal 2 hits."
+        },
+        {
+          "name": "Coil Crush",
+          "diff": "H",
+          "effect": "Deal 1 hit; character cannot Move or Strike."
+        }
+      ]
+    },
+    {
+      "name": "Pit Knight Remnant",
+      "pool": "3d6",
+      "hits": 5,
+      "deploy": "Front",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Advance Banner",
+          "diff": "E",
+          "effect": "Move; allies Front gain Guard."
+        },
+        {
+          "name": "Rusted Thrust",
+          "diff": "M",
+          "effect": "Deal 2 hits."
+        },
+        {
+          "name": "Shield Wall",
+          "diff": "H",
+          "effect": "Gain Guard; deal 1 hit to attackers this round."
+        }
+      ]
+    },
+    {
+      "name": "Fungal Brute",
+      "pool": "3d6",
+      "hits": 5,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Stomp",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Spore Fist",
+          "diff": "M",
+          "effect": "Deal 2 hits; character -1 face next die."
+        },
+        {
+          "name": "Cloud",
+          "diff": "H",
+          "effect": "Deal 1 hit to all characters in zone and adjacent."
+        }
+      ]
+    },
+    {
+      "name": "Debt Collector",
+      "pool": "3d6",
+      "hits": 4,
+      "deploy": "Front",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Corner",
+          "diff": "E",
+          "effect": "Move into zone with most characters."
+        },
+        {
+          "name": "Bone Interest",
+          "diff": "M",
+          "effect": "Deal 1 hit; +1 Debt if unpaid after fight."
+        },
+        {
+          "name": "Break Finger",
+          "diff": "H",
+          "effect": "Deal 2 hits; character cannot use Hard Hard next round."
+        }
+      ]
+    },
+    {
+      "name": "Amber Scorpion",
+      "pool": "3d6",
+      "hits": 4,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Scuttle",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Claw",
+          "diff": "M",
+          "effect": "Deal 1 hit."
+        },
+        {
+          "name": "Stinger",
+          "diff": "H",
+          "effect": "Deal 2 hits; ongoing poison 1 hit next round."
+        }
+      ]
+    },
+    {
+      "name": "Mine Horror Half",
+      "pool": "3d6",
+      "hits": 5,
+      "deploy": "Mid",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Drag Arm",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Sweep Bone",
+          "diff": "M",
+          "effect": "Deal 2 hits."
+        },
+        {
+          "name": "Suture",
+          "diff": "H",
+          "effect": "Heal 1; deal 1 hit to nearest character."
+        }
+      ]
+    },
+    {
+      "name": "Cinder Boar",
+      "pool": "3d6",
+      "hits": 4,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Charge",
+          "diff": "E",
+          "effect": "Move into zone; deal 1 hit if ending on a character."
+        },
+        {
+          "name": "Gore",
+          "diff": "M",
+          "effect": "Deal 2 hits."
+        },
+        {
+          "name": "Ash Breath",
+          "diff": "H",
+          "effect": "Deal 1 hit to all in adjacent zones."
+        }
+      ]
+    },
+    {
+      "name": "Void Mite Broodmother",
+      "pool": "3d6",
+      "hits": 5,
+      "deploy": "Mid",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Spawn Signal",
+          "diff": "E",
+          "effect": "If a Swarm ally is down, place one Ash Rat (1 Hit) in its zone once/fight."
+        },
+        {
+          "name": "Bite",
+          "diff": "M",
+          "effect": "Deal 2 hits."
+        },
+        {
+          "name": "Dark Milk",
+          "diff": "H",
+          "effect": "All Swarm allies heal 1 hit."
+        }
+      ]
+    },
+    {
+      "name": "Stone Mantid",
+      "pool": "3d6",
+      "hits": 4,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Climb Wall",
+          "diff": "E",
+          "effect": "Move; ignore zone capacity once."
+        },
+        {
+          "name": "Razor Arm",
+          "diff": "M",
+          "effect": "Deal 2 hits."
+        },
+        {
+          "name": "Snatch",
+          "diff": "H",
+          "effect": "Deal 1 hit; Move character to its zone."
+        }
+      ]
+    },
+    {
+      "name": "Blight Elk",
+      "pool": "3d6",
+      "hits": 4,
+      "deploy": "Mid",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Antler Rush",
+          "diff": "E",
+          "effect": "Move two zones toward a character; deal 1 hit on contact."
+        },
+        {
+          "name": "Trample",
+          "diff": "M",
+          "effect": "Deal 2 hits."
+        },
+        {
+          "name": "Rot Crown",
+          "diff": "H",
+          "effect": "Deal 1 hit; Stress +1."
+        }
+      ]
+    },
+    {
+      "name": "Chain Ghoul",
+      "pool": "3d6",
+      "hits": 4,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Rattle",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Lash",
+          "diff": "M",
+          "effect": "Deal 1 hit to adjacent zone."
+        },
+        {
+          "name": "Bind",
+          "diff": "H",
+          "effect": "Deal 2 hits in zone; character cannot Move."
+        }
+      ]
+    },
+    {
+      "name": "Slag Hound Pair",
+      "pool": "3d6",
+      "hits": 4,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Flank Run",
+          "diff": "E",
+          "effect": "Move to opposite side of a character (adjacent zone if possible)."
+        },
+        {
+          "name": "Twin Bite",
+          "diff": "M",
+          "effect": "Deal 2 hits."
+        },
+        {
+          "name": "Trip",
+          "diff": "H",
+          "effect": "Deal 1 hit; character falls: next action Hard Hard."
+        }
+      ]
+    },
+    {
+      "name": "Oracle Leech",
+      "pool": "2d6",
+      "hits": 4,
+      "deploy": "Rear",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Drift Thought",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Siphon Vision",
+          "diff": "M",
+          "effect": "Deal 1 hit; cancel one planned Hard Hard this round."
+        },
+        {
+          "name": "Prophecy Burn",
+          "diff": "H",
+          "effect": "Deal 2 hits to a character who used a Seer/Mage action this fight."
+        }
+      ]
+    },
+    {
+      "name": "Basalt Ape",
+      "pool": "3d6",
+      "hits": 5,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Climb",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Rock Throw",
+          "diff": "M",
+          "effect": "Deal 2 hits adjacent."
+        },
+        {
+          "name": "Beat Chest",
+          "diff": "H",
+          "effect": "Allies Front gain +1 hit on their next action; this ape Guards."
+        }
+      ]
+    },
+    {
+      "name": "Needle Priest",
+      "pool": "3d6",
+      "hits": 4,
+      "deploy": "Mid",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Chant",
+          "diff": "E",
+          "effect": "Nearest Swarm moves once free."
+        },
+        {
+          "name": "Glass Needle",
+          "diff": "M",
+          "effect": "Deal 2 hits same/adjacent."
+        },
+        {
+          "name": "Bless Pain",
+          "diff": "H",
+          "effect": "Deal 1 hit; monster allies in zone heal 1."
+        }
+      ]
+    },
+    {
+      "name": "Rubble Elemental",
+      "pool": "3d6",
+      "hits": 5,
+      "deploy": "Mid",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Reform",
+          "diff": "E",
+          "effect": "Heal 1 if it did not Move last round."
+        },
+        {
+          "name": "Avalanche Fist",
+          "diff": "M",
+          "effect": "Deal 2 hits."
+        },
+        {
+          "name": "Bury",
+          "diff": "H",
+          "effect": "Deal 1 hit; character skips next Party phase action."
+        }
+      ]
+    },
+    {
+      "name": "Wailing Bride",
+      "pool": "3d6",
+      "hits": 4,
+      "deploy": "Rear",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Glide",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Grief Touch",
+          "diff": "M",
+          "effect": "Deal 1 hit; character cannot Guard."
+        },
+        {
+          "name": "Wedding Screech",
+          "diff": "H",
+          "effect": "Deal 2 hits to all characters in adjacent zones."
+        }
+      ]
+    },
+    {
+      "name": "Gear Tortoise",
+      "pool": "3d6",
+      "hits": 5,
+      "deploy": "Mid",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Shell In",
+          "diff": "E",
+          "effect": "Gain Guard."
+        },
+        {
+          "name": "Steam Vent",
+          "diff": "M",
+          "effect": "Deal 1 hit to all in zone."
+        },
+        {
+          "name": "Cannon Snout",
+          "diff": "H",
+          "effect": "Deal 3 hits to one character within two zones."
+        }
+      ]
+    },
+    {
+      "name": "Blood Jelly Elder",
+      "pool": "3d6",
+      "hits": 5,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Flow",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Dissolve",
+          "diff": "M",
+          "effect": "Deal 2 hits; ignore Guard."
+        },
+        {
+          "name": "Split Threat",
+          "diff": "H",
+          "effect": "Deal 1 hit; place a Drip Slime (2 Hits) adjacent once/fight."
+        }
+      ]
+    },
+    {
+      "name": "Hollow Knight",
+      "pool": "3d6",
+      "hits": 5,
+      "deploy": "Front",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "March",
+          "diff": "E",
+          "effect": "Move toward Z1."
+        },
+        {
+          "name": "Spectral Thrust",
+          "diff": "M",
+          "effect": "Deal 2 hits."
+        },
+        {
+          "name": "Oath Break",
+          "diff": "H",
+          "effect": "Deal 1 hit; character loses one Guard and one Aid this round."
+        }
+      ]
+    },
+    {
+      "name": "Cave Manticore Cub",
+      "pool": "3d6",
+      "hits": 5,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Stalk",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Claw",
+          "diff": "M",
+          "effect": "Deal 2 hits."
+        },
+        {
+          "name": "Tail Spikes",
+          "diff": "H",
+          "effect": "Deal 1 hit to up to three characters in adjacent zones."
+        }
+      ]
+    },
+    {
+      "name": "Aether Hyena",
+      "pool": "3d6",
+      "hits": 4,
+      "deploy": "Front",
+      "threat": "d6",
+      "actions": [
+        {
+          "name": "Laughing Run",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Tear",
+          "diff": "M",
+          "effect": "Deal 2 hits."
+        },
+        {
+          "name": "Steal Spark",
+          "diff": "H",
+          "effect": "Deal 1 hit; steal 1 energy from the party."
+        }
+      ]
+    },
+    {
+      "name": "Grim Bailiff",
+      "pool": "3d6",
+      "hits": 4,
+      "deploy": "Front",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Serve Writ",
+          "diff": "E",
+          "effect": "Move into zone with a character who has Debt."
+        },
+        {
+          "name": "Mace",
+          "diff": "M",
+          "effect": "Deal 2 hits."
+        },
+        {
+          "name": "Confiscate",
+          "diff": "H",
+          "effect": "Deal 1 hit; that character loses Guard and cannot Guard next round."
+        }
+      ]
+    }
+  ],
+  "elites": [
+    {
+      "name": "Shard Captain",
+      "pool": "4d6",
+      "hits": 6,
+      "deploy": "Front",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Rally Filth",
+          "diff": "E",
+          "effect": "One allied monster Moves free."
+        },
+        {
+          "name": "Captain's Cut",
+          "diff": "M",
+          "effect": "Deal 2 hits."
+        },
+        {
+          "name": "Formation",
+          "diff": "M",
+          "effect": "All Front allies gain Guard."
+        },
+        {
+          "name": "Execute Order",
+          "diff": "H",
+          "effect": "Deal 3 hits to one character in its zone."
+        }
+      ]
+    },
+    {
+      "name": "Resonance Cantor Apostate",
+      "pool": "4d6",
+      "hits": 6,
+      "deploy": "Mid",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Dissonant Step",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Shatter Note",
+          "diff": "M",
+          "effect": "Deal 2 hits in zone."
+        },
+        {
+          "name": "Silence Bell",
+          "diff": "H",
+          "effect": "Characters in zone cannot Aid or Ward."
+        },
+        {
+          "name": "Choir of Knives",
+          "diff": "H",
+          "effect": "Deal 1 hit to every character on the field (max 3)."
+        }
+      ]
+    },
+    {
+      "name": "Voidbinder Thrall",
+      "pool": "4d6",
+      "hits": 6,
+      "deploy": "Mid",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Pin",
+          "diff": "E",
+          "effect": "A character in its zone cannot Move."
+        },
+        {
+          "name": "Void Hook",
+          "diff": "M",
+          "effect": "Pull from adjacent; deal 1 hit."
+        },
+        {
+          "name": "Cage Crush",
+          "diff": "H",
+          "effect": "Deal 3 hits to a Bound/pinned character."
+        },
+        {
+          "name": "Horizon",
+          "diff": "H",
+          "effect": "No one leaves its zone; deal 1 hit to each character there."
+        }
+      ]
+    },
+    {
+      "name": "Dust Alchemist Renegade",
+      "pool": "3d6",
+      "hits": 6,
+      "deploy": "Rear",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Flask Step",
+          "diff": "E",
+          "effect": "Move."
+        },
+        {
+          "name": "Vitriol",
+          "diff": "M",
+          "effect": "Deal 2 hits adjacent."
+        },
+        {
+          "name": "Mutagen Cloud",
+          "diff": "H",
+          "effect": "Deal 1 hit to all in Mid zones; Stress +1."
+        },
+        {
+          "name": "Magnum Shock",
+          "diff": "H",
+          "effect": "Deal 3 hits to one character."
+        }
+      ]
+    },
+    {
+      "name": "Iron Vanguard Fallen",
+      "pool": "4d6",
+      "hits": 7,
+      "deploy": "Front",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Bulwark Walk",
+          "diff": "E",
+          "effect": "Move; gain Guard."
+        },
+        {
+          "name": "Shield Bash",
+          "diff": "M",
+          "effect": "Deal 2 hits; character cannot Move."
+        },
+        {
+          "name": "Phalanx",
+          "diff": "M",
+          "effect": "Allies in zone gain Guard."
+        },
+        {
+          "name": "Judgment",
+          "diff": "H",
+          "effect": "Deal 3 hits."
+        }
+      ]
+    },
+    {
+      "name": "Night Broker Boss",
+      "pool": "4d6",
+      "hits": 6,
+      "deploy": "Mid",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Buy Opening",
+          "diff": "E",
+          "effect": "One ally Strikes with +1 hit this phase."
+        },
+        {
+          "name": "Contract Knife",
+          "diff": "M",
+          "effect": "Deal 2 hits."
+        },
+        {
+          "name": "Sell Out",
+          "diff": "H",
+          "effect": "Deal 1 hit to a character; another character takes 1 hit (Broker chooses)."
+        },
+        {
+          "name": "Midnight Clause",
+          "diff": "H",
+          "effect": "Deal 2 hits; cancel one Party Hard Hard this round."
+        }
+      ]
+    },
+    {
+      "name": "Gatecutter Assassin",
+      "pool": "4d6",
+      "hits": 5,
+      "deploy": "Rear",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Soft Entry",
+          "diff": "E",
+          "effect": "Move into any zone ignoring capacity once."
+        },
+        {
+          "name": "Keystrike",
+          "diff": "M",
+          "effect": "Deal 2 hits."
+        },
+        {
+          "name": "Kill the Keeper",
+          "diff": "H",
+          "effect": "Deal 3 hits to a character who has not Moved this round."
+        },
+        {
+          "name": "Seal Behind",
+          "diff": "M",
+          "effect": "After Moving, characters cannot follow into its zone this round."
+        }
+      ]
+    },
+    {
+      "name": "Prism Seer Wraith",
+      "pool": "4d6",
+      "hits": 6,
+      "deploy": "Rear",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Glance Ahead",
+          "diff": "E",
+          "effect": "Force party to discard one unassigned die next Party phase."
+        },
+        {
+          "name": "Oracle Bolt",
+          "diff": "M",
+          "effect": "Deal 2 hits any zone."
+        },
+        {
+          "name": "Bad Future",
+          "diff": "H",
+          "effect": "Force reroll of one successful party action die."
+        },
+        {
+          "name": "Prophetic Doom",
+          "diff": "H",
+          "effect": "Deal 3 hits to a character who ignored a Guard warning."
+        }
+      ]
+    },
+    {
+      "name": "Crucible Champion",
+      "pool": "4d6",
+      "hits": 7,
+      "deploy": "Front",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Pain Tithe",
+          "diff": "E",
+          "effect": "Take 1 hit; deal 1 hit."
+        },
+        {
+          "name": "Anvil Blow",
+          "diff": "M",
+          "effect": "Deal 2 hits."
+        },
+        {
+          "name": "No Quarter",
+          "diff": "H",
+          "effect": "Deal 3 hits; neither side Guards this exchange."
+        },
+        {
+          "name": "Molten Aura",
+          "diff": "M",
+          "effect": "Characters ending in its zone take 1 hit."
+        }
+      ]
+    },
+    {
+      "name": "Oathbreaker Duellist",
+      "pool": "4d6",
+      "hits": 6,
+      "deploy": "Front",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Cut Ties",
+          "diff": "E",
+          "effect": "Move; cannot be Aided against."
+        },
+        {
+          "name": "Spite Cut",
+          "diff": "M",
+          "effect": "Deal 2 hits."
+        },
+        {
+          "name": "Turncloak",
+          "diff": "H",
+          "effect": "Deal 1 hit to a character and force an ally in zone to take 1 hit."
+        },
+        {
+          "name": "Forsaken Surge",
+          "diff": "H",
+          "effect": "If alone vs characters in zone, deal 4 hits."
+        }
+      ]
+    },
+    {
+      "name": "Aetherwright Construct",
+      "pool": "4d6",
+      "hits": 6,
+      "deploy": "Mid",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Lattice Step",
+          "diff": "E",
+          "effect": "Move itself or pull a minion."
+        },
+        {
+          "name": "Hardlight Edge",
+          "diff": "M",
+          "effect": "Deal 2 hits; ignore Guard."
+        },
+        {
+          "name": "Barrier Dome",
+          "diff": "H",
+          "effect": "Gain Guard; characters entering take 1 hit."
+        },
+        {
+          "name": "Cataclysm Line",
+          "diff": "H",
+          "effect": "Deal 3 hits along two zones."
+        }
+      ]
+    },
+    {
+      "name": "Tunnel Knight Haunt",
+      "pool": "4d6",
+      "hits": 6,
+      "deploy": "Front",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Choke Point",
+          "diff": "E",
+          "effect": "Only one character may enter its zone next round."
+        },
+        {
+          "name": "Cave-In Blow",
+          "diff": "M",
+          "effect": "Deal 2 hits; character cannot leave."
+        },
+        {
+          "name": "Collapse Threat",
+          "diff": "H",
+          "effect": "Deal 1 hit to each character in zone; Move them adjacent."
+        },
+        {
+          "name": "Dead End",
+          "diff": "H",
+          "effect": "Deal 3 hits if exactly one character shares its zone."
+        }
+      ]
+    },
+    {
+      "name": "Glasshand Killer",
+      "pool": "4d6",
+      "hits": 5,
+      "deploy": "Mid",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Sliver",
+          "diff": "E",
+          "effect": "Deal 1 hit (precision; cannot redirect)."
+        },
+        {
+          "name": "Poison Edge",
+          "diff": "M",
+          "effect": "Deal 2 hits; ongoing 1."
+        },
+        {
+          "name": "Arterial",
+          "diff": "H",
+          "effect": "Deal 2 hits; ongoing each round until Guarded."
+        },
+        {
+          "name": "Perfect Cut",
+          "diff": "H",
+          "effect": "If a 6 was rolled in its pool, deal 4 hits."
+        }
+      ]
+    },
+    {
+      "name": "Veinstalker Apex",
+      "pool": "4d6",
+      "hits": 6,
+      "deploy": "Mid",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Vein Step",
+          "diff": "E",
+          "effect": "Move along crystal; gain Guard."
+        },
+        {
+          "name": "Ambush",
+          "diff": "M",
+          "effect": "Deal 2 hits to a character that Moved."
+        },
+        {
+          "name": "Quartz Throat",
+          "diff": "H",
+          "effect": "Deal 3 hits to a lone character in its zone."
+        },
+        {
+          "name": "Hungering Glass",
+          "diff": "H",
+          "effect": "Deal 2 hits; if character falls, Move free."
+        }
+      ]
+    },
+    {
+      "name": "Debtknife Captain",
+      "pool": "4d6",
+      "hits": 6,
+      "deploy": "Front",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Corner Ledger",
+          "diff": "E",
+          "effect": "Move to character with Debt."
+        },
+        {
+          "name": "Collection",
+          "diff": "M",
+          "effect": "Deal 2 hits."
+        },
+        {
+          "name": "Foreclosure",
+          "diff": "H",
+          "effect": "Deal 3 hits; the party loses 1 Energy."
+        },
+        {
+          "name": "Final Notice",
+          "diff": "H",
+          "effect": "Deal 4 hits to a marked debtor."
+        }
+      ]
+    },
+    {
+      "name": "Ashblade Zealot",
+      "pool": "4d6",
+      "hits": 6,
+      "deploy": "Front",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Cinder Cut",
+          "diff": "E",
+          "effect": "Deal 1 hit."
+        },
+        {
+          "name": "Wildfire",
+          "diff": "M",
+          "effect": "Deal 1 hit to two characters in zone."
+        },
+        {
+          "name": "Cremate",
+          "diff": "H",
+          "effect": "Deal 3 hits; heal 1 if target falls."
+        },
+        {
+          "name": "White-Hot",
+          "diff": "H",
+          "effect": "Deal 2 hits; next party Hard Hard becomes Medium+energy once (zealot bleeds advantage)."
+        }
+      ]
+    },
+    {
+      "name": "Static Rain Elemental",
+      "pool": "4d6",
+      "hits": 6,
+      "deploy": "Mid",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Charge Air",
+          "diff": "E",
+          "effect": "Characters in metal (Warrior) take 1 hit if they lack Guard."
+        },
+        {
+          "name": "Bolt",
+          "diff": "M",
+          "effect": "Deal 2 hits same/adjacent."
+        },
+        {
+          "name": "Storm Sheet",
+          "diff": "H",
+          "effect": "Deal 1 hit to all characters."
+        },
+        {
+          "name": "Grounding Crush",
+          "diff": "H",
+          "effect": "Deal 3 hits; end all Guards on the field."
+        }
+      ]
+    },
+    {
+      "name": "Mining Guild Juggernaut",
+      "pool": "4d6",
+      "hits": 7,
+      "deploy": "Front",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Steam Advance",
+          "diff": "E",
+          "effect": "Move toward Z1."
+        },
+        {
+          "name": "Drill Fist",
+          "diff": "M",
+          "effect": "Deal 2 hits."
+        },
+        {
+          "name": "Vent",
+          "diff": "M",
+          "effect": "Deal 1 hit to all in zone."
+        },
+        {
+          "name": "Overburden",
+          "diff": "H",
+          "effect": "Deal 3 hits; character cannot Move next round."
+        }
+      ]
+    },
+    {
+      "name": "Star-Cult Hierophant",
+      "pool": "4d6",
+      "hits": 6,
+      "deploy": "Rear",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Preach",
+          "diff": "E",
+          "effect": "One ally heals 1 or Moves free."
+        },
+        {
+          "name": "Glass Sacrament",
+          "diff": "M",
+          "effect": "Deal 2 hits any zone."
+        },
+        {
+          "name": "Compel Kneel",
+          "diff": "H",
+          "effect": "Character in Mid/Front loses next Easy action."
+        },
+        {
+          "name": "Falling Sun Rite",
+          "diff": "H",
+          "effect": "Deal 2 hits to all characters; Stress +1."
+        }
+      ]
+    },
+    {
+      "name": "Bone Colossus Fragment",
+      "pool": "4d6",
+      "hits": 7,
+      "deploy": "Mid",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Rebuild",
+          "diff": "E",
+          "effect": "Heal 1."
+        },
+        {
+          "name": "Osseous Slam",
+          "diff": "M",
+          "effect": "Deal 2 hits."
+        },
+        {
+          "name": "Ribcage Prison",
+          "diff": "H",
+          "effect": "Deal 2 hits; character cannot Move or be Aided."
+        },
+        {
+          "name": "Shatter Salvo",
+          "diff": "H",
+          "effect": "Deal 1 hit to every character; take 1 hit."
+        }
+      ]
+    }
+  ],
+  "horrors": [
+    {
+      "name": "Prismatic Heart Guardian",
+      "pool": "4d6",
+      "hits": 8,
+      "deploy": "Mid",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Orbit",
+          "diff": "E",
+          "effect": "Move; gain Guard."
+        },
+        {
+          "name": "Facet Beam",
+          "diff": "M",
+          "effect": "Deal 2 hits any zone."
+        },
+        {
+          "name": "Refract Pain",
+          "diff": "H",
+          "effect": "Redirect all hits dealt to it this round onto a character in its zone."
+        },
+        {
+          "name": "Heartflare",
+          "diff": "H",
+          "effect": "Deal 3 hits to all characters in Front; Stress +1."
+        },
+        {
+          "name": "Seal the Breach",
+          "diff": "H",
+          "effect": "Deal 4 hits to the character closest to Z5."
+        }
+      ]
+    },
+    {
+      "name": "Nameless from Aethelgard",
+      "pool": "4d6",
+      "hits": 8,
+      "deploy": "Rear",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Unwalk",
+          "diff": "E",
+          "effect": "Move to any zone."
+        },
+        {
+          "name": "Erase Name",
+          "diff": "M",
+          "effect": "Deal 2 hits; character cannot be Aided by name this round."
+        },
+        {
+          "name": "World Crack",
+          "diff": "H",
+          "effect": "Deal 3 hits along any two zones."
+        },
+        {
+          "name": "Silence of Stars",
+          "diff": "H",
+          "effect": "No Party Hard Hard this round; deal 2 hits to one character."
+        },
+        {
+          "name": "Remember the Cabal",
+          "diff": "H",
+          "effect": "Deal 4 hits; spawn two Glass Mites (1 Hit) in its zone."
+        }
+      ]
+    },
+    {
+      "name": "Star-Grave Leviathan Spawn",
+      "pool": "4d6",
+      "hits": 8,
+      "deploy": "Front",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Surge",
+          "diff": "E",
+          "effect": "Move toward Z1; crush: deal 1 hit if entering occupied zone."
+        },
+        {
+          "name": "Maw",
+          "diff": "M",
+          "effect": "Deal 3 hits."
+        },
+        {
+          "name": "Tidal Glass",
+          "diff": "H",
+          "effect": "Deal 2 hits to all in Front zones."
+        },
+        {
+          "name": "Swallow Dark",
+          "diff": "H",
+          "effect": "Deal 3 hits; heal 2."
+        },
+        {
+          "name": "Depth Pressure",
+          "diff": "H",
+          "effect": "Characters in its zone treat all actions as Hard Hard this round."
+        }
+      ]
+    },
+    {
+      "name": "The Guild's Hungering Vault",
+      "pool": "4d6",
+      "hits": 8,
+      "deploy": "Mid",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Ledger Pulse",
+          "diff": "E",
+          "effect": "Mark all characters with Debt; they take 1 hit if already Debted."
+        },
+        {
+          "name": "Vault Door",
+          "diff": "M",
+          "effect": "Deal 2 hits; gain Guard."
+        },
+        {
+          "name": "Compound Interest",
+          "diff": "H",
+          "effect": "Deal hits equal to party Debt marks (max 4)."
+        },
+        {
+          "name": "Foreclose Reality",
+          "diff": "H",
+          "effect": "Deal 3 hits; destroy one Guard on each character."
+        },
+        {
+          "name": "Zero Balance",
+          "diff": "H",
+          "effect": "Deal 4 hits to the character with most Debt; clear that Debt."
+        }
+      ]
+    },
+    {
+      "name": "Echo of the Falling Sun",
+      "pool": "4d6",
+      "hits": 8,
+      "deploy": "Rear",
+      "threat": "d8",
+      "actions": [
+        {
+          "name": "Second Dawn",
+          "diff": "E",
+          "effect": "All monsters heal 1."
+        },
+        {
+          "name": "Blind Noon",
+          "diff": "M",
+          "effect": "Deal 2 hits; characters cannot target Rear this round."
+        },
+        {
+          "name": "Ash Tide",
+          "diff": "H",
+          "effect": "Deal 2 hits to all characters."
+        },
+        {
+          "name": "Night of Fire",
+          "diff": "H",
+          "effect": "Deal 3 hits to Z1 and Z2 characters."
+        },
+        {
+          "name": "Remember Impact",
+          "diff": "H",
+          "effect": "Deal 5 hits split among characters as it chooses (min 1 each if 3 alive)."
+        }
+      ]
+    }
+  ],
+  "flavor": {
+    "Vein Tick": {
+      "appearance": "Fist-sized crystal mites with translucent carapaces veined in amber light; needle-legs click like abacus beads.",
+      "behavior": "They fatten on warm Aether-Glass seams, close into a fighter's zone, bite, then latch so the victim cannot flee.",
+      "lore": "Crystal mites fatten in warm Aether-Glass seams. Miners call their bites ``ledger kisses''---cheap wounds that open the way for worse hungers deeper in."
+    },
+    "Ash Rat": {
+      "appearance": "Soot-grey rats the size of cats, eyes like cooling cinders, whiskers stiff with slag dust.",
+      "behavior": "Nest in cooled ash beds; skitter between zones, nip ankles, and scatter when struck to spoil the next Strike.",
+      "lore": "After the Falling Sun, ash vermin learned to nest in cooled slag. They fear little except bright flame, and they remember the smell of rations."
+    },
+    "Glass Mite": {
+      "appearance": "Nearly invisible parasites, thin as fingernail shavings, that catch light only when they move.",
+      "behavior": "Cling to boots and blades; crawl toward heat and bite through Guard as if armor were rumor.",
+      "lore": "Transparent parasites cling to boots and blades. When crushed they scream like cooling glass---music that draws larger shardlings."
+    },
+    "Cave Urchin": {
+      "appearance": "A rolling knot of calcite spines dripping shard-water, marrow stains between the points.",
+      "behavior": "Tumbles into occupied zones and flares spines to catch everyone who shares the space.",
+      "lore": "Calcite spines grow where shard-water drips. Roll into a corridor and they become living caltrops with a taste for marrow."
+    },
+    "Drip Slime": {
+      "appearance": "Slow curtains of vault runoff, opalescent and smelling of wet copper; surface quivers like held breath.",
+      "behavior": "Oozes patiently, engulfs to strip Guard, and splits when pressed---teaching the dungeon to multiply.",
+      "lore": "Condensed runoff from crystal vaults, slow and patient. Split them and you only teach the dungeon to multiply."
+    },
+    "Gloom Bat": {
+      "appearance": "Blind leather wings from the upper dark, throats ridged for screech, faces all membrane and needle teeth.",
+      "behavior": "Swoops from Rear across two zones, then bleed-screeches so Aid dies in the throat.",
+      "lore": "Blind wings from the Star-Grave's upper dark. Their screech unravels courage faster than it sheds blood."
+    },
+    "Bone Maggot": {
+      "appearance": "Fat white worms thick as thumbs, guild brand-scars still pink on their rings of flesh.",
+      "behavior": "Hatch in mass graves; write toward meat already opened and gnaw the wounded.",
+      "lore": "Fat white worms that hatch in guild mass graves. They prefer meat already opened by someone else's victory."
+    },
+    "Rust Beetle": {
+      "appearance": "Fist-sized iron-eaters with orange-brown shells and saliva that stinks of spoiled oil.",
+      "behavior": "Clack toward the nearest steel, then corrode so Medium strikes cost extra energy.",
+      "lore": "Iron-eaters bred in neglected armories. Their saliva turns Medium strikes into costly gambles."
+    },
+    "Shardling Scout": {
+      "appearance": "Palm-sized crystalline runners, facets cut like courier seals, leaving glitter trails.",
+      "behavior": "Advance toward Z1, cut once, and signal kin so the pack treats approach as already done.",
+      "lore": "Tiny crystalline scouts that report to something larger. Kill one and others still know your route."
+    },
+    "Tunnel Leech": {
+      "appearance": "Pale ribbon-bodies in flooded shafts, mouths a ring of glass teeth that drink warmth.",
+      "behavior": "Slither into occupied zones and drain hits into their own slick vigor.",
+      "lore": "Pale ribbons in flooded shafts. They drink heat and return it as stolen vigor to their own slick bodies."
+    },
+    "Ember Moth": {
+      "appearance": "Ash-Frontier moths with wings of glowing dust; beautiful, then choking.",
+      "behavior": "Flutter close and singe; the burn lingers into the next round unless Guarded.",
+      "lore": "Ash Frontier pests whose wings shed burning dust. Beautiful until the singe settles into your lungs."
+    },
+    "Pit Viper": {
+      "appearance": "Punishment-pit serpents, scales matte black, fangs beaded with anti-Guard venom.",
+      "behavior": "Coil to Guard themselves, strike clean, then venom so the target cannot Guard next round.",
+      "lore": "Vipers that nested in punishment pits and learned to wait beside ladders. Venom denies the mercy of Guard."
+    },
+    "Carrion Crow": {
+      "appearance": "Surface crows gone wrong on crystal offal---feathers edged in glass, beaks notched like map knives.",
+      "behavior": "Circle from Rear, then peck eyes and plans alike, spoiling the next die face.",
+      "lore": "Surface birds gone wrong on crystal offal. They circle retreats and peck at maps as readily as eyes."
+    },
+    "Fungal Spore": {
+      "appearance": "Breathing clouds of lacunae mold, almost bodyless until they choke a corridor.",
+      "behavior": "Drift, then choke so Hard Hard actions fail in the coughing dark.",
+      "lore": "Breathing clouds from lacunae cults left untended. Choking them is half the fight; the rest is not singing their spore-song."
+    },
+    "Mine Wight Pup": {
+      "appearance": "Half-formed dead still wearing smoking guild brands; limbs too long, jaws unhinged.",
+      "behavior": "Shamble toward living warmth and claw with leftover miner hate.",
+      "lore": "Half-formed dead that never left the claim. They shamble toward living warmth with guild brands still smoking on their wrists."
+    },
+    "Crystal Gnat Cloud": {
+      "appearance": "A glittering thought of wings---thousands of mote-insects thinking as one refraction.",
+      "behavior": "Swarm-moves as a cloud, stings everyone in the zone, disperses to shrug a hit and relocate.",
+      "lore": "A swarm that thinks as one glitter. Disperse it and it laughs in a thousand tiny refractions."
+    },
+    "Debt Thug": {
+      "appearance": "Ledger-hired muscle in patched leather, Guild chalk marks on knuckles, cudgels wrapped in interest notes.",
+      "behavior": "Press into a zone, club hard, and shake down fleeing parties for +Debt.",
+      "lore": "Muscle rented by Mining Guild ledgers. They break bones to keep interest flowing and flee only when the coin stops."
+    },
+    "Gate Urchin": {
+      "appearance": "Spined cling-beasts colonizing Gate rims like living locks; shells etched by threshold weather.",
+      "behavior": "Cling when on Gate terrain for Guard, then spike anyone sharing or adjacent to the threshold.",
+      "lore": "Spined cling-beasts that colonize Gate rims. Touch the threshold and they wake like a lock picking you."
+    },
+    "Soot Imp": {
+      "appearance": "Knee-high forge-mockeries of ash and spite, grins too wide, fingers tipped in cinder.",
+      "behavior": "Cackle-step, flick burning grit into adjacent zones, and smoke the corridor so Strikes need higher faces.",
+      "lore": "Little mockeries born of forge smoke and spite. They flick cinders and teach corridors to lie about distance."
+    },
+    "Pale Centipede": {
+      "appearance": "Segmented mid-dark hunters, each plate a dull pearl, legs like sewing needles.",
+      "behavior": "Undulate through monster zones, mandible-bite, then coil-bind so Move dies.",
+      "lore": "Segmented hunters of the mid-dark. Coil once around an ankle and the Star-Grave owns your next step."
+    },
+    "Scrap Hound": {
+      "appearance": "Feral dogs fused to slag collars and broken chain; ribs show like ledger lines.",
+      "behavior": "Bay at lone targets, maul, and drag meat toward Z5 as offerings.",
+      "lore": "Feral dogs fused with slag collars. They bay for lone stragglers and drag meat toward Z5 as offerings."
+    },
+    "Lantern Jelly": {
+      "appearance": "Wet-vault hangers pulsing soft gold-green light through translucent bells.",
+      "behavior": "Pulse to ruin stealth, then sting whatever the light revealed.",
+      "lore": "Bioluminescent hangers in wet vaults. Their pulse reveals every stealth you thought you bought."
+    },
+    "Ore Tick": {
+      "appearance": "Magnetic parasites the size of fists, shells iron-flecked, drawn to plate and hammers.",
+      "behavior": "Crawl to the most metal-clad foe and suck spark---hits plus stolen energy.",
+      "lore": "Magnetic parasites that prefer plate and hammers. Warriors feel them first---then miss the energy they siphon."
+    },
+    "Grave Larva": {
+      "appearance": "Soft white death-seeds from shallow graves above Gates; blind heads questing.",
+      "behavior": "Writhe close and burrow hardest into those already nearly fallen.",
+      "lore": "Soft white deaths seeded in shallow graves above Gates. They finish what duels begin."
+    },
+    "Echo Sprig": {
+      "appearance": "Twig-thin mimics with knot faces; bark that looks like boot leather at a glance.",
+      "behavior": "Copy a recent Move destination, false-call to cancel Aid, then shatter-chirp the zone.",
+      "lore": "Twig-thin mimics that steal footfalls. Fight one and you may strike your own last Move by mistake."
+    },
+    "Blindfish Walker": {
+      "appearance": "Cave fish that grew wrong legs when light died; milky eyes, gulping mouths.",
+      "behavior": "Slap-walk forward and gulp dark until the floor becomes difficult syrup.",
+      "lore": "Cave fish that grew legs when light died. Their gulp turns floors into black syrup."
+    },
+    "Nail Sprite": {
+      "appearance": "Needle-thin forge fairies, laughter like filing metal, fingers all punctures.",
+      "behavior": "Dart, puncture pride, and rust-laugh so the next Guard fails automatically.",
+      "lore": "Needle fairies from blackmarket forges. They puncture pride and laugh rust into your Guard."
+    },
+    "Cinder Beetle": {
+      "appearance": "Furnace vermin that glow white before they burst; shells cracked with heat.",
+      "behavior": "Glow for Guard, then burst for zone damage at the cost of their own Hits.",
+      "lore": "Furnace vermin that glow before they burst. Stand close and share their suicide."
+    },
+    "Tunnel Brat": {
+      "appearance": "Feral children of failed delves---rock in hand, eyes like unpaid debt, clothes of rope and rag.",
+      "behavior": "Chuck rocks into adjacent zones, run toward Z5, and jeer until Strikes must answer them.",
+      "lore": "Feral children of failed delves, rock in hand, eyes like unpaid debt. They run deeper when blood spills."
+    },
+    "Shard Flea": {
+      "appearance": "Leaping glass fleas that treat distance as a joke; bodies like broken lenses.",
+      "behavior": "Hop up to two zones and bite whatever lands under them.",
+      "lore": "Leaping glass fleas that treat zones as jokes. Hop twice and they are already at your throat."
+    },
+    "Muck Crab": {
+      "appearance": "Quarantine-shore crabs armored in salt scab and plague-banner dyes.",
+      "behavior": "Sideways into reach, claw, then pinch gear so archetype tricks seize up.",
+      "lore": "Quarantine-shore crabs armored in salt scab. Pinch a gauntlet and archetype tricks seize up."
+    },
+    "Whisper Moth": {
+      "appearance": "Soft-winged thieves of words; dust on wings looks like erased ink.",
+      "behavior": "Soft-wing without triggering entry hits, then steal a spoken Aid or keyword.",
+      "lore": "Soft-winged thieves of words. One brush and your Aid dies unspoken. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Bone Spur": {
+      "appearance": "Calcified stakes that root in chokepoints; ivory stained with old marches.",
+      "behavior": "Plant for Guard if still, then impale anyone entering---or Strike in place.",
+      "lore": "Calcified stakes that plant themselves in chokepoints. Impale the eager; ignore the patient."
+    },
+    "Guild Rat": {
+      "appearance": "Four-legged informants branded with guild ink; ears notched for routes sold.",
+      "behavior": "Flank beside other monsters, shiv, then call Debt when blood proves the tip.",
+      "lore": "Informants on four legs, branded with guild ink. Flank, shiv, then call the Debt in."
+    },
+    "Static Polyp": {
+      "appearance": "Anchored flesh-crystals arcing blue-white toward metal; roots fuse to stone.",
+      "behavior": "Refuse Moves, arc to same/adjacent targets, then discharge into every adjacent zone.",
+      "lore": "Anchored flesh-crystals that arc lightning toward metal. Discharge once and the corridor remembers."
+    },
+    "Dust Wisp": {
+      "appearance": "Resonance leftovers given hunger---smoke with a suggestion of a face.",
+      "behavior": "Drift into lungs; choke-dust writes Stress as well as Hits.",
+      "lore": "Resonance leftovers given hunger. Drift into lungs and Stress writes itself. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Cave Spiderling": {
+      "appearance": "Young of something still descending; too many eyes, silk that glitters like wire.",
+      "behavior": "Web lines tax Moves into their zone, then bite.",
+      "lore": "Young of something still descending. Webs tax every Move you thought was Easy. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Pyre Cub": {
+      "appearance": "Ash Frontier predators still half-cub: soot fur, ember tongue, funeral smell.",
+      "behavior": "Pounce into a zone, rake, and howl embers that cling into the next round.",
+      "lore": "Ash Frontier predators still half-cub, all hunger. Howl embers cling like unfinished funerals."
+    },
+    "Lead Slug": {
+      "appearance": "Slow poison given weight---matte grey bulk that leaves toxic trails.",
+      "behavior": "Creep, then crush a toe so Escape and Move die together.",
+      "lore": "Slow poison given weight. Creep, crush, and deny Escape. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Hollow Child Echo": {
+      "appearance": "A Gate memory wearing a child's shape; edges flicker, smile too still.",
+      "behavior": "Beckon the nearest fighter deeper, cold-touch, then wail across adjacent zones.",
+      "lore": "A Gate memory wearing a child's shape. Beckon, touch, wail---and watch the party lean toward Z5."
+    },
+    "Shard Brute": {
+      "appearance": "Crystalline muscle grown where miners overfed a vein; fists like broken pillars, face a suggestion of ore.",
+      "behavior": "Advances, smashes for two hits, backhands crowds, and roars Guard away.",
+      "lore": "Crystalline muscle grown where miners fed the vein too greedily. It smashes first and learns names later."
+    },
+    "Tunnel Ogre": {
+      "appearance": "Old meat sealed under collapses; skin mapped with timber scars, club a fallen support beam.",
+      "behavior": "Stoop-walks, sweeps clubs through zones, and hurls rubble into adjacent lines.",
+      "lore": "Old meat sealed under collapsed shafts. Rubble is its language; your skull is punctuation."
+    },
+    "Crystal Hound Alpha": {
+      "appearance": "Pack lord of glass-fang curs; mane of jagged light, howl visible as frost.",
+      "behavior": "Hunts the wounded, bites deep, and pack-howls so Swarm allies Move free.",
+      "lore": "Pack lord of glass-fang curs. Its howl is a deployment order written in echo. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Ashblade Mercenary": {
+      "appearance": "Sellsword in cinder-oiled leathers; blade black with soot-salve, eyes hired.",
+      "behavior": "Closes, burning-cuts with lingering fire, and executes whoever already bled.",
+      "lore": "Sellswords who bathe blades in cinder oil. Execution is a specialty; mercy is unpaid overtime."
+    },
+    "Vein Stalker Beast": {
+      "appearance": "Ambush predator of glowing seams; low profile, crystal whiskers tasting Moves.",
+      "behavior": "Stalks Mid/Rear with Guard, pounces into a zone with a hit, then throat-rips Aid away.",
+      "lore": "Ambush predators of glowing seams. They wait until you Move, then invent your throat."
+    },
+    "Iron Vulture": {
+      "appearance": "Scar Road scavenger---iron-feathered, chain-tangled talons, breath like forge exhaust.",
+      "behavior": "Wheels at Rear, dives Front for two hits, and carries prey toward Z5.",
+      "lore": "Sky-scavengers of the Scar Road. Dive, carry, and sell bones to whoever holds the ridge."
+    },
+    "Quarry Wight": {
+      "appearance": "Dead diggers still swinging; lantern jaws, picks fused to bone, brands smoking.",
+      "behavior": "Shambles, grave-claws, drains warmth to heal, and wails Guard off the living.",
+      "lore": "Dead diggers still swinging. They drain warmth to remember what sunlight was. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Slag Golem Chunk": {
+      "appearance": "Walking kiln-fragment: cooling crust over orange gut, fists of poured waste.",
+      "behavior": "Trudges immune to forced Moves, fists for two, slag-bursts the zone while wounding itself.",
+      "lore": "A walking kiln-fragment. Fist, burst, reform---industry that refuses to die. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Gate Enforcer": {
+      "appearance": "Crown-licensed threshold violence---badge, baton, and a face that has never entered for fun.",
+      "behavior": "Lock-steps to block Z1, batons, and arrests so leaving the zone becomes a crime.",
+      "lore": "Crown-licensed violence at thresholds. Arrest means you leave the Gate in pieces."
+    },
+    "Resonance Spawn": {
+      "appearance": "Stress given limbs: jittering silhouette shot through with static veins.",
+      "behavior": "Pulse-steps, static-lashes same/adjacent, and overloads to tick the party's Stress track.",
+      "lore": "Stress given limbs. Overload and the party's track ticks whether they consent or not."
+    },
+    "Cave Troll Kin": {
+      "appearance": "Kin to deeper trolls---smaller only in patience; moss-bone, yellow nails.",
+      "behavior": "Lumbers, rends for two, and regrows when it has already tasted blood.",
+      "lore": "Kin to deeper trolls, smaller only in patience. Rend, then regrow on your blood."
+    },
+    "Blackmarket Ogre": {
+      "appearance": "Debt made enormous: hook-chains for arms, ledger tattoos across a belly like a map.",
+      "behavior": "Menaces retreats, chain-hooks adjacent prey in, then crushes for three hits.",
+      "lore": "Debt made enormous. Chain hooks pull debtors into reach; crush finishes the audit."
+    },
+    "Glass Serpent": {
+      "appearance": "Serpent poured through prism molds; body a moving stained-glass wound.",
+      "behavior": "Slithers two zones in a line, fangs for two, coil-crush ending Strike and Move.",
+      "lore": "Serpents poured through prism molds. Coil crush ends Strike and Move alike. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Pit Knight Remnant": {
+      "appearance": "Banner still raised on empty armor; rusted plate, oath-ribbons rotting.",
+      "behavior": "Advances with Front allies Guarding, thrusts for two, shield-walls and retaliates.",
+      "lore": "Banner still raised, flesh long traded. Thrust and wall---oaths without masters."
+    },
+    "Fungal Brute": {
+      "appearance": "Lacunae garden walking---cap for a head, fists shedding spore like snow.",
+      "behavior": "Stomps, spore-fists for two with die-face tax, then clouds adjacent zones.",
+      "lore": "Lacunae gardens walking. Spore fists rewrite die faces mid-swing. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Debt Collector": {
+      "appearance": "Polite horror in a clerk's coat; ledger under one arm, bone-interest tools under the other.",
+      "behavior": "Corners debtors, marks unpaid interest, and break-fingers Hard Hard away.",
+      "lore": "Polite monsters with ledgers. Interest accrues in bone; fingers are collateral. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Amber Scorpion": {
+      "appearance": "Vein-amber predator: translucent shell trapping old insects, stinger beaded with tomorrow.",
+      "behavior": "Scuttles, claws, then stings for two plus lingering poison.",
+      "lore": "Vein-amber predators. Stingers write tomorrow's damage today. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Mine Horror Half": {
+      "appearance": "Half a thing that should not have been sewn---too many joints, suture-light in the seams.",
+      "behavior": "Drags an arm-zone closer, sweeps bone, and sutures while dealing pain.",
+      "lore": "Half a thing that should not have been sewn. Sweep bone, suture, continue. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Cinder Boar": {
+      "appearance": "Frontier tusks wrapped in ash; breath a furnace, hide crackling.",
+      "behavior": "Charges into zones with entry hits, gores for two, ash-breathes adjacent lines.",
+      "lore": "Frontier tusks wrapped in ash. Charge, gore, breathe the road into fire. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Void Mite Broodmother": {
+      "appearance": "Mid-dark mother of swarms: swollen abdomen glittering with unborn mites, crown of empty eyes.",
+      "behavior": "Signals reprints of fallen Swarm, bites for two, dark-milks allies back to Hits.",
+      "lore": "Mother of swarms in mid-dark. Kill her children and she reprints them. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Stone Mantid": {
+      "appearance": "Chitin and cliff---forearms like quarry gates, camouflage of wet basalt.",
+      "behavior": "Climbs ignoring capacity once, razor-arms for two, snatches prey into its zone.",
+      "lore": "Chitin and cliff. Snatch prey into its zone like a closing quarry gate. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Blight Elk": {
+      "appearance": "Antlered rot from poisoned marches; crown dripping Stress-colored sap.",
+      "behavior": "Antler-rushes with contact hits, tramples for two, rot-crowns Stress onto the living.",
+      "lore": "Antlered rot from poisoned marches. Crown rot marks Stress as surely as blood. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Chain Ghoul": {
+      "appearance": "Guild punishment left too long: chains grown into wrists, mouth full of rust.",
+      "behavior": "Rattles forward, lashes adjacent, binds so Move dies in the zone.",
+      "lore": "Guild punishment left too long in the dark. Lash, bind, collect screams. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Slag Hound Pair": {
+      "appearance": "Two slag-fused hounds sharing a hunger; eyes alternate blink like a bad clock.",
+      "behavior": "Flank-run opposite sides, twin-bite for two, trip into Hard Hard sprawls.",
+      "lore": "Two bodies, one hunger. Flank until trip sends you sprawling into Hard Hard. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Oracle Leech": {
+      "appearance": "Rear-lurking siphon of futures: soft body, mouth like a drained hourglass.",
+      "behavior": "Drifts thought, siphons planned Hard Hard, prophecy-burns Seer/Mage actors.",
+      "lore": "Rear-lurking siphon of futures. It eats planned sixes and sells the emptiness back."
+    },
+    "Basalt Ape": {
+      "appearance": "Scar Road cliffs given fists; knuckle-stone, chest scarred with territorial scars.",
+      "behavior": "Climbs, throws rock adjacent for two, beat-chests to buff Front allies and Guard.",
+      "lore": "Scar Road cliffs given fists. Throw rock, beat chest, teach lesser brutes pride."
+    },
+    "Needle Priest": {
+      "appearance": "Cult surgeon in glass liturgy vestments; needles for fingers, hymn-mask.",
+      "behavior": "Chants Swarm free Moves, glass-needles same/adjacent, blesses pain so allies heal.",
+      "lore": "Cult surgeons with glass liturgy. Bless pain so the swarm may heal. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Rubble Elemental": {
+      "appearance": "Collapse that learned to hate---a walking landslide with a suggestion of a face.",
+      "behavior": "Reforms when still, avalanche-fists, buries a Party action under stone.",
+      "lore": "Collapse that learned to hate. Bury a turn of your life under stone. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Wailing Bride": {
+      "appearance": "Wedding whites gone Gate-grey; veil of moth lace, mouth a grief-cut.",
+      "behavior": "Glides Rear, grief-touches Guard away, wedding-screeches adjacent zones.",
+      "lore": "A wedding that ended at a Gate. Grief touch, screech, and widow the zone. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Gear Tortoise": {
+      "appearance": "Salvage engine in a shell: vents, snout-cannon, guild serials stamped in brass.",
+      "behavior": "Shells in for Guard, steam-vents the zone, cannon-snouts up to two zones for three hits.",
+      "lore": "Salvage engine wearing a shell. Vent steam, then cannon the rear line. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Blood Jelly Elder": {
+      "appearance": "Old drip given ambition; crimson gel shot with younger slime-seeds.",
+      "behavior": "Flows, dissolves ignoring Guard, split-threats spawn lesser Drip Slimes.",
+      "lore": "Old drip given ambition. Split threats into younger hungers. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Hollow Knight": {
+      "appearance": "Marching absence in armor---plume intact, nothing breathing inside.",
+      "behavior": "Marches Z1-ward, spectral-thrusts for two, oath-breaks Guard and Aid together.",
+      "lore": "Marching absence in armor. Oath break strips Guard and Aid in one thrust. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Cave Manticore Cub": {
+      "appearance": "Not yet legend: lion-wrong body, tail already spiked, eyes too knowing.",
+      "behavior": "Stalks, claws for two, tail-spikes up to three adjacent characters.",
+      "lore": "Not yet legend, already lethal. Tail spikes argue with whole formations. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Aether Hyena": {
+      "appearance": "Laughing thieves of spark; crystal ruff, grin too wide for the skull.",
+      "behavior": "Laughing-runs, tears for two, steal-sparks party Energy.",
+      "lore": "Laughing thieves of spark. Tear flesh, steal Energy, grin crystal. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Grim Bailiff": {
+      "appearance": "Law with a mace: wax seals on belt, writ-papers bloodstained, eyes empty of appeal.",
+      "behavior": "Serves writs on Debt-bearers, maces for two, confiscates a chosen action next round.",
+      "lore": "Law with a mace. Serve writ, confiscate hope, file the bruise. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Shard Captain": {
+      "appearance": "Field officer of the crystal war---half plate, half growth, baton of fused glass.",
+      "behavior": "Rallies filth free Moves, captain-cuts, formations Guard Front, executes for three.",
+      "lore": "Field officer of the crystal war. Rally filth, cut captains, execute orders. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Resonance Cantor Apostate": {
+      "appearance": "A singer who joined the wrong choir; throat scarred with notation, eyes weeping pitch.",
+      "behavior": "Dissonant-steps, shatter-notes, silence-bells Aid/Ward, choir-of-knives across the field.",
+      "lore": "A singer who joined the wrong choir. Silence bells and knife-hymns follow. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Voidbinder Thrall": {
+      "appearance": "Cage-magic wearing a person; bars grow from the ribs outward, keyhole for a face.",
+      "behavior": "Pins Move, void-hooks adjacent in, cage-crushes the bound, horizons the zone shut.",
+      "lore": "Cage-magic wearing a person. Pin, hook, crush---freedom is a rumor. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Dust Alchemist Renegade": {
+      "appearance": "Flask and feud: stained apron, teeth the color of reagents, smile like a broken seal.",
+      "behavior": "Flask-steps, vitriol-sprays adjacent, mutagen-clouds Mid with Stress, magnum-shocks one name.",
+      "lore": "Flask and feud. Vitriol for the adjacent; magnum shock for the named. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Iron Vanguard Fallen": {
+      "appearance": "Once a wall for others; tower-shield fused to arm, oath-ribbons burned black.",
+      "behavior": "Bulwark-walks with Guard, shield-bashes Move away, phalanx-Guards allies, judgments for three.",
+      "lore": "Once a wall for others. Now bulwark and judgment without a banner. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Night Broker Boss": {
+      "appearance": "Contracts written in dusk: ink-stained gloves, second smile under the first.",
+      "behavior": "Buys openings for allies, contract-knifes, sell-outs split hits, midnight-clauses cancel Hard Hard.",
+      "lore": "Contracts written in dusk. Sell openings, buy screams, clause the midnight. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Gatecutter Assassin": {
+      "appearance": "Keys and cutthroats---lockpicks for jewelry, quiet boots, eyes on hinges.",
+      "behavior": "Soft-enters any zone, keystrikes, kills still keepers, seals behind so pursuit dies.",
+      "lore": "Keys and cutthroats. Soft entry, then kill whoever held the latch. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Prism Seer Wraith": {
+      "appearance": "A future that outlived its seer; body of cracked glass, gaze already elsewhere.",
+      "behavior": "Glances ahead to discard party dice, oracle-bolts any zone, bad-futures reroll success, dooms the unwarned.",
+      "lore": "A future that outlived its seer. Bad futures force rerolls you cannot afford. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Crucible Champion": {
+      "appearance": "Pain tithed into legend; scars like temperature charts, hammer-heart glowing.",
+      "behavior": "Pain-tithes self for hits, anvil-blows, no-quarters, molten auras punish zone-enders.",
+      "lore": "Pain tithed into legend. No quarter---only molten aura and anvil bluntness. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Oathbreaker Duellist": {
+      "appearance": "Every vow spent: coat of torn banners, dual blades named after broken friends.",
+      "behavior": "Cuts ties against Aid, spite-cuts, turncloaks ally-pain, forsaken-surges when alone.",
+      "lore": "Every vow spent. Cut ties, spite cut, forsaken surge when alone. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Aetherwright Construct": {
+      "appearance": "Lattice given orders---geometry walking, hardlight seams, no face only focus.",
+      "behavior": "Lattice-steps or pulls minions, hardlight-edges ignore Guard, barrier-domes, cataclysm-lines two zones.",
+      "lore": "Lattice given orders. Hardlight edges ignore Guard; cataclysm draws lines through parties."
+    },
+    "Tunnel Knight Haunt": {
+      "appearance": "Chokepoint ghost in dented plate; lantern jaw, nostalgia for collapses.",
+      "behavior": "Choke-points entry, cave-in blows trap, collapse-threats shove, dead-ends punish single targets.",
+      "lore": "Chokepoint ghost. Dead ends favor the haunt; collapses are nostalgia. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Glasshand Killer": {
+      "appearance": "Precision murder: gloves of shard-slivers, posture a surgeon's, smile optional.",
+      "behavior": "Sliver-precision hits, poison edges with ongoing, arterial bleeds, perfect-cuts when sixes show.",
+      "lore": "Precision murder for hire. Perfect cuts bloom when sixes show. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Veinstalker Apex": {
+      "appearance": "Alpha of the glowing dark; low, long, whiskers tasting crystal current.",
+      "behavior": "Vein-steps with Guard, ambushes Movers, quartz-throats loners, hungering-glass Moves on kills.",
+      "lore": "Alpha of the glowing dark. Quartz throats for the lonely; hungering glass for the fallen."
+    },
+    "Debtknife Captain": {
+      "appearance": "Ledger and knife in one grip; coat of co-signed names, boots that never squeak.",
+      "behavior": "Corners debtors, collects, forecloses items, final-notices marked meat for four hits.",
+      "lore": "Ledger and knife in one grip. Foreclosure is policy; final notice is personal. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Ashblade Zealot": {
+      "appearance": "Faith measured in cinders; pilgrimage scars, blade a reliquary of burned towns.",
+      "behavior": "Cinder-cuts, wildfires two targets, cremates to heal on kills, white-hots the exchange.",
+      "lore": "Faith measured in cinders. Cremate the fallen and call it sacrament. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Static Rain Elemental": {
+      "appearance": "Weather that hates armor---a walking storm sheet, no limbs only discharge.",
+      "behavior": "Charges metal-wearers, bolts, storm-sheets all, grounding-crush ends every Guard.",
+      "lore": "Weather that hates armor. Storm sheets wash Guards off the field. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Mining Guild Juggernaut": {
+      "appearance": "Corporate war-engine on legs; drill-fist, vent grilles, serial plate still readable.",
+      "behavior": "Steam-advances Z1, drill-fists, vents zones, overburdens Move away.",
+      "lore": "Corporate war-engine. Drill, vent, overburden---progress with casualties. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Star-Cult Hierophant": {
+      "appearance": "Preach-mask of falling suns; robes of night-leather, hands empty of mercy.",
+      "behavior": "Preaches ally heal/Move, glass-sacraments any zone, compel-kneels Easy away, falling-sun rites Stress all.",
+      "lore": "Preach, compel, fall the sun indoors. Stress is the tithe. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Bone Colossus Fragment": {
+      "appearance": "A rib of something buried wrong; walking ossuary taller than a Gate arch.",
+      "behavior": "Rebuilds Hits, osseous-slams, ribcage-prisons Aid/Move, shatter-salvos the whole field.",
+      "lore": "A rib of something buried wrong. Prison of bone; salvo of shatter. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "Prismatic Heart Guardian": {
+      "appearance": "Ward of the world's sore point: geometry of living prism, core a slow heartbeat of wrong light.",
+      "behavior": "Orbits with Guard, facet-beams any zone, refracts incoming pain, heartflares Front, seals whoever nears Z5.",
+      "lore": "Ward of the world's sore point. Facet beams and heartflare---the Breach argues back."
+    },
+    "Nameless from Aethelgard": {
+      "appearance": "A refugee concept from the dead planet---edges refuse names, silhouette like a forgotten theorem.",
+      "behavior": "Unwalks any zone, erases Aid-by-name, world-cracks lines, silences Hard Hard, remembers the cabal with mite-spawns.",
+      "lore": "A refugee concept from the dead planet. It unwalks zones and erases names mid-Aid."
+    },
+    "Star-Grave Leviathan Spawn": {
+      "appearance": "Juvenile apocalypse: too many mouths, tide of glass-flesh, depth pressure as a smell.",
+      "behavior": "Surges Z1 crushing entrants, maws for three, tidal-glasses Front, swallows to heal, depth-pressures Hard Hard.",
+      "lore": "Juvenile apocalypse. Maw, tide, depth pressure---Z1 is only a rumor. Miners whisper its name when the Journey Clock runs thin."
+    },
+    "The Guild's Hungering Vault": {
+      "appearance": "Debt apotheosis: a vault door given appetite, hinges like ledgers, interior a counting dark.",
+      "behavior": "Ledger-pulses Debt marks into hits, vault-doors Guard, compound-interests Debt, forecloses Guards, zero-balances the richest debtor.",
+      "lore": "Debt apotheosis. Compound interest in hits; zero balance takes the richest debtor."
+    },
+    "Echo of the Falling Sun": {
+      "appearance": "The catastrophe still happening---a standing noon of ash and second dawn light that never finishes.",
+      "behavior": "Second-dawns monster heals, blind-noons Rear safety, ash-tides all, night-of-fires Front, remember-impacts split five hits.",
+      "lore": "The catastrophe still happening. Second dawn for monsters; remember impact for you."
+    }
+  }
+}

@@ -19,28 +19,36 @@ A themed download page lives at [`index.html`](index.html).
   - [Forum](https://fonts.google.com/specimen/Forum) as `Forum-Regular.otf` (title face; must be findable by `fontspec`)
   - EB Garamond (body)
   - DejaVu Sans Condensed (UI / keywords)
-- **Python 3** (only when regenerating generated tables)
+- **JDK 21+** and **Maven 3.8+** (only when regenerating generated tables from JSON)
 
 On Debian/Ubuntu-style systems:
 
 ```bash
 sudo apt install texlive-xetex texlive-latex-extra texlive-fonts-extra \
-  fonts-ebgaramond fonts-dejavu python3
+  fonts-ebgaramond fonts-dejavu openjdk-21-jdk-headless maven
 # Install Forum Regular into ~/.local/share/fonts and run: fc-cache -fv
 ```
 
 ## Regenerate tables (optional)
 
-Most chapter text is hand-written. These scripts rebuild the generated catalogs:
+Catalog data lives in [`generators/src/main/resources/data/*.json`](generators/src/main/resources/data/). The Maven module [`generators/`](generators/) maps those files to TeX with Jackson:
 
 ```bash
-python3 scripts/generate_classes.py      # chapters/classes/{warrior,rogue,mage}.tex
-python3 scripts/generate_monsters.py     # tables/monsters-bestiary.tex
-python3 scripts/generate_noncombat.py    # tables/encounters-book.tex
-python3 scripts/generate_hexmap.py       # chapters/hexmap-grid.tex
+./generators/generate.sh
+# or: ./scripts/generate.sh
+# or: (cd generators && mvn -q exec:java)
 ```
 
-Run them after editing the corresponding Python banks, then recompile the affected book(s).
+That rebuilds:
+
+- `chapters/classes/{warrior,rogue,mage}.tex` from `classes.json`
+- `tables/equipment.tex` and `tables/relics.tex` from `equipment.json`
+- `tables/spells.tex` from `spells.json`
+- `tables/monsters-bestiary.tex` from `monsters.json`
+- `tables/encounters-book.tex` from `encounters.json`
+- `chapters/hexmap-grid.tex` from `hexmap.json`
+
+Edit the JSON, regenerate, then recompile the affected book(s).
 
 ## Build the PDFs
 
@@ -81,7 +89,8 @@ rules.tex / bestiary.tex / encounters.tex / adventure.tex   # book roots
 preamble.tex                                                # shared style
 chapters/                                                   # prose chapters
 tables/                                                     # generated catalogs
-scripts/                                                    # Python generators
+scripts/generate.sh                                        # thin wrapper → generators/
+generators/                                                 # Maven module (Jackson + JSON data)
 index.html                                                  # web download page
 ```
 
