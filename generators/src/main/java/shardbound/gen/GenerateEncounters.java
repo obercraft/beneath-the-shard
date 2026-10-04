@@ -12,7 +12,7 @@ public final class GenerateEncounters {
     private GenerateEncounters() {}
 
     public static void run() throws IOException {
-        EncountersData data = Data.load("encounters.json", EncountersData.class);
+        EncountersData data = Data.load("encounters.yaml", EncountersData.class);
         StringBuilder lines = new StringBuilder();
         int roll = 1;
         for (Mechanic mechanic : data.mechanics()) {

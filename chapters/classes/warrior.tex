@@ -5,815 +5,325 @@ Warrior classes forge steel and stubborn will against the Star-Grave.
 \subsubsection{Iron Vanguard}
 \textit{A living wall of plate and oath. Holds the gate while others bleed for crystal.}
 
-\subsubsection*{Level 1 --- choose one}
-
-oindent
+\noindent
 {\normalsize
 \renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \textbf{Shield Bash} & \easy & Deal 1 hit to a foe in your zone; they cannot Move next round. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Brace} & \easy & Gain Guard. If you already have Guard, an ally in your zone gains Guard. \\
-  \rowcolor{bone} \textbf{Lockstep} & \easy & You and one ally in your zone may each Move to the same adjacent zone. \\
-  \rowcolor{ash!15} \textbf{Iron Wall} & \medium{} \energy{1} & Until your next round, foes entering your zone take 1 hit. \\
-  \rowcolor{bone} \textbf{Taunt} & \medium{} \energy{1} & Choose a foe in your zone: their next action must target you if able. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 2 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Gate Seal} & \easy & No foe may leave your zone until the end of the round. \\
-  \rowcolor{ash!15} \textbf{Shoulder Check} & \easy & Move into an adjacent zone occupied by a foe and deal 1 hit. \\
-  \rowcolor{bone} \defensive{} \textbf{Bulwark Strike} & \medium{} \energy{1} & Deal 1 hit and gain Guard. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Interpose} & \medium{} \energy{1} & Redirect the next hit an ally in your zone would take to yourself; then Guard. \\
-  \rowcolor{bone} \defensive{} \textbf{Tower Guard} & \medium{} \energy{1} & All allies in your zone gain Guard. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 3 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \textbf{Retaliate} & \easy & After you take a hit this round, deal 1 hit to the attacker if in your zone. \\
-  \rowcolor{ash!15} \textbf{Crushing Advance} & \medium{} \energy{1} & Move into an adjacent zone; deal 1 hit to one foe there. \\
-  \rowcolor{bone} \defensive{} \textbf{Hold Fast} & \medium{} \energy{1} & You cannot be Moved by foes; gain Guard. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Unbreakable} & \hard{} \hard{} & Ignore the next two hits you would take this round. \\
-  \rowcolor{bone} \defensive{} \textbf{Shield Wall Advance} & \grand{} \energy{1} & You and every ally in your zone Move to the same adjacent zone; each gains Guard. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 4 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Anchor} & \easy & Prevent one ally in your zone from being Moved this round. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Rivet Blow} & \medium{} \energy{1} & Deal 1 hit; that foe deals 1 less hit with their next attack. \\
-  \rowcolor{bone} \defensive{} \textbf{Fortify} & \medium{} \energy{1} & Gain Guard and reclaim 1 energy. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Aegis Slam} & \hard{} \hard{} & Deal 2 hits to one foe in your zone; you gain Guard. \\
-  \rowcolor{bone} \defensive{} \textbf{Iron Bastion} & \grand{} \energy{1} & Until your next round, allies in your zone ignore the first 2 hits each. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 5 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Enduring Plate} & \medium{} \energy{1} & Ignore the first hit; if it was from a foe in your zone, deal 1 hit back. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Weight of Plate} & \medium{} \energy{1} & Gain Guard; a foe that Moves into your zone this round takes 1 hit. \\
-  \rowcolor{bone} \defensive{} \textbf{Crushing Guard} & \hard{} \hard{} & Gain Guard; deal 1 hit to every foe that hits you this round. \\
-  \rowcolor{ash!15} \textbf{Crush the Line} & \grand{} \energy{1} & Deal 2 hits to one foe in your zone and 1 hit to another foe there. \\
-  \rowcolor{bone} \defensive{} \textbf{Rampart} & \grand{} \energy{1} & Restore 2 spent Armor boxes, split as you like among allies in your zone. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 6 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Oathbound Step} & \medium{} \energy{1} & Move to an adjacent zone containing an ally; you both gain Guard. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Immovable} & \hard{} \hard{} & You and one ally ignore Move forced by foes; each gains Guard. \\
-  \rowcolor{bone} \defensive{} \textbf{Shield Wall} & \hard{} \hard{} & Allies in your zone ignore the first hit this round. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Hold the Gate} & \grand{} \energy{1} & Until your next round, no foe may enter or leave your zone; foes already there take 1 hit. \\
-  \rowcolor{bone} \textbf{Siege Breaker} & \dire{} \energy{1} & Deal 4 hits to one foe in your zone. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 7 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Pavise} & \medium{} \energy{1} & Until your next round, allies in your zone ignore hits from adjacent zones. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Breach Denied} & \hard{} \hard{} & Until your next round, no foe may enter your zone; foes already there take 1 hit. \\
-  \rowcolor{bone} \defensive{} \textbf{Punishing Shield} & \grand{} \energy{1} & Gain Guard; until your next round, each foe that hits you takes 2 hits. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Standard of Iron} & \grand{} \energy{1} & Allies in your zone and in adjacent zones gain Guard. \\
-  \rowcolor{bone} \defensive{} \textbf{Fortress Oath} & \dire{} \energy{1} & Until your next round, you and every ally in your zone ignore all hits from foes in your zone. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 8 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Shield Lift} & \easy & Remove Bound and Burning from yourself or an ally in your zone. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Mountain Stance} & \hard{} \hard{} & Gain Guard twice; you cannot Move until your next round. \\
-  \rowcolor{bone} \textbf{Breaker's Advance} & \grand{} \energy{1} & Move into an adjacent zone; deal 2 hits to one foe there and Bind it. \\
-  \rowcolor{ash!15} \textbf{Mountain Falls} & \dire{} \energy{1} & Deal 2 hits to each foe in your zone; push each one zone toward Z5. \\
-  \rowcolor{bone} \defensive{} \textbf{Iron Reckoning} & \dire{} \energy{1} & Deal 3 hits to a foe that injured an ally this fight; gain Guard. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 9 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Iron Resolve} & \medium{} \energy{1} & If you have 2 or fewer Hits left, gain Guard and reclaim 1 Energy. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Vanguard Oath} & \hard{} \hard{} & Allies in your zone gain Guard; you take 1 hit for each Guard granted (max 2). \\
-  \rowcolor{bone} \defensive{} \textbf{Oath Unbroken} & \grand{} \energy{1} & Choose an ally in your zone: until your next round every hit they would take is dealt to you instead, and your Armor absorbs the first two even if spent. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Living Gate} & \dire{} \energy{1} & Until your next round, allies in your zone cannot be targeted while you stand; you gain Guard twice. \\
-  \rowcolor{bone} \defensive{} \textbf{The Wall Does Not Fall} & \fell{} \energy{2} & Until your next round, no ally takes hits: every hit dealt to the party is dealt to you, and your Armor absorbs the first 3 as if unspent. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 10 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Unyielding} & \hard{} \hard{} & Until your next round, the first two hits dealt to allies in your zone are redirected to you. \\
-  \rowcolor{ash!15} \textbf{Plate Thunder} & \grand{} \energy{1} & Deal 1 hit to every foe in your zone; each is Bound. \\
-  \rowcolor{bone} \defensive{} \textbf{Tempered Plate} & \dire{} \energy{1} & Restore all Armor boxes on yourself and on one ally in your zone. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Anvil of the Vanguard} & \dire{} \energy{1} & Deal 3 hits to a Bound foe; it cannot act next phase. \\
-  \rowcolor{bone} \textbf{Iron Judgment} & \fell{} \energy{2} & Deal 5 hits to one foe in your zone; if it falls, every other foe in the zone is Bound. \\
-\end{tabularx}
+\begin{longtable}{@{\hspace{2pt}} >{\centering\arraybackslash}p{0.9cm} >{\raggedright\arraybackslash}p{3.6cm} >{\centering\arraybackslash}p{3.0cm} >{\raggedright\arraybackslash}p{7.6cm} @{}}
+  \shardheadercell{Lv} & \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
+\endfirsthead
+  \shardheadercell{Lv} & \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
+\endhead
+  \rowcolor{bone} \textbf{1} & \textbf{Shield Bash} & \easy & Deal 1 hit to a foe in your zone; they cannot Move next round. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Brace} & \easy & Gain Guard. If you already have Guard, an ally in your zone gains Guard. \\
+  \rowcolor{bone}  & \textbf{Lockstep} & \easy & You and one ally in your zone may each Move to the same adjacent zone. \\
+  \rowcolor{ash!15}  & \textbf{Iron Wall} & \medium{} \energy{1} & Until your next round, foes entering your zone take 1 hit. \\
+  \rowcolor{bone}  & \textbf{Taunt} & \medium{} \energy{1} & Choose a foe in your zone: their next action must target you if able. \\
+  \rowcolor{ash!15} \textbf{2} & \defensive{} \textbf{Gate Seal} & \easy & No foe may leave your zone until the end of the round. \\
+  \rowcolor{bone}  & \textbf{Shoulder Check} & \easy & Move into an adjacent zone occupied by a foe and deal 1 hit. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Bulwark Strike} & \medium{} \energy{1} & Deal 1 hit and gain Guard. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Interpose} & \medium{} \energy{1} & Redirect the next hit an ally in your zone would take to yourself; then Guard. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Tower Guard} & \medium{} \energy{1} & All allies in your zone gain Guard. \\
+  \rowcolor{bone} \textbf{3} & \textbf{Retaliate} & \easy & After you take a hit this round, deal 1 hit to the attacker if in your zone. \\
+  \rowcolor{ash!15}  & \textbf{Crushing Advance} & \medium{} \energy{1} & Move into an adjacent zone; deal 1 hit to one foe there. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Hold Fast} & \medium{} \energy{1} & You cannot be Moved by foes; gain Guard. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Unbreakable} & \hard{} \hard{} & Ignore the next two hits you would take this round. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Shield Wall Advance} & \grand{} \energy{1} & You and every ally in your zone Move to the same adjacent zone; each gains Guard. \\
+  \rowcolor{ash!15} \textbf{4} & \defensive{} \textbf{Anchor} & \easy & Prevent one ally in your zone from being Moved this round. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Rivet Blow} & \medium{} \energy{1} & Deal 1 hit; that foe deals 1 less hit with their next attack. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Fortify} & \medium{} \energy{1} & Gain Guard and reclaim 1 energy. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Aegis Slam} & \hard{} \hard{} & Deal 2 hits to one foe in your zone; you gain Guard. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Iron Bastion} & \grand{} \energy{1} & Until your next round, allies in your zone ignore the first 2 hits each. \\
+  \rowcolor{bone} \textbf{5} & \defensive{} \textbf{Enduring Plate} & \medium{} \energy{1} & Ignore the first hit; if it was from a foe in your zone, deal 1 hit back. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Weight of Plate} & \medium{} \energy{1} & Gain Guard; a foe that Moves into your zone this round takes 1 hit. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Crushing Guard} & \hard{} \hard{} & Gain Guard; deal 1 hit to every foe that hits you this round. \\
+  \rowcolor{ash!15}  & \textbf{Crush the Line} & \grand{} \energy{1} & Deal 2 hits to one foe in your zone and 1 hit to another foe there. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Rampart} & \grand{} \energy{1} & Restore 2 spent Armor boxes, split as you like among allies in your zone. \\
+  \rowcolor{ash!15} \textbf{6} & \defensive{} \textbf{Oathbound Step} & \medium{} \energy{1} & Move to an adjacent zone containing an ally; you both gain Guard. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Immovable} & \hard{} \hard{} & You and one ally ignore Move forced by foes; each gains Guard. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Shield Wall} & \hard{} \hard{} & Allies in your zone ignore the first hit this round. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Hold the Gate} & \grand{} \energy{1} & Until your next round, no foe may enter or leave your zone; foes already there take 1 hit. \\
+  \rowcolor{ash!15}  & \textbf{Siege Breaker} & \dire{} \energy{1} & Deal 4 hits to one foe in your zone. \\
+  \rowcolor{bone} \textbf{7} & \defensive{} \textbf{Pavise} & \medium{} \energy{1} & Until your next round, allies in your zone ignore hits from adjacent zones. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Breach Denied} & \hard{} \hard{} & Until your next round, no foe may enter your zone; foes already there take 1 hit. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Punishing Shield} & \grand{} \energy{1} & Gain Guard; until your next round, each foe that hits you takes 2 hits. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Standard of Iron} & \grand{} \energy{1} & Allies in your zone and in adjacent zones gain Guard. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Fortress Oath} & \dire{} \energy{1} & Until your next round, you and every ally in your zone ignore all hits from foes in your zone. \\
+  \rowcolor{ash!15} \textbf{8} & \defensive{} \textbf{Shield Lift} & \easy & Remove Bound and Burning from yourself or an ally in your zone. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Mountain Stance} & \hard{} \hard{} & Gain Guard twice; you cannot Move until your next round. \\
+  \rowcolor{ash!15}  & \textbf{Breaker's Advance} & \grand{} \energy{1} & Move into an adjacent zone; deal 2 hits to one foe there and Bind it. \\
+  \rowcolor{bone}  & \textbf{Mountain Falls} & \dire{} \energy{1} & Deal 2 hits to each foe in your zone; push each one zone toward Z5. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Iron Reckoning} & \dire{} \energy{1} & Deal 3 hits to a foe that injured an ally this fight; gain Guard. \\
+  \rowcolor{bone} \textbf{9} & \defensive{} \textbf{Iron Resolve} & \medium{} \energy{1} & If you have 2 or fewer Hits left, gain Guard and reclaim 1 Energy. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Vanguard Oath} & \hard{} \hard{} & Allies in your zone gain Guard; you take 1 hit for each Guard granted (max 2). \\
+  \rowcolor{bone}  & \defensive{} \textbf{Oath Unbroken} & \grand{} \energy{1} & Choose an ally in your zone: until your next round every hit they would take is dealt to you instead, and your Armor absorbs the first two even if spent. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Living Gate} & \dire{} \energy{1} & Until your next round, allies in your zone cannot be targeted while you stand; you gain Guard twice. \\
+  \rowcolor{bone}  & \defensive{} \textbf{The Wall Does Not Fall} & \fell{} \energy{2} & Until your next round, no ally takes hits: every hit dealt to the party is dealt to you, and your Armor absorbs the first 3 as if unspent. \\
+  \rowcolor{ash!15} \textbf{10} & \defensive{} \textbf{Unyielding} & \hard{} \hard{} & Until your next round, the first two hits dealt to allies in your zone are redirected to you. \\
+  \rowcolor{bone}  & \textbf{Plate Thunder} & \grand{} \energy{1} & Deal 1 hit to every foe in your zone; each is Bound. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Tempered Plate} & \dire{} \energy{1} & Restore all Armor boxes on yourself and on one ally in your zone. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Anvil of the Vanguard} & \dire{} \energy{1} & Deal 3 hits to a Bound foe; it cannot act next phase. \\
+  \rowcolor{ash!15}  & \textbf{Iron Judgment} & \fell{} \energy{2} & Deal 5 hits to one foe in your zone; if it falls, every other foe in the zone is Bound. \\
+\end{longtable}
 }
 \vspace{0.55em}
 
 \subsubsection{Ashblade}
 \textit{Burns brighter the closer death leans in. Favors brutal finishing cuts.}
 
-\subsubsection*{Level 1 --- choose one}
-
-oindent
+\noindent
 {\normalsize
 \renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \textbf{Cinder Cut} & \easy & Deal 1 hit to a foe in your zone. \\
-  \rowcolor{ash!15} \textbf{Spark Step} & \easy & Move to an adjacent zone after dealing a hit this round. \\
-  \rowcolor{bone} \textbf{Blood Heat} & \easy & If you took a hit this round, your next Strike deals +1 hit. \\
-  \rowcolor{ash!15} \textbf{Searing Edge} & \medium{} \energy{1} & Deal 1 hit; that foe takes 1 hit at the start of the next round. \\
-  \rowcolor{bone} \textbf{Ash Cloud} & \medium{} \energy{1} & Foes in your zone cannot Aid until your next round. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 2 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \textbf{Knife of Coals} & \easy & Deal 1 hit; ignore Guard on that foe for this hit. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Smoke Withdraw} & \easy & Move to an adjacent zone; gain Guard. \\
-  \rowcolor{bone} \textbf{Executioner's Poise} & \medium{} \energy{1} & Deal 1 hit to a foe that already took a hit this round. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Flare Parry} & \medium{} \energy{1} & Gain Guard; if you ignore a hit, deal 1 hit to the attacker. \\
-  \rowcolor{bone} \textbf{Brand} & \medium{} \energy{1} & Mark a foe: your next action against them this fight costs no energy. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 3 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \textbf{Char} & \easy & A foe in your zone loses Guard if they have it. \\
-  \rowcolor{ash!15} \textbf{Rage Tempo} & \medium{} \energy{1} & Deal 1 hit; take 1 hit yourself to deal +1 hit. \\
-  \rowcolor{bone} \textbf{Kindling Blow} & \medium{} \energy{1} & Deal 1 hit; if you Strike the same foe later this round, deal +1 hit. \\
-  \rowcolor{ash!15} \textbf{Cremate} & \hard{} \hard{} & Deal 2 hits to one foe in your zone; if they fall, reclaim 1 energy. \\
-  \rowcolor{bone} \textbf{Blazing Arc} & \grand{} \energy{1} & Deal 2 hits to each of up to two foes in your zone. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 4 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Scorch Guard} & \easy & Gain Guard; attackers that hit you take 1 hit. \\
-  \rowcolor{ash!15} \textbf{Ember Dance} & \medium{} \energy{1} & Move, then Strike without spending the usual energy (still need Medium die). \\
-  \rowcolor{bone} \textbf{Black Spark} & \medium{} \energy{1} & Deal 1 hit to a foe in an adjacent zone. \\
-  \rowcolor{ash!15} \textbf{Wildfire Slash} & \hard{} \hard{} & Deal 1 hit to a foe and 1 hit to another foe in the same zone. \\
-  \rowcolor{bone} \textbf{Furnace Step} & \grand{} \energy{1} & Move into an adjacent zone; deal 2 hits to one foe there and set it Burning. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 5 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \textbf{Burning Oath} & \medium{} \energy{1} & Deal 1 hit; you may not Guard this round. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Ember Guard} & \medium{} \energy{1} & Gain Guard; the first foe to hit you this round is Burning. \\
-  \rowcolor{bone} \defensive{} \textbf{Dying Ember} & \hard{} \hard{} & If you have 1 hit remaining before you would fall, deal 2 hits instead of falling; then fall. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Pyre Guard} & \grand{} \energy{1} & Gain Guard; foes that hit you before your next round are Burning. \\
-  \rowcolor{bone} \textbf{Cinder Rush} & \grand{} \energy{1} & Deal 3 hits to one foe that has already taken a hit this round. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 6 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Heat Haze} & \medium{} \energy{1} & Until your next round, foes in your zone need a 5+ for Medium actions against you. \\
-  \rowcolor{ash!15} \textbf{Incinerate} & \hard{} \hard{} & Deal 2 hits; that foe cannot Guard this round. \\
-  \rowcolor{bone} \textbf{Ashen Whirl} & \hard{} \hard{} & Deal 1 hit to up to three foes in your zone. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Shimmer of Heat} & \grand{} \energy{1} & Until your next round, foes in your zone need a 5+ for their Medium actions. \\
-  \rowcolor{bone} \textbf{Inferno Cut} & \dire{} \energy{1} & Deal 4 hits to one foe; it is Burning. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 7 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Soot Veil} & \medium{} \energy{1} & Move; you cannot be targeted by foes in your old zone this round. \\
-  \rowcolor{ash!15} \textbf{Hellcut} & \hard{} \hard{} & Deal 3 hits to one foe that has taken hits this round. \\
-  \rowcolor{bone} \textbf{Ember Reap} & \grand{} \energy{1} & Deal 1 hit to every foe in your zone; reclaim 1 Energy for each foe that falls. \\
-  \rowcolor{ash!15} \textbf{Field of Embers} & \grand{} \energy{1} & Your zone burns: at the start of every Monster phase this fight, foes there take 1 hit. \\
-  \rowcolor{bone} \textbf{Wildfire} & \dire{} \energy{1} & Deal 2 hits to every foe in your zone and 1 hit to each foe in adjacent zones. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 8 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \textbf{Smolder} & \easy & A foe already hit this round takes 1 hit. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Ash Feast} & \hard{} \hard{} & If a foe falls in your zone, heal 1 hit or reclaim 2 energy. \\
-  \rowcolor{bone} \defensive{} \textbf{Smoke Veil} & \grand{} \energy{1} & Until your next round, allies in your zone cannot be targeted by foes in adjacent zones. \\
-  \rowcolor{ash!15} \textbf{Last Light} & \dire{} \energy{1} & If you have 2 or fewer Hits left, deal 5 hits to one foe in your zone. \\
-  \rowcolor{bone} \textbf{Immolate} & \dire{} \energy{1} & Deal 3 hits to one foe, ignoring its Guard and Armor. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 9 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Ash Veteran} & \medium{} \energy{1} & If you took a hit this round, deal 1 hit and gain Guard. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Phoenix Cut} & \hard{} \hard{} & If you have 2 or fewer Hits left, heal 2 Hits and deal 2 hits to one foe. \\
-  \rowcolor{bone} \textbf{Burning Momentum} & \grand{} \energy{1} & Deal 2 hits; if you took a hit this round, deal 3 instead. \\
-  \rowcolor{ash!15} \textbf{Dance of Cinders} & \dire{} \energy{1} & Move up to two zones; deal 2 hits to one foe in each zone you leave. \\
-  \rowcolor{bone} \textbf{Cremation} & \fell{} \energy{2} & Deal 6 hits split as you choose among foes in your zone; each is Burning. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 10 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Final Blaze} & \hard{} \hard{} & Deal 3 hits to a Burning foe; if it falls, allies in your zone gain Guard. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Ash Rebirth} & \grand{} \energy{1} & Heal 2 Hits on yourself; mark +1 Stress. \\
-  \rowcolor{bone} \defensive{} \textbf{Pyre Ward} & \dire{} \energy{1} & Until your next round, allies in your zone ignore the first 2 hits each, and any foe that hits them is Burning. \\
-  \rowcolor{ash!15} \textbf{Ash Crown} & \dire{} \energy{1} & Deal 3 hits; for the rest of the fight your Strikes deal +1 hit. \\
-  \rowcolor{bone} \defensive{} \textbf{Phoenix Oath} & \fell{} \energy{2} & A Down ally in your zone stands with 3 Hits and takes no Scar for it; you take 2 hits. \\
-\end{tabularx}
+\begin{longtable}{@{\hspace{2pt}} >{\centering\arraybackslash}p{0.9cm} >{\raggedright\arraybackslash}p{3.6cm} >{\centering\arraybackslash}p{3.0cm} >{\raggedright\arraybackslash}p{7.6cm} @{}}
+  \shardheadercell{Lv} & \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
+\endfirsthead
+  \shardheadercell{Lv} & \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
+\endhead
+  \rowcolor{bone} \textbf{1} & \textbf{Cinder Cut} & \easy & Deal 1 hit to a foe in your zone. \\
+  \rowcolor{ash!15}  & \textbf{Spark Step} & \easy & Move to an adjacent zone after dealing a hit this round. \\
+  \rowcolor{bone}  & \textbf{Blood Heat} & \easy & If you took a hit this round, your next Strike deals +1 hit. \\
+  \rowcolor{ash!15}  & \textbf{Searing Edge} & \medium{} \energy{1} & Deal 1 hit; that foe takes 1 hit at the start of the next round. \\
+  \rowcolor{bone}  & \textbf{Ash Cloud} & \medium{} \energy{1} & Foes in your zone cannot Aid until your next round. \\
+  \rowcolor{ash!15} \textbf{2} & \textbf{Knife of Coals} & \easy & Deal 1 hit; ignore Guard on that foe for this hit. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Smoke Withdraw} & \easy & Move to an adjacent zone; gain Guard. \\
+  \rowcolor{ash!15}  & \textbf{Executioner's Poise} & \medium{} \energy{1} & Deal 1 hit to a foe that already took a hit this round. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Flare Parry} & \medium{} \energy{1} & Gain Guard; if you ignore a hit, deal 1 hit to the attacker. \\
+  \rowcolor{ash!15}  & \textbf{Brand} & \medium{} \energy{1} & Mark a foe: your next action against them this fight costs no energy. \\
+  \rowcolor{bone} \textbf{3} & \textbf{Char} & \easy & A foe in your zone loses Guard if they have it. \\
+  \rowcolor{ash!15}  & \textbf{Rage Tempo} & \medium{} \energy{1} & Deal 1 hit; take 1 hit yourself to deal +1 hit. \\
+  \rowcolor{bone}  & \textbf{Kindling Blow} & \medium{} \energy{1} & Deal 1 hit; if you Strike the same foe later this round, deal +1 hit. \\
+  \rowcolor{ash!15}  & \textbf{Cremate} & \hard{} \hard{} & Deal 2 hits to one foe in your zone; if they fall, reclaim 1 energy. \\
+  \rowcolor{bone}  & \textbf{Blazing Arc} & \grand{} \energy{1} & Deal 2 hits to each of up to two foes in your zone. \\
+  \rowcolor{ash!15} \textbf{4} & \defensive{} \textbf{Scorch Guard} & \easy & Gain Guard; attackers that hit you take 1 hit. \\
+  \rowcolor{bone}  & \textbf{Ember Dance} & \medium{} \energy{1} & Move, then Strike without spending the usual energy (still need Medium die). \\
+  \rowcolor{ash!15}  & \textbf{Black Spark} & \medium{} \energy{1} & Deal 1 hit to a foe in an adjacent zone. \\
+  \rowcolor{bone}  & \textbf{Wildfire Slash} & \hard{} \hard{} & Deal 1 hit to a foe and 1 hit to another foe in the same zone. \\
+  \rowcolor{ash!15}  & \textbf{Furnace Step} & \grand{} \energy{1} & Move into an adjacent zone; deal 2 hits to one foe there and set it Burning. \\
+  \rowcolor{bone} \textbf{5} & \textbf{Burning Oath} & \medium{} \energy{1} & Deal 1 hit; you may not Guard this round. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Ember Guard} & \medium{} \energy{1} & Gain Guard; the first foe to hit you this round is Burning. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Dying Ember} & \hard{} \hard{} & If you have 1 hit remaining before you would fall, deal 2 hits instead of falling; then fall. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Pyre Guard} & \grand{} \energy{1} & Gain Guard; foes that hit you before your next round are Burning. \\
+  \rowcolor{bone}  & \textbf{Cinder Rush} & \grand{} \energy{1} & Deal 3 hits to one foe that has already taken a hit this round. \\
+  \rowcolor{ash!15} \textbf{6} & \defensive{} \textbf{Heat Haze} & \medium{} \energy{1} & Until your next round, foes in your zone need a 5+ for Medium actions against you. \\
+  \rowcolor{bone}  & \textbf{Incinerate} & \hard{} \hard{} & Deal 2 hits; that foe cannot Guard this round. \\
+  \rowcolor{ash!15}  & \textbf{Ashen Whirl} & \hard{} \hard{} & Deal 1 hit to up to three foes in your zone. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Shimmer of Heat} & \grand{} \energy{1} & Until your next round, foes in your zone need a 5+ for their Medium actions. \\
+  \rowcolor{ash!15}  & \textbf{Inferno Cut} & \dire{} \energy{1} & Deal 4 hits to one foe; it is Burning. \\
+  \rowcolor{bone} \textbf{7} & \defensive{} \textbf{Soot Veil} & \medium{} \energy{1} & Move; you cannot be targeted by foes in your old zone this round. \\
+  \rowcolor{ash!15}  & \textbf{Hellcut} & \hard{} \hard{} & Deal 3 hits to one foe that has taken hits this round. \\
+  \rowcolor{bone}  & \textbf{Ember Reap} & \grand{} \energy{1} & Deal 1 hit to every foe in your zone; reclaim 1 Energy for each foe that falls. \\
+  \rowcolor{ash!15}  & \textbf{Field of Embers} & \grand{} \energy{1} & Your zone burns: at the start of every Monster phase this fight, foes there take 1 hit. \\
+  \rowcolor{bone}  & \textbf{Wildfire} & \dire{} \energy{1} & Deal 2 hits to every foe in your zone and 1 hit to each foe in adjacent zones. \\
+  \rowcolor{ash!15} \textbf{8} & \textbf{Smolder} & \easy & A foe already hit this round takes 1 hit. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Ash Feast} & \hard{} \hard{} & If a foe falls in your zone, heal 1 hit or reclaim 2 energy. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Smoke Veil} & \grand{} \energy{1} & Until your next round, allies in your zone cannot be targeted by foes in adjacent zones. \\
+  \rowcolor{bone}  & \textbf{Last Light} & \dire{} \energy{1} & If you have 2 or fewer Hits left, deal 5 hits to one foe in your zone. \\
+  \rowcolor{ash!15}  & \textbf{Immolate} & \dire{} \energy{1} & Deal 3 hits to one foe, ignoring its Guard and Armor. \\
+  \rowcolor{bone} \textbf{9} & \defensive{} \textbf{Ash Veteran} & \medium{} \energy{1} & If you took a hit this round, deal 1 hit and gain Guard. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Phoenix Cut} & \hard{} \hard{} & If you have 2 or fewer Hits left, heal 2 Hits and deal 2 hits to one foe. \\
+  \rowcolor{bone}  & \textbf{Burning Momentum} & \grand{} \energy{1} & Deal 2 hits; if you took a hit this round, deal 3 instead. \\
+  \rowcolor{ash!15}  & \textbf{Dance of Cinders} & \dire{} \energy{1} & Move up to two zones; deal 2 hits to one foe in each zone you leave. \\
+  \rowcolor{bone}  & \textbf{Cremation} & \fell{} \energy{2} & Deal 6 hits split as you choose among foes in your zone; each is Burning. \\
+  \rowcolor{ash!15} \textbf{10} & \defensive{} \textbf{Final Blaze} & \hard{} \hard{} & Deal 3 hits to a Burning foe; if it falls, allies in your zone gain Guard. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Ash Rebirth} & \grand{} \energy{1} & Heal 2 Hits on yourself; mark +1 Stress. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Pyre Ward} & \dire{} \energy{1} & Until your next round, allies in your zone ignore the first 2 hits each, and any foe that hits them is Burning. \\
+  \rowcolor{bone}  & \textbf{Ash Crown} & \dire{} \energy{1} & Deal 3 hits; for the rest of the fight your Strikes deal +1 hit. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Phoenix Oath} & \fell{} \energy{2} & A Down ally in your zone stands with 3 Hits and takes no Scar for it; you take 2 hits. \\
+\end{longtable}
 }
 \vspace{0.55em}
 
 \subsubsection{Tunnel Knight}
 \textit{Veteran of collapsing shafts and black chokepoints. Master of cramped zones.}
 
-\subsubsection*{Level 1 --- choose one}
-
-oindent
+\noindent
 {\normalsize
 \renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \textbf{Choke Point} & \easy & Choose your zone: only one foe may enter it next round. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Lantern Guard} & \easy & Gain Guard; allies in your zone ignore Omen penalties this round. \\
-  \rowcolor{bone} \textbf{Short Step} & \easy & Move to an adjacent zone even if it is occupied by foes. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Cave-In Blow} & \medium{} \energy{1} & Deal 1 hit; that foe cannot leave your zone this round. \\
-  \rowcolor{bone} \textbf{Shaft Rush} & \medium{} \energy{1} & Move up to two adjacent zones along a straight passage; deal 1 hit at the end. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 2 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \textbf{Pit Spike} & \easy & Deal 1 hit to a foe that Moved into your zone this round. \\
-  \rowcolor{ash!15} \textbf{Echo Step} & \easy & Move; leave a decoy: the next foe action targeting your old zone fails. \\
-  \rowcolor{bone} \textbf{Ribcracker} & \medium{} \energy{1} & Deal 1 hit; that foe's next Hard Hard action fails automatically. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Bolt the Hatch} & \medium{} \energy{1} & Prevent all Moves out of your zone until your next round. \\
-  \rowcolor{bone} \defensive{} \textbf{Brace Tunnel} & \medium{} \energy{1} & Allies in your zone cannot be Moved. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 3 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \textbf{Pick Strike} & \easy & Deal 1 hit; ignore Guard. \\
-  \rowcolor{ash!15} \textbf{Hammer Hook} & \medium{} \energy{1} & Deal 1 hit and Move the foe into an adjacent zone. \\
-  \rowcolor{bone} \textbf{Crawlspace} & \medium{} \energy{1} & Move through a foe's zone without stopping; end adjacent. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Deep Watch} & \hard{} \hard{} & You and allies in your zone gain Guard; foes cannot Aid. \\
-  \rowcolor{bone} \textbf{Choke the Shaft} & \grand{} \energy{1} & Until your next round, your zone holds at most 2 foes; extra foes are pushed toward Z5 and take 1 hit each. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 4 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Support Beam} & \easy & An ally in your zone gains Guard. \\
-  \rowcolor{ash!15} \textbf{Pressure Plate} & \medium{} \energy{1} & The next foe to enter your zone takes 2 hits. \\
-  \rowcolor{bone} \textbf{Blackout Fight} & \medium{} \energy{1} & Foes in your zone cannot target adjacent zones this round. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Rockslide Guard} & \hard{} \hard{} & Gain Guard twice (ignore two hits). \\
-  \rowcolor{bone} \defensive{} \textbf{Lamplit Line} & \grand{} \energy{1} & Allies in your zone gain Guard; Swarm foes there take 1 hit. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 5 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Seal Crack} & \medium{} \energy{1} & Cancel one foe Move into or out of your zone. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Brace the Shaft} & \medium{} \energy{1} & You and one ally in your zone gain Guard. \\
-  \rowcolor{bone} \defensive{} \textbf{Crush Corridor} & \hard{} \hard{} & Deal 2 hits to each foe sharing your zone if no ally is there. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Brace the Beam} & \grand{} \energy{1} & Restore 2 Armor boxes, split as you like among allies in your zone. \\
-  \rowcolor{bone} \textbf{Pick, Then Hammer} & \grand{} \energy{1} & Deal 2 hits to one foe in your zone; a second foe there takes 1 hit. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 6 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Lantern Flare} & \medium{} \energy{1} & Foes in your zone need a 5+ for Medium actions this round. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Stone Shoulder} & \hard{} \hard{} & Deal 1 hit; gain Guard; an ally may Move for free (Easy still needed). \\
-  \rowcolor{bone} \defensive{} \textbf{Final Bulkhead} & \hard{} \hard{} & You cannot leave your zone; deal 2 hits to every foe that enters. \\
-  \rowcolor{ash!15} \textbf{Collapse Call} & \grand{} \energy{1} & Deal 1 hit to every foe in an adjacent zone; Moves into that zone are Hard Hard this fight. \\
-  \rowcolor{bone} \textbf{Bring the Roof Down} & \dire{} \energy{1} & Deal 3 hits to every foe in one adjacent zone; no figure may Move through that zone for the rest of the fight. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 7 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Shaft Guard} & \medium{} \energy{1} & Gain Guard; foes that Move into your zone this round are Bound. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Hold the Shaft} & \hard{} \hard{} & Until your next round, you cannot be Moved and ignore the first two hits. \\
-  \rowcolor{bone} \textbf{Blind Shaft} & \grand{} \energy{1} & Choose a foe in your zone: it cannot Move or be Moved until the end of next round; deal 2 hits to it. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Cramped Quarters} & \grand{} \energy{1} & Deal 2 hits to one foe; until your next round, foes in your zone deal 1 less hit (minimum 1). \\
-  \rowcolor{bone} \defensive{} \textbf{Tunnel Lord} & \dire{} \energy{1} & Until your next round, allies in your zone ignore all hits from Swarm and Front foes. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 8 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \textbf{Grate Kick} & \easy & Deal 1 hit; Move yourself to an adjacent zone. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Collapse Corridor} & \hard{} \hard{} & Deal 1 hit to each foe in an adjacent zone; they cannot enter your zone this round. \\
-  \rowcolor{bone} \textbf{Stooped Vault} & \grand{} \energy{1} & Until your next round, no Hard Hard monster action may target allies in your zone. \\
-  \rowcolor{ash!15} \textbf{Black Gallery} & \dire{} \energy{1} & Deal 4 hits to one foe that cannot Move. \\
-  \rowcolor{bone} \defensive{} \textbf{Prop and Pillar} & \dire{} \energy{1} & You and every ally in your zone restore all Armor boxes. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 9 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Narrow Step} & \medium{} \energy{1} & Deal 1 hit; if exactly one foe is in your zone, gain Guard. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Last Lantern} & \hard{} \hard{} & Allies in your zone gain Guard; deal 1 hit to each foe that has Guard in your zone. \\
-  \rowcolor{bone} \textbf{Shaft Charge} & \grand{} \energy{1} & Move into an adjacent zone; deal 2 hits to one foe there. \\
-  \rowcolor{ash!15} \textbf{Pickaxe Judgment} & \dire{} \energy{1} & Deal 4 hits to one foe in your zone. \\
-  \rowcolor{bone} \defensive{} \textbf{The Shaft Holds} & \fell{} \energy{2} & Until your next round, foes in your zone and in adjacent zones skip their phase. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 10 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Shaft Lord} & \hard{} \hard{} & Deal 2 hits; for the rest of the fight, foes cannot Move out of your zone. \\
-  \rowcolor{ash!15} \textbf{Mine Cart} & \grand{} \energy{1} & Push one foe in your zone two zones toward Z5; it takes 2 hits. \\
-  \rowcolor{bone} \textbf{Backfill} & \dire{} \energy{1} & Move every foe in your zone one zone toward Z5; each takes 2 hits. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Breath of the Deep} & \dire{} \energy{1} & Allies in your zone heal 1 Hit each and gain Guard. \\
-  \rowcolor{bone} \textbf{Final Collapse} & \fell{} \energy{2} & Deal 5 hits to each foe in one zone other than yours; no figure may enter that zone for the rest of the fight. \\
-\end{tabularx}
+\begin{longtable}{@{\hspace{2pt}} >{\centering\arraybackslash}p{0.9cm} >{\raggedright\arraybackslash}p{3.6cm} >{\centering\arraybackslash}p{3.0cm} >{\raggedright\arraybackslash}p{7.6cm} @{}}
+  \shardheadercell{Lv} & \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
+\endfirsthead
+  \shardheadercell{Lv} & \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
+\endhead
+  \rowcolor{bone} \textbf{1} & \textbf{Choke Point} & \easy & Choose your zone: only one foe may enter it next round. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Lantern Guard} & \easy & Gain Guard; allies in your zone ignore Omen penalties this round. \\
+  \rowcolor{bone}  & \textbf{Short Step} & \easy & Move to an adjacent zone even if it is occupied by foes. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Cave-In Blow} & \medium{} \energy{1} & Deal 1 hit; that foe cannot leave your zone this round. \\
+  \rowcolor{bone}  & \textbf{Shaft Rush} & \medium{} \energy{1} & Move up to two adjacent zones along a straight passage; deal 1 hit at the end. \\
+  \rowcolor{ash!15} \textbf{2} & \textbf{Pit Spike} & \easy & Deal 1 hit to a foe that Moved into your zone this round. \\
+  \rowcolor{bone}  & \textbf{Echo Step} & \easy & Move; leave a decoy: the next foe action targeting your old zone fails. \\
+  \rowcolor{ash!15}  & \textbf{Ribcracker} & \medium{} \energy{1} & Deal 1 hit; that foe's next Hard Hard action fails automatically. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Bolt the Hatch} & \medium{} \energy{1} & Prevent all Moves out of your zone until your next round. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Brace Tunnel} & \medium{} \energy{1} & Allies in your zone cannot be Moved. \\
+  \rowcolor{bone} \textbf{3} & \textbf{Pick Strike} & \easy & Deal 1 hit; ignore Guard. \\
+  \rowcolor{ash!15}  & \textbf{Hammer Hook} & \medium{} \energy{1} & Deal 1 hit and Move the foe into an adjacent zone. \\
+  \rowcolor{bone}  & \textbf{Crawlspace} & \medium{} \energy{1} & Move through a foe's zone without stopping; end adjacent. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Deep Watch} & \hard{} \hard{} & You and allies in your zone gain Guard; foes cannot Aid. \\
+  \rowcolor{bone}  & \textbf{Choke the Shaft} & \grand{} \energy{1} & Until your next round, your zone holds at most 2 foes; extra foes are pushed toward Z5 and take 1 hit each. \\
+  \rowcolor{ash!15} \textbf{4} & \defensive{} \textbf{Support Beam} & \easy & An ally in your zone gains Guard. \\
+  \rowcolor{bone}  & \textbf{Pressure Plate} & \medium{} \energy{1} & The next foe to enter your zone takes 2 hits. \\
+  \rowcolor{ash!15}  & \textbf{Blackout Fight} & \medium{} \energy{1} & Foes in your zone cannot target adjacent zones this round. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Rockslide Guard} & \hard{} \hard{} & Gain Guard twice (ignore two hits). \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Lamplit Line} & \grand{} \energy{1} & Allies in your zone gain Guard; Swarm foes there take 1 hit. \\
+  \rowcolor{bone} \textbf{5} & \defensive{} \textbf{Seal Crack} & \medium{} \energy{1} & Cancel one foe Move into or out of your zone. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Brace the Shaft} & \medium{} \energy{1} & You and one ally in your zone gain Guard. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Crush Corridor} & \hard{} \hard{} & Deal 2 hits to each foe sharing your zone if no ally is there. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Brace the Beam} & \grand{} \energy{1} & Restore 2 Armor boxes, split as you like among allies in your zone. \\
+  \rowcolor{bone}  & \textbf{Pick, Then Hammer} & \grand{} \energy{1} & Deal 2 hits to one foe in your zone; a second foe there takes 1 hit. \\
+  \rowcolor{ash!15} \textbf{6} & \defensive{} \textbf{Lantern Flare} & \medium{} \energy{1} & Foes in your zone need a 5+ for Medium actions this round. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Stone Shoulder} & \hard{} \hard{} & Deal 1 hit; gain Guard; an ally may Move for free (Easy still needed). \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Final Bulkhead} & \hard{} \hard{} & You cannot leave your zone; deal 2 hits to every foe that enters. \\
+  \rowcolor{bone}  & \textbf{Collapse Call} & \grand{} \energy{1} & Deal 1 hit to every foe in an adjacent zone; Moves into that zone are Hard Hard this fight. \\
+  \rowcolor{ash!15}  & \textbf{Bring the Roof Down} & \dire{} \energy{1} & Deal 3 hits to every foe in one adjacent zone; no figure may Move through that zone for the rest of the fight. \\
+  \rowcolor{bone} \textbf{7} & \defensive{} \textbf{Shaft Guard} & \medium{} \energy{1} & Gain Guard; foes that Move into your zone this round are Bound. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Hold the Shaft} & \hard{} \hard{} & Until your next round, you cannot be Moved and ignore the first two hits. \\
+  \rowcolor{bone}  & \textbf{Blind Shaft} & \grand{} \energy{1} & Choose a foe in your zone: it cannot Move or be Moved until the end of next round; deal 2 hits to it. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Cramped Quarters} & \grand{} \energy{1} & Deal 2 hits to one foe; until your next round, foes in your zone deal 1 less hit (minimum 1). \\
+  \rowcolor{bone}  & \defensive{} \textbf{Tunnel Lord} & \dire{} \energy{1} & Until your next round, allies in your zone ignore all hits from Swarm and Front foes. \\
+  \rowcolor{ash!15} \textbf{8} & \textbf{Grate Kick} & \easy & Deal 1 hit; Move yourself to an adjacent zone. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Collapse Corridor} & \hard{} \hard{} & Deal 1 hit to each foe in an adjacent zone; they cannot enter your zone this round. \\
+  \rowcolor{ash!15}  & \textbf{Stooped Vault} & \grand{} \energy{1} & Until your next round, no Hard Hard monster action may target allies in your zone. \\
+  \rowcolor{bone}  & \textbf{Black Gallery} & \dire{} \energy{1} & Deal 4 hits to one foe that cannot Move. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Prop and Pillar} & \dire{} \energy{1} & You and every ally in your zone restore all Armor boxes. \\
+  \rowcolor{bone} \textbf{9} & \defensive{} \textbf{Narrow Step} & \medium{} \energy{1} & Deal 1 hit; if exactly one foe is in your zone, gain Guard. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Last Lantern} & \hard{} \hard{} & Allies in your zone gain Guard; deal 1 hit to each foe that has Guard in your zone. \\
+  \rowcolor{bone}  & \textbf{Shaft Charge} & \grand{} \energy{1} & Move into an adjacent zone; deal 2 hits to one foe there. \\
+  \rowcolor{ash!15}  & \textbf{Pickaxe Judgment} & \dire{} \energy{1} & Deal 4 hits to one foe in your zone. \\
+  \rowcolor{bone}  & \defensive{} \textbf{The Shaft Holds} & \fell{} \energy{2} & Until your next round, foes in your zone and in adjacent zones skip their phase. \\
+  \rowcolor{ash!15} \textbf{10} & \defensive{} \textbf{Shaft Lord} & \hard{} \hard{} & Deal 2 hits; for the rest of the fight, foes cannot Move out of your zone. \\
+  \rowcolor{bone}  & \textbf{Mine Cart} & \grand{} \energy{1} & Push one foe in your zone two zones toward Z5; it takes 2 hits. \\
+  \rowcolor{ash!15}  & \textbf{Backfill} & \dire{} \energy{1} & Move every foe in your zone one zone toward Z5; each takes 2 hits. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Breath of the Deep} & \dire{} \energy{1} & Allies in your zone heal 1 Hit each and gain Guard. \\
+  \rowcolor{ash!15}  & \textbf{Final Collapse} & \fell{} \energy{2} & Deal 5 hits to each foe in one zone other than yours; no figure may enter that zone for the rest of the fight. \\
+\end{longtable}
 }
 \vspace{0.55em}
 
 \subsubsection{Crucible Veteran}
 \textit{Tempered in guild smelters and punishment pits. Trades pain for momentum.}
 
-\subsubsection*{Level 1 --- choose one}
-
-oindent
+\noindent
 {\normalsize
 \renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \textbf{Pain Tithe} & \easy & Take 1 hit to reclaim 1 energy. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Scar Memory} & \easy & Gain Guard if you have already taken a hit this fight. \\
-  \rowcolor{bone} \textbf{Grit Swing} & \easy & Deal 1 hit; you may not Move this round. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Tempered Blow} & \medium{} \energy{1} & Deal 1 hit; ignore the next hit you take. \\
-  \rowcolor{bone} \textbf{Crucible Breath} & \medium{} \energy{1} & Reclaim 1 energy; deal 1 hit to a foe in your zone. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 2 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \textbf{Quench} & \easy & Remove Burning from yourself or an ally in your zone. \\
-  \rowcolor{ash!15} \textbf{Chain Hook} & \easy & Pull a foe from an adjacent zone into yours. \\
-  \rowcolor{bone} \defensive{} \textbf{Break Their Tempo} & \medium{} \energy{1} & Deal 1 hit; that foe skips their next Easy action. \\
-  \rowcolor{ash!15} \textbf{Blood Tariff} & \medium{} \energy{1} & Take 1 hit; deal 2 hits to one foe. \\
-  \rowcolor{bone} \textbf{Foundry Stomp} & \medium{} \energy{1} & Deal 1 hit to all foes in your zone. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 3 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \textbf{Work Gang} & \easy & Aid without spending energy (still need Medium die). \\
-  \rowcolor{ash!15} \textbf{Hard Lesson} & \medium{} \energy{1} & An ally in your zone may reroll one assigned die (keep second). \\
-  \rowcolor{bone} \defensive{} \textbf{Scab Over} & \medium{} \energy{1} & Heal 1 hit if you dealt a hit this round. \\
-  \rowcolor{ash!15} \textbf{Molten Resolve} & \hard{} \hard{} & While you have taken more hits than any ally, deal +1 hit on strikes. \\
-  \rowcolor{bone} \textbf{Pain Forge} & \grand{} \energy{1} & Take 1 hit; deal 3 hits to one foe in your zone. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 4 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \textbf{Hammer Echo} & \easy & If you dealt a hit last round, deal 1 hit now. \\
-  \rowcolor{ash!15} \textbf{Brand of Service} & \medium{} \energy{1} & Mark yourself: reclaim 1 energy whenever you Guard. \\
-  \rowcolor{bone} \textbf{Forced March} & \medium{} \energy{1} & You and one ally Move to the same adjacent zone. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Veteran Feint} & \hard{} \hard{} & Cancel one foe action targeting you; deal 1 hit. \\
-  \rowcolor{bone} \defensive{} \textbf{Tempered Hide} & \grand{} \energy{1} & Restore 2 of your Armor boxes; gain Guard. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 5 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \textbf{Pit Fighter} & \medium{} \energy{1} & If alone with foes in your zone, deal +1 hit. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Second Wind} & \medium{} \energy{1} & Heal 1 Hit; reclaim 1 Energy. \\
-  \rowcolor{bone} \textbf{No Quarter} & \hard{} \hard{} & Deal 2 hits; you and the foe cannot Guard this round. \\
-  \rowcolor{ash!15} \textbf{Slag Sweep} & \grand{} \energy{1} & Deal 1 hit to every foe in your zone; each loses Guard. \\
-  \rowcolor{bone} \textbf{Hammer Rhythm} & \grand{} \energy{1} & Deal 2 hits; if you have taken a hit this fight, reclaim 1 Energy. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 6 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \textbf{Smelter's Grip} & \medium{} \energy{1} & Deal 1 hit; that foe is Bound. \\
-  \rowcolor{ash!15} \textbf{Anvil Drop} & \hard{} \hard{} & Deal 3 hits to one foe; take 1 hit. \\
-  \rowcolor{bone} \defensive{} \textbf{Slag Armor} & \hard{} \hard{} & Gain Guard; attackers take 1 hit when they hit you this round. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Quenching Draught} & \grand{} \energy{1} & Heal 2 Hits on yourself or on an ally in your zone. \\
-  \rowcolor{bone} \textbf{Crucible Blow} & \dire{} \energy{1} & Deal 4 hits to one foe; you take 1 hit. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 7 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Grit Teeth} & \medium{} \energy{1} & Gain Guard; heal 1 Hit if you took a hit last round. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Unmade Fear} & \hard{} \hard{} & Allies in your zone ignore the first failed action this round and may reassign those dice. \\
-  \rowcolor{bone} \textbf{Pit Discipline} & \grand{} \energy{1} & Until your next round, allies in your zone deal +1 hit with Strike. \\
-  \rowcolor{ash!15} \textbf{Molten Step} & \grand{} \energy{1} & Move into an adjacent zone; deal 2 hits to one foe there; you take 1 hit. \\
-  \rowcolor{bone} \textbf{Forged in Pain} & \dire{} \energy{1} & Deal hits to one foe equal to the Hits you have lost this fight (maximum 5). \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 8 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \textbf{Iron Lung} & \easy & Ignore Static Rain / hazard damage once this round. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Endurance Peak} & \hard{} \hard{} & Ignore all hits this round; you cannot act next round. \\
-  \rowcolor{bone} \textbf{Pit Reprisal} & \grand{} \energy{1} & Until your next round, every foe in your zone that hits you takes 2 hits. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Unbroken Steel} & \dire{} \energy{1} & Until your next round, you ignore all hits; you cannot Move. \\
-  \rowcolor{bone} \textbf{Pit Champion} & \dire{} \energy{1} & Deal 3 hits to one foe and 1 hit to every other foe in your zone. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 9 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Steel Yourself} & \medium{} \energy{1} & Remove Bound, Marked, and Burning from yourself; gain Guard. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Furnace Heart} & \hard{} \hard{} & Heal 2 Hits; deal 1 hit to each foe in your zone. \\
-  \rowcolor{bone} \textbf{Furnace Grip} & \grand{} \energy{1} & Deal 2 hits; that foe is Bound and Burning. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Iron Lungs} & \dire{} \energy{1} & You and every ally in your zone heal 2 Hits; mark +1 Stress. \\
-  \rowcolor{bone} \textbf{Walk Through Fire} & \fell{} \energy{2} & Deal 2 hits to every foe on the battle field; you take 2 hits. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 10 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Tempered Party} & \hard{} \hard{} & Allies in your zone heal 1 Hit; you take 1 hit. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Scarred Hide} & \grand{} \energy{1} & Until your next round, ignore the first 2 hits you would take. \\
-  \rowcolor{bone} \defensive{} \textbf{Anneal} & \dire{} \energy{1} & Restore all Armor boxes on every ally in your zone. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Brand of the Pit} & \dire{} \energy{1} & Deal 3 hits; that foe cannot act next phase. \\
-  \rowcolor{bone} \defensive{} \textbf{Veteran's Last Lesson} & \fell{} \energy{2} & Until your next round, every hit you take also deals 1 hit to its attacker, and your Hits cannot drop below 1. \\
-\end{tabularx}
+\begin{longtable}{@{\hspace{2pt}} >{\centering\arraybackslash}p{0.9cm} >{\raggedright\arraybackslash}p{3.6cm} >{\centering\arraybackslash}p{3.0cm} >{\raggedright\arraybackslash}p{7.6cm} @{}}
+  \shardheadercell{Lv} & \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
+\endfirsthead
+  \shardheadercell{Lv} & \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
+\endhead
+  \rowcolor{bone} \textbf{1} & \textbf{Pain Tithe} & \easy & Take 1 hit to reclaim 1 energy. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Scar Memory} & \easy & Gain Guard if you have already taken a hit this fight. \\
+  \rowcolor{bone}  & \textbf{Grit Swing} & \easy & Deal 1 hit; you may not Move this round. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Tempered Blow} & \medium{} \energy{1} & Deal 1 hit; ignore the next hit you take. \\
+  \rowcolor{bone}  & \textbf{Crucible Breath} & \medium{} \energy{1} & Reclaim 1 energy; deal 1 hit to a foe in your zone. \\
+  \rowcolor{ash!15} \textbf{2} & \textbf{Quench} & \easy & Remove Burning from yourself or an ally in your zone. \\
+  \rowcolor{bone}  & \textbf{Chain Hook} & \easy & Pull a foe from an adjacent zone into yours. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Break Their Tempo} & \medium{} \energy{1} & Deal 1 hit; that foe skips their next Easy action. \\
+  \rowcolor{bone}  & \textbf{Blood Tariff} & \medium{} \energy{1} & Take 1 hit; deal 2 hits to one foe. \\
+  \rowcolor{ash!15}  & \textbf{Foundry Stomp} & \medium{} \energy{1} & Deal 1 hit to all foes in your zone. \\
+  \rowcolor{bone} \textbf{3} & \textbf{Work Gang} & \easy & Aid without spending energy (still need Medium die). \\
+  \rowcolor{ash!15}  & \textbf{Hard Lesson} & \medium{} \energy{1} & An ally in your zone may reroll one assigned die (keep second). \\
+  \rowcolor{bone}  & \defensive{} \textbf{Scab Over} & \medium{} \energy{1} & Heal 1 hit if you dealt a hit this round. \\
+  \rowcolor{ash!15}  & \textbf{Molten Resolve} & \hard{} \hard{} & While you have taken more hits than any ally, deal +1 hit on strikes. \\
+  \rowcolor{bone}  & \textbf{Pain Forge} & \grand{} \energy{1} & Take 1 hit; deal 3 hits to one foe in your zone. \\
+  \rowcolor{ash!15} \textbf{4} & \textbf{Hammer Echo} & \easy & If you dealt a hit last round, deal 1 hit now. \\
+  \rowcolor{bone}  & \textbf{Brand of Service} & \medium{} \energy{1} & Mark yourself: reclaim 1 energy whenever you Guard. \\
+  \rowcolor{ash!15}  & \textbf{Forced March} & \medium{} \energy{1} & You and one ally Move to the same adjacent zone. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Veteran Feint} & \hard{} \hard{} & Cancel one foe action targeting you; deal 1 hit. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Tempered Hide} & \grand{} \energy{1} & Restore 2 of your Armor boxes; gain Guard. \\
+  \rowcolor{bone} \textbf{5} & \textbf{Pit Fighter} & \medium{} \energy{1} & If alone with foes in your zone, deal +1 hit. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Second Wind} & \medium{} \energy{1} & Heal 1 Hit; reclaim 1 Energy. \\
+  \rowcolor{bone}  & \textbf{No Quarter} & \hard{} \hard{} & Deal 2 hits; you and the foe cannot Guard this round. \\
+  \rowcolor{ash!15}  & \textbf{Slag Sweep} & \grand{} \energy{1} & Deal 1 hit to every foe in your zone; each loses Guard. \\
+  \rowcolor{bone}  & \textbf{Hammer Rhythm} & \grand{} \energy{1} & Deal 2 hits; if you have taken a hit this fight, reclaim 1 Energy. \\
+  \rowcolor{ash!15} \textbf{6} & \textbf{Smelter's Grip} & \medium{} \energy{1} & Deal 1 hit; that foe is Bound. \\
+  \rowcolor{bone}  & \textbf{Anvil Drop} & \hard{} \hard{} & Deal 3 hits to one foe; take 1 hit. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Slag Armor} & \hard{} \hard{} & Gain Guard; attackers take 1 hit when they hit you this round. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Quenching Draught} & \grand{} \energy{1} & Heal 2 Hits on yourself or on an ally in your zone. \\
+  \rowcolor{ash!15}  & \textbf{Crucible Blow} & \dire{} \energy{1} & Deal 4 hits to one foe; you take 1 hit. \\
+  \rowcolor{bone} \textbf{7} & \defensive{} \textbf{Grit Teeth} & \medium{} \energy{1} & Gain Guard; heal 1 Hit if you took a hit last round. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Unmade Fear} & \hard{} \hard{} & Allies in your zone ignore the first failed action this round and may reassign those dice. \\
+  \rowcolor{bone}  & \textbf{Pit Discipline} & \grand{} \energy{1} & Until your next round, allies in your zone deal +1 hit with Strike. \\
+  \rowcolor{ash!15}  & \textbf{Molten Step} & \grand{} \energy{1} & Move into an adjacent zone; deal 2 hits to one foe there; you take 1 hit. \\
+  \rowcolor{bone}  & \textbf{Forged in Pain} & \dire{} \energy{1} & Deal hits to one foe equal to the Hits you have lost this fight (maximum 5). \\
+  \rowcolor{ash!15} \textbf{8} & \textbf{Iron Lung} & \easy & Ignore Static Rain / hazard damage once this round. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Endurance Peak} & \hard{} \hard{} & Ignore all hits this round; you cannot act next round. \\
+  \rowcolor{ash!15}  & \textbf{Pit Reprisal} & \grand{} \energy{1} & Until your next round, every foe in your zone that hits you takes 2 hits. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Unbroken Steel} & \dire{} \energy{1} & Until your next round, you ignore all hits; you cannot Move. \\
+  \rowcolor{ash!15}  & \textbf{Pit Champion} & \dire{} \energy{1} & Deal 3 hits to one foe and 1 hit to every other foe in your zone. \\
+  \rowcolor{bone} \textbf{9} & \defensive{} \textbf{Steel Yourself} & \medium{} \energy{1} & Remove Bound, Marked, and Burning from yourself; gain Guard. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Furnace Heart} & \hard{} \hard{} & Heal 2 Hits; deal 1 hit to each foe in your zone. \\
+  \rowcolor{bone}  & \textbf{Furnace Grip} & \grand{} \energy{1} & Deal 2 hits; that foe is Bound and Burning. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Iron Lungs} & \dire{} \energy{1} & You and every ally in your zone heal 2 Hits; mark +1 Stress. \\
+  \rowcolor{bone}  & \textbf{Walk Through Fire} & \fell{} \energy{2} & Deal 2 hits to every foe on the battle field; you take 2 hits. \\
+  \rowcolor{ash!15} \textbf{10} & \defensive{} \textbf{Tempered Party} & \hard{} \hard{} & Allies in your zone heal 1 Hit; you take 1 hit. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Scarred Hide} & \grand{} \energy{1} & Until your next round, ignore the first 2 hits you would take. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Anneal} & \dire{} \energy{1} & Restore all Armor boxes on every ally in your zone. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Brand of the Pit} & \dire{} \energy{1} & Deal 3 hits; that foe cannot act next phase. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Veteran's Last Lesson} & \fell{} \energy{2} & Until your next round, every hit you take also deals 1 hit to its attacker, and your Hits cannot drop below 1. \\
+\end{longtable}
 }
 \vspace{0.55em}
 
 \subsubsection{Oathbreaker}
 \textit{Cast out of every banner that mattered. Turns betrayal into ruthless leverage.}
 
-\subsubsection*{Level 1 --- choose one}
-
-oindent
+\noindent
 {\normalsize
 \renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Broken Word} & \easy & Cancel one ally Aid targeting you; deal 1 hit to a foe instead. \\
-  \rowcolor{ash!15} \textbf{Cut Ties} & \easy & Move; you cannot be Aided this round. \\
-  \rowcolor{bone} \defensive{} \textbf{Spite Guard} & \easy & Gain Guard; an ally in your zone loses Guard if they have it. \\
-  \rowcolor{ash!15} \textbf{Betray the Line} & \medium{} \energy{1} & Swap zones with an ally; deal 1 hit in your new zone. \\
-  \rowcolor{bone} \textbf{Blackmail Blow} & \medium{} \energy{1} & Deal 1 hit; that foe must target an ally of yours next if able. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 2 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Mocking Parry} & \easy & Gain Guard; taunt: one foe must attack you. \\
-  \rowcolor{ash!15} \textbf{Lone Path} & \easy & Move twice (two Easy assignments) as one action if you assign two dice. \\
-  \rowcolor{bone} \textbf{Stolen Honor} & \medium{} \energy{1} & Use one Basic Action an ally in your zone just resolved, once. \\
-  \rowcolor{ash!15} \textbf{Cruel Bargain} & \medium{} \energy{1} & An ally takes 1 hit; you deal 2 hits. \\
-  \rowcolor{bone} \textbf{Debt of Blood} & \medium{} \energy{1} & Deal 1 hit for each ally that has fallen this fight (max 3). \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 3 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \textbf{Backstab Allegiance} & \easy & Deal 1 hit to a foe engaged with an ally. \\
-  \rowcolor{ash!15} \textbf{False Banner} & \medium{} \energy{1} & Foes treat you as an ally for targeting until you hit them. \\
-  \rowcolor{bone} \textbf{Whispered Threat} & \medium{} \energy{1} & A foe in an adjacent zone Moves into your zone. \\
-  \rowcolor{ash!15} \textbf{Severance} & \hard{} \hard{} & Deal 2 hits; that foe cannot benefit from allied actions this round. \\
-  \rowcolor{bone} \textbf{Betrayer's Edge} & \grand{} \energy{1} & Deal 3 hits to a foe that has Guard, ignoring the Guard. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 4 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \textbf{Outcast Charge} & \easy & Move into a zone with no allies; deal 1 hit. \\
-  \rowcolor{ash!15} \textbf{Bitter Aid} & \medium{} \energy{1} & Aid an ally; they take 1 hit and deal +1 hit on their next action. \\
-  \rowcolor{bone} \textbf{Cut the Purse} & \medium{} \energy{1} & Deal 1 hit; reclaim 1 energy from the party pool if any was spent this round. \\
-  \rowcolor{ash!15} \textbf{Turncloak Strike} & \hard{} \hard{} & Deal 1 hit to a foe and 1 hit to an ally in your zone; reclaim 2 energy. \\
-  \rowcolor{bone} \defensive{} \textbf{Turncoat} & \grand{} \energy{1} & Until your next round, the first hit an ally in your zone would take is dealt to a foe in your zone instead. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 5 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Alone Enough} & \medium{} \energy{1} & If you are the only party member in your zone, gain Guard and deal 1 hit. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Cold Shoulder} & \medium{} \energy{1} & Gain Guard; you cannot be Aided this round. \\
-  \rowcolor{bone} \defensive{} \textbf{Forsaken Surge} & \hard{} \hard{} & If no ally is in your zone, deal 3 hits to one foe. \\
-  \rowcolor{ash!15} \textbf{Banner Torn} & \grand{} \energy{1} & Foes in your zone lose Guard; deal 1 hit to each. \\
-  \rowcolor{bone} \defensive{} \textbf{Sworn to None} & \grand{} \energy{1} & Until your next round, monster actions that name ``one character'' cannot choose you. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 6 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \textbf{Traitor's Step} & \medium{} \energy{1} & Move to an adjacent zone; deal 1 hit to a foe there that an ally hit this round. \\
-  \rowcolor{ash!15} \textbf{Exile's Edge} & \hard{} \hard{} & Deal 2 hits; ignore Guard. \\
-  \rowcolor{bone} \textbf{Ruin Pact} & \hard{} \hard{} & You and one foe each take 2 hits. \\
-  \rowcolor{ash!15} \textbf{Blood Price} & \grand{} \energy{1} & Deal 2 hits; reclaim 1 Energy. \\
-  \rowcolor{bone} \textbf{Treason} & \dire{} \energy{1} & Deal 4 hits to one foe; another foe in its zone takes 1 hit. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 7 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Scapegoat} & \medium{} \energy{1} & A foe's next action targets you instead of an ally in your zone; gain Guard. \\
-  \rowcolor{ash!15} \textbf{No Master} & \hard{} \hard{} & Ignore all forced Moves and taunts; deal 1 hit. \\
-  \rowcolor{bone} \defensive{} \textbf{Oath Severed} & \grand{} \energy{1} & Deal 2 hits; that foe cannot heal or be healed for the rest of the fight. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Exile's Guard} & \grand{} \energy{1} & Gain Guard twice. \\
-  \rowcolor{bone} \textbf{Ruinous Vow} & \dire{} \energy{1} & Deal 3 hits; that foe is Marked and Bound; you take 1 hit. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 8 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \textbf{Renegade Step} & \easy & Move ignoring zones occupied limits. \\
-  \rowcolor{ash!15} \textbf{Shattered Oath} & \hard{} \hard{} & Discard Guard from all characters in your zone; deal 1 hit to each foe. \\
-  \rowcolor{bone} \textbf{Knife in the Dark} & \grand{} \energy{1} & Move into an adjacent zone; deal 2 hits to a foe there that has not acted this round. \\
-  \rowcolor{ash!15} \defensive{} \textbf{No Masters} & \dire{} \energy{1} & Until your next round, the first monster action each phase that would target you is cancelled. \\
-  \rowcolor{bone} \defensive{} \textbf{Oathbreaker's Mercy} & \dire{} \energy{1} & Heal 3 Hits on an ally; you take 1 hit. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 9 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Cut Loose} & \medium{} \energy{1} & Remove Bound from yourself; deal 1 hit. \\
-  \rowcolor{ash!15} \defensive{} \textbf{Forsworn Fury} & \hard{} \hard{} & If no ally is in your zone, deal 2 hits to each foe there. \\
-  \rowcolor{bone} \defensive{} \textbf{Faithless Rally} & \grand{} \energy{1} & Allies in your zone gain Guard; mark +1 Stress. \\
-  \rowcolor{ash!15} \textbf{Bridge of Ash} & \dire{} \energy{1} & Deal 3 hits to every foe in an adjacent zone; you cannot Move next round. \\
-  \rowcolor{bone} \textbf{Every Oath Broken} & \fell{} \energy{2} & Deal 4 hits to one foe and 2 hits to every other foe on the battle field; mark +1 Stress. \\
-\end{tabularx}
-}
-\vspace{0.55em}
-
-\subsubsection*{Level 10 --- choose one}
-
-oindent
-{\normalsize
-\renewcommand{\arraystretch}{1.35}
-\begin{tabularx}{\linewidth}{@{\hspace{2pt}} >{\raggedright\arraybackslash}p{4.2cm} >{\centering\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X @{}}
-  \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
-  \rowcolor{bone} \defensive{} \textbf{Nobody's Shield} & \hard{} \hard{} & Gain Guard twice; allies in your zone lose Guard. \\
-  \rowcolor{ash!15} \textbf{Spite} & \grand{} \energy{1} & Deal 2 hits to a foe that hit you this fight; 3 if it hit you this round. \\
-  \rowcolor{bone} \defensive{} \textbf{Price of Loyalty} & \dire{} \energy{1} & Deal 3 hits; until your next round, any foe that would hit an ally in your zone hits you instead. \\
-  \rowcolor{ash!15} \textbf{Kingslayer} & \dire{} \energy{1} & Deal 5 hits to an Elite or Horror in your zone. \\
-  \rowcolor{bone} \textbf{The Last Betrayal} & \fell{} \energy{2} & Choose a foe: its next action's hits are dealt to another monster of your choice; then it takes 3 hits. \\
-\end{tabularx}
+\begin{longtable}{@{\hspace{2pt}} >{\centering\arraybackslash}p{0.9cm} >{\raggedright\arraybackslash}p{3.6cm} >{\centering\arraybackslash}p{3.0cm} >{\raggedright\arraybackslash}p{7.6cm} @{}}
+  \shardheadercell{Lv} & \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
+\endfirsthead
+  \shardheadercell{Lv} & \shardheadercell{Action} & \shardheadercell{Diff.} & \shardheadercell{Effect} \\
+\endhead
+  \rowcolor{bone} \textbf{1} & \defensive{} \textbf{Broken Word} & \easy & Cancel one ally Aid targeting you; deal 1 hit to a foe instead. \\
+  \rowcolor{ash!15}  & \textbf{Cut Ties} & \easy & Move; you cannot be Aided this round. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Spite Guard} & \easy & Gain Guard; an ally in your zone loses Guard if they have it. \\
+  \rowcolor{ash!15}  & \textbf{Betray the Line} & \medium{} \energy{1} & Swap zones with an ally; deal 1 hit in your new zone. \\
+  \rowcolor{bone}  & \textbf{Blackmail Blow} & \medium{} \energy{1} & Deal 1 hit; that foe must target an ally of yours next if able. \\
+  \rowcolor{ash!15} \textbf{2} & \defensive{} \textbf{Mocking Parry} & \easy & Gain Guard; taunt: one foe must attack you. \\
+  \rowcolor{bone}  & \textbf{Lone Path} & \easy & Move twice (two Easy assignments) as one action if you assign two dice. \\
+  \rowcolor{ash!15}  & \textbf{Stolen Honor} & \medium{} \energy{1} & Use one Basic Action an ally in your zone just resolved, once. \\
+  \rowcolor{bone}  & \textbf{Cruel Bargain} & \medium{} \energy{1} & An ally takes 1 hit; you deal 2 hits. \\
+  \rowcolor{ash!15}  & \textbf{Debt of Blood} & \medium{} \energy{1} & Deal 1 hit for each ally that has fallen this fight (max 3). \\
+  \rowcolor{bone} \textbf{3} & \textbf{Backstab Allegiance} & \easy & Deal 1 hit to a foe engaged with an ally. \\
+  \rowcolor{ash!15}  & \textbf{False Banner} & \medium{} \energy{1} & Foes treat you as an ally for targeting until you hit them. \\
+  \rowcolor{bone}  & \textbf{Whispered Threat} & \medium{} \energy{1} & A foe in an adjacent zone Moves into your zone. \\
+  \rowcolor{ash!15}  & \textbf{Severance} & \hard{} \hard{} & Deal 2 hits; that foe cannot benefit from allied actions this round. \\
+  \rowcolor{bone}  & \textbf{Betrayer's Edge} & \grand{} \energy{1} & Deal 3 hits to a foe that has Guard, ignoring the Guard. \\
+  \rowcolor{ash!15} \textbf{4} & \textbf{Outcast Charge} & \easy & Move into a zone with no allies; deal 1 hit. \\
+  \rowcolor{bone}  & \textbf{Bitter Aid} & \medium{} \energy{1} & Aid an ally; they take 1 hit and deal +1 hit on their next action. \\
+  \rowcolor{ash!15}  & \textbf{Cut the Purse} & \medium{} \energy{1} & Deal 1 hit; reclaim 1 energy from the party pool if any was spent this round. \\
+  \rowcolor{bone}  & \textbf{Turncloak Strike} & \hard{} \hard{} & Deal 1 hit to a foe and 1 hit to an ally in your zone; reclaim 2 energy. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Turncoat} & \grand{} \energy{1} & Until your next round, the first hit an ally in your zone would take is dealt to a foe in your zone instead. \\
+  \rowcolor{bone} \textbf{5} & \defensive{} \textbf{Alone Enough} & \medium{} \energy{1} & If you are the only party member in your zone, gain Guard and deal 1 hit. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Cold Shoulder} & \medium{} \energy{1} & Gain Guard; you cannot be Aided this round. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Forsaken Surge} & \hard{} \hard{} & If no ally is in your zone, deal 3 hits to one foe. \\
+  \rowcolor{ash!15}  & \textbf{Banner Torn} & \grand{} \energy{1} & Foes in your zone lose Guard; deal 1 hit to each. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Sworn to None} & \grand{} \energy{1} & Until your next round, monster actions that name ``one character'' cannot choose you. \\
+  \rowcolor{ash!15} \textbf{6} & \textbf{Traitor's Step} & \medium{} \energy{1} & Move to an adjacent zone; deal 1 hit to a foe there that an ally hit this round. \\
+  \rowcolor{bone}  & \textbf{Exile's Edge} & \hard{} \hard{} & Deal 2 hits; ignore Guard. \\
+  \rowcolor{ash!15}  & \textbf{Ruin Pact} & \hard{} \hard{} & You and one foe each take 2 hits. \\
+  \rowcolor{bone}  & \textbf{Blood Price} & \grand{} \energy{1} & Deal 2 hits; reclaim 1 Energy. \\
+  \rowcolor{ash!15}  & \textbf{Treason} & \dire{} \energy{1} & Deal 4 hits to one foe; another foe in its zone takes 1 hit. \\
+  \rowcolor{bone} \textbf{7} & \defensive{} \textbf{Scapegoat} & \medium{} \energy{1} & A foe's next action targets you instead of an ally in your zone; gain Guard. \\
+  \rowcolor{ash!15}  & \textbf{No Master} & \hard{} \hard{} & Ignore all forced Moves and taunts; deal 1 hit. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Oath Severed} & \grand{} \energy{1} & Deal 2 hits; that foe cannot heal or be healed for the rest of the fight. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Exile's Guard} & \grand{} \energy{1} & Gain Guard twice. \\
+  \rowcolor{bone}  & \textbf{Ruinous Vow} & \dire{} \energy{1} & Deal 3 hits; that foe is Marked and Bound; you take 1 hit. \\
+  \rowcolor{ash!15} \textbf{8} & \textbf{Renegade Step} & \easy & Move ignoring zones occupied limits. \\
+  \rowcolor{bone}  & \textbf{Shattered Oath} & \hard{} \hard{} & Discard Guard from all characters in your zone; deal 1 hit to each foe. \\
+  \rowcolor{ash!15}  & \textbf{Knife in the Dark} & \grand{} \energy{1} & Move into an adjacent zone; deal 2 hits to a foe there that has not acted this round. \\
+  \rowcolor{bone}  & \defensive{} \textbf{No Masters} & \dire{} \energy{1} & Until your next round, the first monster action each phase that would target you is cancelled. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Oathbreaker's Mercy} & \dire{} \energy{1} & Heal 3 Hits on an ally; you take 1 hit. \\
+  \rowcolor{bone} \textbf{9} & \defensive{} \textbf{Cut Loose} & \medium{} \energy{1} & Remove Bound from yourself; deal 1 hit. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Forsworn Fury} & \hard{} \hard{} & If no ally is in your zone, deal 2 hits to each foe there. \\
+  \rowcolor{bone}  & \defensive{} \textbf{Faithless Rally} & \grand{} \energy{1} & Allies in your zone gain Guard; mark +1 Stress. \\
+  \rowcolor{ash!15}  & \textbf{Bridge of Ash} & \dire{} \energy{1} & Deal 3 hits to every foe in an adjacent zone; you cannot Move next round. \\
+  \rowcolor{bone}  & \textbf{Every Oath Broken} & \fell{} \energy{2} & Deal 4 hits to one foe and 2 hits to every other foe on the battle field; mark +1 Stress. \\
+  \rowcolor{ash!15} \textbf{10} & \defensive{} \textbf{Nobody's Shield} & \hard{} \hard{} & Gain Guard twice; allies in your zone lose Guard. \\
+  \rowcolor{bone}  & \textbf{Spite} & \grand{} \energy{1} & Deal 2 hits to a foe that hit you this fight; 3 if it hit you this round. \\
+  \rowcolor{ash!15}  & \defensive{} \textbf{Price of Loyalty} & \dire{} \energy{1} & Deal 3 hits; until your next round, any foe that would hit an ally in your zone hits you instead. \\
+  \rowcolor{bone}  & \textbf{Kingslayer} & \dire{} \energy{1} & Deal 5 hits to an Elite or Horror in your zone. \\
+  \rowcolor{ash!15}  & \textbf{The Last Betrayal} & \fell{} \energy{2} & Choose a foe: its next action's hits are dealt to another monster of your choice; then it takes 3 hits. \\
+\end{longtable}
 }
 \vspace{0.55em}
 

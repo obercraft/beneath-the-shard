@@ -1,0 +1,248 @@
+weapons:
+- name: Shortsword
+  hands: 1h
+  price: '2'
+  effect: 'Strike: if the die shows a 6, deal $+1$ hit.'
+- name: Spear
+  hands: 1h
+  price: '2'
+  effect: Strike may target a foe in an adjacent zone.
+- name: Mace
+  hands: 1h
+  price: '2'
+  effect: Strike ignores Guard.
+- name: Hand Axe
+  hands: 1h
+  price: '2'
+  effect: 'Strike: if the foe falls, you may Move once for free.'
+- name: Dagger
+  hands: 1h
+  price: '1'
+  effect: Once per round, if you Moved this phase, you may Strike as \easy (still deals 1 hit).
+- name: Flail
+  hands: 1h
+  price: '3'
+  effect: 'Strike: ignore Armor on that hit.'
+- name: Longsword
+  hands: 2h
+  price: '3'
+  effect: Strike deals 2 hits (still \medium{} \energy{1}). Occupies weapon and off-hand.
+- name: Greataxe
+  hands: 2h
+  price: '4'
+  effect: 'You gain the action \textbf{Cleaving Blow} (\hard{} \hard{}): deal 3 hits to one foe in your zone. Occupies weapon
+    and off-hand.'
+- name: Warhammer
+  hands: 2h
+  price: '4'
+  effect: 'Strike: deal $+1$ hit and Bind that foe. Occupies weapon and off-hand.'
+- name: Bow
+  hands: 2h
+  price: '3'
+  effect: Strike may target a foe up to two zones away, but not in your own zone. Occupies weapon and off-hand.
+- name: Crossbow
+  hands: 2h
+  price: '3'
+  effect: Strike deals 2 hits to a foe in an adjacent zone; you cannot Move the same round. Occupies weapon and off-hand.
+- name: Shard-Staff
+  hands: 2h
+  price: '4'
+  effect: Once per round, raise one die face on a spell you cast by $+1$ (max 6). Occupies weapon and off-hand.
+offhand:
+- name: Shield
+  price: '2'
+  effect: When you Guard, ignore the first \textbf{two} hits, or grant Guard to one ally in your zone instead of yourself.
+- name: Buckler
+  price: '1'
+  effect: Once per fight, after you take a hit, ignore it (before Armor).
+- name: Parrying Knife
+  price: '1'
+  effect: Once per round, when a foe in your zone hits you, deal 1 hit back.
+armor:
+- name: None
+  boxes: '0'
+  price: '0'
+  notes: No Armor boxes.
+- name: Light
+  boxes: '1'
+  price: '2'
+  notes: 1 Armor box. Soft leather, padded cloak, crystal-scale vest.
+- name: Medium
+  boxes: '2'
+  price: '4'
+  notes: 2 Armor boxes. Mail, brigandine, scavenged plate.
+- name: Heavy
+  boxes: '3'
+  price: '6'
+  notes: 3 Armor boxes. Full plate or Shard-forged harness. You may \kw{Move} only once per round; Static Field / Static Rain
+    deals 1 hit at round start unless Guarded.
+gear:
+- name: Rations
+  price: '1'
+  type: consumable
+  effect: At Camp, spend to regain $+1$ Supply (once per Camp).
+- name: Bandages
+  price: '1'
+  type: consumable
+  effect: After a fight, heal 1 Hit on one character (once).
+- name: Lockpicks
+  price: '1'
+  type: tool
+  effect: Once per Gate, treat one Hard Hard lock/forge check as Medium.
+- name: Climbing Kit
+  price: '1'
+  type: tool
+  effect: Once per expedition, ignore one Climb/ford failure on a STR check (still mark the clock/Supply).
+- name: Lantern
+  price: '1'
+  type: tool
+  effect: Ignore darkness penalties; Swarm foes prefer the bearer.
+- name: Forged Papers
+  price: '2'
+  type: consumable
+  effect: Once, auto-succeed one Easy or Medium CHA/INT forgery or passage check; then gone.
+- name: Antidote
+  price: '1'
+  type: consumable
+  effect: Clear Burning, Bound, or Marked from one character (once).
+- name: Smoke Pot
+  price: '1'
+  type: consumable
+  effect: 'Combat: Easy Use Gear. Until your next round, foes in your zone cannot target adjacent zones.'
+- name: Firepot
+  price: '1'
+  type: consumable
+  effect: 'Combat: Easy Use Gear. Deal 1 hit to every foe in an adjacent zone; they are Burning.'
+- name: Flash Glass
+  price: '1'
+  type: consumable
+  effect: 'Combat: Easy Use Gear. One foe in your zone loses Guard and is Marked.'
+- name: Crowbar
+  price: '1'
+  type: tool
+  effect: $+1$ die on one STR force/pry check per Gate.
+- name: Rope and Grapple
+  price: '1'
+  type: tool
+  effect: Once per Gate, treat a Vertical Drop Move as a single zone.
+- name: Spare Kit
+  price: '1'
+  type: tool
+  effect: Once per expedition, restore 1 spent Armor box outside combat.
+- name: Guild Token
+  price: '2'
+  type: token
+  effect: Spend to clear 1 Guild Debt pressure, or as 1 Favor for a Guild Bargain.
+- name: Cult Charm
+  price: '1'
+  type: token
+  effect: Once per Gate, reroll one Omen result; keep the second.
+- name: Field Journal
+  price: '1'
+  type: tool
+  effect: Once per Camp, Scout or Lore Counsel without counting as one of your two Counsel picks.
+relics:
+  common:
+  - name: Ash Cloak
+    effect: Once per fight, ignore the first hit from a Rear foe.
+  - name: Iron Nail Charm
+    effect: Your first Strike each fight deals $+1$ hit.
+  - name: Bone Dice
+    effect: Once per Camp, reroll one Attribute Check die.
+  - name: Guild Brass Ring
+    effect: Bargain with the Guild at $+1$ face once per Town.
+  - name: Vein Whisper
+    effect: Once per Gate, learn if an adjacent hex holds a Gate (yes/no).
+  - name: Cracked Lens
+    effect: Once per fight, raise one assigned die face by $+1$ (max 6).
+  - name: Salt Band
+    effect: Ignore the first plague Hazard hit each expedition.
+  - name: Lantern Shard
+    effect: Lantern effect without occupying a gear slot; Swarm still prefer you.
+  - name: Soft Boots
+    effect: Once per Gate, treat one Easy DEX sneak as automatic success.
+  - name: Scar Salve Tin
+    effect: Once per campaign, ignore one Scar you would take.
+  - name: Crow Feather
+    effect: Once per fight, Move as a free Easy (no die).
+  - name: Debt Stub
+    effect: Spend to clear 1 Debt with any faction (then destroy).
+  - name: Glass Bead
+    effect: Reclaim 1 Energy when you first enter a Gate each expedition.
+  - name: Pit Badge
+    effect: 'Hold the Line / Guard allies: Guard lasts until end of next round once per fight.'
+  - name: Tunnel Chalk
+    effect: Once per delve, mark a chamber as explored without rolling Feature next visit to that hex.
+  - name: Rust Key
+    effect: Once per Gate, open one locked Vault Door as Medium instead of Hard Hard.
+  - name: Ember Thumb Ring
+    effect: Your first hit each fight also sets the foe Burning.
+  - name: Quiet Bell
+    effect: Once per fight, cancel one Swarm Move into your zone.
+  - name: Marching Strap
+    effect: Once per expedition, ignore one Supply cost for a Camp.
+  - name: Whetstone of Dust
+    effect: Once per fight, Strike ignores Guard.
+  uncommon:
+  - name: Mirror Shard
+    effect: \defensive{} Once per fight, redirect the first hit you would take to a foe in your zone.
+  - name: Resonance Ear
+    effect: Once per Gate, roll Omen twice and pick one.
+  - name: Blood Ledger Clip
+    effect: When you drop a foe, reclaim 1 Energy (once per fight).
+  - name: Ashsteel Torc
+    effect: Gain $+1$ Armor box while bound (stacks with worn armor for absorption order after Guard).
+  - name: Gatecutter's Pick
+    effect: Once per delve, auto-succeed one Medium DEX lock/scout check.
+  - name: Cantor's Reed
+    effect: Once per fight, one ally in your zone gains Guard.
+  - name: Void Thread
+    effect: Once per fight, Bind one foe in your zone (no die; after a successful Strike).
+  - name: Crown Bailiff Seal
+    effect: Clear 1 Crown Debt when you Camp on Crown Scar Road (once per expedition).
+  - name: Star-Cult Rosary
+    effect: Spend Cult Favor once per Gate to ignore $+1$ Stress from a single source.
+  - name: Hound Tooth
+    effect: Strike against the most wounded foe in reach deals $+1$ hit.
+  - name: Glass Lung Filter
+    effect: Ignore Exhausted's $-1$ die once per expedition.
+  - name: Phalanx Brooch
+    effect: \defensive{} Allies in your zone ignore the first hit each fight.
+  - name: Smuggler's Purse
+    effect: Carry $+1$ Raw without the usual Stress for carrying it out of one Gate.
+  - name: Echo Needle
+    effect: Once per fight, Mark a foe in any zone.
+  - name: Aetherwick
+    effect: Once per Camp, burn to refill 2 Energy without a full Camp Energy refill counting this as Counsel.
+  rare:
+  - name: Captain's Gorget
+    effect: '\defensive{} Guard ignores three hits. Bind cost: mutation check.'
+  - name: Veinheart Spike
+    effect: Strike deals $+1$ hit always. Once per fight, ignore Armor.
+  - name: Night Broker Contract
+    effect: Once per delve, force one Minion to skip its phase.
+  - name: Seer's Prism
+    effect: Once per fight, discard and redraw up to two unassigned party dice.
+  - name: Iron Oath Plate
+    effect: \defensive{} Restore 1 Armor box at the start of each fight.
+  - name: Hungering Knife
+    effect: When you deal 3+ hits with one action, heal 1 Hit (once per fight).
+  - name: Static Null Rod
+    effect: Ignore Static Field / Static Rain hits. Heavy armor Move limit still applies.
+  - name: Choir Mask
+    effect: Once per fight, deal 1 hit to every foe in your zone (\medium{} \energy{1} action added while bound).
+  - name: Deep Gate Key
+    effect: Once per campaign, enter one ring-B Gate without rolling Omen (still Camp first).
+  - name: Ash Phoenix Band
+    effect: Once per campaign, when you would go Down, stand with 2 Hits and take no Scar.
+  prismatic:
+  - name: Heart-Splinter Crown
+    effect: Pool $+1$ die while bound (max 5). Mark $+1$ Stress each Gate entry.
+  - name: World-Crack Lens
+    effect: Once per fight, cast one Circle II spell you know without Energy (Stress still applies if printed).
+  - name: Nameless Blade
+    effect: Strike deals 2 hits and ignores Guard and Armor. Each fight you use it, mark $+1$ Stress.
+  - name: Star-Grave Mantle
+    effect: \defensive{} Ignore all hits from one Monster phase per fight. Then mark $+1$ Stress.
+  - name: Cabal's Last Pattern
+    effect: Once per campaign, treat one Fell action as Dire for dice needed (still pay Fell Energy). Mark $+2$ Stress.

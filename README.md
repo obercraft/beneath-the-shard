@@ -31,7 +31,7 @@ sudo apt install texlive-xetex texlive-latex-extra texlive-fonts-extra \
 
 ## Regenerate tables (optional)
 
-Catalog data lives in [`generators/src/main/resources/data/*.json`](generators/src/main/resources/data/). The Maven module [`generators/`](generators/) maps those files to TeX with Jackson:
+Catalog data lives in [`generators/src/main/resources/data/*.yaml`](generators/src/main/resources/data/). The Maven module [`generators/`](generators/) maps those files to TeX with Jackson (YAML module):
 
 ```bash
 ./generators/generate.sh
@@ -41,14 +41,14 @@ Catalog data lives in [`generators/src/main/resources/data/*.json`](generators/s
 
 That rebuilds:
 
-- `chapters/classes/{warrior,rogue,mage}.tex` from `classes.json`
-- `tables/equipment.tex` and `tables/relics.tex` from `equipment.json`
-- `tables/spells.tex` from `spells.json`
-- `tables/monsters-bestiary.tex` from `monsters.json`
-- `tables/encounters-book.tex` from `encounters.json`
-- `chapters/hexmap-grid.tex` from `hexmap.json`
+- `chapters/classes/{warrior,rogue,mage}.tex` from `classes.yaml`
+- `tables/equipment.tex` and `tables/relics.tex` from `equipment.yaml`
+- `tables/spells.tex` from `spells.yaml`
+- `tables/monsters-bestiary.tex` from `monsters.yaml`
+- `tables/encounters-book.tex` from `encounters.yaml`
+- `chapters/hexmap-grid.tex` from `hexmap.yaml`
 
-Edit the JSON, regenerate, then recompile the affected book(s).
+Edit the YAML, regenerate, then recompile the affected book(s).
 
 ## Build the PDFs
 

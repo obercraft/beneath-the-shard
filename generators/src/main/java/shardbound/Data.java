@@ -2,13 +2,14 @@ package shardbound;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
 
-/** Jackson ObjectMapper loader for classpath JSON under {@code data/}. */
+/** Jackson ObjectMapper loader for classpath YAML under {@code data/}. */
 public final class Data {
-    private static final ObjectMapper MAPPER = new ObjectMapper()
+    private static final ObjectMapper MAPPER = new ObjectMapper(new YAMLFactory())
             .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 
     private Data() {}

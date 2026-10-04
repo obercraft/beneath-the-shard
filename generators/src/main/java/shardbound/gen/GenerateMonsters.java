@@ -16,7 +16,7 @@ public final class GenerateMonsters {
     private GenerateMonsters() {}
 
     public static void run() throws IOException {
-        MonstersData data = Data.load("monsters.json", MonstersData.class);
+        MonstersData data = Data.load("monsters.yaml", MonstersData.class);
         List<Monster> monsters = new ArrayList<>();
         monsters.addAll(data.minions());
         monsters.addAll(data.brutes());

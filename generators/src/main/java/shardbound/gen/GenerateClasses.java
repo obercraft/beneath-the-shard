@@ -20,7 +20,7 @@ public final class GenerateClasses {
     private GenerateClasses() {}
 
     public static void run() throws IOException {
-        ClassesData data = Data.load("classes.json", ClassesData.class);
+        ClassesData data = Data.load("classes.yaml", ClassesData.class);
         Map<Integer, List<String>> levelDiffs = new HashMap<>();
         data.levelDiffs().forEach((k, v) -> levelDiffs.put(Integer.parseInt(k), v));
 
@@ -37,15 +37,15 @@ public final class GenerateClasses {
                 sb.append("\\textit{").append(Tex.esc(clazz.hook())).append("}\n\n");
 
                 Set<String> used = new LinkedHashSet<>();
+                List<List<ActionEntry>> byLevel = new ArrayList<>();
                 for (int level = 1; level <= 10; level++) {
-                    sb.append("\\subsubsection*{Level ").append(level).append(" --- choose one}\n");
-                    List<ActionEntry> picks = pickActions(bank, levelDiffs.get(level), used);
-                    sb.append(levelTable(picks, data));
-                    sb.append('\n');
+                    byLevel.add(pickActions(bank, levelDiffs.get(level), used));
                 }
                 if (used.size() != 50) {
                     throw new IllegalStateException(clazz.name() + " used " + used.size());
                 }
+                sb.append(classTable(byLevel, data));
+                sb.append('\n');
             }
 
             var out = Tex.chapters("classes/" + arch + ".tex");
@@ -138,30 +138,41 @@ public final class GenerateClasses {
         return chosen;
     }
 
-    private static String levelTable(List<ActionEntry> actions, ClassesData data) {
+    private static String classTable(List<List<ActionEntry>> byLevel, ClassesData data) {
         StringBuilder rows = new StringBuilder();
-        for (int i = 0; i < actions.size(); i++) {
-            ActionEntry a = actions.get(i);
-            String color = (i % 2 == 0) ? "\\rowcolor{bone}" : "\\rowcolor{ash!15}";
-            String tag = isDefensive(a.effect(), data) ? "\\defensive{} " : "";
-            rows.append("  ").append(color).append(' ').append(tag)
-                    .append("\\textbf{").append(Tex.esc(a.name())).append("} & ")
-                    .append(data.diffMacros().get(a.diff())).append(" & ")
-                    .append(Tex.esc(a.effect())).append(" \\\\\n");
+        int row = 0;
+        for (int level = 0; level < byLevel.size(); level++) {
+            List<ActionEntry> actions = byLevel.get(level);
+            for (int i = 0; i < actions.size(); i++) {
+                ActionEntry a = actions.get(i);
+                String color = (row % 2 == 0) ? "\\rowcolor{bone}" : "\\rowcolor{ash!15}";
+                String tag = isDefensive(a.effect(), data) ? "\\defensive{} " : "";
+                String lvl = (i == 0) ? "\\textbf{" + (level + 1) + "}" : "";
+                rows.append("  ").append(color).append(' ').append(lvl).append(" & ").append(tag)
+                        .append("\\textbf{").append(Tex.esc(a.name())).append("} & ")
+                        .append(data.diffMacros().get(a.diff())).append(" & ")
+                        .append(Tex.esc(a.effect())).append(" \\\\\n");
+                row++;
+            }
         }
-        return """
-\noindent
-{\\normalsize
-\\renewcommand{\\arraystretch}{1.35}
-\\begin{tabularx}{\\linewidth}{@{\\hspace{2pt}} >{\\raggedright\\arraybackslash}p{4.2cm} >{\\centering\\arraybackslash}p{3.2cm} >{\\raggedright\\arraybackslash}X @{}}
-  \\shardheadercell{Action} & \\shardheadercell{Diff.} & \\shardheadercell{Effect} \\\\
-"""
+        String header =
+                "  \\shardheadercell{Lv} & \\shardheadercell{Action} & \\shardheadercell{Diff.} & \\shardheadercell{Effect} \\\\\n";
+        return "\\noindent\n"
+                + "{\\normalsize\n"
+                + "\\renewcommand{\\arraystretch}{1.35}\n"
+                + "\\begin{longtable}{@{\\hspace{2pt}}"
+                + " >{\\centering\\arraybackslash}p{0.9cm}"
+                + " >{\\raggedright\\arraybackslash}p{3.6cm}"
+                + " >{\\centering\\arraybackslash}p{3.0cm}"
+                + " >{\\raggedright\\arraybackslash}p{7.6cm} @{}}\n"
+                + header
+                + "\\endfirsthead\n"
+                + header
+                + "\\endhead\n"
                 + rows
-                + """
-\\end{tabularx}
-}
-\\vspace{0.55em}
-""";
+                + "\\end{longtable}\n"
+                + "}\n"
+                + "\\vspace{0.55em}\n";
     }
 
     private static boolean isDefensive(String effect, ClassesData data) {

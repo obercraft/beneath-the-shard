@@ -16,7 +16,7 @@ public final class GenerateEquipment {
     private GenerateEquipment() {}
 
     public static void run() throws IOException {
-        EquipmentData data = Data.load("equipment.json", EquipmentData.class);
+        EquipmentData data = Data.load("equipment.yaml", EquipmentData.class);
         emitEquipment(data);
         emitRelics(data.relics());
     }

@@ -19,7 +19,7 @@ public final class GenerateHexmap {
     private GenerateHexmap() {}
 
     public static void run() throws IOException {
-        HexmapData cfg = Data.load("hexmap.json", HexmapData.class);
+        HexmapData cfg = Data.load("hexmap.yaml", HexmapData.class);
         double size = cfg.size();
         int radius = cfg.radius();
         Map<Integer, String> ringLetters = new HashMap<>();
