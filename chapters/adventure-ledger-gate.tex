@@ -16,7 +16,7 @@ The Bestiary (\texttt{bestiary.pdf}) helps if you want full monster lore; this t
 
 \paragraph{Starting state.}
 Start with the party \textbf{Energy} track full (8), \textbf{Resonance Stress 0} (track of 6), and \textbf{Debt +1} with the Mining Guild.
-Each character has Hits equal to $3 + \lfloor \textrm{CON Rank} / 2 \rfloor$ and a Dice Pool of \D{2}{6}.
+Each character has Hits equal to 3 plus their CON Attribute Dice and a Dice Pool of \D{2}{6}.
 Checks on the road are Attribute Checks: the named character rolls their Attribute Dice for the named attribute and counts 4+ as successes---Easy needs 1 (roll at least 2 dice), Medium 2, Hard Hard 3. Companions may add 1 die each for \energy{1}.
 
 \subsection{The Hook}
@@ -32,12 +32,12 @@ Record \textbf{Debt +1}. You may instead roll a Motivation from the core book an
 
 \subsection{Pregen Sketches (Optional)}
 
-Use these if you want to start immediately. Attributes are given as values; Hits follow from CON.
+Use these if you want to start immediately. Attributes are Attribute Dice; Hits follow from CON.
 
 \begin{itemize}
-    \item \textbf{Warrior --- Iron Vanguard:} STR 65 (3 dice), DEX 40 (2), CON 60 (3), INT 30 (2), WIS 50 (3), CHA 40 (2). Hits 6. Archetype actions Cleave, Hold the Line. Level~1 special: pick one from Iron Vanguard Level~1. \textbf{Kit:} Mace, Shield (instead of gear), Light armor.
-    \item \textbf{Rogue --- Gatecutter:} STR 40 (2 dice), DEX 65 (3), CON 50 (3), INT 50 (3), WIS 40 (2), CHA 55 (3). Hits 5. Skirmish, Exploit. Level~1 special: pick one from Gatecutter Level~1. \textbf{Kit:} Shortsword, Light armor, Lockpicks.
-    \item \textbf{Mage --- Aetherwright:} STR 30 (2 dice), DEX 40 (2), CON 40 (2), INT 65 (3), WIS 60 (3), CHA 50 (3). Hits 5. Arc Bolt, Ward. Level~1 special: pick one from Aetherwright Level~1. \textbf{Kit:} Shard-Staff, Light armor, Bandages. \textbf{Grimoire:} Glass Veil and Spark Needle (or any two Circle~I spells).
+    \item \textbf{Warrior --- Iron Vanguard:} STR 3, DEX 2, CON 3, INT 2, WIS 3, CHA 2. Hits 6. Archetype actions Cleave, Hold the Line. Level~1 special: pick one from Iron Vanguard Level~1. \textbf{Kit:} Mace, Shield (instead of gear), Light armor.
+    \item \textbf{Rogue --- Gatecutter:} STR 2, DEX 3, CON 3, INT 3, WIS 2, CHA 3. Hits 6. Skirmish, Exploit. Level~1 special: pick one from Gatecutter Level~1. \textbf{Kit:} Shortsword, Light armor, Lockpicks.
+    \item \textbf{Mage --- Aetherwright:} STR 2, DEX 2, CON 2, INT 3, WIS 3, CHA 3. Hits 5. Arc Bolt, Ward. Level~1 special: pick one from Aetherwright Level~1. \textbf{Kit:} Shard-Staff, Light armor, Bandages. \textbf{Grimoire:} Glass Veil and Spark Needle (or any two Circle~I spells).
 \end{itemize}
 
 All three share Basic Actions: Move, Strike, Guard, Aid, Brace, Use Gear.
@@ -108,7 +108,7 @@ Night under March sky. Energy refills to 8. Choose \textbf{two} Campfire Counsel
 \begin{itemize}
     \item \textbf{Heal (WIS, Medium):} Heals 2 Hits on one character---useful if the ridge went badly.
     \item \textbf{Repair (DEX, Medium):} Clears \kw{Exhausted}, or restores a tool later taken by the Omen (resolve it then; you may hold the success).
-    \item \textbf{Scout (DEX, Easy):} Read Chamber 2's monster list and Deploy tags now; you may also pick Chamber 3's choice before seeing it.
+    \item \textbf{Scout (DEX, Easy):} Read Chamber 2's monster list and Deploy tags now, and you may attempt Party Ambush on that fight (Combat: Opening); you may also pick Chamber 3's choice before seeing it.
     \item \textbf{Bargain (CHA, Medium \energy{1}):} If refugees were refused, cancel the Debt rumor; otherwise clear the Companies' Debt if you took it.
     \item \textbf{Lore (INT, Easy):} The Omen here is fixed (\textit{Glass Teeth}), so take the other option: clear 1 Resonance Stress.
 \end{itemize}
@@ -134,7 +134,7 @@ Apply this Omen for the whole delve. Then proceed to Chamber 1.
 % ==========================================
 \section{Act III --- Hollow Vein Delve}
 
-Combat uses Deployment, Initiative, Dice Pools, and Monster Phase (top to bottom) from the core rules.
+Combat uses Opening (Deploy / Ambush / Initiative), Dice Pools, and Monster Phase (top to bottom) from the core rules.
 \textbf{Retreat:} At any time you may flee toward Z1 and abandon the delve---lose unsealed loot (Raw glass not yet crated), keep Stress, and mark \textbf{Debt +1}.
 
 \subsection{Chamber 1 --- Threshold Crawl (Hazard)}
@@ -165,7 +165,7 @@ Then go to Chamber 2.
     \item Cave Urchin \#04 --- Deploy Front --- pool 2d6, Hits 2
 \end{itemize}
 
-Place party (Z1/Z2) then monsters by Deploy. Roll Initiative. Fight until nest creatures are out or you retreat.
+Resolve Opening (Deploy / Ambush / Initiative). This is a Nest: if you did not Scout Chamber 2, monsters have Ambush. Fight until nest creatures are out or you retreat.
 On victory, regain 2 Energy and stand any Down character with 1 Hit and a Scar (core rules: End of Fight). Go to Chamber 3.
 
 \subsection{Chamber 3 --- Guild Cache Scratch (Choice)}
@@ -199,6 +199,7 @@ Continue to Chamber 4.
 
 If you do \textbf{not} carry the \textbf{Debt rumor} from Tick 1, one character may first try a \textbf{Hard Hard CHA check} (3 successes; Aid allowed) to talk them down: success means the Thugs leave and only the Collector fights (Threat 3); failure means combat as written and Debt +1 with the Guild.
 If you still carry the Debt rumor, combat is mandatory.
+When combat begins, resolve Opening (Deploy / Ambush / Initiative).
 When the Collector has 1 Hit left you may let it flee instead of finishing it; note \textbf{Collector fled}: Debt +1 persists after the adventure even if you deliver the glass.
 
 On victory (or after retreat rules), go to Chamber 5 if you still hold the delve.

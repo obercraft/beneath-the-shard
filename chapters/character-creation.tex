@@ -44,54 +44,37 @@ Each character has six attributes. In combat they do nothing---the Dice Pool car
     \item \textbf{Charisma $\left[\textbf{CHA}\right]$:} Bargaining with factors, bribing ferrymen, talking a collector into one more week.
 \end{itemize}
 
-\subsection{Attribute Value}
-Each attribute has an \kw{Attribute Value} ranging from 0 to 100.
+\subsection{Attribute Dice}
 
-Roll \D{3}{6} once for each of the six attributes and read the value from the table.
+Each attribute is a number of \kw{Attribute Dice} from 1 to 4---that is the whole score.
+Roll \D{3}{6} once for each of the six attributes and read the dice from the table.
+No attribute may ever have more than 4 dice.
 
 \begin{table}[htbp]
   \centering
-  \caption{Determine Attribute Values}
-  \label{tab:attribute_values}
+  \caption{Determine Attribute Dice}
+  \label{tab:attribute_dice}
 \renewcommand{\arraystretch}{1.25}
-\begin{tabular}{ccc}
-  \shardheadercell{3d6} & \shardheadercell{Attribute Value} & \shardheadercell{Dice} \\
-  \rowcolor{bone} 3 -- 4   & 20 & 1 \\
-  \rowcolor{ash!15} 5 -- 6   & 30 & 2 \\
-  \rowcolor{bone} 7 -- 8   & 40 & 2 \\
-  \rowcolor{ash!15} 9 -- 10  & 50 & 3 \\
-  \rowcolor{bone} 11 -- 12 & 55 & 3 \\
-  \rowcolor{ash!15} 13 -- 14 & 60 & 3 \\
-  \rowcolor{bone} 15 -- 16 & 65 & 3 \\
-  \rowcolor{ash!15} 17 -- 18 & 70 & 4 \\
+\begin{tabular}{cc}
+  \shardheadercell{3d6} & \shardheadercell{Dice} \\
+  \rowcolor{bone} 3 -- 4   & 1 \\
+  \rowcolor{ash!15} 5 -- 8   & 2 \\
+  \rowcolor{bone} 9 -- 16  & 3 \\
+  \rowcolor{ash!15} 17 -- 18 & 4 \\
 \end{tabular}
 \end{table}
 
-After rolling, you may swap the values of any two attributes once, so the Warrior is not the party's only scholar by accident.
+After rolling, you may swap the dice of any two attributes once, so the Warrior is not the party's only scholar by accident.
 
-\subsection{Attribute Rank and Dice}
-
-The \kw{Attribute Rank} of an attribute is its value divided by 10, rounded down.
-If a character's \attr{STR} is 75, its rank is 7.
-
-Each attribute also gives a number of \kw{Attribute Dice}: half the Rank, rounded up, to a maximum of 4.
-
-\begin{center}
-\renewcommand{\arraystretch}{1.2}
-\begin{tabular}{lc}
-  \shardheadercell{Value} & \shardheadercell{Dice} \\
-  \rowcolor{bone} 20 -- 29 & 1 \\
-  \rowcolor{ash!15} 30 -- 49 & 2 \\
-  \rowcolor{bone} 50 -- 69 & 3 \\
-  \rowcolor{ash!15} 70 -- 80 & 4 \\
-\end{tabular}
-\end{center}
-
-Each time a character \kw{level up}s, add $+10$ to one of their attributes (maximum 80). Write the dice next to the value on the party sheet; they are what you roll on the road.
+Each time a character \kw{level up}s, add $+1$ die to one attribute (maximum 4).
+Write the dice on the party sheet; they are what you roll on the road.
 
 \subsection{Hits}
 
-A character's maximum \kw{Hits} are $3 + \lfloor \textrm{CON Rank} / 2 \rfloor$. A CON of 20 gives 4 Hits; 50 gives 5; 70 gives 6. Each \kw{Scar} earned by going Down in a fight lowers the maximum by 1, never below 3. Hits are tracked on the party sheet and heal only through Campfire Counsel, class actions, or encounter rewards.
+A character's maximum \kw{Hits} are 3 plus their CON Attribute Dice.
+CON 1 die gives 4 Hits; 2 dice give 5; 3 dice give 6; 4 dice give 7.
+Each \kw{Scar} earned by going Down in a fight lowers the maximum by 1, never below 3.
+Hits are tracked on the party sheet and heal only through Campfire Counsel, class actions, or encounter rewards.
 
 \subsection{Attribute Check}
 
@@ -137,11 +120,11 @@ If the text names an attribute, use it. If it only describes the task, pick from
 \end{center}
 
 \begin{rpgbox}{Attribute Check Example}
-    \textit{Medium crossing (STR):} your Warrior has \attr{STR}{60}, so 3 dice. You roll $5$, $4$, $2$---two successes. The party crosses.
+    \textit{Medium crossing (STR):} your Warrior has \attr{STR}{3} dice. You roll $5$, $4$, $2$---two successes. The party crosses.
 
-    \textit{Easy notice (WIS):} your Mage has \attr{WIS}{40}, so 2 dice. You roll $3$, $1$---no success. The milestone was rotated, and you walk the wrong way.
+    \textit{Easy notice (WIS):} your Mage has \attr{WIS}{2} dice. You roll $3$, $1$---no success. The milestone was rotated, and you walk the wrong way.
 
-    \textit{Hard Hard forgery (INT):} the same Mage has \attr{INT}{65}, so 3 dice; alone that is a 1-in-8 chance of three successes. The Warrior and Rogue each spend \energy{1} to Aid, making 5 dice. You roll $6$, $6$, $4$, $3$, $1$---three successes, papers accepted, Energy down by 2.
+    \textit{Hard Hard forgery (INT):} the same Mage has \attr{INT}{3} dice; alone that is a 1-in-8 chance of three successes. The Warrior and Rogue each spend \energy{1} to Aid, making 5 dice. You roll $6$, $6$, $4$, $3$, $1$---three successes, papers accepted, Energy down by 2.
 \end{rpgbox}
 
 \subsubsection{Critical Success}
@@ -158,7 +141,7 @@ After rolling, you may burn one Favor mark with any faction to reroll every die 
 Your three characters live on one party sheet (see the last page of this book). Record:
 
 \begin{itemize}
-    \item \textbf{Each character:} name, archetype, class, level, Dice Pool, six attributes, maximum and current Hits, Scars, archetype actions, the one special action learned per level, weapon, off-hand, armor and its boxes, four gear slots, bound relic, and (Mages) known spells.
+    \item \textbf{Each character:} name, archetype, class, level, Dice Pool, six attributes (1--4 dice each), maximum and current Hits, Scars, archetype actions, the one special action learned per level, weapon, off-hand, armor and its boxes, four gear slots, bound relic, and (Mages) known spells.
     \item \textbf{Energy} (8 boxes), shared by all three.
     \item \textbf{Resonance Stress} (6 boxes) --- see Non-Combat Encounters and Campaign: Corruption Mutations.
     \item \textbf{Debt and Favor} marks, one line per faction (Guild, Crown, Cult, Companies, others as they appear).

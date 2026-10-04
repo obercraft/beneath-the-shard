@@ -1444,7 +1444,7 @@ banks:
     effect: Deal 1 hit ignoring line limits (any zone).
   - name: Premonition
     diff: E
-    effect: You cannot be surprised by entry hits this round.
+    effect: You cannot be surprised by entry hits this round; ignore the first hit from a Monster Opening Rush.
   - name: Fate Cut
     diff: H
     effect: Deal 2 hits; cancel one foe plan (skip their action).

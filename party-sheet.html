@@ -163,7 +163,19 @@
     table.attrs .label {
       display: block;
       text-align: center;
-      margin-bottom: 0.2mm;
+      margin-bottom: 0;
+    }
+
+    table.attrs .hint {
+      display: block;
+      text-align: center;
+      font-family: "DejaVu Sans Condensed", "DejaVu Sans", sans-serif;
+      font-size: 4.8pt;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-transform: lowercase;
+      color: var(--ash);
+      margin-bottom: 0.15mm;
     }
 
     table.attrs .write {
@@ -306,18 +318,18 @@
             <td style="width:105mm; padding-right:2.5mm; vertical-align:top;">
               <table class="attrs">
                 <tr>
-                  <td><span class="label">STR</span><div class="write"></div></td>
-                  <td><span class="label">DEX</span><div class="write"></div></td>
-                  <td><span class="label">CON</span><div class="write"></div></td>
-                  <td><span class="label">INT</span><div class="write"></div></td>
-                  <td><span class="label">WIS</span><div class="write"></div></td>
-                  <td><span class="label">CHA</span><div class="write"></div></td>
+                  <td><span class="label">STR</span><span class="hint">dice</span><div class="write"></div></td>
+                  <td><span class="label">DEX</span><span class="hint">dice</span><div class="write"></div></td>
+                  <td><span class="label">CON</span><span class="hint">dice</span><div class="write"></div></td>
+                  <td><span class="label">INT</span><span class="hint">dice</span><div class="write"></div></td>
+                  <td><span class="label">WIS</span><span class="hint">dice</span><div class="write"></div></td>
+                  <td><span class="label">CHA</span><span class="hint">dice</span><div class="write"></div></td>
                 </tr>
               </table>
             </td>
             <td style="width:auto; vertical-align:top; white-space:nowrap;">
               <table class="vitals">
-                <tr><td class="label l">Hits</td><td><span class="boxes"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td></tr>
+                <tr><td class="label l">Hits</td><td><span class="boxes"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td></tr>
                 <tr><td class="label l">Scars</td><td><span class="boxes"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td></tr>
                 <tr><td class="label l">Armor</td><td><span class="boxes"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td></tr>
               </table>
@@ -390,18 +402,18 @@
             <td style="width:105mm; padding-right:2.5mm; vertical-align:top;">
               <table class="attrs">
                 <tr>
-                  <td><span class="label">STR</span><div class="write"></div></td>
-                  <td><span class="label">DEX</span><div class="write"></div></td>
-                  <td><span class="label">CON</span><div class="write"></div></td>
-                  <td><span class="label">INT</span><div class="write"></div></td>
-                  <td><span class="label">WIS</span><div class="write"></div></td>
-                  <td><span class="label">CHA</span><div class="write"></div></td>
+                  <td><span class="label">STR</span><span class="hint">dice</span><div class="write"></div></td>
+                  <td><span class="label">DEX</span><span class="hint">dice</span><div class="write"></div></td>
+                  <td><span class="label">CON</span><span class="hint">dice</span><div class="write"></div></td>
+                  <td><span class="label">INT</span><span class="hint">dice</span><div class="write"></div></td>
+                  <td><span class="label">WIS</span><span class="hint">dice</span><div class="write"></div></td>
+                  <td><span class="label">CHA</span><span class="hint">dice</span><div class="write"></div></td>
                 </tr>
               </table>
             </td>
             <td style="width:auto; vertical-align:top; white-space:nowrap;">
               <table class="vitals">
-                <tr><td class="label l">Hits</td><td><span class="boxes"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td></tr>
+                <tr><td class="label l">Hits</td><td><span class="boxes"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td></tr>
                 <tr><td class="label l">Scars</td><td><span class="boxes"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td></tr>
                 <tr><td class="label l">Armor</td><td><span class="boxes"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td></tr>
               </table>
@@ -471,18 +483,18 @@
             <td style="width:105mm; padding-right:2.5mm; vertical-align:top;">
               <table class="attrs">
                 <tr>
-                  <td><span class="label">STR</span><div class="write"></div></td>
-                  <td><span class="label">DEX</span><div class="write"></div></td>
-                  <td><span class="label">CON</span><div class="write"></div></td>
-                  <td><span class="label">INT</span><div class="write"></div></td>
-                  <td><span class="label">WIS</span><div class="write"></div></td>
-                  <td><span class="label">CHA</span><div class="write"></div></td>
+                  <td><span class="label">STR</span><span class="hint">dice</span><div class="write"></div></td>
+                  <td><span class="label">DEX</span><span class="hint">dice</span><div class="write"></div></td>
+                  <td><span class="label">CON</span><span class="hint">dice</span><div class="write"></div></td>
+                  <td><span class="label">INT</span><span class="hint">dice</span><div class="write"></div></td>
+                  <td><span class="label">WIS</span><span class="hint">dice</span><div class="write"></div></td>
+                  <td><span class="label">CHA</span><span class="hint">dice</span><div class="write"></div></td>
                 </tr>
               </table>
             </td>
             <td style="width:auto; vertical-align:top; white-space:nowrap;">
               <table class="vitals">
-                <tr><td class="label l">Hits</td><td><span class="boxes"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td></tr>
+                <tr><td class="label l">Hits</td><td><span class="boxes"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td></tr>
                 <tr><td class="label l">Scars</td><td><span class="boxes"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td></tr>
                 <tr><td class="label l">Armor</td><td><span class="boxes"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td></tr>
               </table>

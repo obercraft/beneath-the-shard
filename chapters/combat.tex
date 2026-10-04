@@ -18,13 +18,33 @@ Z1 & Z2 & Z3 & Z4 & Z5 \\
 \end{tblr}
 \end{table}
 
-\subsection{Deployment}
+\subsection{Opening}
 
-Before round 1, place figures as follows.
+Every fight opens the same way: decide who has \kw{Ambush}, \textbf{Deploy}, set \kw{Initiative}, then---if someone ambushed---resolve an \kw{Opening Rush}. Round 1 follows in Initiative order.
 
-\begin{enumerate}
-    \item \textbf{Party first:} Put one character in \textbf{Z2} (front) and one in \textbf{Z1} (rear). Place the third in \textbf{Z2} or \textbf{Z1} (your choice). Characters do not start in Z3--Z5 unless an Omen or adventure says otherwise.
-    \item \textbf{Monsters next:} Use each monster's \textbf{Deploy} tag:
+\paragraph{Ambush.}
+At most one side has Ambush. If both would, \textbf{neither} does---go straight to a normal Initiative roll (with modifiers below).
+
+\textbf{Party Ambush} if you have a Scout success for this fight (or an adventure/Omen grants Ambush) \textbf{and} one character passes a \textbf{Medium DEX} check (Aid allowed) to slip into position.
+A character with the Echo Speech mutation (Campaign: Corruption Mutations) cannot grant or join a Party Ambush.
+
+\textbf{Monster Ambush} if any of the following is true:
+\begin{itemize}
+    \item The adventure or sample fight says ambush (e.g.\ Campaign: Vein ambush).
+    \item The chamber is a \textbf{Nest} or \textbf{Chokepoint} and you did \textbf{not} Scout this fight.
+    \item The party is \kw{Exhausted} from empty Supply (Non-Combat) and you did not Scout this fight.
+\end{itemize}
+
+\textbf{Warned.} If monsters would Ambush, one character may attempt an \textbf{Easy WIS} check. Success cancels Monster Ambush (standard Opening). Failure leaves it.
+
+The side without Ambush is \kw{surprised} only during the Opening Rush (they do not act in it).
+
+\paragraph{Deploy.}
+Place figures before round 1. Without Ambush, the party places first, then monsters.
+
+\begin{itemize}
+    \item \textbf{Party:} Put one character in \textbf{Z2} (front) and one in \textbf{Z1} (rear). Place the third in Z2 or Z1. Characters do not start in Z3--Z5 unless Ambush, an Omen, or an adventure says otherwise.
+    \item \textbf{Monsters:} Use each monster's \textbf{Deploy} tag:
     \begin{itemize}
         \item \textbf{Front} $\rightarrow$ Z3, overflow Z4
         \item \textbf{Mid} $\rightarrow$ Z4, overflow Z3 then Z5
@@ -32,27 +52,47 @@ Before round 1, place figures as follows.
         \item \textbf{Swarm} $\rightarrow$ split evenly across Z3--Z4
     \end{itemize}
     \item A zone may hold at most \textbf{4} figures. Spill extras to the next overflow zone listed for that Deploy tag.
-\end{enumerate}
+\end{itemize}
 
-\subsection{Initiative}
+\textbf{If a side has Ambush:} the other side places first; the ambusher places second (they see the field).
+\begin{itemize}
+    \item \textbf{Party Ambush:} one character may start in \textbf{Z3}; the others stay in Z1/Z2.
+    \item \textbf{Monster Ambush:} one \textbf{Front} monster may start in \textbf{Z2}; the others follow their Deploy tags.
+\end{itemize}
+Omens and adventure text that force starting zones still override.
 
-At the start of the fight, roll \kw{Initiative} once; it persists for the whole battle.
+\paragraph{Initiative.}
+Initiative is set once and persists for the whole battle.
 
 \begin{itemize}
-    \item The party rolls \D{1}{6}.
-    \item The monsters roll their encounter \textbf{Threat} die (printed on the lead monster or group; default \D{1}{6}; elites often use \D{1}{8}).
-    \item Higher result wins. Ties go to the party.
+    \item \textbf{Ambush:} the ambusher \textbf{auto-wins} Initiative (no roll).
+    \item \textbf{No Ambush:} the party rolls \D{1}{6}; the monsters roll their encounter \textbf{Threat} die (printed on the lead monster or group; default \D{1}{6}; elites often use \D{1}{8}). Higher wins; ties go to the party.
+    \begin{itemize}
+        \item \textbf{Scout Edge:} if Scout revealed this fight but you have no Party Ambush, the party die is \D{1}{6}$+1$.
+        \item \textbf{Exhausted:} if the party is Exhausted and not under Monster Ambush, the party die is \D{1}{6}${-1}$ (minimum 1).
+    \end{itemize}
 \end{itemize}
 
 \textbf{Party wins:} each round is Party phase, then Monster phase.\\
 \textbf{Monsters win:} each round is Monster phase, then Party phase.
 
-The Threat \textbf{die} decides Initiative. Threat \textbf{Points} (Campaign: Threat Budget) are the cost to put a monster in the fight. They share a name because both measure how much a creature is feared, but they are never added together.
+The Threat \textbf{die} decides Initiative when you roll. Threat \textbf{Points} (Campaign: Threat Budget) are the cost to put a monster in the fight. They share a name because both measure how much a creature is feared, but they are never added together. Ambush skips the roll entirely.
+
+\paragraph{Opening Rush.}
+If a side has Ambush, resolve this \textbf{before} round 1. Surprised figures do not act.
+
+\begin{itemize}
+    \item \textbf{Party Ambush:} each standing character may take one free \textbf{Easy} Basic action---\kw{Strike} or \kw{Move} only. No Energy, no class/spell/relic actions, no pool roll.
+    \item \textbf{Monster Ambush:} each monster resolves \textbf{only its first} action list entry, and only if that action is \easy. If the first entry is not Easy, that monster skips the Rush.
+\end{itemize}
+
+A character with Premonition active (Classes: Mage) ignores the first hit from a Monster Opening Rush.
+Then begin round 1 in Initiative order with full phases.
 
 \subsection{Hits, Energy, and Falling}
 
 \paragraph{Hits.}
-Each character has a number of \kw{Hits} equal to $3 + \lfloor \textrm{CON Rank} / 2 \rfloor$ (see Character Creation), usually 4--6. Mark one box each time you take a hit. Hits do not recover on their own; heal them with Campfire Counsel, class actions, or encounter rewards.
+Each character has a number of \kw{Hits} equal to 3 plus their CON Attribute Dice (see Character Creation), usually 4--7. Mark one box each time you take a hit. Hits do not recover on their own; heal them with Campfire Counsel, class actions, or encounter rewards.
 
 \paragraph{Energy.}
 The party shares one \kw{Energy} track of \textbf{8} boxes. Every \medium{} \energy{1} action spends one. Energy refills to full at a Campfire and whenever you return to the surface. You regain \textbf{2 Energy} after every fight you win, and \textbf{1} for each Raw crystal you burn (Campaign: Aether-Glass Economy). Energy never exceeds 8.
