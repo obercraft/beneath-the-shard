@@ -12,8 +12,7 @@ public record MonstersData(
         List<Monster> minions,
         List<Monster> brutes,
         List<Monster> elites,
-        List<Monster> horrors,
-        Map<String, Flavor> flavor
+        List<Monster> horrors
 ) {
     @JsonIgnoreProperties(ignoreUnknown = true)
     public record Tier(int lo, int hi, String title, String intro) {}
@@ -21,13 +20,13 @@ public record MonstersData(
     @JsonIgnoreProperties(ignoreUnknown = true)
     public record Monster(
             String name,
+            String appearance,
+            String behavior,
+            String lore,
             String pool,
             int hits,
             String deploy,
             String threat,
             List<ActionEntry> actions
     ) {}
-
-    @JsonIgnoreProperties(ignoreUnknown = true)
-    public record Flavor(String appearance, String behavior, String lore) {}
 }

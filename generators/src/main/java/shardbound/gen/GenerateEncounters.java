@@ -25,9 +25,10 @@ public final class GenerateEncounters {
                     .append(String.format("%02d", lo)).append("--")
                     .append(String.format("%02d", hi)).append(")}\n\n");
             for (Encounter encounter : mechanic.encounters()) {
-                String flavor = data.flavors().getOrDefault(
-                        encounter.title(),
-                        "Terramyr presses in. " + encounter.title() + " unfolds under Shardlight and bad choices.");
+                String flavor = encounter.flavor();
+                if (flavor == null || flavor.isBlank()) {
+                    throw new IllegalStateException("missing flavor for " + encounter.title());
+                }
                 lines.append("\\begin{encounterentry}{")
                         .append(String.format("%02d", roll)).append(" --- ")
                         .append(Tex.esc(encounter.title())).append("\\index{")

@@ -1,6 +1,6 @@
 # Beneath The Shard
 
-A grim-dark solo pen-and-paper RPG for Planet Terramyr. The books are written in XeLaTeX and compile to four printable PDFs.
+A grim-dark solo pen-and-paper RPG for Planet Terramyr. The books are written in XeLaTeX and compile to printable PDFs.
 
 | Book | Source | Output |
 |------|--------|--------|
@@ -8,6 +8,8 @@ A grim-dark solo pen-and-paper RPG for Planet Terramyr. The books are written in
 | Bestiary | `bestiary.tex` | `bestiary.pdf` |
 | Journey Encounters | `encounters.tex` | `encounters.pdf` |
 | Intro adventure — *The Ledger Gate* | `adventure.tex` | `adventure.pdf` |
+| Party sheet (XeLaTeX) | `party-sheet.tex` | `party-sheet.pdf` |
+| Party sheet (HTML alt.) | `party-sheet.html` | `party-sheet-alt.pdf` |
 
 A themed download page lives at [`index.html`](index.html).
 
@@ -19,7 +21,8 @@ A themed download page lives at [`index.html`](index.html).
   - [Forum](https://fonts.google.com/specimen/Forum) as `Forum-Regular.otf` (title face; must be findable by `fontspec`)
   - EB Garamond (body)
   - DejaVu Sans Condensed (UI / keywords)
-- **JDK 21+** and **Maven 3.8+** (only when regenerating generated tables from JSON)
+- **JDK 21+** and **Maven 3.8+** (only when regenerating catalog tables from YAML)
+- **WeasyPrint** (only for the HTML party-sheet alternative)
 
 On Debian/Ubuntu-style systems:
 
@@ -55,7 +58,7 @@ Edit the YAML, regenerate, then recompile the affected book(s).
 From the repository root, compile each book **twice** so the TOC and index settle. Indexing is handled by `imakeidx` / `makeindex` during the XeLaTeX pass.
 
 ```bash
-for book in rules bestiary encounters adventure; do
+for book in rules bestiary encounters adventure party-sheet; do
   xelatex -interaction=nonstopmode "$book.tex"
   xelatex -interaction=nonstopmode "$book.tex"
 done
@@ -68,13 +71,26 @@ xelatex -interaction=nonstopmode rules.tex
 xelatex -interaction=nonstopmode rules.tex
 ```
 
+The party sheet is a one-page photocopy extra (no second pass needed):
+
+```bash
+xelatex -interaction=nonstopmode party-sheet.tex
+```
+
+HTML alternative (WeasyPrint):
+
+```bash
+./scripts/build-party-sheet-html.sh
+# → party-sheet-alt.pdf
+```
+
 With `latexmk` (if installed):
 
 ```bash
-latexmk -xelatex rules.tex bestiary.tex encounters.tex adventure.tex
+latexmk -xelatex rules.tex bestiary.tex encounters.tex adventure.tex party-sheet.tex
 ```
 
-Outputs land next to the `.tex` roots: `rules.pdf`, `bestiary.pdf`, `encounters.pdf`, `adventure.pdf`.
+Outputs land next to the `.tex` roots: `rules.pdf`, `bestiary.pdf`, `encounters.pdf`, `adventure.pdf`, `party-sheet.pdf`.
 
 ## Suggested reading order
 
@@ -86,11 +102,13 @@ Outputs land next to the `.tex` roots: `rules.pdf`, `bestiary.pdf`, `encounters.
 
 ```
 rules.tex / bestiary.tex / encounters.tex / adventure.tex   # book roots
+party-sheet.tex / party-sheet.html                          # single-page photocopy extras
+scripts/build-party-sheet-html.sh                           # HTML → PDF via WeasyPrint
 preamble.tex                                                # shared style
-chapters/                                                   # prose chapters
+chapters/                                                   # prose chapters (+ party-sheet-form)
 tables/                                                     # generated catalogs
 scripts/generate.sh                                        # thin wrapper → generators/
-generators/                                                 # Maven module (Jackson + JSON data)
+generators/                                                 # Maven module (Jackson + YAML data)
 index.html                                                  # web download page
 ```
 

@@ -1,0 +1,134 @@
+% Shared fillable party sheet body (ink on white — photocopy-friendly).
+\newcommand{\psboxes}[1]{%
+  \foreach \i in {1,...,#1}{%
+    \tikz[baseline=-0.28ex]\draw[shardink, line width=0.45pt] (0,0) rectangle (0.22,0.22);\,}%
+}
+\newcommand{\psline}[1]{\makebox[#1]{\dotfill}}
+\newcommand{\pslabel}[1]{{\GameSans\bfseries #1}}
+
+\newcommand{\pscharblock}[1]{%
+\begin{tcolorbox}[
+  enhanced, arc=0mm, boxrule=0.55pt,
+  colback=white, colframe=shardink,
+  colbacktitle=white, coltitle=shardink,
+  fonttitle=\GameSans\bfseries\small,
+  toptitle=0.5pt, bottomtitle=0.5pt,
+  titlerule=0.35pt, titlerule style={shardink},
+  left=3pt, right=3pt, top=1pt, bottom=1pt,
+  before skip=3pt, after skip=0pt,
+  title={#1}
+]
+{\scriptsize
+\begin{tabular}{@{}l@{\,}l@{\quad}l@{\,}l@{\quad}l@{\,}l@{\quad}l@{\,}l@{\quad}l@{}}
+\pslabel{Name} & \psline{3.4cm} &
+\pslabel{Arch.} & \psline{1.9cm} &
+\pslabel{Class} & \psline{2.6cm} &
+\pslabel{Lv} & \psline{0.65cm} &
+\pslabel{Pool}~2\,\psboxes{1}\,3\,\psboxes{1}\,4\,\psboxes{1}\,5\,\psboxes{1}
+\end{tabular}
+
+\vspace{1.5pt}
+\begin{minipage}[t]{0.58\linewidth}
+\begin{tabular}{@{}*{6}{c@{\hspace{0.55em}}}@{}}
+\pslabel{STR} & \pslabel{DEX} & \pslabel{CON} & \pslabel{INT} & \pslabel{WIS} & \pslabel{CHA} \\
+\psline{1.05cm} & \psline{1.05cm} & \psline{1.05cm} & \psline{1.05cm} & \psline{1.05cm} & \psline{1.05cm} \\
+\end{tabular}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.38\linewidth}
+\begin{tabular}{@{}l@{\,}l@{}}
+\pslabel{Hits} & \psboxes{6} \\
+\pslabel{Scars} & \psboxes{3} \\
+\pslabel{Armor} & \psboxes{3} \\
+\end{tabular}
+\end{minipage}
+
+\vspace{1.5pt}
+\pslabel{Weapon} \psline{4.0cm}\quad
+\pslabel{Off-hand} \psline{3.2cm}\quad
+\pslabel{Armor type} \psline{2.9cm}
+
+\vspace{1.5pt}
+\pslabel{Gear}
+\,1\,\psline{2.75cm}\,
+2\,\psline{2.75cm}\,
+3\,\psline{2.75cm}\,
+4\,\psline{2.75cm}
+
+\vspace{1.5pt}
+\pslabel{Relic (bound)} \psline{5.6cm}\quad
+\pslabel{Carried} \psline{5.2cm}
+
+\vspace{1.5pt}
+\pslabel{Spells} \psline{13.7cm}
+
+\vspace{1.5pt}
+\pslabel{Archetype} \psline{13.7cm}
+
+\vspace{1.5pt}
+\begin{tabular}{@{}l@{\,}l@{\hspace{1.2em}}l@{\,}l@{}}
+\pslabel{L1} & \psline{5.0cm} & \pslabel{L6} & \psline{5.0cm} \\[0.6pt]
+\pslabel{L2} & \psline{5.0cm} & \pslabel{L7} & \psline{5.0cm} \\[0.6pt]
+\pslabel{L3} & \psline{5.0cm} & \pslabel{L8} & \psline{5.0cm} \\[0.6pt]
+\pslabel{L4} & \psline{5.0cm} & \pslabel{L9} & \psline{5.0cm} \\[0.6pt]
+\pslabel{L5} & \psline{5.0cm} & \pslabel{L10} & \psline{5.0cm} \\
+\end{tabular}
+}
+\end{tcolorbox}%
+}
+
+\pscharblock{Character One}
+\pscharblock{Character Two}
+\pscharblock{Character Three}
+
+\begin{tcolorbox}[
+  enhanced, arc=0mm, boxrule=0.55pt,
+  colback=white, colframe=shardink,
+  colbacktitle=white, coltitle=shardink,
+  fonttitle=\GameSans\bfseries\small,
+  toptitle=0.5pt, bottomtitle=0.5pt,
+  titlerule=0.35pt, titlerule style={shardink},
+  left=3pt, right=3pt, top=1pt, bottom=1pt,
+  before skip=3pt, after skip=0pt,
+  title={Party}
+]
+{\scriptsize
+\begin{minipage}[t]{0.48\linewidth}
+\begin{tabular}{@{}l@{\hspace{0.6em}}l@{}}
+\pslabel{Energy} (max 8) & \psboxes{8} \\[1.5pt]
+\pslabel{Resonance Stress} & \psboxes{6} \\[1.5pt]
+\pslabel{Supply} (Journey Clock) & \psboxes{6} \\[1.5pt]
+\pslabel{World Crack Clock} & \psboxes{8} \\
+\end{tabular}
+
+\vspace{3pt}
+\pslabel{Home Town} \psline{2.4cm}\quad \pslabel{Current hex} \psline{2.0cm}
+
+\vspace{2.5pt}
+\pslabel{Motivation} \psline{7.0cm}
+
+\vspace{2.5pt}
+\pslabel{Crystals} (Raw / Refined / Prismatic) \psline{3.4cm}
+
+\vspace{2.5pt}
+\pslabel{Mutations} \psline{7.0cm}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.48\linewidth}
+\begin{tabular}{@{}l@{\hspace{0.8em}}l@{\hspace{0.8em}}l@{}}
+\pslabel{Faction} & \pslabel{Debt} & \pslabel{Favor} \\[1pt]
+Mining Guild & \psboxes{5} & \psboxes{5} \\[0.8pt]
+Crown & \psboxes{5} & \psboxes{5} \\[0.8pt]
+Star-Cult & \psboxes{5} & \psboxes{5} \\[0.8pt]
+Free Companies & \psboxes{5} & \psboxes{5} \\[0.8pt]
+\psline{2.4cm} & \psboxes{5} & \psboxes{5} \\
+\end{tabular}
+
+\vspace{3pt}
+\pslabel{Bonds}\\[1pt]
+\psline{7.4cm}\\[1.5pt]
+\psline{7.4cm}\\[1.5pt]
+\psline{7.4cm}
+\end{minipage}
+}
+\end{tcolorbox}

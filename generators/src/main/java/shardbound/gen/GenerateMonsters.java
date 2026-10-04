@@ -4,7 +4,6 @@ import shardbound.Data;
 import shardbound.Tex;
 import shardbound.model.ActionEntry;
 import shardbound.model.MonstersData;
-import shardbound.model.MonstersData.Flavor;
 import shardbound.model.MonstersData.Monster;
 import shardbound.model.MonstersData.Tier;
 
@@ -33,16 +32,15 @@ public final class GenerateMonsters {
             lines.append(Tex.esc(tier.intro())).append("\n\n");
             while (idx <= tier.hi()) {
                 Monster monster = monsters.get(idx - 1);
-                Flavor flavor = data.flavor().get(monster.name());
-                if (flavor == null) {
-                    throw new IllegalStateException("missing flavor for " + monster.name());
+                if (monster.appearance() == null || monster.behavior() == null || monster.lore() == null) {
+                    throw new IllegalStateException("missing flavor fields for " + monster.name());
                 }
                 lines.append("\\subsection*{\\#").append(String.format("%02d", idx)).append(" --- ")
                         .append(Tex.esc(monster.name())).append("\\index{")
                         .append(Tex.esc(monster.name())).append("}}\n\n");
-                lines.append("\\textbf{Appearance.} ").append(Tex.esc(flavor.appearance())).append("\n\n");
-                lines.append("\\textbf{Behavior.} ").append(Tex.esc(flavor.behavior())).append("\n\n");
-                lines.append("\\textbf{Lore.} ").append(Tex.esc(flavor.lore())).append("\n\n");
+                lines.append("\\textbf{Appearance.} ").append(Tex.esc(monster.appearance())).append("\n\n");
+                lines.append("\\textbf{Behavior.} ").append(Tex.esc(monster.behavior())).append("\n\n");
+                lines.append("\\textbf{Lore.} ").append(Tex.esc(monster.lore())).append("\n\n");
                 lines.append("\\begin{monsterentry}{Stats}\n");
                 lines.append("\\textbf{Pool} ").append(monster.pool())
                         .append("\\quad\\textbf{Hits} ").append(monster.hits())

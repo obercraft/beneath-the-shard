@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Beneath The Shard — Party Sheet</title>
+  <style>
+    :root {
+      --ink: #1a1614;
+      --ash: #6e675f;
+      --blood: #6b2c2c;
+      --hair: #b7aea3;
+    }
+
+    * { box-sizing: border-box; }
+
+    @page {
+      size: A4 portrait;
+      margin: 9mm 11mm;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: var(--ink);
+    }
+
+    body {
+      font-family: "EB Garamond", "Times New Roman", serif;
+      font-size: 7.5pt;
+      line-height: 1.12;
+      width: 188mm;
+    }
+
+    .sheet { width: 188mm; }
+
+    .masthead {
+      border-bottom: 1.3pt solid var(--blood);
+      padding-bottom: 1mm;
+      margin-bottom: 1.5mm;
+    }
+
+    .masthead h1 {
+      margin: 0;
+      font-family: Forum, "EB Garamond", serif;
+      font-weight: 400;
+      font-size: 15pt;
+      line-height: 1;
+      display: inline-block;
+    }
+
+    .masthead .brand {
+      float: right;
+      font-family: "DejaVu Sans Condensed", "DejaVu Sans", sans-serif;
+      font-size: 6.5pt;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ash);
+      margin-top: 1.5mm;
+    }
+
+    .footer-note {
+      margin: 1.6mm 0 0;
+      font-style: italic;
+      font-size: 7pt;
+      color: var(--ash);
+      text-align: center;
+    }
+
+    .char, .party {
+      border: 0.65pt solid var(--ink);
+      width: 188mm;
+      margin-bottom: 1.4mm;
+    }
+
+    .party { margin-bottom: 0; }
+
+    .char-head, .party-head {
+      font-family: "DejaVu Sans Condensed", "DejaVu Sans", sans-serif;
+      font-size: 6.4pt;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #f5f0e8;
+      padding: 0.5mm 1.5mm;
+    }
+
+    .char-head { background: var(--ink); }
+    .party-head { background: var(--blood); }
+
+    .body { padding: 1.1mm 1.5mm 1.2mm; }
+
+    .label {
+      font-family: "DejaVu Sans Condensed", "DejaVu Sans", sans-serif;
+      font-size: 5.8pt;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    table.g {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    table.g td {
+      vertical-align: bottom;
+      padding: 0 0.7mm 0.8mm 0;
+    }
+
+    .write {
+      display: block;
+      width: 100%;
+      height: 2.7mm;
+      border-bottom: 0.55pt solid var(--ink);
+    }
+
+    .boxes {
+      white-space: nowrap;
+      line-height: 1;
+    }
+
+    .box {
+      display: inline-block;
+      width: 5mm;
+      height: 5mm;
+      margin-right: 0.7mm;
+      vertical-align: middle;
+    }
+
+    .box:last-child { margin-right: 0; }
+
+    .boxes.sm .box {
+      width: 4.6mm;
+      height: 4.6mm;
+      margin-right: 0.6mm;
+    }
+
+    .pool .n {
+      font-family: "DejaVu Sans Condensed", "DejaVu Sans", sans-serif;
+      font-size: 7pt;
+      font-weight: 700;
+      padding: 0 0.3mm 0 1.1mm;
+      vertical-align: middle;
+    }
+
+    table.attrs {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    table.attrs td {
+      border: 0.55pt solid var(--ink);
+      padding: 0.4mm 0.6mm 0.5mm;
+      height: 5.4mm;
+      vertical-align: top;
+    }
+
+    table.attrs .label {
+      display: block;
+      text-align: center;
+      margin-bottom: 0.2mm;
+    }
+
+    table.attrs .write {
+      border-bottom: none;
+      height: 2.2mm;
+    }
+
+    table.vitals {
+      border-collapse: collapse;
+      width: auto;
+    }
+
+    table.vitals td {
+      border: 0.55pt solid var(--ink);
+      padding: 0.5mm 1.1mm;
+      vertical-align: middle;
+      width: 1%;
+      white-space: nowrap;
+    }
+
+    table.vitals td.l {
+      width: 1%;
+      padding-right: 1.4mm;
+    }
+
+    table.levels td {
+      padding: 0.2mm 1mm 0.2mm 0;
+      vertical-align: bottom;
+    }
+
+    table.levels td.l {
+      width: 6mm;
+      text-align: right;
+    }
+
+    table.levels .write { height: 2.4mm; }
+
+    table.split {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    table.split > tbody > tr > td {
+      width: 50%;
+      vertical-align: top;
+    }
+
+    table.split > tbody > tr > td:first-child { padding-right: 2.2mm; }
+    table.split > tbody > tr > td:last-child {
+      padding-left: 2.2mm;
+      border-left: 0.45pt solid var(--hair);
+    }
+
+    table.tracks {
+      width: auto !important;
+      table-layout: auto !important;
+    }
+
+    table.tracks td {
+      padding: 0.5mm 0;
+      vertical-align: middle;
+      width: auto;
+    }
+
+    table.tracks td.l {
+      width: auto;
+      padding-right: 2.5mm;
+    }
+
+    table.faction {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table.faction th {
+      font-family: "DejaVu Sans Condensed", "DejaVu Sans", sans-serif;
+      font-size: 5.5pt;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--ash);
+      text-align: left;
+      border-bottom: 0.6pt solid var(--ink);
+      padding: 0 0.5mm 0.6mm 0;
+    }
+
+    table.faction td {
+      padding: 0.55mm 0.5mm 0.55mm 0;
+      border-bottom: 0.35pt solid var(--hair);
+      vertical-align: middle;
+      font-size: 7.3pt;
+    }
+
+    table.faction .n { width: 40mm; white-space: nowrap; }
+
+    .bonds-label {
+      font-family: "DejaVu Sans Condensed", "DejaVu Sans", sans-serif;
+      font-size: 5.5pt;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ash);
+      margin: 0.7mm 0 0.4mm;
+    }
+
+    .bonds .write {
+      margin-bottom: 0.9mm;
+      height: 2.5mm;
+    }
+  </style>
+</head>
+<body>
+  <main class="sheet">
+    <header class="masthead">
+      <h1>Party Sheet</h1>
+      <div class="brand">Beneath The Shard</div>
+    </header>
+
+    <section class="char">
+      <div class="char-head">Character I</div>
+      <div class="body">
+        <table class="g">
+          <colgroup>
+            <col style="width:8%" /><col style="width:27%" />
+            <col style="width:7%" /><col style="width:14%" />
+            <col style="width:7%" /><col style="width:20%" />
+            <col style="width:5%" /><col style="width:12%" />
+          </colgroup>
+          <tr>
+            <td class="label">Name</td><td><div class="write"></div></td>
+            <td class="label">Arch.</td><td><div class="write"></div></td>
+            <td class="label">Class</td><td><div class="write"></div></td>
+            <td class="label">Lv</td><td><div class="write"></div></td>
+          </tr>
+        </table>
+
+        <table style="width:auto; border-collapse:collapse; table-layout:auto;">
+          <tr>
+            <td style="width:105mm; padding-right:2.5mm; vertical-align:top;">
+              <table class="attrs">
+                <tr>
+                  <td><span class="label">STR</span><div class="write"></div></td>
+                  <td><span class="label">DEX</span><div class="write"></div></td>
+                  <td><span class="label">CON</span><div class="write"></div></td>
+                  <td><span class="label">INT</span><div class="write"></div></td>
+                  <td><span class="label">WIS</span><div class="write"></div></td>
+                  <td><span class="label">CHA</span><div class="write"></div></td>
+                </tr>
+              </table>
+            </td>
+            <td style="width:auto; vertical-align:top; white-space:nowrap;">
+              <table class="vitals">
+                <tr><td class="label l">Hits</td><td><span class="boxes"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td></tr>
+                <tr><td class="label l">Scars</td><td><span class="boxes"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td></tr>
+                <tr><td class="label l">Armor</td><td><span class="boxes"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+
+        <table class="g">
+          <tr>
+            <td class="label" style="width:8%">Pool</td>
+            <td style="width:30%; white-space:nowrap; vertical-align:middle;">
+              <span class="pool"><span class="n">2</span><span class="boxes sm"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span><span class="n">3</span><span class="boxes sm"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span><span class="n">4</span><span class="boxes sm"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span><span class="n">5</span><span class="boxes sm"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></span>
+            </td>
+            <td class="label" style="width:10%">Weapon</td>
+            <td style="width:24%"><div class="write"></div></td>
+            <td class="label" style="width:11%">Off-hand</td>
+            <td><div class="write"></div></td>
+          </tr>
+        </table>
+
+        <table class="g">
+          <tr>
+            <td class="label" style="width:12%">Armor</td><td style="width:21%"><div class="write"></div></td>
+            <td class="label" style="width:9%">Gear 1</td><td style="width:18%"><div class="write"></div></td>
+            <td class="label" style="width:9%">Gear 2</td><td><div class="write"></div></td>
+          </tr>
+          <tr>
+            <td class="label">Gear 3</td><td><div class="write"></div></td>
+            <td class="label">Gear 4</td><td><div class="write"></div></td>
+            <td class="label">Relic</td><td><div class="write"></div></td>
+          </tr>
+          <tr>
+            <td class="label">Carried</td><td colspan="2"><div class="write"></div></td>
+            <td class="label">Spells</td><td colspan="2"><div class="write"></div></td>
+          </tr>
+          <tr>
+            <td class="label">Archetype</td><td colspan="5"><div class="write"></div></td>
+          </tr>
+        </table>
+
+        <table class="g levels">
+          <tr><td class="label l">L1</td><td><div class="write"></div></td><td class="label l">L6</td><td><div class="write"></div></td></tr>
+          <tr><td class="label l">L2</td><td><div class="write"></div></td><td class="label l">L7</td><td><div class="write"></div></td></tr>
+          <tr><td class="label l">L3</td><td><div class="write"></div></td><td class="label l">L8</td><td><div class="write"></div></td></tr>
+          <tr><td class="label l">L4</td><td><div class="write"></div></td><td class="label l">L9</td><td><div class="write"></div></td></tr>
+          <tr><td class="label l">L5</td><td><div class="write"></div></td><td class="label l">L10</td><td><div class="write"></div></td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="char">
+      <div class="char-head">Character II</div>
+      <div class="body">
+        <table class="g">
+          <colgroup>
+            <col style="width:8%" /><col style="width:27%" />
+            <col style="width:7%" /><col style="width:14%" />
+            <col style="width:7%" /><col style="width:20%" />
+            <col style="width:5%" /><col style="width:12%" />
+          </colgroup>
+          <tr>
+            <td class="label">Name</td><td><div class="write"></div></td>
+            <td class="label">Arch.</td><td><div class="write"></div></td>
+            <td class="label">Class</td><td><div class="write"></div></td>
+            <td class="label">Lv</td><td><div class="write"></div></td>
+          </tr>
+        </table>
+        <table style="width:auto; border-collapse:collapse; table-layout:auto;">
+          <tr>
+            <td style="width:105mm; padding-right:2.5mm; vertical-align:top;">
+              <table class="attrs">
+                <tr>
+                  <td><span class="label">STR</span><div class="write"></div></td>
+                  <td><span class="label">DEX</span><div class="write"></div></td>
+                  <td><span class="label">CON</span><div class="write"></div></td>
+                  <td><span class="label">INT</span><div class="write"></div></td>
+                  <td><span class="label">WIS</span><div class="write"></div></td>
+                  <td><span class="label">CHA</span><div class="write"></div></td>
+                </tr>
+              </table>
+            </td>
+            <td style="width:auto; vertical-align:top; white-space:nowrap;">
+              <table class="vitals">
+                <tr><td class="label l">Hits</td><td><span class="boxes"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td></tr>
+                <tr><td class="label l">Scars</td><td><span class="boxes"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td></tr>
+                <tr><td class="label l">Armor</td><td><span class="boxes"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <table class="g">
+          <tr>
+            <td class="label" style="width:8%">Pool</td>
+            <td style="width:30%; white-space:nowrap; vertical-align:middle;">
+              <span class="pool"><span class="n">2</span><span class="boxes sm"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span><span class="n">3</span><span class="boxes sm"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span><span class="n">4</span><span class="boxes sm"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span><span class="n">5</span><span class="boxes sm"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></span>
+            </td>
+            <td class="label" style="width:10%">Weapon</td>
+            <td style="width:24%"><div class="write"></div></td>
+            <td class="label" style="width:11%">Off-hand</td>
+            <td><div class="write"></div></td>
+          </tr>
+        </table>
+        <table class="g">
+          <tr>
+            <td class="label" style="width:12%">Armor</td><td style="width:21%"><div class="write"></div></td>
+            <td class="label" style="width:9%">Gear 1</td><td style="width:18%"><div class="write"></div></td>
+            <td class="label" style="width:9%">Gear 2</td><td><div class="write"></div></td>
+          </tr>
+          <tr>
+            <td class="label">Gear 3</td><td><div class="write"></div></td>
+            <td class="label">Gear 4</td><td><div class="write"></div></td>
+            <td class="label">Relic</td><td><div class="write"></div></td>
+          </tr>
+          <tr>
+            <td class="label">Carried</td><td colspan="2"><div class="write"></div></td>
+            <td class="label">Spells</td><td colspan="2"><div class="write"></div></td>
+          </tr>
+          <tr>
+            <td class="label">Archetype</td><td colspan="5"><div class="write"></div></td>
+          </tr>
+        </table>
+        <table class="g levels">
+          <tr><td class="label l">L1</td><td><div class="write"></div></td><td class="label l">L6</td><td><div class="write"></div></td></tr>
+          <tr><td class="label l">L2</td><td><div class="write"></div></td><td class="label l">L7</td><td><div class="write"></div></td></tr>
+          <tr><td class="label l">L3</td><td><div class="write"></div></td><td class="label l">L8</td><td><div class="write"></div></td></tr>
+          <tr><td class="label l">L4</td><td><div class="write"></div></td><td class="label l">L9</td><td><div class="write"></div></td></tr>
+          <tr><td class="label l">L5</td><td><div class="write"></div></td><td class="label l">L10</td><td><div class="write"></div></td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="char">
+      <div class="char-head">Character III</div>
+      <div class="body">
+        <table class="g">
+          <colgroup>
+            <col style="width:8%" /><col style="width:27%" />
+            <col style="width:7%" /><col style="width:14%" />
+            <col style="width:7%" /><col style="width:20%" />
+            <col style="width:5%" /><col style="width:12%" />
+          </colgroup>
+          <tr>
+            <td class="label">Name</td><td><div class="write"></div></td>
+            <td class="label">Arch.</td><td><div class="write"></div></td>
+            <td class="label">Class</td><td><div class="write"></div></td>
+            <td class="label">Lv</td><td><div class="write"></div></td>
+          </tr>
+        </table>
+        <table style="width:auto; border-collapse:collapse; table-layout:auto;">
+          <tr>
+            <td style="width:105mm; padding-right:2.5mm; vertical-align:top;">
+              <table class="attrs">
+                <tr>
+                  <td><span class="label">STR</span><div class="write"></div></td>
+                  <td><span class="label">DEX</span><div class="write"></div></td>
+                  <td><span class="label">CON</span><div class="write"></div></td>
+                  <td><span class="label">INT</span><div class="write"></div></td>
+                  <td><span class="label">WIS</span><div class="write"></div></td>
+                  <td><span class="label">CHA</span><div class="write"></div></td>
+                </tr>
+              </table>
+            </td>
+            <td style="width:auto; vertical-align:top; white-space:nowrap;">
+              <table class="vitals">
+                <tr><td class="label l">Hits</td><td><span class="boxes"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td></tr>
+                <tr><td class="label l">Scars</td><td><span class="boxes"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td></tr>
+                <tr><td class="label l">Armor</td><td><span class="boxes"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <table class="g">
+          <tr>
+            <td class="label" style="width:8%">Pool</td>
+            <td style="width:30%; white-space:nowrap; vertical-align:middle;">
+              <span class="pool"><span class="n">2</span><span class="boxes sm"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span><span class="n">3</span><span class="boxes sm"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span><span class="n">4</span><span class="boxes sm"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span><span class="n">5</span><span class="boxes sm"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></span>
+            </td>
+            <td class="label" style="width:10%">Weapon</td>
+            <td style="width:24%"><div class="write"></div></td>
+            <td class="label" style="width:11%">Off-hand</td>
+            <td><div class="write"></div></td>
+          </tr>
+        </table>
+        <table class="g">
+          <tr>
+            <td class="label" style="width:12%">Armor</td><td style="width:21%"><div class="write"></div></td>
+            <td class="label" style="width:9%">Gear 1</td><td style="width:18%"><div class="write"></div></td>
+            <td class="label" style="width:9%">Gear 2</td><td><div class="write"></div></td>
+          </tr>
+          <tr>
+            <td class="label">Gear 3</td><td><div class="write"></div></td>
+            <td class="label">Gear 4</td><td><div class="write"></div></td>
+            <td class="label">Relic</td><td><div class="write"></div></td>
+          </tr>
+          <tr>
+            <td class="label">Carried</td><td colspan="2"><div class="write"></div></td>
+            <td class="label">Spells</td><td colspan="2"><div class="write"></div></td>
+          </tr>
+          <tr>
+            <td class="label">Archetype</td><td colspan="5"><div class="write"></div></td>
+          </tr>
+        </table>
+        <table class="g levels">
+          <tr><td class="label l">L1</td><td><div class="write"></div></td><td class="label l">L6</td><td><div class="write"></div></td></tr>
+          <tr><td class="label l">L2</td><td><div class="write"></div></td><td class="label l">L7</td><td><div class="write"></div></td></tr>
+          <tr><td class="label l">L3</td><td><div class="write"></div></td><td class="label l">L8</td><td><div class="write"></div></td></tr>
+          <tr><td class="label l">L4</td><td><div class="write"></div></td><td class="label l">L9</td><td><div class="write"></div></td></tr>
+          <tr><td class="label l">L5</td><td><div class="write"></div></td><td class="label l">L10</td><td><div class="write"></div></td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="party">
+      <div class="party-head">Party</div>
+      <div class="body">
+        <table class="split">
+          <tr>
+            <td>
+              <table class="tracks g" style="table-layout:auto">
+                <tr>
+                  <td class="label l">Energy (8)</td>
+                  <td><span class="boxes"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td>
+                </tr>
+                <tr>
+                  <td class="label l">Resonance</td>
+                  <td><span class="boxes"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td>
+                </tr>
+                <tr>
+                  <td class="label l">Supply / Journey</td>
+                  <td><span class="boxes"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td>
+                </tr>
+                <tr>
+                  <td class="label l">World Crack</td>
+                  <td><span class="boxes"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td>
+                </tr>
+              </table>
+              <table class="g">
+                <tr>
+                  <td class="label" style="width:16%">Home</td>
+                  <td><div class="write"></div></td>
+                  <td class="label" style="width:10%">Hex</td>
+                  <td style="width:24%"><div class="write"></div></td>
+                </tr>
+                <tr>
+                  <td class="label">Motivation</td>
+                  <td colspan="3"><div class="write"></div></td>
+                </tr>
+                <tr>
+                  <td class="label">Crystals</td>
+                  <td colspan="3"><div class="write"></div></td>
+                </tr>
+                <tr>
+                  <td class="label">Mutations</td>
+                  <td colspan="3"><div class="write"></div></td>
+                </tr>
+              </table>
+            </td>
+            <td>
+              <table class="faction">
+                <tr><th>Faction</th><th class="n">Debt</th><th class="n">Favor</th></tr>
+                <tr>
+                  <td>Mining Guild</td>
+                  <td class="n"><span class="boxes sm"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td>
+                  <td class="n"><span class="boxes sm"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td>
+                </tr>
+                <tr>
+                  <td>Crown</td>
+                  <td class="n"><span class="boxes sm"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td>
+                  <td class="n"><span class="boxes sm"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td>
+                </tr>
+                <tr>
+                  <td>Star-Cult</td>
+                  <td class="n"><span class="boxes sm"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td>
+                  <td class="n"><span class="boxes sm"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td>
+                </tr>
+                <tr>
+                  <td>Free Companies</td>
+                  <td class="n"><span class="boxes sm"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td>
+                  <td class="n"><span class="boxes sm"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td>
+                </tr>
+                <tr>
+                  <td><div class="write"></div></td>
+                  <td class="n"><span class="boxes sm"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td>
+                  <td class="n"><span class="boxes sm"><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg><svg class="box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="5mm" height="5mm"><rect x="1.2" y="1.2" width="17.6" height="17.6" fill="none" stroke="#1a1614" stroke-width="2.2"/></svg></span></td>
+                </tr>
+              </table>
+              <p class="bonds-label">Bonds</p>
+              <div class="bonds">
+                <div class="write"></div>
+                <div class="write"></div>
+                <div class="write"></div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <p class="footer-note">Photocopy freely. One sheet carries the whole expedition.</p>
+  </main>
+</body>
+</html>
