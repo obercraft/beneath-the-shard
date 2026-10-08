@@ -1,4 +1,4 @@
-package shardbound;
+package net.sachau.beneath;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;

@@ -26,7 +26,7 @@ weapons:
 - name: Longsword
   hands: 2h
   price: '3'
-  effect: Strike deals 2 hits (still \medium{} \energy{1}). Occupies weapon and off-hand.
+  effect: Strike deals 2 hits (still \medium). Occupies weapon and off-hand.
 - name: Greataxe
   hands: 2h
   price: '4'
@@ -88,7 +88,7 @@ gear:
 - name: Lockpicks
   price: '1'
   type: tool
-  effect: Once per Gate, treat one Hard Hard lock/forge check as Medium.
+  effect: Once per Gate, treat one Hard lock/forge check as Medium.
 - name: Climbing Kit
   price: '1'
   type: tool
@@ -174,7 +174,7 @@ relics:
   - name: Tunnel Chalk
     effect: Once per delve, mark a chamber as explored without rolling Feature next visit to that hex.
   - name: Rust Key
-    effect: Once per Gate, open one locked Vault Door as Medium instead of Hard Hard.
+    effect: Once per Gate, open one locked Vault Door as Medium instead of Hard.
   - name: Ember Thumb Ring
     effect: Your first hit each fight also sets the foe Burning.
   - name: Quiet Bell
@@ -230,7 +230,7 @@ relics:
   - name: Static Null Rod
     effect: Ignore Static Field / Static Rain hits. Heavy armor Move limit still applies.
   - name: Choir Mask
-    effect: Once per fight, deal 1 hit to every foe in your zone (\medium{} \energy{1} action added while bound).
+    effect: Once per fight, deal 1 hit to every foe in your zone (\medium{} action added while bound).
   - name: Deep Gate Key
     effect: Once per campaign, enter one ring-B Gate without rolling Omen (still Camp first).
   - name: Ash Phoenix Band

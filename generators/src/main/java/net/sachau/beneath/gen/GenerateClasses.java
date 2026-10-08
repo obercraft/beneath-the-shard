@@ -1,9 +1,9 @@
-package shardbound.gen;
+package net.sachau.beneath.gen;
 
-import shardbound.Data;
-import shardbound.Tex;
-import shardbound.model.ActionEntry;
-import shardbound.model.ClassesData;
+import net.sachau.beneath.Data;
+import net.sachau.beneath.Tex;
+import net.sachau.beneath.model.ActionEntry;
+import net.sachau.beneath.model.ClassesData;
 
 import java.io.IOException;
 import java.util.ArrayList;

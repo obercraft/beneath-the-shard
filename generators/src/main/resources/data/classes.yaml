@@ -1,7 +1,8 @@
 diffMacros:
+  N: \negligible
   E: \easy
-  M: \medium{} \energy{1}
-  H: \hard{} \hard{}
+  M: \medium
+  H: \hard
   G: \grand{} \energy{1}
   D: \dire{} \energy{1}
   F: \fell{} \energy{2}
@@ -166,7 +167,7 @@ banks:
     effect: Deal 1 hit to a foe; that foe and one adjacent-zone foe each take 1 hit.
   - name: Oath of Iron
     diff: M
-    effect: Spend no energy on your next Medium action this round.
+    effect: Treat your next Medium action this round as Easy.
   - name: Retaliate
     diff: E
     effect: After you take a hit this round, deal 1 hit to the attacker if in your zone.
@@ -175,7 +176,7 @@ banks:
     effect: You cannot be Moved by foes; gain Guard.
   - name: Siege Presence
     diff: H
-    effect: Foes in your zone treat Move as Hard Hard until your next round.
+    effect: Foes in your zone treat Move as Hard until your next round.
   - name: Anchor
     diff: E
     effect: Prevent one ally in your zone from being Moved this round.
@@ -296,7 +297,7 @@ banks:
     effect: If a foe falls in your zone, heal 1 hit or reclaim 2 energy.
   - name: White-Hot
     diff: H
-    effect: Deal 2 hits; treat your next Hard Hard action this fight as Medium +1 energy instead.
+    effect: Deal 2 hits; treat your next Hard action this fight as Medium instead.
   Tunnel Knight:
   - name: Choke Point
     diff: E
@@ -315,7 +316,7 @@ banks:
     effect: Move up to two adjacent zones along a straight passage; deal 1 hit at the end.
   - name: Ribcracker
     diff: M
-    effect: Deal 1 hit; that foe's next Hard Hard action fails automatically.
+    effect: Deal 1 hit; that foe's next Hard action fails automatically.
   - name: Bolt the Hatch
     diff: M
     effect: Prevent all Moves out of your zone until your next round.
@@ -448,7 +449,7 @@ banks:
     effect: After you fell a foe, Move and deal 1 hit.
   - name: Trial by Fire
     diff: H
-    effect: Take 2 hits; until your next round your Medium actions cost no Energy and your Hard Hard actions need two 5+ instead
+    effect: Take 2 hits; until your next round your Medium actions cost no Energy and your Hard actions need two 5+ instead
       of two 6s.
   - name: Brand of Service
     diff: M
@@ -564,7 +565,7 @@ banks:
     effect: Move ignoring zones occupied limits.
   - name: Oathknife
     diff: H
-    effect: Deal 2 hits; that foe's next action requires Hard Hard.
+    effect: Deal 2 hits; that foe's next action requires Hard.
   - name: Black Standard
     diff: H
     effect: Allies may treat you as not present for zone limits; you deal +1 hit.
@@ -640,7 +641,7 @@ banks:
     effect: Move; gain Guard.
   - name: Iron File
     diff: M
-    effect: Reduce a Hard Hard action in your zone to Medium +1 energy for you once.
+    effect: Reduce a Hard action in your zone to Medium for you once.
   - name: Breach Team
     diff: H
     effect: You and one ally Move into the same zone; you deal 1 hit.
@@ -734,7 +735,7 @@ banks:
     effect: Mark a foe; deal 3 hits next round if you Strike them.
   - name: Lightless Bind
     diff: M
-    effect: Foes in your zone treat Strike as Hard Hard against you.
+    effect: Foes in your zone treat Strike as Hard against you.
   - name: Crystal Feast
     diff: H
     effect: Spend 1 energy; deal 2 hits and heal 1 hit.
@@ -768,7 +769,7 @@ banks:
     effect: Move; deal 1 hit; reclaim 1 energy if you already hit them.
   - name: Break Finger
     diff: M
-    effect: Deal 1 hit; foe cannot use Hard Hard this round.
+    effect: Deal 1 hit; foe cannot use Hard this round.
   - name: Guild Pressure
     diff: M
     effect: A foe must Guard or take 2 hits (their choice).
@@ -1022,7 +1023,7 @@ banks:
     effect: Deal 2 hits; one ally gains Guard.
   - name: Under-Table
     diff: H
-    effect: Treat a Hard Hard as Medium +1 energy once.
+    effect: Treat a Hard as Medium once.
   - name: Final Offer
     diff: H
     effect: Deal 2 hits; foe accepts Move away or takes +1 hit.
@@ -1077,7 +1078,7 @@ banks:
     effect: Deal 1 hit to up to three different foes within adjacent range.
   - name: Circuit Break
     diff: M
-    effect: Cancel one foe Hard Hard action.
+    effect: Cancel one foe Hard action.
   - name: Light Hook
     diff: E
     effect: Pull a foe from adjacent into your zone.
@@ -1189,7 +1190,7 @@ banks:
     effect: You and one ally each deal 1 hit.
   - name: Tremor Hymn
     diff: M
-    effect: 'Treat your zone as difficult: foe Moves are Hard Hard.'
+    effect: 'Treat your zone as difficult: foe Moves are Hard.'
   - name: Shard Anthem
     diff: H
     effect: Allies deal +1 hit this round; you take 1 hit.
@@ -1207,7 +1208,7 @@ banks:
     effect: Deal 2 hits; mark zone as resonant until fight ends (+1 hit on bolts).
   - name: Absolute Pitch
     diff: H
-    effect: Set two assigned dice to 6 for one Hard Hard action.
+    effect: Set two assigned dice to 6 for one Hard action.
   Voidbinder:
   - name: Pin Fragment
     diff: E
@@ -1271,7 +1272,7 @@ banks:
     effect: End a Bind on a foe to deal 4 hits.
   - name: Shadow Manacle
     diff: M
-    effect: Deal 1 hit; foe's Hard Hard becomes impossible this round.
+    effect: Deal 1 hit; foe's Hard becomes impossible this round.
   - name: Dim
     diff: E
     effect: Foes in your zone cannot target adjacent zones.
@@ -1453,7 +1454,7 @@ banks:
     effect: Allies deal +1 hit; you take 2 hits of visions.
   - name: Guide Thread
     diff: M
-    effect: Ally treats one Hard Hard as Medium +1 energy.
+    effect: Ally treats one Hard as Medium.
   - name: Shattered Maybe
     diff: E
     effect: Reroll one party die.
@@ -1607,7 +1608,7 @@ extraBank:
   Tunnel Knight:
   - name: Low Ceiling
     diff: M
-    effect: Foes in your zone cannot use Hard Hard actions until your next round.
+    effect: Foes in your zone cannot use Hard actions until your next round.
   - name: Brace the Shaft
     diff: M
     effect: You and one ally in your zone gain Guard.
@@ -2259,7 +2260,7 @@ extraBank:
     effect: Pull every foe in adjacent zones into your zone; each is Bound.
   - name: Null Zone
     diff: H
-    effect: Until your next round, no foe in your zone may use Hard Hard actions; deal 1 hit to each.
+    effect: Until your next round, no foe in your zone may use Hard actions; deal 1 hit to each.
   - name: Oblivion Touch
     diff: H
     effect: Deal 3 hits to a Bound foe; remove its Bound.
@@ -2531,7 +2532,7 @@ powerBank:
     effect: Deal 2 hits to one foe in your zone; a second foe there takes 1 hit.
   - name: Collapse Call
     diff: G
-    effect: Deal 1 hit to every foe in an adjacent zone; Moves into that zone are Hard Hard this fight.
+    effect: Deal 1 hit to every foe in an adjacent zone; Moves into that zone are Hard this fight.
   - name: Blind Shaft
     diff: G
     effect: 'Choose a foe in your zone: it cannot Move or be Moved until the end of next round; deal 2 hits to it.'
@@ -2540,7 +2541,7 @@ powerBank:
     effect: Deal 2 hits to one foe; until your next round, foes in your zone deal 1 less hit (minimum 1).
   - name: Stooped Vault
     diff: G
-    effect: Until your next round, no Hard Hard monster action may target allies in your zone.
+    effect: Until your next round, no Hard monster action may target allies in your zone.
   - name: Shaft Charge
     diff: G
     effect: Move into an adjacent zone; deal 2 hits to one foe there.
@@ -2784,7 +2785,7 @@ powerBank:
     effect: Deal 4 hits to a Marked foe in any zone.
   - name: Rupture the Vein
     diff: D
-    effect: Deal 3 hits; Moves into or out of that foe's zone are Hard Hard this fight.
+    effect: Deal 3 hits; Moves into or out of that foe's zone are Hard this fight.
   - name: Hunt's End
     diff: D
     effect: Deal 5 hits to a foe with 3 or fewer Hits left.
@@ -2845,7 +2846,7 @@ powerBank:
     effect: Deal 3 hits; heal 2 Hits on yourself or an ally in your zone.
   - name: Asset Seizure
     diff: D
-    effect: Deal 3 hits; that foe may not use its Hard Hard actions for the rest of the fight.
+    effect: Deal 3 hits; that foe may not use its Hard actions for the rest of the fight.
   - name: Bankruptcy
     diff: D
     effect: Deal 2 hits to every foe in your zone; each loses Guard.
@@ -2928,7 +2929,7 @@ powerBank:
     effect: Allies in your zone gain Guard; one foe in your zone skips the first action on its list next phase.
   - name: Bought Blade
     diff: G
-    effect: Deal 2 hits; one ally in your zone may Strike this round without a die (pay the Energy).
+    effect: Deal 2 hits; one ally in your zone may Strike this round without a die.
   - name: Third Price
     diff: G
     effect: Deal 2 hits; reclaim 1 Energy.
@@ -3054,7 +3055,7 @@ powerBank:
     effect: Deal 2 hits; that foe's next action targets another monster if any remain.
   - name: Note of Shelter
     diff: G
-    effect: Until your next round, allies in your zone ignore hits from Hard Hard monster actions.
+    effect: Until your next round, allies in your zone ignore hits from Hard monster actions.
   - name: Shatter Tone
     diff: G
     effect: Deal 3 hits to a foe with Guard; it loses the Guard.
@@ -3249,7 +3250,7 @@ powerBank:
     effect: Deal 4 hits to a Marked foe.
   - name: Unwritten
     diff: D
-    effect: Until your next round, the first Hard Hard monster action against the party is cancelled.
+    effect: Until your next round, the first Hard monster action against the party is cancelled.
   - name: Many Futures
     diff: D
     effect: Deal 2 hits to every Marked foe on the battle field.

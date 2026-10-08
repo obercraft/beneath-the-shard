@@ -16,9 +16,10 @@ tiers:
   title: Horrors
   intro: Apocalypse fragments. Budget carefully---or not at all.
 diffMacros:
+  N: \negligible
   E: \easy
   M: \medium
-  H: \hard{} \hard{}
+  H: \hard
   G: \grand{} \energy{1}
   D: \dire{} \energy{1}
   F: \fell{} \energy{2}
@@ -239,7 +240,7 @@ minions:
     effect: Deal 1 hit; -1 face on that character's next die.
 - name: Fungal Spore
   appearance: Breathing clouds of lacunae mold, almost bodyless until they choke a corridor.
-  behavior: Drift, then choke so Hard Hard actions fail in the coughing dark.
+  behavior: Drift, then choke so Hard actions fail in the coughing dark.
   lore: Breathing clouds from lacunae cults left untended. Choking them is half the fight; the rest is not singing their spore-song.
   pool: 1d6
   hits: 1
@@ -251,7 +252,7 @@ minions:
     effect: Move.
   - name: Choke
     diff: M
-    effect: Deal 1 hit; character cannot use Hard Hard this round.
+    effect: Deal 1 hit; character cannot use Hard this round.
 - name: Mine Wight Pup
   appearance: Half-formed dead still wearing smoking guild brands; limbs too long, jaws unhinged.
   behavior: Shamble toward living warmth and claw with leftover miner hate.
@@ -450,7 +451,7 @@ minions:
     effect: Move.
   - name: Gulp Dark
     diff: M
-    effect: Deal 1 hit; zone becomes difficult (Moves Hard Hard) until cleared.
+    effect: Deal 1 hit; zone becomes difficult (Moves Hard) until cleared.
 - name: Nail Sprite
   appearance: Needle-thin forge fairies, laughter like filing metal, fingers all punctures.
   behavior: Dart, puncture pride, and rust-laugh so the next Guard fails automatically.
@@ -678,7 +679,7 @@ minions:
   actions:
   - name: Beckon
     diff: E
-    effect: Nearest character Moves one zone toward this monster if not Hard Hard resisted (assign any die 4+).
+    effect: Nearest character Moves one zone toward this monster if not Hard resisted (assign any die 4+).
   - name: Cold Touch
     diff: M
     effect: Deal 1 hit.
@@ -969,7 +970,7 @@ brutes:
     effect: Deal 1 hit to all characters in zone and adjacent.
 - name: Debt Collector
   appearance: Polite horror in a clerk's coat; ledger under one arm, bone-interest tools under the other.
-  behavior: Corners debtors, marks unpaid interest, and break-fingers Hard Hard away.
+  behavior: Corners debtors, marks unpaid interest, and break-fingers Hard away.
   lore: Polite monsters with ledgers. Interest accrues in bone; fingers are collateral. Miners whisper its name when the Journey
     Clock runs thin.
   pool: 3d6
@@ -985,7 +986,7 @@ brutes:
     effect: Deal 1 hit; +1 Debt if unpaid after fight.
   - name: Break Finger
     diff: H
-    effect: Deal 2 hits; character cannot use Hard Hard next round.
+    effect: Deal 2 hits; character cannot use Hard next round.
 - name: Amber Scorpion
   appearance: 'Vein-amber predator: translucent shell trapping old insects, stinger beaded with tomorrow.'
   behavior: Scuttles, claws, then stings for two plus lingering poison.
@@ -1121,8 +1122,8 @@ brutes:
     effect: Deal 2 hits in zone; character cannot Move.
 - name: Slag Hound Pair
   appearance: Two slag-fused hounds sharing a hunger; eyes alternate blink like a bad clock.
-  behavior: Flank-run opposite sides, twin-bite for two, trip into Hard Hard sprawls.
-  lore: Two bodies, one hunger. Flank until trip sends you sprawling into Hard Hard. Miners whisper its name when the Journey
+  behavior: Flank-run opposite sides, twin-bite for two, trip into Hard sprawls.
+  lore: Two bodies, one hunger. Flank until trip sends you sprawling into Hard. Miners whisper its name when the Journey
     Clock runs thin.
   pool: 3d6
   hits: 4
@@ -1137,10 +1138,10 @@ brutes:
     effect: Deal 2 hits.
   - name: Trip
     diff: H
-    effect: 'Deal 1 hit; character falls: next action Hard Hard.'
+    effect: 'Deal 1 hit; character falls: next action Hard.'
 - name: Oracle Leech
   appearance: 'Rear-lurking siphon of futures: soft body, mouth like a drained hourglass.'
-  behavior: Drifts thought, siphons planned Hard Hard, prophecy-burns Seer/Mage actors.
+  behavior: Drifts thought, siphons planned Hard, prophecy-burns Seer/Mage actors.
   lore: Rear-lurking siphon of futures. It eats planned sixes and sells the emptiness back.
   pool: 2d6
   hits: 4
@@ -1152,7 +1153,7 @@ brutes:
     effect: Move.
   - name: Siphon Vision
     diff: M
-    effect: Deal 1 hit; cancel one planned Hard Hard this round.
+    effect: Deal 1 hit; cancel one planned Hard this round.
   - name: Prophecy Burn
     diff: H
     effect: Deal 2 hits to a character who used a Seer/Mage action this fight.
@@ -1457,7 +1458,7 @@ elites:
     effect: Deal 3 hits.
 - name: Night Broker Boss
   appearance: 'Contracts written in dusk: ink-stained gloves, second smile under the first.'
-  behavior: Buys openings for allies, contract-knifes, sell-outs split hits, midnight-clauses cancel Hard Hard.
+  behavior: Buys openings for allies, contract-knifes, sell-outs split hits, midnight-clauses cancel Hard.
   lore: Contracts written in dusk. Sell openings, buy screams, clause the midnight. Miners whisper its name when the Journey
     Clock runs thin.
   pool: 4d6
@@ -1476,7 +1477,7 @@ elites:
     effect: Deal 1 hit to a character; another character takes 1 hit (Broker chooses).
   - name: Midnight Clause
     diff: H
-    effect: Deal 2 hits; cancel one Party Hard Hard this round.
+    effect: Deal 2 hits; cancel one Party Hard this round.
 - name: Gatecutter Assassin
   appearance: Keys and cutthroats---lockpicks for jewelry, quiet boots, eyes on hinges.
   behavior: Soft-enters any zone, keystrikes, kills still keepers, seals behind so pursuit dies.
@@ -1694,7 +1695,7 @@ elites:
     effect: Deal 3 hits; heal 1 if target falls.
   - name: White-Hot
     diff: H
-    effect: Deal 2 hits; next party Hard Hard becomes Medium+energy once (zealot bleeds advantage).
+    effect: Deal 2 hits; next party Hard becomes Medium+energy once (zealot bleeds advantage).
 - name: Static Rain Elemental
   appearance: Weather that hates armor---a walking storm sheet, no limbs only discharge.
   behavior: Charges metal-wearers, bolts, storm-sheets all, grounding-crush ends every Guard.
@@ -1809,7 +1810,7 @@ horrors:
     effect: Deal 4 hits to the character closest to Z5.
 - name: Nameless from Aethelgard
   appearance: A refugee concept from the dead planet---edges refuse names, silhouette like a forgotten theorem.
-  behavior: Unwalks any zone, erases Aid-by-name, world-cracks lines, silences Hard Hard, remembers the cabal with mite-spawns.
+  behavior: Unwalks any zone, erases Aid-by-name, world-cracks lines, silences Hard, remembers the cabal with mite-spawns.
   lore: A refugee concept from the dead planet. It unwalks zones and erases names mid-Aid.
   pool: 4d6
   hits: 8
@@ -1827,13 +1828,13 @@ horrors:
     effect: Deal 3 hits along any two zones.
   - name: Silence of Stars
     diff: H
-    effect: No Party Hard Hard this round; deal 2 hits to one character.
+    effect: No Party Hard this round; deal 2 hits to one character.
   - name: Remember the Cabal
     diff: H
     effect: Deal 4 hits; spawn two Glass Mites (1 Hit) in its zone.
 - name: Star-Grave Leviathan Spawn
   appearance: 'Juvenile apocalypse: too many mouths, tide of glass-flesh, depth pressure as a smell.'
-  behavior: Surges Z1 crushing entrants, maws for three, tidal-glasses Front, swallows to heal, depth-pressures Hard Hard.
+  behavior: Surges Z1 crushing entrants, maws for three, tidal-glasses Front, swallows to heal, depth-pressures Hard.
   lore: Juvenile apocalypse. Maw, tide, depth pressure---Z1 is only a rumor. Miners whisper its name when the Journey Clock
     runs thin.
   pool: 4d6
@@ -1855,7 +1856,7 @@ horrors:
     effect: Deal 3 hits; heal 2.
   - name: Depth Pressure
     diff: H
-    effect: Characters in its zone treat all actions as Hard Hard this round.
+    effect: Characters in its zone treat all actions as Hard this round.
 - name: The Guild's Hungering Vault
   appearance: 'Debt apotheosis: a vault door given appetite, hinges like ledgers, interior a counting dark.'
   behavior: Ledger-pulses Debt marks into hits, vault-doors Guard, compound-interests Debt, forecloses Guards, zero-balances

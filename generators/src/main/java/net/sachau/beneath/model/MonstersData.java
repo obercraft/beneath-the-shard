@@ -1,4 +1,4 @@
-package shardbound.model;
+package net.sachau.beneath.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

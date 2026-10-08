@@ -1,9 +1,9 @@
-package shardbound.gen;
+package net.sachau.beneath.gen;
 
-import shardbound.Data;
-import shardbound.Tex;
-import shardbound.model.HexmapData;
-import shardbound.model.HexmapData.Wedge;
+import net.sachau.beneath.Data;
+import net.sachau.beneath.Tex;
+import net.sachau.beneath.model.HexmapData;
+import net.sachau.beneath.model.HexmapData.Wedge;
 
 import java.io.IOException;
 import java.util.ArrayList;

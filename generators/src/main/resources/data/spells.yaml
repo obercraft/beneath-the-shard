@@ -10,12 +10,12 @@ circleI:
   effect: One ally in your zone gains Guard.
   overcast: That ally also restores 1 Armor box
 - name: Dust Bind
-  diff: \medium{} \energy{1}
+  diff: \medium
   defensive: false
   effect: Bind one foe in your zone.
   overcast: Also deal 1 hit
 - name: Shard Mend
-  diff: \medium{} \energy{1}
+  diff: \medium
   defensive: true
   effect: Heal 1 Hit on one ally in your zone.
   overcast: Heal 2 Hits instead
@@ -25,7 +25,7 @@ circleI:
   effect: A foe in your zone loses Guard.
   overcast: That foe is also Marked
 - name: Echo Step
-  diff: \medium{} \energy{1}
+  diff: \medium
   defensive: false
   effect: Move one ally one zone.
   overcast: Also grant them Guard
@@ -35,12 +35,12 @@ circleI:
   effect: Mark one foe in any zone.
   overcast: Deal 1 hit to that foe
 - name: Ash Whisper
-  diff: \medium{} \energy{1}
+  diff: \medium
   defensive: false
   effect: Deal 1 hit to a foe in any zone.
   overcast: $+1$ hit
 - name: Null Soften
-  diff: \medium{} \energy{1}
+  diff: \medium
   defensive: true
   effect: Until your next round, foes in your zone deal 1 less hit (minimum 1).
   overcast: Also gain Guard
@@ -50,12 +50,12 @@ circleI:
   effect: Set one foe in your zone Burning.
   overcast: Also deal 1 hit
 - name: Pattern Brace
-  diff: \medium{} \energy{1}
+  diff: \medium
   defensive: true
   effect: Restore 1 Armor box on yourself or an ally in your zone.
   overcast: Restore 2 boxes, split as you like
 - name: Borrowed Face
-  diff: \medium{} \energy{1}
+  diff: \medium
   defensive: false
   effect: Raise one unassigned party die by $+1$ (max 6).
   overcast: Raise two dice instead

@@ -1,10 +1,10 @@
-package shardbound.gen;
+package net.sachau.beneath.gen;
 
-import shardbound.Data;
-import shardbound.Tex;
-import shardbound.model.EncountersData;
-import shardbound.model.EncountersData.Encounter;
-import shardbound.model.EncountersData.Mechanic;
+import net.sachau.beneath.Data;
+import net.sachau.beneath.Tex;
+import net.sachau.beneath.model.EncountersData;
+import net.sachau.beneath.model.EncountersData.Encounter;
+import net.sachau.beneath.model.EncountersData.Mechanic;
 
 import java.io.IOException;
 

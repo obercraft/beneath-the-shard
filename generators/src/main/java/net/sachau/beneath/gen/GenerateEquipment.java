@@ -1,13 +1,13 @@
-package shardbound.gen;
+package net.sachau.beneath.gen;
 
-import shardbound.Data;
-import shardbound.Tex;
-import shardbound.model.EquipmentData;
-import shardbound.model.EquipmentData.Armor;
-import shardbound.model.EquipmentData.GearItem;
-import shardbound.model.EquipmentData.PricedItem;
-import shardbound.model.EquipmentData.Relic;
-import shardbound.model.EquipmentData.Weapon;
+import net.sachau.beneath.Data;
+import net.sachau.beneath.Tex;
+import net.sachau.beneath.model.EquipmentData;
+import net.sachau.beneath.model.EquipmentData.Armor;
+import net.sachau.beneath.model.EquipmentData.GearItem;
+import net.sachau.beneath.model.EquipmentData.PricedItem;
+import net.sachau.beneath.model.EquipmentData.Relic;
+import net.sachau.beneath.model.EquipmentData.Weapon;
 
 import java.io.IOException;
 import java.util.List;

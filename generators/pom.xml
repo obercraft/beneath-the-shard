@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>shardbound</groupId>
+  <groupId>net.sachau.beneath</groupId>
   <artifactId>generators</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <name>Beneath The Shard generators</name>
@@ -41,7 +41,7 @@
         <artifactId>exec-maven-plugin</artifactId>
         <version>3.5.0</version>
         <configuration>
-          <mainClass>shardbound.GenerateAll</mainClass>
+          <mainClass>net.sachau.beneath.GenerateAll</mainClass>
         </configuration>
       </plugin>
     </plugins>

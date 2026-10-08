@@ -82,8 +82,8 @@ The Threat \textbf{die} decides Initiative when you roll. Threat \textbf{Points}
 If a side has Ambush, resolve this \textbf{before} round 1. Surprised figures do not act.
 
 \begin{itemize}
-    \item \textbf{Party Ambush:} each standing character may take one free \textbf{Easy} Basic action---\kw{Strike} or \kw{Move} only. No Energy, no class/spell/relic actions, no pool roll.
-    \item \textbf{Monster Ambush:} each monster resolves \textbf{only its first} action list entry, and only if that action is \easy. If the first entry is not Easy, that monster skips the Rush.
+    \item \textbf{Party Ambush:} each standing character may take one free \kw{Move} or \kw{Strike} (no pool roll, no Energy). No class, spell, or relic actions.
+    \item \textbf{Monster Ambush:} each monster resolves \textbf{only its first} action list entry, and only if that action is \easy{} or \negligible. If the first entry is harder, that monster skips the Rush.
 \end{itemize}
 
 A character with Premonition active (Classes: Mage) ignores the first hit from a Monster Opening Rush.
@@ -95,7 +95,7 @@ Then begin round 1 in Initiative order with full phases.
 Each character has a number of \kw{Hits} equal to 3 plus their CON Attribute Dice (see Character Creation), usually 4--7. Mark one box each time you take a hit. Hits do not recover on their own; heal them with Campfire Counsel, class actions, or encounter rewards.
 
 \paragraph{Energy.}
-The party shares one \kw{Energy} track of \textbf{8} boxes. Every \medium{} \energy{1} action spends one. Energy refills to full at a Campfire and whenever you return to the surface. You regain \textbf{2 Energy} after every fight you win, and \textbf{1} for each Raw crystal you burn (Campaign: Aether-Glass Economy). Energy never exceeds 8.
+The party shares one \kw{Energy} track of \textbf{8} boxes. Power actions (\grand, \dire, \fell) and effects that say so spend Energy; Negligible, Easy, Medium, and Hard do not. Energy refills to full at a Campfire and whenever you return to the surface. You regain \textbf{2 Energy} after every fight you win, and \textbf{1} for each Raw crystal you burn (Campaign: Aether-Glass Economy). Energy never exceeds 8.
 
 \paragraph{Down.}
 A character at 0 Hits is \kw{Down}: they contribute no dice, take no actions, and cannot be targeted while another character is still standing. If the party \textbf{wins} the fight, every Down character stands up with 1 Hit and takes a permanent \kw{Scar}: reduce their maximum Hits by 1 (never below 3). Write the Scar on the party sheet.
@@ -155,7 +155,7 @@ In combat you command a party of three characters. Each character has a \kw{Dice
 \renewcommand{\arraystretch}{1.2}
 \begin{tabular}{lcc}
   \shardheadercell{Level} & \shardheadercell{Pool} & \shardheadercell{Opens} \\
-  \rowcolor{bone} 1--2 & \D{2}{6} & Easy, Medium, Hard Hard \\
+  \rowcolor{bone} 1--2 & \D{2}{6} & Negligible, Easy, Medium, Hard \\
   \rowcolor{ash!15} 3--5 & \D{3}{6} & Grand \grand \\
   \rowcolor{bone} 6--8 & \D{4}{6} & Dire \dire \\
   \rowcolor{ash!15} 9--10 & \D{5}{6} & Fell \fell \\
@@ -175,7 +175,7 @@ Each \kw{Combat Round}, resolve the two phases in Initiative order.
 \begin{enumerate}
     \item \textbf{Roll:} Gather every active character's Dice Pool and roll them together.
     \item \textbf{Assign:} Place individual dice onto actions. A character may receive \textbf{at most as many dice as their pool} (2--5 by level). You may split those dice across that character's actions, but the total assigned to them must not exceed their pool, and all dice on a single action belong to the same character.
-    \item \textbf{Resolve:} An action succeeds only if the assigned dice meet its difficulty (see Playing The Game: \easy, \medium{} \energy{1}, \hard{} \hard{}). Discard any unassigned dice for the rest of the phase.
+    \item \textbf{Resolve:} An action succeeds only if the assigned dice meet its difficulty (see Playing The Game: \negligible, \easy, \medium, \hard). Discard any unassigned dice for the rest of the phase.
 \end{enumerate}
 
 \paragraph{Monster phase.}
@@ -185,10 +185,10 @@ Each active monster (or pack that shares one pool) acts using the Monster Phase 
     Your Warrior, Rogue, and Mage are all standing, so you roll \D{6}{6} and get
     $6$, $5$, $4$, $3$, $2$, $1$.
 
-    The Warrior takes the $6$ and $5$ for \kw{Cleave} (\hard{} \hard{}).
-    The Rogue takes the $4$ for \kw{Skirmish} (\medium{} \energy{1}).
-    The Mage takes the $3$ for \kw{Ward} (\easy).
-    The leftover $2$ and $1$ are discarded.
+    The Warrior takes the $6$ for \kw{Cleave} (\hard) and the $5$ for a Medium \kw{Strike}.
+    The Rogue takes the $4$ for \kw{Skirmish} (\medium).
+    The Mage takes the $3$ for \kw{Ward} (\easy) and the $2$ for \kw{Move} (\negligible).
+    The leftover $1$ is discarded.
 
     No character received more than two dice.
 
@@ -211,9 +211,9 @@ Monsters have their own Dice Pool, Hits, Deploy tag, Threat die, and an \textbf{
     A Vein Tick (pool \D{2}{6}, Deploy Front) has this list:\\
     1.~Close In --- \easy: if not in a character's zone, Move toward the nearest character.\\
     2.~Bite --- \medium: deal 1 hit to one character in its zone.\\
-    3.~Latch --- \hard{} \hard{}: deal 1 hit; that character cannot Move next round.
+    3.~Latch --- \hard: deal 1 hit; that character cannot Move next round.
 
-    It rolls $5$, $3$. Close In is skipped (already in Z2 with the Warrior). Bite spends the $5$ (Medium needs a face of 4+; monsters spend no Energy). Latch needs two 6s---skipped. The $3$ is discarded.
+    It rolls $5$, $3$. Close In is skipped (already in Z2 with the Warrior). Bite spends the $5$ (Medium needs a face of 4+). Latch needs a 6---skipped. The $3$ is discarded.
 \end{rpgbox}
 
 \subsection{Basic Actions}
@@ -226,15 +226,15 @@ Archetype-specific actions are listed under each archetype in Character Creation
 \begin{tabularx}{\linewidth}{l c >{\raggedright\arraybackslash}X}
   \shardheadercell{Action} & \shardheadercell{Difficulty} & \shardheadercell{Effect} \\
   \rowcolor{bone}
-  \kw{Move} & \easy & Move to an adjacent zone on the battle field. \\
+  \kw{Move} & \negligible & Move to an adjacent zone on the battle field. \\
   \rowcolor{ash!15}
-  \kw{Strike} & \medium{} \energy{1} & Deal 1 hit to one foe in your zone. \\
+  \kw{Strike} & \medium & Deal 1 hit to one foe in your zone. \\
   \rowcolor{bone}
   \defensive{} \kw{Guard} & \easy & Until your next round, ignore the first hit you would take (two with a Shield). \\
   \rowcolor{ash!15}
-  \kw{Aid} & \medium{} \energy{1} & An ally in your zone gains $+1$ on one die face they use this round (max 6), or reclaim 1 spent energy if you aid no die. \\
+  \kw{Aid} & \medium & An ally in your zone gains $+1$ on one die face they use this round (max 6), or reclaim 1 spent Energy if you aid no die. \\
   \rowcolor{bone}
-  \defensive{} \kw{Brace} & \medium{} \energy{1} & Until your next round, you cannot be Moved by foes and the first hit you take is absorbed by an Armor box even if all your boxes are spent. \\
+  \defensive{} \kw{Brace} & \medium & Until your next round, you cannot be Moved by foes and the first hit you take is absorbed by an Armor box even if all your boxes are spent. \\
   \rowcolor{ash!15}
   \kw{Use Gear} & \easy & Use one consumable or tool from your gear slots (Equipment). \\
 \end{tabularx}

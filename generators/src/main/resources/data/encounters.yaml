@@ -9,7 +9,7 @@ mechanics:
   - title: Ash Wind Front
     flavor: The Ash Frontier exhales. Grit scours paint from shields and turns the sun into a rumor.
     stakes: 'A wall of volcanic grit blinds the road. Mark +1 Journey Clock. Camp now (see Campfire Counsel) or push on: Hard
-      Hard to keep the map accurate; failure means you become Lost (resolve one extra encounter before the Gate).'
+       to keep the map accurate; failure means you become Lost (resolve one extra encounter before the Gate).'
   - title: Refugee Column
     flavor: Families flee a Gate that woke hungry. Their hands are empty except for hope and the Guild brands on their wrists.
     stakes: Starving surface folk block the trail, begging for crystal dust. Give supplies (lose 1 energy from the party)
@@ -40,7 +40,7 @@ mechanics:
       become a Debt encounter if you take it.
   - title: Border Plague Banner
     flavor: Yellow cloth and spears. The quarantine is half medicine, half tax.
-    stakes: A kingdom quarantine blocks the high road. Bribe (pay Favor), detour (+2 clock), or forge papers (Hard Hard on
+    stakes: A kingdom quarantine blocks the high road. Bribe (pay Favor), detour (+2 clock), or forge papers (Hard on
       Rogue/Mage).
   - title: Singing Rails
     flavor: Abandoned ore rails sing when the Shard pulses. Riding them feels like cheating the clock---and feeding it your
@@ -68,7 +68,7 @@ mechanics:
       hit, clock +1.
   - title: Sinking Cart Road
     flavor: Mud eats wheels the way Debt eats years. Something below the road is drinking.
-    stakes: Mud eats wheels. Abandon gear (lose a tool) to keep clock, or labor (Hard Hard, all help with Aids) to haul through.
+    stakes: Mud eats wheels. Abandon gear (lose a tool) to keep clock, or labor (Hard, all help with Aids) to haul through.
   - title: Eclipse Noon
     flavor: Shard-dust veils the sun. Birds fall silent; clocks become guesses.
     stakes: 'Shard-dust darkens the sun for an hour. No navigation: auto clock +1, and roll Resonance Stress encounter next.'
@@ -95,7 +95,7 @@ mechanics:
       next fight recklessly.
   - title: Echo of Aethelgard
     flavor: A dead world's tongue floods a sleeper's mouth. Morning tastes like starlight and blood.
-    stakes: 'A dead language floods a mage''s dreams. Gain a free Lore fact; mark +1 Stress. Refuse the vision: Hard Hard
+    stakes: 'A dead language floods a mage''s dreams. Gain a free Lore fact; mark +1 Stress. Refuse the vision: Hard
       or wake with 1 hit.'
   - title: Bleeding Focus
     flavor: Your Aether tools weep red light. Power wants out---or wants you.
@@ -133,7 +133,7 @@ mechanics:
     stakes: Uncontrolled lightning from fingertips. Free 1 hit to a foe in a future fight, then +1 Stress now.
   - title: Silent Hour
     flavor: Sound dies. Mouths move; meaning arrives late and wrong.
-    stakes: 'All sound dies for an hour. Communication only by gesture: next negotiation is Hard Hard; Stress +1.'
+    stakes: 'All sound dies for an hour. Communication only by gesture: next negotiation is Hard; Stress +1.'
   - title: Geode Heartbeat
     flavor: A pulse syncs to the Shard. Guard breaks may miss you---once.
     stakes: A character's pulse syncs to the Shard. +1 Stress; they may ignore one Guard-break once.
@@ -171,7 +171,7 @@ mechanics:
       costs double).'
   - title: Forgiven---For Now
     flavor: A patron clears a mark for one sealed errand. The box hums like an Omen.
-    stakes: A patron clears 1 Debt if you carry a sealed box to a Gate. Do not open it (Hard Hard temptation); opening rolls
+    stakes: A patron clears 1 Debt if you carry a sealed box to a Gate. Do not open it (Hard temptation); opening rolls
       an Omen immediately.
   - title: Street Tithe
     flavor: Urchins with Debtknife tattoos ask politely while counting exits.
@@ -179,7 +179,7 @@ mechanics:
       rumor).
   - title: Contract Rewrite
     flavor: A scribe offers to rewrite fate in triplicate. Ink costs more than blood.
-    stakes: A scribe can alter your obligation. Hard Hard CHA/INT; success converts Debt to Favor owed by them; failure doubles
+    stakes: A scribe can alter your obligation. Hard CHA/INT; success converts Debt to Favor owed by them; failure doubles
       Debt.
   - title: Blood Co-Signer
     flavor: The ledger wants a second signature from someone you love.
@@ -213,7 +213,7 @@ mechanics:
     stakes: 'Fight as entertainment to erase 1 Debt. One character: win a Medium duel stub; lose and Debt remains +1 Stress.'
   - title: Ledger Fire
     flavor: Guild records burn beautifully. So do the wanted posters that follow.
-    stakes: 'Chance to burn guild records. Hard Hard infiltration; success clears 2 Debt; failure: Wanted (all towns +1 Debt).'
+    stakes: 'Chance to burn guild records. Hard infiltration; success clears 2 Debt; failure: Wanted (all towns +1 Debt).'
   - title: Mercy of the Countess
     flavor: A noble offers Favor for social ruin. Fail and both factions bill you.
     stakes: A noble offers Favor if you ruin a guild rival socially. Succeed Medium intrigue; fail and both factions Debt
@@ -240,14 +240,14 @@ mechanics:
       foes Strike first.'
   - title: Salt Rain
     flavor: White grit falls upward. Water dies; Heal becomes a struggle.
-    stakes: White grit falls upward into the Gate. Water rations spoil; next Campfire Heal is Hard Hard.
+    stakes: White grit falls upward into the Gate. Water rations spoil; next Campfire Heal is Hard.
   - title: Counting Shadows
     flavor: One shadow too many. Something joined the party without asking.
     stakes: 'Shadows don''t match bodies. One shadow too many: a stalker joins the delve (extra foe) unless you leave an offering
       (1 energy).'
   - title: Gate That Breathes
     flavor: Air pulls inward. Easy becomes slightly less easy at the threshold.
-    stakes: 'Air pulls inward. First zone: all Easy actions need face 2+. Close visors (no scent clues).'
+    stakes: 'Air pulls inward. First zone: all Easy actions need face 3+. Close visors (no scent clues).'
   - title: Name Spoken Backward
     flavor: A companion's name returns reversed. Hazards learn the Mark.
     stakes: 'Someone says a companion''s name reversed. That character is Marked: hazards target them until a Campfire Lore
@@ -291,7 +291,7 @@ mechanics:
     stakes: Crystal dew coats you. +1 energy each; next Debt collector knows you struck rich (+1 Debt pressure).
   - title: Sealed With Lead
     flavor: Lead bands the Gate. Break and reroll omen---or walk away ticking.
-    stakes: The Gate is lead-banded. Break seal (Hard Hard) and roll again on Omens, or walk away (Clock +1, delve delayed).
+    stakes: The Gate is lead-banded. Break seal (Hard) and roll again on Omens, or walk away (Clock +1, delve delayed).
 - name: Campfire Counsel
   encounters:
   - title: Shared Watch
@@ -355,5 +355,5 @@ mechanics:
       delve adds one Minion of your choice to the monsters.'
   - title: Scatter the Ashes
     flavor: Clean camps confuse collectors. Dirty ones invite them.
-    stakes: Break camp clean. Next collectors/trackers need Hard Hard to find your trail; fail to scatter and Debt agents
+    stakes: Break camp clean. Next collectors/trackers need Hard to find your trail; fail to scatter and Debt agents
       arrive next stop.

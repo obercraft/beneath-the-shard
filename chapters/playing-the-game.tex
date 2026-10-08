@@ -14,9 +14,9 @@ To start a new game of \game{} you need:
 First you create a party, then you set out across \world{} one hex at a time, spending Supply and drawing encounters as you go. Beyond the Shard-Gates you find on the map, you face combat---each fight opens with Opening (Deploy, Ambush, Initiative).
 
 \begin{rpgbox}{{One Die, Two Ways}}
-    \textbf{In combat} the party rolls its shared pool of six-sided dice and \textbf{assigns faces} to actions: a 1+ for Easy, a 4+ and 1 Energy for Medium, two 6s for Hard Hard. Power actions want three or four dice at once. Attributes do not matter; position, Energy, gear, and the faces you rolled do.
+    \textbf{In combat} the party rolls its shared pool of six-sided dice and \textbf{assigns faces} to actions: any face for Negligible, 2+ for Easy, 4+ for Medium, only a 6 for Hard. Power actions want three or four dice at once and still cost Energy. Attributes do not matter; position, Energy (for powers), gear, and the faces you rolled do.
 
-    \textbf{On the road} one character rolls their \textbf{Attribute Dice} (1--4, from one attribute) and \textbf{counts 4+ as successes}: Easy needs 1, Medium 2, Hard Hard 3. Companions add dice by spending Energy. See Character Creation: Attribute Check.
+    \textbf{On the road} one character rolls their \textbf{Attribute Dice} (1--4, from one attribute) and \textbf{counts 4+ as successes}: Easy needs 1, Medium 2, Hard 3. Companions add dice by spending Energy. See Character Creation: Attribute Check.
 
     \dper{} is only ever used to look up a table entry, never to test a character.
 \end{rpgbox}
@@ -26,20 +26,22 @@ First you create a party, then you set out across \world{} one hex at a time, sp
 \begin{tabularx}{\linewidth}{c >{\raggedright\arraybackslash}X}
   \shardheadercell{Symbol} & \shardheadercell{Meaning} \\
   \rowcolor{bone}
-  \easy & assign one die showing at least a 1 \\
+  \negligible & assign one die showing any face (1--6) \\
   \rowcolor{ash!15}
-  \medium{} \energy{1} & assign one die showing at least a 4 and pay 1 Energy \\
+  \easy & assign one die showing at least a 2 \\
   \rowcolor{bone}
-  \hard{} \hard{} & assign two dice showing a 6 \\
+  \medium & assign one die showing at least a 4 \\
   \rowcolor{ash!15}
+  \hard & assign one die showing a 6 \\
+  \rowcolor{bone}
   \grand{} \energy{1} & \textbf{Grand:} assign three dice showing at least a 4 and pay 1 Energy \\
-  \rowcolor{bone}
+  \rowcolor{ash!15}
   \dire{} \energy{1} & \textbf{Dire:} assign two 6s and one die of 4 or more; pay 1 Energy \\
-  \rowcolor{ash!15}
-  \fell{} \energy{2} & \textbf{Fell:} assign two 6s and two dice of 4 or more; pay 2 Energy \\
   \rowcolor{bone}
-  \defensive & a \textbf{defensive} action: it keeps hits off someone \\
+  \fell{} \energy{2} & \textbf{Fell:} assign two 6s and two dice of 4 or more; pay 2 Energy \\
   \rowcolor{ash!15}
+  \defensive & a \textbf{defensive} action: it keeps hits off someone \\
+  \rowcolor{bone}
   \stress{1} & the action also marks 1 Resonance Stress (spells, relics) \\
 \end{tabularx}
 

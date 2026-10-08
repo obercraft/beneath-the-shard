@@ -1,11 +1,11 @@
-package shardbound;
+package net.sachau.beneath;
 
-import shardbound.gen.GenerateClasses;
-import shardbound.gen.GenerateEncounters;
-import shardbound.gen.GenerateEquipment;
-import shardbound.gen.GenerateHexmap;
-import shardbound.gen.GenerateMonsters;
-import shardbound.gen.GenerateSpells;
+import net.sachau.beneath.gen.GenerateClasses;
+import net.sachau.beneath.gen.GenerateEncounters;
+import net.sachau.beneath.gen.GenerateEquipment;
+import net.sachau.beneath.gen.GenerateHexmap;
+import net.sachau.beneath.gen.GenerateMonsters;
+import net.sachau.beneath.gen.GenerateSpells;
 
 /** Entry point: regenerate all TeX catalogs from classpath JSON. */
 public final class GenerateAll {
